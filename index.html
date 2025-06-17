@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TryTasty | Quick & Tasty Snack Recipes</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
+         and easy-to-make snacks. Explore flavors, try something new, and cook with confidence.">
+         <meta property="og:type" content="website">
+         <meta content="TryTasty" property="og:title">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="Recipe.css">
+         <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+         <!-- 
+         These codes are useless
+         <link href="plantainNachos.html">
+         <link href="savoryFrenchToastSticks.html">
+         <link href="spicypeanutbutterpopcorn.html">
+         <link href="zestyCucumberChips.html">
+         <link href="sweetPotatoBitesWithYogurtDip.html">
+         <link href="bananaOatEnergyBites.html">
+         <link href="cheesyRamenNests.html">
+    -->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 500); // Delay to allow fade-out effect
+  });
+</script>
+
+    </head>
+
+
+<script>
+  // Check if user has already seen the popup
+  window.onload = function() {
+    if (!localStorage.getItem('popupShown')) {
+      document.getElementById('popup').style.display = 'flex'; // Show popup
+    } else {
+      document.getElementById('popup').style.display = 'none'; // Hide popup
+    }
+  };
+
+  function closePopup() {
+    localStorage.setItem('popupShown', 'true'); // Remember that popup was shown
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+
+    <!--  
+This will show the popup message everytime the page is reloaded
+    <script>
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+-->
+    <body>
+        <div id="preloader">
+  <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746104911/TryTasty-logo_lcvbvd.png" alt="Loading..." id="loader-logo">
+  <h2 style="text-align: right;">Scybud Creation</h2>
+</div>
+<!-- Popup HTML -->
+<div id="popup">
+  <div id="popup-content">
+    <h2>Welcome to TryTasty!</h2>
+    <p><strong>TryTasty</strong> is a fun recipe project made by <strong>Scybud</strong>, a student-led brand that loves to create and share.</p>
+    <p>Here, you'll find simple and creative snack ideas built with code and love.</p>
+    <button onclick="closePopup()">Enter</button>
+  </div>
+</div>
+
+
+    <header>
+        <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746104911/TryTasty-logo_lcvbvd.png"  alt="TryTasty Logo">
+         <nav>
+                <a href="index.html">
+                    <p style="color: black; size: 4px;"><i class='bx bx-home'></i></p>
+                    <p style="color: black; size: 4px;">Home</p>
+                </a>
+                <a href="bot.html">
+                      <p style="color: black; size: 4px;"><i class='bx bx-bot'></i></p>
+                      <p style="color: black;">AI Bot</p>
+                </a>
+            </nav>
+    </header>
+    <main>
+        
+        <section>
+        <nav>
+            <!--Link all the recipe pages here-->
+            <a href="plantainNachos.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746262940/ChatGPT_Image_May_3_2025_10_59_04_AM_dgozic.png" title="Click to see details" alt="Crispy Plantain Nachos">
+                Plantain Nachos</a>
+                <a href="spicypeanutbutterpopcorn.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746264589/Spicy_Peanut_Butter_Popcorn_Delights_jjyi3k.png" title="Click to see details" alt="Spicy Peanut Butter Popcorn">Spicy Peanut Butter Popcorn</a>
+                <a href="savoryFrenchToastSticks.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746274690/Savory_French_Toast_Sticks_with_Sauce_pz9oh7.png" title="Click to see details" alt= "French Toast Sticks">Savory French Toast Sticks </a>
+                <a href="sweetPotatoBitesWithYogurtDip.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746300419/ChatGPT_Image_May_3_2025_09_25_52_PM_sslgeo.png" title="Click to see details" alt= "Sweet Potato Bites With Yogurt Dip">Sweet Potato Bites With Yogurt Dip</a>
+                <a href="cheesyRamenNests.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746300915/ChatGPT_Image_May_3_2025_09_31_03_PM_l0tcru.png" title="Click to see details" alt= "Ramen Nest">Cheesy Ramen Nest</a>
+                <a href="bananaOatEnergyBites.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746300912/ChatGPT_Image_May_3_2025_09_33_00_PM_j48php.png" title="Click to see details" alt= "Banana Oat Energy Bites">Banana Oat Energy Bites</a>
+                <a href="zestyCucumberChips.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746300910/ChatGPT_Image_May_3_2025_09_34_44_PM_bp3u4c.png" title="Click to see details" alt= "Zesty Cucunber Chips">Zesty Cucumber Chips</a>
+                <a href="avocadoeggtoastcups.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746957416/Avocado_Egg_Toast_Cups_ayhz3q.png" title="Click to see image" alt="Avocado Egg Toast Cups">Avocado Egg Toast Cups</a>
+                <a href="crispychickpeasnack.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746958124/Crispy_Chickpea_snack_syoduf.png" title="Click to see image" alt="Crispy Chickpea Snack">Crispy Chickpea Snack</a>
+                <a href="peanutbutterapplenachos.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746958473/Peanut_butter_apple_nachos_vyh2u8.png" title="Click to see image" alt="peanut Butter Apple Nachos">Peanut Butter Apple Nachos</a>
+                <a href="minicapreseskewers.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1746957797/Mini_caprese_skewer_sqxtko.png" title="Click to see image" alt="Mini Caprese Skewers">Mini Caprese Skewers</a>
+                <a href="cheesymangopoppers.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747315217/ChatGPT_Image_May_15_2025_03_18_28_PM_arecoy.png" title="Click to see image" alt="Cheesy Mango Poppers">Cheesy Mango Poppers</a>
+                <a href="instantramenTacos.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747315284/ChatGPT_Image_May_15_2025_03_20_52_PM_dr14bl.png" title="Click to see image" alt="Instant Ramen Tacos">Instant Ramen Tacos</a>
+                <a href="spicycorn&coconutbites.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747321954/Spicy_Corn_and_Coconut_Bites_v9qacd.png" title="Click to see image" alt="Spicy Corn and Coconut Bites">Spicy Corn & Coconut Bites</a>
+                <a href="chocochilibananachips.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747322235/Choco_Chili_Banana_Chips_Delight_d4ikbw.png" title="Click to see image" alt="Choco Chili Banana Chips">Choco Chili Banana Chips</a>
+                <a href="nuttydateenergyrocks.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747328908/Energie_Steine_aus_Datteln_und_N%C3%BCssen_iuy9bz.png" title="Click to see image" alt="Nutty Date Energy Rocks">Nutty Date Energy Rocks</a>
+                <a href="crispykalepakoras.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747402251/Crispy_Kale_Pakoras_with_Mint_Chutney_jgewn4.png" title="Click to see image" alt="Crispy Kale Pakoras">Crispy Kale Pakoras</a>
+                <a href="frozenBananaS`more Bites.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1747403085/ChatGPT_Image_May_16_2025_03_44_16_PM_pvfeim.png" title="Click to see image" alt="Frozen Banana S`More Bites">Frozen Banana S`More Bites</a>
+                <a href="plantaincinnamonrolls.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750179774/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_ozhrdz.png" title="Click to see image" alt="Plantain Cinnamon Rolls">Plantain Cinnamon ROlls</a>
+                <a href="plantaineggcups.html" class="snackImage"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750180806/Plantain_Egg_Cups_peecle.png" title="Click to see image" alt="Plantain Egg Cups">Plantain Egg Cups</a>
+        </nav>
+        </section>
+        </main>
+        <footer>&copy;2025 Scybud. All Rights reserved.</footer>
+    </body>
+
+</html>
