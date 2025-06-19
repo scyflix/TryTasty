@@ -178,11 +178,6 @@
     background-color: black;
     border-radius: 15px;
   }
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
   /* Responsive Design */
   @media (max-width: 600px) {
     .snackImage {
