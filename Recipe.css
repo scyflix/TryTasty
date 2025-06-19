@@ -108,6 +108,7 @@
     list-style: none;
     font-weight: bold;
     padding: 0;
+    flex-direction: column;
   }
   
   .snackImage {
