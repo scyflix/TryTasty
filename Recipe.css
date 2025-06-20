@@ -201,4 +201,15 @@
     max-width:100%;
     height: auto;
   }
+  .social-icons a {
+  color: #fffefe;
+  font-size: 28px;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e69500; 
+}
   
