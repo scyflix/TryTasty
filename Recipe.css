@@ -90,6 +90,8 @@
     padding: 10px;
     background-color: #ffd9a0;
     border-radius: 8px;
+        display: flex;
+  flex-direction: row;
   }
   
   header img {
