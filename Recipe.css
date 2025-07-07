@@ -110,6 +110,8 @@
     list-style: none;
     font-weight: bold;
     padding: 0;
+      flex-direction: column;
+      align-items: center;
   }
   
   .snackImage {
@@ -157,6 +159,9 @@
     border-bottom: 2px solid #ffa94d;
     padding-bottom: 5px;
   }
+a {
+  text-decoration: none;
+}
   
   h3 {
     margin-top: 10px;
@@ -185,12 +190,7 @@
     .snackImage {
       width: 100%;
     }
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+ 
     header img {
       width: 80%;
     }
