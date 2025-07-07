@@ -79,6 +79,13 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+      margin-bottom: 30px;
+    list-style: none;
+    font-weight: bold;
+    padding: 0;
+      flex-direction: column;
+      align-items: center;
+  
 }
 
   
