@@ -100,9 +100,6 @@
     border-radius: 15% 25%;
   }
   
-  header nav:nth-child(2) {
-    text-decoration: none;
-  }
   nav {
     display: flex;
     flex-wrap: wrap;
