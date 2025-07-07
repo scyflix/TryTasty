@@ -112,6 +112,7 @@
     padding: 0;
       flex-direction: column;
       align-items: center;
+    text-decoration: none !important;
   }
   
   .snackImage {
@@ -159,9 +160,6 @@
     border-bottom: 2px solid #ffa94d;
     padding-bottom: 5px;
   }
-a {
-  text-decoration: none;
-}
   
   h3 {
     margin-top: 10px;
