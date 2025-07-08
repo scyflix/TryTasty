@@ -89,7 +89,7 @@
 
   
   body {
-    font-family: sans-serif;
+    font-family: calibri, sans-serif;
     background-color: #fffaf3;
     color: #333;
     line-height: 1.6;
@@ -205,7 +205,18 @@
       align-items: center;
     }
     #page-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
       text-decoration: none;
+    }
+    #page-nav a {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: black;
+      font-family: calibri, sans-serif;
     }
  
     header img {
