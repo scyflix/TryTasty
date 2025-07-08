@@ -222,6 +222,9 @@
       text-decoration: none;
       transform: scale(1.05);
     }
+    a {
+      text-decoration: none;
+    }
  
     header img {
       width: 80%;
