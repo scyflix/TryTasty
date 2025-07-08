@@ -222,6 +222,10 @@
       text-decoration: none;
       transform: scale(1.05);
     }
+    body .page-nav {
+  background-color: red !important;
+}
+
     a {
       text-decoration: none;
     }
