@@ -203,13 +203,13 @@
       flex-direction: column;
       align-items: center;
     }
-    #page-nav {
+    .page-nav {
       display: flex;
       gap: 20px;
       align-items: center;
       text-decoration: none;
     }
-    #page-nav a {
+    .page-nav a {
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -217,7 +217,7 @@
       color: black;
       font-family: calibri, sans-serif;
     }
-    #page-nav a:hover {
+    .page-nav a:hover {
       color: orange;
       text-decoration: none;
       transform: scale(1.05);
