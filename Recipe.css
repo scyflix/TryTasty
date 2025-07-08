@@ -213,7 +213,7 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-      text-decoration: none;
+      text-decoration: none !important;
       color: black;
       font-family: calibri, sans-serif;
     }
