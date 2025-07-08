@@ -124,7 +124,6 @@
     padding: 0;
       flex-direction: column;
       align-items: center;
-    text-decoration: none;
   }
   
   .snackImage {
@@ -187,7 +186,7 @@
     margin-bottom: 6px;
   }
   
-  /* Footer (Optional) */
+  
   footer {
     text-align: center;
     margin-top: 30px;
@@ -217,6 +216,11 @@
       text-decoration: none;
       color: black;
       font-family: calibri, sans-serif;
+    }
+    #page-nav a:hover {
+      color: orange;
+      text-decoration: none;
+      transform: scale(1.05);
     }
  
     header img {
