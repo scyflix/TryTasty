@@ -47,9 +47,11 @@ button {
   }
   
   header img {
-    max-width: 220px;
-    height: auto;
+    header img {
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 15% 25%;
+  }
   }
   
   nav {
