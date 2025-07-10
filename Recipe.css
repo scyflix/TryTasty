@@ -109,8 +109,8 @@
   }
   
   header img {
-    max-width: 220px;
-    height: auto;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 15% 25%;
   }
   
@@ -258,10 +258,5 @@ iframe {
   color: #e69500; 
 }
 
-@media (max-width: 600px) {
-  .page-nav i,
-  .page-nav span {
-    font-size: 16px;
-  }
-}
+
 
