@@ -72,4 +72,32 @@ cursor: pointer;
   button:after{
     cursor: progress;
   }
+  nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    .page-nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      text-decoration: none;
+    }
+    .page-nav a {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none !important;
+      color: black;
+      font-family: calibri, sans-serif;
+    }
+    .page-nav a:hover {
+      color: orange;
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+
+
+    a {
+      text-decoration: none;
+    }
   
