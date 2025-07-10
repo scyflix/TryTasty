@@ -214,6 +214,7 @@
     .page-nav a {
       text-align: center;
       display: flex;
+        flex: 0 0 auto;
       flex-direction: column;
       text-decoration: none !important;
       color: black;
