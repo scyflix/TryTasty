@@ -78,16 +78,15 @@ cursor: pointer;
     }
     .page-nav {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap; 
+     gap: 10px;
+     justify-content: center;
       align-items: center;
       text-decoration: none;
     }
     .page-nav a {
       text-align: center;
       display: flex;
-     flex-wrap: wrap; 
-     gap: 10px;
-     justify-content: center;
       flex-direction: column;
       text-decoration: none !important;
       color: black;
