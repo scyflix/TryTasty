@@ -248,6 +248,9 @@
   text-decoration: none;
   transition: color 0.3s;
 }
+iframe {
+  margin: 0 auto;
+}
 
 .social-icons a:hover {
   color: #e69500; 
