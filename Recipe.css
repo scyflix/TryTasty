@@ -105,6 +105,7 @@
     border-radius: 8px;
         display: flex;
   flex-direction: row;
+     max-height: 180px;
   }
   
   header img {
