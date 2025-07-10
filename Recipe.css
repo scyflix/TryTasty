@@ -257,4 +257,11 @@ iframe {
 .social-icons a:hover {
   color: #e69500; 
 }
-  
+
+@media (max-width: 600px) {
+  .page-nav i,
+  .page-nav span {
+    font-size: 16px;
+  }
+}
+
