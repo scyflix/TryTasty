@@ -56,9 +56,6 @@ button {
   
   nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
     margin-bottom: 30px;
     list-style: none;
     font-weight: bold;
@@ -80,9 +77,6 @@ cursor: pointer;
     }
     .page-nav {
       display: flex;
-      flex-wrap: wrap; 
-     gap: 10px;
-     justify-content: center;
       align-items: center;
       text-decoration: none;
     }
