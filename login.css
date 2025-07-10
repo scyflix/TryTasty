@@ -85,6 +85,9 @@ cursor: pointer;
     .page-nav a {
       text-align: center;
       display: flex;
+     flex-wrap: wrap; 
+     gap: 10px;
+     justify-content: center;
       flex-direction: column;
       text-decoration: none !important;
       color: black;
