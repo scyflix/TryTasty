@@ -195,8 +195,8 @@ header img:hover {
   footer {
     text-align: center;
     margin-top: 30px;
-    color: white !important;
-    background-color: black;
+    color: black ;
+    background-color: white;
     border-radius: 15px;
   }
   /* Responsive Design */
@@ -246,7 +246,7 @@ header img:hover {
     max-height: 400px;
   }
   .social-icons a {
-  color: #fffefe;
+  color: black;
   font-size: 28px;
   margin: 0 12px;
   text-decoration: none;
