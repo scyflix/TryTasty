@@ -111,8 +111,12 @@
   header img {
     max-width: 50px;
     max-height: 50px;
-    border-radius: 15% 25%;
+    border-radius: 100%;
   }
+header img:hover {
+  transform: scale(2.05);
+  
+}
   
   nav {
     display: flex;
