@@ -259,6 +259,39 @@ iframe {
 .social-icons a:hover {
   color: #e69500; 
 }
-
+input {
+   height: 25px;
+    width: 300px;
+border: black solid 2px;
+}
+textarea {
+    height: 60px;
+    width: 300px;
+border: black solid 2px;
+}
+form{
+  width: 250px;
+  max-height: auto;
+  margin: auto;
+  padding: 20px;
+}
+label{
+  display: inline-block;
+  font-size: large;
+}
+button{
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+}
+  button:hover{
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    width: 150px;
+    height: 35px;
+  }
 
 
