@@ -274,6 +274,7 @@ form{
   max-height: auto;
   margin: auto;
   padding: 20px;
+  align-items: center;
 }
 label{
   display: inline-block;
