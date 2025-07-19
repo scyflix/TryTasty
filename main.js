@@ -46,6 +46,20 @@ window.signup = function (event) {
       alert(error.message);
     });
 };
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+const auth = getAuth();
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is logged in - show form or allow submit
+    document.getElementById("recipe-form").style.display = "block";
+    document.getElementById("login-message").style.display = "none";
+  } else {
+    // Not logged in - redirect to login page
+    window.location.href = "login.html";
+  }
+});
 
 // Google Sign-In
 window.googleLogin = function () {
@@ -82,6 +96,22 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("welcomeText").innerText = `Hi, ${user.email}`;
   }
 });
+
+import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+const auth = getAuth();
+
+window.logout = function() {
+  signOut(auth).then(() => {
+    window.location.href = "login.html";
+  })
+    alert("Logout successful!");
+      window.location.href = "submit.html";
+    }).catch((error) => {
+    alert("Logout failed: " + error.message);
+  });
+}
+
 
 
 
