@@ -37,12 +37,9 @@
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
     }
-
-
-    
-
-
-
+label {
+  display: inline-block;
+}
 body {
     font-family: calibri, sans-serif;
     background-color: #fffaf3;
