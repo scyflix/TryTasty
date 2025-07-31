@@ -198,6 +198,8 @@ header img:hover {
     color: black !important;
     background-color: white;
     border-radius: 15px;
+    height: 20vh;
+    width: 95vw;
   }
   /* Responsive Design */
   @media (max-width: 600px) {
