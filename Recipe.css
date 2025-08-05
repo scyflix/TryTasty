@@ -271,12 +271,34 @@ textarea {
     width: 300px;
 border: black solid 2px;
 }
+input:focus {
+  border-radius: 2px;
+  border-color: red;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 35px;
+  width: 320px;
+}
+textarea:focus {
+   border-radius: 2px;
+  border-color: red;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 70px;
+  width: 320px;
+}
 form{
   width: 250px;
   max-height: auto;
   margin: auto;
   padding: 20px;
-  align-items: center;
+  background-color: #fffaf3;
+display: flex;
+flex-direction: column;
+gap: 10px;
+justify-content: center;
+align-items: center;
+box-shadow: 4px 7px 10px  #e69500;
 }
 label{
   display: inline-block;
@@ -296,5 +318,6 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
