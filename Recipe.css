@@ -288,7 +288,7 @@ textarea:focus {
   width: 320px;
 }
 form{
-  width: 250px;
+  width: 350px;
   max-height: auto;
   margin: auto;
   padding: 20px;
@@ -318,6 +318,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
