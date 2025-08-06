@@ -235,9 +235,14 @@ header img:hover {
 
     a {
       text-decoration: none;
+      
     }
  
-    
+    a:hover {
+      text-decoration: underline;
+      background-color: lightgrey;
+      color: grey
+    }
   
     main {
       padding: 15px;
@@ -288,7 +293,7 @@ textarea:focus {
   width: 320px;
 }
 form{
-  width: 350px;
+  width: 330px;
   max-height: auto;
   margin: auto;
   padding: 20px;
@@ -318,6 +323,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
