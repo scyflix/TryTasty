@@ -207,10 +207,6 @@ header img:hover {
       width: 100%;
     }
   }
-      nav {
-      flex-direction: column;
-      align-items: center;
-    }
     .page-nav {
       display: flex;
       gap: 20px;
@@ -240,7 +236,6 @@ header img:hover {
  
     a:hover {
       text-decoration: underline;
-      background-color: lightgrey;
     }
   
     main {
@@ -322,6 +317,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
