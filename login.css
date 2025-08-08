@@ -45,7 +45,6 @@ body {
     padding: 10px;
   font-display: swap;
   }
-form {
 input {
    height: 25px;
     width: 300px;
@@ -122,15 +121,7 @@ button {
   flex-direction: row;
      max-height: 180px;
   }
-  
 
-    header img {
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 15% 25%;
-  }
-  
-  
   nav {
     display: flex;
     margin-bottom: 30px;
@@ -175,5 +166,6 @@ box-shadow: 0px 6px 10px black;
       text-decoration: none;
     }
   
+
 
 
