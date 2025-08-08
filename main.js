@@ -1,19 +1,6 @@
 import {
   initializeApp
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-// Firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
-  authDomain: "trytasty-64537.firebaseapp.com",
-  projectId: "trytasty-64537",
-  storageBucket: "trytasty-64537.firebasestorage.app",
-  messagingSenderId: "379426398000",
-  appId: "1:379426398000:web:49b7236df3218d7306b2f5",
-  measurementId: "G-ZMW8ZTX39M"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
 import {
   getAuth,
@@ -24,6 +11,20 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
+  authDomain: "trytasty-64537.firebaseapp.com",
+  projectId: "trytasty-64537",
+ storageBucket: "trytasty-64537.appspot.com",
+  messagingSenderId: "379426398000",
+  appId: "1:379426398000:web:49b7236df3218d7306b2f5",
+  measurementId: "G-ZMW8ZTX39M"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 // Signup
 window.signup = function (event) {
@@ -40,7 +41,7 @@ window.signup = function (event) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       alert("Signup successful!");
-      window.location.href = "submit.html";
+      window.location.href = "index.html";
     })
     .catch((error) => {
       alert(error.message);
@@ -53,7 +54,7 @@ window.googleLogin = function () {
 
   signInWithPopup(auth, provider)
     .then((result) => {
-      alert(Welcome, ${result.user.displayName});
+      alert(`Welcome, ${result.user.displayName}`);
       window.location.href = "index.html";
     })
     .catch((error) => {
@@ -71,7 +72,7 @@ window.login = function (event) {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       alert("Login successful!");
-      window.location.href = "submit.html";
+      window.location.href = "index.html";
     })
     .catch((error) => {
       alert(error.message);
@@ -79,8 +80,9 @@ window.login = function (event) {
 };
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    document.getElementById("welcomeText").innerText = Hi, ${user.email};
+    document.getElementById("welcomeText").innerText = `Hi, ${user.email}`;
   }
 });
+
 
 
