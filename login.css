@@ -43,7 +43,6 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 10px;
-  font-display: swap;
   }
 input {
    height: 25px;
@@ -73,7 +72,7 @@ textarea:focus {
 }
 form{
   width: 80vw;
-  max-height: auto;
+  max-height: 500py;
   margin: auto;
   padding: 20px;
   background-color: #fffaf3;
@@ -138,10 +137,6 @@ cursor: pointer;
 box-shadow: 0px 6px 10px black;
   }
 
-  nav {
-      flex-direction: column;
-      align-items: center;
-    }
     .page-nav {
       display: flex;
       align-items: center;
@@ -161,11 +156,11 @@ box-shadow: 0px 6px 10px black;
       transform: scale(1.05);
     }
 
-
     a {
       text-decoration: none;
     }
   
+
 
 
 
