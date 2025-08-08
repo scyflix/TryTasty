@@ -64,13 +64,16 @@ form {
 input {
   border-radius: 7px;
 }
-footer {
-  background-color: white;
-  border-radius: 25px;
-  overflow: hidden;
-  padding: 30px;
-  margin: 10px;
-}
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: black !important;
+    background-color: white;
+    border-radius: 15px;
+    height: 20vh;
+    width: 95vw;
+  }
 button {
   background-color: #fe4401;
   color: white;
@@ -142,3 +145,4 @@ box-shadow: 0px 6px 10px black;
       text-decoration: none;
     }
   
+
