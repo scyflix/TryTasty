@@ -23,7 +23,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
-
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
 
 // Signup
 window.signup = function (event) {
@@ -82,4 +82,5 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("welcomeText").innerText = Hi, ${user.email};
   }
 });
+
 
