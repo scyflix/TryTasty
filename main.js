@@ -8,7 +8,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  signOut
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
 
@@ -81,8 +82,25 @@ window.login = function (event) {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     document.getElementById("welcomeText").innerText = `Hi, ${user.email}`;
+    document.getElementById("logoutBtn").style.display = "block";
+  } else {
+    document.getElementById("logoutBtn").style.display = "none";
   }
 });
+
+// Logout
+window.logout = function () {
+  signOut(auth)
+  .then(() => {
+    alert("You have just Logged out.");
+    window.location.href = "login.html";
+  })
+  .catch((error) => {
+    console.error("Lougout Error:", error)
+    alert("Error Logging out: " + error.message);
+  });
+};
+
 
 
 
