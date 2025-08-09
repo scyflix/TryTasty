@@ -80,6 +80,8 @@ window.login = function (event) {
     });
 };
 onAuthStateChanged(auth, (user) => {
+      const logoutBtn = document.getElementById("logoutBtn");
+  const welcomeText = document.getElementById("welcomeText");
   if (user) {
     document.getElementById("welcomeText").innerText = `Hi, ${user.email}`;
     document.getElementById("logoutBtn").style.display = "block";
@@ -89,7 +91,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // Logout
-window.logout = function () {
+window.logout = function() {
   signOut(auth)
   .then(() => {
     alert("You have just Logged out.");
@@ -100,6 +102,7 @@ window.logout = function () {
     alert("Error Logging out: " + error.message);
   });
 };
+
 
 
 
