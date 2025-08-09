@@ -85,6 +85,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     document.getElementById("welcomeText").innerText = `Hi, ${user.email}`;
     document.getElementById("logoutBtn").style.display = "block";
+      document.getElementById("popup").style.display = "none";
   } else {
     document.getElementById("logoutBtn").style.display = "none";
   }
@@ -102,6 +103,7 @@ window.logout = function() {
     alert("Error Logging out: " + error.message);
   });
 };
+
 
 
 
