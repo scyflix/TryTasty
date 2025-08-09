@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 140, 0); /* or your background color */
+  background-color:  rgb(255, 204, 142); /* or your background color */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,6 +317,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
