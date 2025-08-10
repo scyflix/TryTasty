@@ -79,6 +79,33 @@ window.login = function (event) {
       alert(error.message);
     });
 };
+// Wait for DOM so getElementById won't return null if script is in <head>
+window.addEventListener('DOMContentLoaded', () => {
+  onAuthStateChanged(auth, (user) => {
+    const logoutBtn = document.getElementById("logoutBtn");
+    const welcomeText = document.getElementById("welcomeText");
+    const popup = document.getElementById("popup");
+    const nonUserMessage = document.getElementById("non-userMessage");
+    const recipeForm = document.getElementById("recipeSubmissionForm");
+
+    if (user) {
+      if (welcomeText) welcomeText.innerText = `Hi, ${user.displayName || user.email || "user"}`;
+      if (logoutBtn) logoutBtn.style.display = "block";
+      if (popup) popup.style.display = "none";
+      if (nonUserMessage) nonUserMessage.style.display = "none";
+      if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
+    } else {
+      if (logoutBtn) logoutBtn.style.display = "none";
+      if (popup) popup.style.display = "block";
+      // If you want the text underlined, use textDecoration (not display)
+      if (nonUserMessage) nonUserMessage.style.textDecoration = "underline";
+      if (recipeForm) recipeForm.style.display = "none";
+      if (welcomeText) welcomeText.innerText = ""; // clear greeting
+    }
+  });
+});
+
+/*
 onAuthStateChanged(auth, (user) => {
       const logoutBtn = document.getElementById("logoutBtn");
   const welcomeText = document.getElementById("welcomeText");
@@ -90,7 +117,7 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById("logoutBtn").style.display = "none";
   }
 });
-
+*/
 // Logout
 window.logout = function() {
   signOut(auth)
@@ -103,6 +130,7 @@ window.logout = function() {
     alert("Error Logging out: " + error.message);
   });
 };
+
 
 
 
