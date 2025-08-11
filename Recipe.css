@@ -108,7 +108,7 @@
      max-height: 60px;
     justify-content: space-evenly;
   }
-  /*
+  
   header img {
     max-width: 50px;
     max-height: 50px;
@@ -118,7 +118,7 @@ header img:hover {
   transform: scale(2.05);
   
 }
- */
+ 
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -318,6 +318,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
