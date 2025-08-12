@@ -107,6 +107,9 @@
   flex-direction: row;
      max-height: 60px;
     justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   header img {
@@ -318,6 +321,7 @@ button{
     width: 150px;
     height: 35px;
   }
+
 
 
 
