@@ -28,7 +28,7 @@ This project is part of **Scybud**, a student-led creative brand exploring tech,
 
 ## 🌐 Live Site
 
-👉 [Visit TryTasty](https://scyflix.github.io/TryTasty/)
+👉 [Visit TryTasty v1](https://scyflix.github.io/TryTasty/v1/)
 
 ---
 
