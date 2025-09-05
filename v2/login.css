@@ -67,14 +67,10 @@ input:focus {
   width: 100%;
     transition: all 0.5s ease;
 }
-@media (max-width: 600px) {
-    form {
-      width: 100%;
-    }
-  }
+
 form{
-  max-width: 400px;
-  width: 70vw;
+  max-width: 500px;
+  width: 97vw;
   max-height: 500px;
   border-radius: 10px;
   margin: auto;
