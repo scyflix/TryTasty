@@ -69,8 +69,8 @@ input:focus {
 }
 
 form{
-  max-width: 500px;
-  width: 97vw;
+  
+  max-width: 97vw;
   max-height: 500px;
   border-radius: 10px;
   margin: auto;
@@ -100,7 +100,7 @@ label{
     background-color: white;
     border-radius: 15px;
     height: 20vh;
-    width: 95vw;
+    max-width: 95vw;
   }
     .social-icons a {
   color: black;
