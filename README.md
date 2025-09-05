@@ -13,10 +13,10 @@ This project is part of **Scybud**, a student-led creative brand exploring tech,
 - 🍌 Easy and quick snack recipes  
 - 📱 Mobile-friendly, responsive design  
 - 🎯 Beginner-friendly foundation for future expansion  
-
+- Basic recipe bot
 ---
 
-## 🔮 Coming Soon
+## 🔮 Later features
 
 - 👥 User accounts and profiles  
 - 📝 Recipe uploads with images  
