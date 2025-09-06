@@ -113,7 +113,7 @@ window.logout = function() {
   signOut(auth)
   .then(() => {
     alert("You have just Logged out.");
-    window.location.href = "welcome.html";
+    window.location.href = "https://scyflix.github.io/TryTasty/";
   })
   .catch((error) => {
     console.error("Lougout Error:", error)
