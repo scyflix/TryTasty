@@ -49,8 +49,8 @@ body {
     padding: 10px;
   }
   input {
-    height: 25px;
-    width: 90%;
+       height: 25px;
+    width: 95%;
 border: black solid 2px;
 margin-left: 4px;
 }
@@ -70,10 +70,11 @@ input:focus {
 }
 
 form{
-  max-width: max-content;
-  width: 92vw;
-  max-height: 500px;
+  max-width: 400px;
+  width: 70vw;
+  max-height: auto;
   border-radius: 10px;
+  text-align: center;
   margin: auto;
   padding: 20px;
   background-color: #fffaf3;
