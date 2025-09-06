@@ -49,8 +49,10 @@ body {
     padding: 10px;
   }
   input {
+     max-width: 800px;
        height: 25px;
-    width: 75%;
+       margin: 0 4px 0 4px;
+    width: 75vw;
 border: black solid 2px;
 margin-left: 4px;
 }
@@ -65,7 +67,7 @@ input:focus {
   outline: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   height: 35px;
-  width: 100%;
+  width: 80vw;
     transition: all 0.5s ease;
 }
 
