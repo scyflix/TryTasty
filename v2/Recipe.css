@@ -18,7 +18,7 @@
   header {
     text-align: center;
     margin-bottom: 10px;
-    padding: 0 0 0 10px;
+    padding: 10px 0 0 10px;
     background-color: #ffd9a0;
     border-radius: 8px;
         display: flex;
@@ -79,7 +79,15 @@
     border-bottom: 2px solid #ffa94d;
     padding-bottom: 5px;
   }
-  
+  span {
+    color: black;
+    font-size: 24px;
+  }
+  @media  (max-width: 600px) {
+    span {
+      font-size: 15px;
+    }
+  } 
   h3 {
     margin-top: 10px;
     color: orangered;
@@ -117,7 +125,7 @@
       flex-direction: column;
       text-decoration: none;
       color: black;
-      font-family: calibri, sans-serif;
+      font-family: arial, sans-serif;
     }
     .page-nav a:hover {
       text-decoration: none;
