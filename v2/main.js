@@ -21,7 +21,7 @@ const firebaseConfig = {
   messagingSenderId: "379426398000",
   appId: "1:379426398000:web:49b7236df3218d7306b2f5",
   measurementId: "G-ZMW8ZTX39M"
-};
+}
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -46,7 +46,7 @@ window.signup = function (event) {
   .catch((error) => {
     alert(error.message);
   });
-};
+}
 
 // Google Sign-In
 window.googleLogin = function () {
@@ -60,7 +60,7 @@ window.googleLogin = function () {
   .catch((error) => {
     alert(error.message);
   });
-};
+}
 
 // Email/Password Login
 window.login = function (event) {
@@ -76,7 +76,7 @@ window.login = function (event) {
   .catch((error) => {
     alert(error.message);
   });
-};
+}
 
 // Wait for DOM so getElementById won't return null if script is in <head>
 window.addEventListener('DOMContentLoaded', () => {
@@ -116,7 +116,7 @@ window.logout = function() {
     window.location.href = "https://scyflix.github.io/TryTasty/";
   })
   .catch((error) => {
-    console.error("Lougout Error:", error)
+    console.error("Lougout Error:", error);
     alert("Error Logging out: " + error.message);
   });
-};
+}
