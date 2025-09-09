@@ -25,17 +25,6 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       animation: fadeIn 0.3s ease;
     }
-
-    #popup button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      border: none;
-      background-color: orangered;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
     
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.9); }
@@ -49,7 +38,7 @@ body {
     padding: 10px;
   }
   input {
-     max-width: 800px;
+     max-width: 400px;
        height: 25px;
        margin: 0 4px 0 4px;
     width: 75vw;
@@ -72,9 +61,8 @@ input:focus {
 }
 
 form{
-  max-width: 900px;
+  max-width: 500px;
   width: 85vw;
-  max-height: auto;
   border-radius: 10px;
   text-align: center;
   margin: auto;
@@ -86,6 +74,12 @@ form{
   justify-content: center;
   align-items: center;
   box-shadow: 4px 7px 30px orange;
+}
+#login-form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 label{
   display: block;
@@ -116,7 +110,7 @@ label{
 .social-icons a:hover {
   color: #e69500; 
 }
-button {
+#popup button, button {
   background-color: #fe4401;
   color: white;
    border-radius: 5px;
