@@ -88,6 +88,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const nonUserMessage = document.getElementById("non-userMessage");
     const recipeForm = document.getElementById("recipeSubmissionForm");
     const loginBtn = document.getElementById("loginBtn");
+    const videosPage = document.getElementById("videosPage");
+
     if (user) {
       if (welcomeText) welcomeText.innerText = `Hi, ${user.displayName || user.email || "user"}`;
       if (logoutBtn) logoutBtn.style.display = "block";
@@ -96,6 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (loginInputForm) loginInputForm.style.display = "none";
       if (nonUserMessage) nonUserMessage.style.display = "none";
       if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
+      if (videosPage) videosPage.style.display = "block";
     } else {
       if (logoutBtn) logoutBtn.style.display = "none";
       if (popup) popup.style.display = "block";
@@ -103,6 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (recipeForm) recipeForm.style.display = "none";
       if (welcomeText) welcomeText.innerText = ""; // clear greeting
        if (loginInputForm) loginInputForm.style.display = "block";
+       if (videosPage) videosPage.style.display = "none";
 
     }
   });

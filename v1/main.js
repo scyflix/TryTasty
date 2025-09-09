@@ -11,8 +11,6 @@ import {
   onAuthStateChanged,
   signOut
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
-
 // Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
@@ -97,7 +95,6 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       if (logoutBtn) logoutBtn.style.display = "none";
       if (popup) popup.style.display = "block";
-      // If you want the text underlined, use textDecoration (not display)
       if (nonUserMessage) nonUserMessage.style.textDecoration = "underline";
       if (recipeForm) recipeForm.style.display = "none";
       if (welcomeText) welcomeText.innerText = ""; // clear greeting
