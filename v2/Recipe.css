@@ -109,8 +109,9 @@
     color: black;
     background-color: white;
     border-radius: 15px;
-    height: 20vh;
-    width: 95vw;
+    height: auto;
+    width: auto;
+    bottom: 0;
   }
   
     .page-nav {
@@ -172,7 +173,7 @@ input {
 border: black solid 2px;
 }
 textarea {
- height: 25px;
+ height: 50px;
     width: 95%;
 border: black solid 2px;
 }
@@ -190,7 +191,7 @@ textarea:focus {
   border-color: red;
   outline: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 35px;
+  height: 60px;
   width: 100%;
     transition: all 0.5s ease;
 }
