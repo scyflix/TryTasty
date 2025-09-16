@@ -65,4 +65,22 @@
                                     suggestions.textContent = `${userName}, sorry I do not have a recipe for that yet 😓.`;
                 }
             };
+
+            function darkMode() {
+              let darkModeEnabled = document.getElementById("dark-mode");
+              const body = document.body;
+              const header = document.querySelector("header");
+              const main = document.querySelector("main");
+              const snackcard = document.querySelectorAll(".snackImage");
+              if (darkModeEnabled) {
+                body.style.backgroundColor = "gray";
+                body.style.color = "white";
+                header.style.background = "linear-gradient(90deg, orange, yellow)";
+                main.style.backgroundColor = "rgb(49, 48, 48)";
+                snackcard.forEach(card => {
+                  card.style.backgroundColor = "black";
+                  card.style.color = "white";
+                })
+              }
+            }
     
