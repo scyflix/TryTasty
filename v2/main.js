@@ -71,7 +71,7 @@ window.login = function (event) {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     alert("Login successful!");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   })
   .catch((error) => {
     alert(error.message);
@@ -117,7 +117,7 @@ window.logout = function() {
   signOut(auth)
   .then(() => {
     alert("You have just Logged out.");
-    window.location.href = "https://scyflix.github.io/TryTasty/";
+    window.location.href = "welcome.html";
   })
   .catch((error) => {
     console.error("Lougout Error:", error);
