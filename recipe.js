@@ -22,27 +22,30 @@ window.onload = function() {
   localStorage.setItem("darkMode", isDark);
 
   if (isDark) {
-    body.style.backgroundColor = "gray";
+    body.style.backgroundColor = "#fffaf3";
+    body.style.color = "#333";
+    if (footer) {
+      footer.style.backgroundColor = "#fffaf3";
+      footer.style.color = "black";
+    }
+    if (header) header.style.background = "#ffd9a0";
+    if (main) main.style.backgroundColor = "white";
+    snackcard.forEach(card => {
+      card.style.backgroundColor = "#ffefbbff";
+      card.style.color = "black";
+    });
+       if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
+  } else {
+     body.style.backgroundColor = "gray";
     body.style.color = "white";
-    if (footer) footer.style.backgroundColor = "orange";
+    if (footer) footer.style.backgroundColor = "black";
     if (header) header.style.background = "radial-gradient(circle, yellow, orangered)";
     if (main) main.style.backgroundColor = "rgb(49, 48, 48)";
     snackcard.forEach(card => {
       card.style.backgroundColor = "black";
       card.style.color = "white";
     });
-       if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
-  } else {
-    body.style.backgroundColor = "#fffaf3";
-    body.style.color = "#333";
-    if (footer) footer.style.backgroundColor = "";
-    if (header) header.style.background = "";
-    if (main) main.style.backgroundColor = "";
-    snackcard.forEach(card => {
-      card.style.backgroundColor = "";
-      card.style.color = "";
-    });
-    if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
+    if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
   }
 }
     

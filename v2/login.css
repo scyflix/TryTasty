@@ -14,7 +14,9 @@
       justify-content: center;
       align-items: center;
       z-index: 1000;
+      color: black;
     }
+  
 
     #popup-content {
       background: white;
@@ -30,13 +32,25 @@
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
     }
-body {
+  
+    main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(49, 48, 48);
+    border-radius: 8px;
+    box-shadow: 0 2px 30px 2px rgb(230, 229, 229);
+  }
+  
+  body {
     font-family: arial, sans-serif;
-    background-color: #fffaf3;
-    color: #333;
+    background-color: gray;
+    color: white;
     line-height: 1.6;
     padding: 10px;
   }
+
+
   input {
      max-width: 400px;
        height: 25px;
@@ -67,13 +81,17 @@ form{
   text-align: center;
   margin: auto;
   padding: 20px;
-  background-color: #fffaf3;
+  background-color: gray;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 7px 30px orange;
+  box-shadow: 4px 7px 30px rgb(125, 125, 125);
+}
+form a {
+  color: yellow;
+  text-decoration: underline;
 }
 #login-form {
   justify-content: center;
@@ -93,16 +111,18 @@ label{
 
 
   footer {
-    text-align: center;
+   text-align: center;
     margin-top: 30px;
-    color: black;
-    background-color: white;
+    color: whitesmoke;
+    box-shadow: 0 0 20px 2px rgb(190, 190, 190);
+    background-color: rgb(0, 0, 0);
     border-radius: 15px;
-    height: 20vh;
-    max-width: 95vw;
+    height: auto;
+    width: auto;
+    bottom: 0;
   }
     .social-icons a {
-  color: black;
+  color: white;
   font-size: 28px;
   margin: 0 12px;
   text-decoration: none;
@@ -122,16 +142,18 @@ label{
 }
   header {
     text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #ffd9a0;
+    margin-bottom: 10px;
+    padding: 10px 0 0 10px;
+    background: radial-gradient(circle, yellow, orangered);
     border-radius: 8px;
         display: flex;
   flex-direction: column;
-     max-height: 70px;
+  height: 65px;
+     max-height: 75px;
     justify-content: space-evenly;
     position: sticky;
     top: 0;
+  
   }
 
   nav {
@@ -192,12 +214,5 @@ box-shadow: 0px 6px 10px black;
 
     a {
       text-decoration: none;
+      color: orange;
     }
-    main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: beige;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
