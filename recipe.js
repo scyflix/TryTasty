@@ -8,6 +8,10 @@ window.onload = function() {
     }, 500); // Delay to allow fade-out effect
   } 
 }
+const sidebar = document.getElementById("sidebar");
+function toggleSidebar() {
+  sidebar.classList.toggle("show");
+}
   //dark mode
   function darkMode() {
     const darkModeBtn = document.getElementById("dark-mode");

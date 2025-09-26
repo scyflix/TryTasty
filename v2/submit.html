@@ -17,8 +17,20 @@
     </head>
     <body>
 
-       <header>
-  <nav class="page-nav page">
+      
+<header>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    <nav class="page-nav" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+      <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
     <a href="../index.html">
       <i class='bx bx-home' style="color: black; font-size: 24px;"></i>
       <span style="color: black; text-decoration: none;">Home</span>
@@ -28,9 +40,9 @@
         <i class='bx bx-bot' style="color: black; font-size: 24px;"></i>
         <span style="color: black; text-decoration: none;">Bot</span>
       </a> 
-     <a href="submit.html">
-        <i class='bx bx-upload' style="color: black; font-size: 24px;"></i>
-        <span style="color: black; text-decoration: none;">Share</span>
+      <a href="submit.html">
+          <i class='bx bx-upload' style="color: black; font-size: 24px;"></i>
+          <span style="color: black; text-decoration: none;">Share</span>
       </a> 
 <a href="videos.html">
   <i class="bx bx-video" style="color: black; font-size: 24px;"></i>
@@ -41,6 +53,13 @@
   <i class="bx bx-log-in" style="color: black; font-size: 24px;"></i>
   <span style="color: black; text-decoration: none;">Login</span>
 </a>
+<!--
+    <a href="pinterest-45515.html">
+      <i class="bx bx-pinterest" style="color: black; font-size: 24px;"></i>
+      <span style="color: black; text-decoration: none;">Login</span>
+    </a>
+-->
+
   </nav>
 </header>
         <main>
@@ -124,7 +143,7 @@
   const analytics = getAnalytics(app);
 </script>
 <script type="module" src="main.js"></script>
-
+<script src="../recipe.js"></script>
     </body>
 
 </html>

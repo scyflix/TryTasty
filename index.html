@@ -132,7 +132,17 @@
 
 
 <header>
-    <nav class="page-nav">
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    <nav class="page-nav" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
       <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
     <a href="index.html">
       <i class='bx bx-home' style="color: black; font-size: 24px;"></i>
@@ -662,8 +672,6 @@
         </div>
     </section>
     </main>
-        <script src="recipe.js" defer></script>
-    </body>
     <footer>
         <h5>Follow us</h5>
         <div class="social-icons">
@@ -685,5 +693,8 @@
 <a href="v2/submit.html">Submit a recipe</a>
 <p> &copy;2025 Scybud. All Rights reserved. </p>
     </footer>
+        <script src="recipe.js" defer></script>
+       
+    </body>
 </html>
 <!--Alhamdulillahi Rabbil Ahlamin-->
