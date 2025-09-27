@@ -21,8 +21,8 @@
     padding: 10px 0 0 10px;
     background: radial-gradient(circle, yellow, orangered);
     border-radius: 8px;
-        display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   height: 60px;
      max-height: 75px;
     justify-content: space-evenly;
@@ -82,17 +82,15 @@
  @media (max-width: 600px) {
   header {
     display: flex;
-    align-items: center;
     height: 50px;
     background: radial-gradient(circle,  orange, yellow);
     padding: 0 10px;
   }
-
   /* Menu Icon */
   .menu-icon {
     width: 25px;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 10px 10px 10px 0;
   }
   .menu-icon span {
     background-color: black;
@@ -101,7 +99,7 @@
     display: block;
     margin: 5px 0;
     border-radius: 10px;
-    transition: 0.4s;
+    transition: 0.6s;
   }
 
   /* Sidebar */
@@ -111,10 +109,11 @@
     left: -80vw; /* hidden by default */
     width: 80vw;
     height: 90vh;
-    background-color: rgb(104, 104, 103);
+    background-color: rgb(68, 68, 66);
     display: flex;
     flex-direction: column;
     transition: left 0.4s ease;
+    border-radius: 10px;
   }
   #sidebar.show {
     left: 0; /* slide in */
@@ -126,11 +125,11 @@
     align-items: center;
     font-size: 16px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
   }
   .page-nav a:hover {
     transform: scale(1.05);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(218, 0, 0, 0);
   }
 
   /* Dark Mode button */

@@ -132,16 +132,17 @@
 
 
 <header>
-    <div class="menu-icon" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
+    <div style="display: inline-flex; margin-left: 0;" id="menuIconContainer">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> 
+        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: orangered;">TryTasty</h1>
+    </div>
     <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <h2 style="color: red;">X</h2>
         </div>
       <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
     <a href="index.html">
