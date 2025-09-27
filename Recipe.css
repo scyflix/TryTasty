@@ -14,23 +14,83 @@
     line-height: 1.6;
     padding: 10px;
   }
-
-  header {
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 10px 0 0 10px;
-    background: radial-gradient(circle, yellow, orangered);
-    border-radius: 8px;
+ header {
     display: flex;
-    flex-direction: column;
-  height: 60px;
-     max-height: 75px;
-    justify-content: space-evenly;
+    height: 50px;
+    background: radial-gradient(circle,  orange, yellow);
+    padding: 0 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  height: 60px;
+     max-height: 75px;
+  }
+  /* Menu Icon */
+  .menu-icon {
+    width: 25px;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+  }
+  .menu-icon span {
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin: 5px 5px;
+    border-radius: 10px;
+    transition: 0.6s;
   }
 
+  /* Sidebar */
+  #sidebar {
+    position: fixed;
+    top: 10px;
+    left: -80vw; /* hidden by default */
+    width: 30vw;
+    height: 95vh;
+    background-color: rgb(68, 68, 66);
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s ease;
+    border-radius: 10px;
+  }
+  #sidebar.show {
+    left: 0; /* slide in */
+  }
+
+  /* Sidebar links */
+  .page-nav a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  .page-nav a:hover {
+    transform: scale(1.05);
+    background: rgba(218, 0, 0, 0);
+  }
+
+  /* Dark Mode button */
+  #dark-mode {
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #ffbe5b;
+    color: black;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, background 0.3s;
+  }
+  #dark-mode:hover {
+    background: linear-gradient(90deg, orange, yellow);
+    transform: scale(1.1);
+  }
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -87,6 +147,13 @@
     height: 50px;
     background: radial-gradient(circle,  orange, yellow);
     padding: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  height: 60px;
+     max-height: 75px;
   }
   /* Menu Icon */
   .menu-icon {
@@ -276,13 +343,13 @@ form{
   text-align: center;
   margin: auto;
   padding: 20px;
-  background-color: #fffaf3;
+  background-color: #545454;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 10px  #333;
+  box-shadow: 1px 1px 10px  #969696;
 }
 
 label{

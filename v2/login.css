@@ -39,7 +39,7 @@
     padding: 20px;
     background-color: rgb(49, 48, 48);
     border-radius: 8px;
-    box-shadow: 0 2px 30px 2px rgb(230, 229, 229);
+    box-shadow: 0 2px 30px 2px rgb(48, 48, 48);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,13 +84,13 @@ form{
   text-align: center;
   margin: auto;
   padding: 20px;
-  background-color: gray;
+  background-color: rgb(74, 74, 74);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 4px 7px 30px rgb(125, 125, 125);
+  box-shadow: 4px 7px 30px rgb(98, 98, 98);
 }
 form a {
   color: yellow;
