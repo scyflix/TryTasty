@@ -46,9 +46,9 @@
   /* Sidebar */
   #sidebar {
     position: fixed;
-    top: 10px;
-    left: -80vw; /* hidden by default */
-    width: 30vw;
+    top: 80px;
+    left: 0; /* hidden by default */
+    width: 20vw;
     height: 95vh;
     background-color: rgb(68, 68, 66);
     display: flex;
@@ -57,7 +57,7 @@
     border-radius: 10px;
   }
   #sidebar.show {
-    left: 0; /* slide in */
+    left: -300px; /* slide in */
   }
 
   /* Sidebar links */
@@ -141,7 +141,7 @@
   }
 
   
- @media (max-width: 600px) {
+ @media (max-width: 800px) {
   header {
     display: flex;
     height: 50px;
@@ -174,9 +174,9 @@
   /* Sidebar */
   #sidebar {
     position: fixed;
-    top: 10px;
+    top: 20px;
     left: -80vw; /* hidden by default */
-    width: 80vw;
+    width: 60vw;
     height: 90vh;
     background-color: rgb(68, 68, 66);
     display: flex;
