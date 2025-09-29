@@ -58,6 +58,7 @@ function toggleSidebar() {
       if (localStorage.getItem("darkMode") === "true") {
         darkMode();
       }
+      
   
     //check if user has already seen the popup
     const popup = this.document.getElementById("popup");
@@ -84,8 +85,17 @@ function toggleSidebar() {
                     page.style.display = 'block';
                   } 
               };
-  
-       
+
+              // Check if a recipe key is passed in the URL
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const recipeKey = params.get("recipe");
+    if (recipeKey) {
+        // call showPage to display the saved recipe
+        showPage(recipeKey);
+    }
+});
+
 
             //To show the recipe bot form
             window.findRecipe =

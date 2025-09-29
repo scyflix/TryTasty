@@ -2,7 +2,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(49, 48, 48);
+    background-color: rgb(65, 65, 65);
     border-radius: 8px;
     box-shadow: 0 2px 30px 2px rgb(230, 229, 229);
   }
@@ -170,6 +170,17 @@
     border-radius: 10px;
     transition: 0.6s;
   }
+.fav-link {
+  display: block;
+  margin: 10px 0;
+  font-size: 24px;
+  color: #f1c206;
+  text-decoration: none;
+}
+.fav-link:hover {
+  text-decoration: underline;
+  color: #ff6600;
+}
 
   /* Sidebar */
   #sidebar {

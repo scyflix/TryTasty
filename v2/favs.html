@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TryTasty | Favorites</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
+         and easy-to-make snacks. Explore flavors, try something new, and cook with confidence.">
+         <meta property="og:type" content="website">
+         <meta content="TryTasty" property="og:title">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../Recipe.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    <body>
+        <header>
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    <nav class="page-nav" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+        <h2>X</h2>
+        </div>
+      <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
+    <a href="../index.html">
+      <i class='bx bx-home' style="color: white; font-size: 24px;"></i>
+      <span style="color: white; text-decoration: none;">Home</span>
+    </a>
+    
+      <a href="#" onclick="showPage('recipeBotForm')">
+        <i class='bx bx-bot' style="color: white; font-size: 24px;"></i>
+        <span style="color: white; text-decoration: none;">Bot</span>
+      </a> 
+            <a href="v2/favs.html">
+  <i class="bx bx-heart" style="color: white; font-size: 24px;"></i>
+  <span style="color: white; text-decoration: none;">Favs</span>
+</a>
+      <a href="submit.html">
+          <i class='bx bx-upload' style="color: white; font-size: 24px;"></i>
+          <span style="color: white; text-decoration: none;">Share</span>
+      </a> 
+<a href="videos.html">
+  <i class="bx bx-video" style="color: white; font-size: 24px;"></i>
+  <span style="color: white; text-decoration: none;">Videos</span>
+</a>
+
+<a href="login.html">
+  <i class="bx bx-log-in" style="color: white; font-size: 24px;"></i>
+  <span style="color: white; text-decoration: none;">Login</span>
+</a>
+</nav>
+        </header>
+        <main>
+                  <h1 style="text-align: center; border-bottom: 3px solid orangered; color: orangered;">Favorites</h1>
+            <section id="favs">
+
+            </section>
+           <button type="button" id="clearFavs">Clear Favs</button> 
+        </main>
+        
+        <script>
+            const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
+            const favsection = document.getElementById("favs");
+            const clearFavs = document.getElementById("clearFavs");
+            if(favrecipes.length === 0) {
+                favsection.innerHTML = "<h2>You dont have a favorite yet😓</h2>";
+                clearFavs.style.display = "none";
+            }else {
+                clearFavs.style.display = "block";
+                 favrecipes.forEach(recipe => {
+        const a = document.createElement("a");
+        a.href = `../index.html?recipe=${recipe.key}`; // link stays on page
+        a.textContent = recipe.name; // recipe name
+        a.className = "fav-link"; // optional CSS class
+        a.onclick = () => showPage(recipe.key); // show the recipe
+        favsection.appendChild(a);
+                });
+            }
+            if(clearFavs){
+                clearFavs.addEventListener("click", () =>{
+                    if (confirm("Are you sure? All saved favorites will be cleared.")) {
+                        localStorage.removeItem("favs");
+                         favsection.innerHTML = "<h2>You dont have a favorite yet😓</h2>";
+                    }
+                });
+            }
+        </script>
+        
+        <script src="../recipe.js"></script>
+    </body>
+</html>
