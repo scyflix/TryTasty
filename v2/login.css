@@ -56,7 +56,7 @@
 
   input {
      max-width: 400px;
-       height: 25px;
+       height: 35px;
        margin: 0 4px 0 4px;
     width: 75vw;
 border: black solid 2px;
@@ -72,9 +72,8 @@ input:focus {
   border-color: red;
   outline: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 35px;
-  width: 80vw;
-    transition: all 0.5s ease;
+  height: 45px;
+    transition: height 0.7s ease;
 }
 
 form{
@@ -84,7 +83,6 @@ form{
   text-align: center;
   margin: auto;
   padding: 20px;
-  background-color: rgb(74, 74, 74);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,9 +135,11 @@ label{
 #popup button, button {
   background-color: #fe4401;
   color: white;
-   border-radius: 5px;
+  font-size: 20px;
+   border-radius: 10px;
   width: 150px;
-  height: 25px;
+  height: auto;
+  padding: 5px;
   margin: 10px 75px 0;
   transition: transform 0.5s ease, background-color 0.5s ease;
 }
@@ -179,7 +179,11 @@ color: black;
     width: 150px;
     height: 35px;
     cursor: pointer;
-box-shadow: 0px 6px 10px black;
+    box-shadow: 0px 6px 10px black;
+  }
+  button:focus {
+    rotate: 360deg;
+    transition: 0.4s;
   }
 
     .page-nav {
@@ -190,6 +194,43 @@ box-shadow: 0px 6px 10px black;
       span {
     color: black;
     font-size: 24px;
+  }
+   /* Menu Icon */
+  .menu-icon {
+    width: 25px;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+  }
+  .menu-icon span {
+    background-color: black;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin: 5px 5px;
+    border-radius: 10px;
+    transition: 0.6s;
+  }
+  #menuIconContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Sidebar */
+  #sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0; /* hidden by default */
+    width: 20vw;
+    height: 95vh;
+    background-color: rgb(68, 68, 66);
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s ease;
+    border-radius: 30px;
+  }
+  #sidebar.show {
+    left: -300px; /* slide in */
+    border-radius: 30px;
   }
    
    @media (max-width: 600px) {
@@ -232,7 +273,10 @@ box-shadow: 0px 6px 10px black;
   #sidebar.show {
     left: 0; /* slide in */
   }
-
+ #menuIconContainer {
+    display: flex;
+    align-items: center;
+  }
   /* Sidebar links */
   .page-nav a {
     display: flex;

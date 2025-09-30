@@ -70,6 +70,10 @@ main {
   transition: all 0.9s ease;
   animation: pulse 5s infinite;
 }
+  button:focus {
+    rotate: 360deg;
+    transition: 0.4s;
+  }
 a {
   text-decoration: none;
 }

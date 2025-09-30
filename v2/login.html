@@ -36,51 +36,45 @@
 
       
 <header>
-    <div class="menu-icon" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
+     <div style="display: inline-flex; margin-left: 0;" id="menuIconContainer">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> 
+        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a;">TryTasty</h1>
+    </div>
     <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
+             <i class='bx bx-x' style="color: white; font-size: 44px;"></i>
         </div>
       <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
     <a href="../index.html">
-      <i class='bx bx-home' style="color: white; font-size: 24px;"></i>
+      <i class='bx bx-home' style="color: #ffcc00; font-size: 24px;"></i>
       <span style="color: white; text-decoration: none;">Home</span>
     </a>
     
       <a href="#" onclick="showPage('recipeBotForm')">
-        <i class='bx bx-bot' style="color: white; font-size: 24px;"></i>
+        <i class='bx bx-bot' style="color: #ffcc00; font-size: 24px;"></i>
         <span style="color: white; text-decoration: none;">Bot</span>
       </a> 
-            <a href="favs.html">
-  <i class="bx bx-heart" style="color: white; font-size: 24px;"></i>
+      <a href="favs.html">
+  <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px;"></i>
   <span style="color: white; text-decoration: none;">Favs</span>
 </a>
-      <a href="submit.html">
-          <i class='bx bx-upload' style="color: white; font-size: 24px;"></i>
-          <span style="color: white; text-decoration: none;">Share</span>
-      </a> 
-<a href="videos.html">
-  <i class="bx bx-video" style="color: white; font-size: 24px;"></i>
-  <span style="color: white; text-decoration: none;">Videos</span>
-</a>
+      <a href="videos.html">
+          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px;"></i>
+          <span style="color: white; text-decoration: none;">Videos</span>
+        </a>
+        <a href="submit.html">
+            <i class='bx bx-upload' style="color: #ffcc00; font-size: 24px;"></i>
+            <span style="color: white; text-decoration: none;">Share</span>
+        </a> 
 
 <a href="login.html">
-  <i class="bx bx-log-in" style="color: white; font-size: 24px;"></i>
+  <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px;"></i>
   <span style="color: white; text-decoration: none;">Login</span>
 </a>
-<!--
-    <a href="pinterest-45515.html">
-      <i class="bx bx-pinterest" style="color: black; font-size: 24px;"></i>
-      <span style="color: black; text-decoration: none;">Login</span>
-    </a>
--->
-
   </nav>
 </header>
          <div id="welcomeText" style="margin-top: 10px; font-weight: bold;"></div>
