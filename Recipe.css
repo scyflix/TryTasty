@@ -247,6 +247,17 @@
     background: linear-gradient(90deg, orange, yellow);
     transform: scale(1.1);
   }
+   .page-nav a {
+      padding: 0 60px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      color: black;
+      border: 2px solid yellow;
+      border-radius: 10px;
+      width: 80px;
+    }
 }
 
   h3 {
