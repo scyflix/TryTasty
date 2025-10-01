@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       if (logoutBtn) logoutBtn.style.display = "none";
       if (popup) popup.style.display = "block";
-      if (nonUserMessage) nonUserMessage.style.textDecoration = "underline";
+      if (nonUserMessage) nonUserMessage.style.display = "block";
       if (recipeForm) recipeForm.style.display = "none";
       if (welcomeText) welcomeText.innerText = ""; // clear greeting
        if (loginInputForm) loginInputForm.style.display = "block";

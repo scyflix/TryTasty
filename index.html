@@ -15,8 +15,6 @@
 <link rel="icon" type="image/png" sizes="16x16" href="v2/favicon-16x16.png">
 <link rel="manifest" href="v2/site.webmanifest">
  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- <!--Pintrest embed-->
-<meta name="p:domain_verify" content="455151dc0041f9a94d57768bc4065705"/>
 <style>
     #preloader {
   position: fixed;
@@ -95,25 +93,10 @@
       width: 100%;
     }
     .snackImage:hover {
-        transform: scale(1.05);
+        transform: scale(1.04);
         box-shadow: 0 0 10px yellow;
     }
   }
-  #dark-mode:hover {
-    background: linear-gradient(90deg, orange, yellow);
-    color: black;
-    transform: scale(1.15);
-  }
-#dark-mode {
-    border-radius: 5px;
-    color: black;
-    background-color: #ffbe5b;
-    font-size: 15px;
-    width: 50px; 
-    height: 40px; 
-    display: flex; 
-    margin-bottom: 5px;
-}
 </style>
 </head>
 <body> 
@@ -138,7 +121,9 @@
             <span></span>
             <span></span>
         </div> 
-        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a;">TryTasty</h1>
+        <a href="https://trytasty.de/">
+            <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a;">TryTasty</h1>
+        </a>
     </div>
     <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
@@ -184,9 +169,9 @@
     <section>
         <nav class="page">
             <!--Link all the recipe pages here-->
-            <a href="#" data-keywords="egg,eggs,noodles,Lettuce,chicken" onclick="showPage('instantRamenTacos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif" title="Click to see image" alt="Instant Ramen Tacos" fetchpriority="high">Instant Ramen Tacos</a>
-                <a href="#" data-keywords="plantains,plantain,tomatoe" onclick="showPage('plantainNachos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif" title="Click to see details" alt="Crispy Plantain Nachos" fetchpriority="high">Plantain Nachos</a>
-                <a href="#" data-keywords="chili,peanut butter,popcorn" onclick="showPage('spicyPeanutButterPopcorn')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif" title="Click to see details" alt="Spicy Peanut Butter Popcorn" fetchpriority="high">Spicy Peanut Butter Popcorn</a>
+            <a href="#" data-keywords="egg,eggs,noodles,Lettuce,chicken" onclick="showPage('instantRamenTacos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif" title="Click to see image" alt="Instant Ramen Tacos">Instant Ramen Tacos</a>
+                <a href="#" data-keywords="plantains,plantain,tomatoe" onclick="showPage('plantainNachos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif" title="Click to see details" alt="Crispy Plantain Nachos">Plantain Nachos</a>
+                <a href="#" data-keywords="chili,peanut butter,popcorn" onclick="showPage('spicyPeanutButterPopcorn')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif" title="Click to see details" alt="Spicy Peanut Butter Popcorn">Spicy Peanut Butter Popcorn</a>
                 <a href="#" data-keywords="eggs,egg,milk,bread" onclick="showPage('savoryFrenchToastSticks')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/IMG_20250710_092333_1_glg6ik.avif" title="Click to see details" alt= "French Toast Sticks">Savory French Toast Sticks </a>
                 <a href="#" data-keywords="plantain,nachos,tomatoe" onclick="showPage('spicyCorn&CoconutBites')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif" title="Click to see image" alt="Spicy Corn and Coconut Bites">Spicy Corn & Coconut Bites</a>
                 <a href="#" data-keywords="plantain,cinnamon" onclick="showPage('plantainCinnamonRolls')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif" title="Click to see image" alt="Plantain Cinnamon Rolls">Plantain Cinnamon Rolls</a>
