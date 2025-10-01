@@ -52,18 +52,18 @@
   /* Sidebar */
   #sidebar {
     position: fixed;
-    top: 80px;
-    left: 0; /* hidden by default */
-    width: 20vw;
-    height: 95vh;
+    top: 20px;
+    left: -80vw; /* hidden by default */
+    width: 30vw;
+    height: 90vh;
     background-color: rgb(68, 68, 66);
     display: flex;
     flex-direction: column;
-    transition: left 0.4s ease;
-    border-radius: 30px;
+    transition: left 0.6s ease;
+    border-radius: 10px;
   }
   #sidebar.show {
-    left: -300px; /* slide in */
+    left: -10px; /* slide in */
     border-radius: 30px;
   }
 
@@ -71,19 +71,6 @@
     color: black;
     font-size: 24px;
   }
-  /* Sidebar links */
-  .page-nav a {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
-  .page-nav a:hover {
-    transform: scale(1.05);
-    background: rgba(218, 0, 0, 0);
-  }
-  
   /* Dark Mode button */
   #dark-mode {
     margin: 10px auto;
@@ -110,10 +97,7 @@
     margin-bottom: 30px;
     list-style: none;
     font-weight: bold;
-    padding: 0;
       flex-direction: row;
-      align-items: center;
-      font-display: swap;
   }
   #suggestions {
         display: flex;
@@ -293,24 +277,25 @@
   }
   
     .page-nav {
-      gap: 20px;
+      gap: 10px;
       align-items: center;
-      text-decoration: none;
     }
     .page-nav a {
+      padding: 0 60px;
       text-align: center;
       display: flex;
-        flex: 0 0 auto;
-      flex-direction: column;
+      flex-direction: row;
       text-decoration: none;
       color: black;
-      font-family: arial, sans-serif;
+      border: 2px solid yellow;
+      border-radius: 10px;
+      width: 100px;
     }
     .page-nav a:hover {
       text-decoration: none;
-      transition: transform 0.9s ease, border 0.2s;
+      transition: transform 0.4s ease, border 0.2s;
       border: 2px solid orange;
-      transform: scale(1.3);
+      transform: scale(1.05);
       border-radius: 10px;
     }
 
