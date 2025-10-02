@@ -1,19 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: beige;
-    color: #333;
-    text-align: center;
-     animation: colorChange 5s infinite;
-    transition: all 0.5s ease;
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  color: #333;
+  text-align: center;
+  animation: colorChange 5s infinite;
+  transition: all 0.5s ease;
 }
 @keyframes colorChange {
-    0% { background-color: yellow;}
-    50% { background-color: orange;}
-    100% { background-color: orangered;}
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: orangered;
+  }
 }
 h1 {
-    font-weight: bolder;
-    padding-top: 20px;
+  font-weight: bolder;
+  padding-top: 20px;
 }
 #logo {
   width: 100px;
@@ -27,39 +33,47 @@ h1 {
   height: 200px;
 }
 p {
-    font-size: larger;
-    font-weight: light;
-    padding: 20px 5px 10px 5px;
+  font-size: larger;
+  font-weight: light;
+  padding: 20px 5px 10px 5px;
 }
 * {
- 
   margin: 0;
   padding: 0;
 }
 main {
-    border-radius: 15px;
-    margin: 80px auto;
-    max-width: 600px;
-    max-height: 600px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: beige;
-    animation: pulse 5s infinite;
+  border-radius: 15px;
+  margin: 80px auto;
+  max-width: 600px;
+  max-height: 600px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: beige;
+  animation: pulse 5s infinite;
 }
 @keyframes pulse {
-  0% { transform: scale(0.9); opacity: 1; }
-  50% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(0.9); opacity: 1; }
-}
- /* Responsive Design */
-  @media (max-width: 100%) {
-    main {
-      width: 99%;
-    }
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
   }
-  button{
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+}
+/* Responsive Design */
+@media (max-width: 100%) {
+  main {
+    width: 99%;
+  }
+}
+button {
   color: white;
   background-color: orangered;
   border-radius: 5px;
@@ -70,26 +84,26 @@ main {
   transition: all 0.9s ease;
   animation: pulse 5s infinite;
 }
-  button:focus {
-    rotate: 360deg;
-    transition: 0.4s;
-  }
+button:focus {
+  rotate: 360deg;
+  transition: 0.4s;
+}
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
-  button:hover{
-    color: black;
-    font-size: larger;
-    background-color: orange;
-    border-radius: 15px;
-    width: 150px;
-    height: 35px;
-    animation: none;
-  }
-  .social-icons a {
+button:hover {
+  color: black;
+  font-size: larger;
+  background-color: orange;
+  border-radius: 15px;
+  width: 150px;
+  height: 35px;
+  animation: none;
+}
+.social-icons a {
   color: black;
   font-size: 28px;
   margin: 0 12px;
@@ -97,15 +111,15 @@ a:hover {
   transition: color 0.3s;
 }
 .social-icons a:hover {
-  color: orangered; 
+  color: orangered;
 }
- footer {
-    text-align: center;
-    color: black;
-    background-color: white;
-    border-radius: 15px;
-    width: 97%;
-    height: auto;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+footer {
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  width: 97%;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

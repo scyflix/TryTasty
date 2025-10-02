@@ -1,141 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>TryTasty | Login</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
-         and easy-to-make snacks. Explore flavors, try something new, and cook with confidence.">
-         <meta property="og:type" content="website">
-         <meta content="TryTasty" property="og:title">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="login.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <title>TryTasty | Login</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
+         and easy-to-make snacks. Explore flavors, try something new, and cook with confidence."
+    />
+    <meta property="og:type" content="website" />
+    <meta content="TryTasty" property="og:title" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 
-    </head>
-       <script>
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
-</script>
-
-<body>
-      <div id="preloader">
-      </div>
-      <!-- Popup HTML -->
-      <div id="popup">
+  <body>
+    <div id="preloader"></div>
+    <!-- Popup HTML -->
+    <div id="popup">
       <div id="popup-content">
-      <h2>Terms and Condition</h2>
-      <p style="font-size: large;">By continuing, you agree that you have read  our <a href="privacyGerman.html">Privacy Policy</a> and understand & that you agree to our Conditons for Recipe submission in section 6 of the <a href="privacyGerman.html">Privacy Policy</a> page. </p>
-      <button onclick="closePopup()">Continue</button>
+        <h2>Terms and Condition</h2>
+        <p style="font-size: large">
+          By continuing, you agree that you have read our
+          <a href="privacyGerman.html">Privacy Policy</a> and understand & that
+          you agree to our Conditons for Recipe submission in section 6 of the
+          <a href="privacyGerman.html">Privacy Policy</a> page.
+        </p>
+        <button onclick="closePopup()">Continue</button>
       </div>
-      </div>
-
-      
-<header>
-     <div style="display: inline-flex; margin-left: 0;" id="menuIconContainer">
-        <div class="menu-icon" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div> 
-        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a;">TryTasty</h1>
     </div>
-    <nav class="page-nav" id="sidebar">
+
+    <header>
+      <div style="display: inline-flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon" onclick="toggleSidebar()">
-             <i class='bx bx-x' style="color: white; font-size: 44px;"></i>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
-    <a href="../index.html">
-      <i class='bx bx-home' style="color: #ffcc00; font-size: 24px;"></i>
-      <span style="color: white; text-decoration: none;">Home</span>
-    </a>
-    
-      <a href="#" onclick="showPage('recipeBotForm')">
-        <i class='bx bx-bot' style="color: #ffcc00; font-size: 24px;"></i>
-        <span style="color: white; text-decoration: none;">Bot</span>
-      </a> 
-      <a href="favs.html">
-  <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px;"></i>
-  <span style="color: white; text-decoration: none;">Favs</span>
-</a>
-      <a href="videos.html">
-          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px;"></i>
-          <span style="color: white; text-decoration: none;">Videos</span>
+        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a">
+          TryTasty
+        </h1>
+      </div>
+      <nav class="page-nav" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+          <i class="bx bx-x" style="color: white; font-size: 44px"></i>
+        </div>
+        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+          Light Mode
+        </button>
+        <a href="../index.html">
+          <i class="bx bx-home" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Home</span>
+        </a>
+
+        <a href="#" onclick="showPage('recipeBotForm')">
+          <i class="bx bx-bot" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Bot</span>
+        </a>
+        <a href="favs.html">
+          <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Favs</span>
+        </a>
+        <a href="videos.html">
+          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Videos</span>
         </a>
         <a href="submit.html">
-            <i class='bx bx-upload' style="color: #ffcc00; font-size: 24px;"></i>
-            <span style="color: white; text-decoration: none;">Share</span>
-        </a> 
+          <i class="bx bx-upload" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Share</span>
+        </a>
 
-<a href="login.html">
-  <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px;"></i>
-  <span style="color: white; text-decoration: none;">Login</span>
-</a>
-  </nav>
-</header>
-         <div id="welcomeText" style="margin-top: 10px; font-weight: bold;"></div>
-        <main>
-              <div id="login-form">
-       <form>
-        <div id="loginInputForm">
-          <h3>Login To TryTasty</h3>
-          <label for="email">Email:</label>
-          <input id="email" type="email" placeholder="examble@gmail.com" autocomplete="email">
-          <label for="password">Password:</label>
-          <input id="password" type="password" placeholder="Enter Your Password" autocomplete="current-password">
-          <button id="loginBtn" type="button" onclick="login(event)">Login</button>
+        <a href="login.html">
+          <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Login</span>
+        </a>
+      </nav>
+    </header>
+    <div id="welcomeText" style="margin-top: 10px; font-weight: bold"></div>
+    <main>
+      <div id="login-form">
+        <form>
+          <div id="loginInputForm">
+            <h3>Login To TryTasty</h3>
+            <label for="email">Email:</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="examble@gmail.com"
+              autocomplete="email"
+            />
+            <label for="password">Password:</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter Your Password"
+              autocomplete="current-password"
+            />
+            <button id="loginBtn" type="button" onclick="login(event)">
+              Login
+            </button>
           </div>
-        <section id="logoutBtn" style="display: none;">
-          <h3>Logout Of TryTasty</h3>
-          <button id="logoutBtn" onclick="logout()" >Logout</button>
-        </section>
-        <p>New user? <a href="signup.html">Signup Here</a></p>
-      </form>
-    </div>
-  </main>
-  <footer>
-  <h5>Follow Creator, learn as well!</h5>
-  <div class="social-icons">
-  <a href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="bx bxl-tiktok"></i></a>
-  <a href="https://www.facebook.com/profile.php?id=61566637364542" target="_blank" title="Facebook"><i class="bx bxl-facebook"></i></a>
-  <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
-  <a href="https://www.instagram.com/scyflix5855/" target="_blank" title="Instagram"><i class="bx bxl-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-  <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
-  </div>
-  <hr>
-  <a href="privacyGerman.html">Impressum & Datenschutz</a> <br>
-  <a href="submit.html">Submit a recipe</a>
-  <p> &copy;2025 Scybud. All Rights reserved. </p>
-  </footer>
-       <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+          <section id="logoutBtn" style="display: none">
+            <h3>Logout Of TryTasty</h3>
+            <button id="logoutBtn" onclick="logout()">Logout</button>
+          </section>
+          <p>New user? <a href="signup.html">Signup Here</a></p>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <h5>Follow Creator, learn as well!</h5>
+      <div class="social-icons">
+        <a
+          href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc"
+          target="_blank"
+          title="TikTok"
+          ><i class="bx bxl-tiktok"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61566637364542"
+          target="_blank"
+          title="Facebook"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"
+          ><i class="bx bxl-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/scyflix5855/"
+          target="_blank"
+          title="Instagram"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg"
+          target="_blank"
+          title="YouTube"
+          ><i class="bx bxl-youtube"></i
+        ></a>
+      </div>
+      <hr />
+      <a href="privacyGerman.html">Impressum & Datenschutz</a> <br />
+      <a href="submit.html">Submit a recipe</a>
+      <p>&copy;2025 Scybud. All Rights reserved.</p>
+    </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
-    authDomain: "trytasty-64537.firebaseapp.com",
-    projectId: "trytasty-64537",
-   storageBucket: "trytasty-64537.appspot.com",
-    messagingSenderId: "379426398000",
-    appId: "1:379426398000:web:49b7236df3218d7306b2f5",
-    measurementId: "G-ZMW8ZTX39M"
-  };
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
+        authDomain: "trytasty-64537.firebaseapp.com",
+        projectId: "trytasty-64537",
+        storageBucket: "trytasty-64537.appspot.com",
+        messagingSenderId: "379426398000",
+        appId: "1:379426398000:web:49b7236df3218d7306b2f5",
+        measurementId: "G-ZMW8ZTX39M",
+      };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-<script type="module" src="main.js"></script>
-<script src="../recipe.js"></script>
-    </body>
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <script type="module" src="main.js"></script>
+    <script src="../recipe.js"></script>
+  </body>
 </html>

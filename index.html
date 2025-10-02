@@ -1,694 +1,1259 @@
 <!--Bismillai Rahmani Rahim-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>TryTasty | Quick & Tasty Snack Recipes</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
-         and easy-to-make snacks.">
-         <meta property="og:type" content="website">
-         <meta content="TryTasty" property="og:title">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="Recipe.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="v2/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="v2/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="v2/favicon-16x16.png">
-<link rel="manifest" href="v2/site.webmanifest">
- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<style>
-    #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:  rgb(255, 204, 142); /* or your background color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
- /* Popup styling */
-    #popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000; 
-      color: black;
-    }
+  <head>
+    <title>TryTasty | Quick & Tasty Snack Recipes</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Discover exciting new recipes with TryTasty — your one-click destination for quick, tasty,
+         and easy-to-make snacks."
+    />
+    <meta property="og:type" content="website" />
+    <meta content="TryTasty" property="og:title" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Recipe.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="v2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="v2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="v2/favicon-16x16.png"
+    />
+    <link rel="manifest" href="v2/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 204, 142); /* or your background color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      /* Popup styling */
+      #popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        color: black;
+      }
 
-    #popup-content {
-      background: beige;
-      padding: 20px;
-      max-width: 400px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 0.3s ease;
-    }
+      #popup-content {
+        background: beige;
+        padding: 20px;
+        max-width: 400px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease;
+      }
 
-    #popup button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      border: none;
-      background-color: orangered;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+      #popup button {
+        margin-top: 15px;
+        padding: 8px 16px;
+        border: none;
+        background-color: orangered;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
       .snackImage {
-    text-align: center;
-    text-decoration: none;
-    color: #f1f1f1;
-    width: 150px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #141414;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-  }
-  
-  .snackImage img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 5px;
-  }
-/* Responsive Design */
-  @media (max-width: 600px) {
-    .snackImage {
-      width: 100%;
-    }
-    .snackImage:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 10px yellow;
-    }
-  }
-</style>
-</head>
-<body> 
-      <div id="preloader">
-       <h1 style="text-align: center; color: orangered; margin: 5px;">TryTasty</h1>
-       <h2 style="color: orangered; text-align: right;">Try The Taste</h2>
-      </div>
-           <!-- Popup HTML -->
-      <div id="popup">
-        <div id="popup-content">
-    <h2>Welcome to TryTasty!</h2>
-    <p><strong>TryTasty</strong> is a fun recipe project made by <strong>Scybud</strong>, a student-led brand that loves to create and share.</p>
-    <p>Here, you'll find simple and creative snack ideas built with code and love.</p>
-    <button onclick="closePopup()">Enter</button>
-  </div>
-</div>
+        text-align: center;
+        text-decoration: none;
+        color: #f1f1f1;
+        width: 150px;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #141414;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+      }
 
-<header>
-    <div style="display: inline-flex; margin-left: 0;" id="menuIconContainer">
-        <div class="menu-icon" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div> 
-        <a href="https://trytasty.de/">
-            <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a;">TryTasty</h1>
-        </a>
+      .snackImage img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-bottom: 5px;
+      }
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .snackImage {
+          width: 100%;
+        }
+        .snackImage:hover {
+          transform: scale(1.04);
+          box-shadow: 0 0 10px yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+      <h1 style="text-align: center; color: orangered; margin: 5px">
+        TryTasty
+      </h1>
+      <h2 style="color: orangered; text-align: right">Try The Taste</h2>
     </div>
-    <nav class="page-nav" id="sidebar">
+    <!-- Popup HTML -->
+    <div id="popup">
+      <div id="popup-content">
+        <h2>Welcome to TryTasty!</h2>
+        <p>
+          <strong>TryTasty</strong> is a fun recipe project made by
+          <strong>Scybud</strong>, a student-led brand that loves to create and
+          share.
+        </p>
+        <p>
+          Here, you'll find simple and creative snack ideas built with code and
+          love.
+        </p>
+        <button onclick="closePopup()">Enter</button>
+      </div>
+    </div>
+
+    <header>
+      <div style="display: inline-flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon" onclick="toggleSidebar()">
-             <i class='bx bx-x' style="color: white; font-size: 45px;"></i>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">Light Mode</button>
-    <a href="index.html">
-      <i class='bx bx-home' style="color: #ffcc00; font-size: 24px;"></i>
-      <span style="color: white; text-decoration: none;">Home</span>
-    </a>
-    
-      <a href="#" onclick="showPage('recipeBotForm')">
-        <i class='bx bx-bot' style="color: #ffcc00; font-size: 24px;"></i>
-        <span style="color: white; text-decoration: none;">Bot</span>
-      </a> 
-      <a href="v2/favs.html">
-  <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px;"></i>
-  <span style="color: white; text-decoration: none;">Favorites</span>
-</a>
-      <a href="v2/videos.html">
-          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px;"></i>
-          <span style="color: white; text-decoration: none;">Watch</span>
+        <a href="https://trytasty.de/">
+          <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a">
+            TryTasty
+          </h1>
+        </a>
+      </div>
+      <nav class="page-nav" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+          <i class="bx bx-x" style="color: white; font-size: 45px"></i>
+        </div>
+        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+          Light Mode
+        </button>
+        <a href="index.html">
+          <i class="bx bx-home" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Home</span>
+        </a>
+
+        <a href="#" onclick="showPage('recipeBotForm')">
+          <i class="bx bx-bot" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Bot</span>
+        </a>
+        <a href="v2/favs.html">
+          <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Favorites</span>
+        </a>
+        <a href="v2/videos.html">
+          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Watch</span>
         </a>
         <a href="v2/submit.html">
-            <i class='bx bx-upload' style="color: #ffcc00; font-size: 24px;"></i>
-            <span style="color: white; text-decoration: none;">Submit</span>
-        </a> 
+          <i class="bx bx-upload" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Submit</span>
+        </a>
 
-<a href="v2/login.html">
-  <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px;"></i>
-  <span style="color: white; text-decoration: none;">Login</span>
-</a>
-<!--
+        <a href="v2/login.html">
+          <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px"></i>
+          <span style="color: white; text-decoration: none">Login</span>
+        </a>
+        <!--
     <a href="pinterest-45515.html">
       <i class="bx bx-pinterest" style="color: black; font-size: 24px;"></i>
       <span style="color: black; text-decoration: none;">Login</span>
     </a>
 -->
-
-  </nav>
-</header>
-<main>
-    <section>
+      </nav>
+    </header>
+    <main>
+      <section>
         <nav class="page">
-            <!--Link all the recipe pages here-->
-            <a href="#" data-keywords="egg,eggs,noodles,Lettuce,chicken" onclick="showPage('instantRamenTacos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif" title="Click to see image" alt="Instant Ramen Tacos">Instant Ramen Tacos</a>
-                <a href="#" data-keywords="plantains,plantain,tomatoe" onclick="showPage('plantainNachos')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif" title="Click to see details" alt="Crispy Plantain Nachos">Plantain Nachos</a>
-                <a href="#" data-keywords="chili,peanut butter,popcorn" onclick="showPage('spicyPeanutButterPopcorn')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif" title="Click to see details" alt="Spicy Peanut Butter Popcorn">Spicy Peanut Butter Popcorn</a>
-                <a href="#" data-keywords="eggs,egg,milk,bread" onclick="showPage('savoryFrenchToastSticks')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/IMG_20250710_092333_1_glg6ik.avif" title="Click to see details" alt= "French Toast Sticks">Savory French Toast Sticks </a>
-                <a href="#" data-keywords="plantain,nachos,tomatoe" onclick="showPage('spicyCorn&CoconutBites')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif" title="Click to see image" alt="Spicy Corn and Coconut Bites">Spicy Corn & Coconut Bites</a>
-                <a href="#" data-keywords="plantain,cinnamon" onclick="showPage('plantainCinnamonRolls')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif" title="Click to see image" alt="Plantain Cinnamon Rolls">Plantain Cinnamon Rolls</a>
-                <a href="#" data-keywords="plantain,egg" onclick="showPage('plantainEggCups')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif" title="Click to see image" alt="Plantain Egg Cups">Plantain Egg Cups</a>
-                <a href="#" data-keywords="lime,coconut,corn" onclick="showPage('chocoChiliBananaChips')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif" title="Click to see image" alt="Choco Chili Banana Chips">Choco Chili Banana Chips</a>
-                <a href="#"  onclick="showPage('nuttyDateEnergyRocks')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Energie_Steine_aus_Datteln_und_N%C3%BCssen_1_lqm8ah.avif" title="Click to see image" alt="Nutty Date Energy Rocks" >Nutty Date Energy Rocks</a>
-                <a href="#"  onclick="showPage('crispyKalePakoras')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Crispy_Kale_Pakoras_with_Mint_Chutney_1_etc34x.avif" title="Click to see image" alt="Crispy Kale Pakoras">Crispy Kale Pakoras</a>
-                <a href="#" data-keywords="yogurt,cinamon,paprika,potatoes,Potato"onclick="showPage('sweetPotatoBitesWithYogurtDip')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416750/ChatGPT-Image-May-3_-2025_-09_25_52-PM-_1__teaw4q.avif" title="Click to see details" alt= "Sweet Potato Bites With Yogurt Dip">Sweet Potato Bites With Yogurt Dip</a>
-                <a href="#" data-keywords="egg,eggs,noodles,cheese" onclick="showPage('cheesyRamenNests')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif" title="Click to see details" alt= "Ramen Nest">Cheesy Ramen Nest</a>
-                <a href="#" data-keywords="chocolate,butter,banana,oats,oat" onclick="showPage('bananaOatEnergyBites')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/ChatGPT-Image-May-3_-2025_-09_33_00-PM-_1__j7giel.avif" title="Click to see details" alt= "Banana Oat Energy Bites" >Banana Oat Energy Bites</a>
-                <a href="#" data-keywords="paprika,cucumber" onclick="showPage('zestyCucumberChips')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/ChatGPT-Image-May-3_-2025_-09_34_44-PM-_1__v8iram.avif" title="Click to see details" alt= "Zesty Cucunber Chips">Zesty Cucumber Chips</a>
-                <a href="#"  onclick="showPage('frozenBananaS`moreBites')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/ChatGPT_Image_May_16_2025_03_44_16_PM_1_kgvh5w.avif" title="Click to see image" alt="Frozen Banana S´More Bites">Frozen Banana S´More Bites</a>
-                <a href="#" data-keywords="bread,egg,eggs,avocado" onclick="showPage('avocadoEggToastCups')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/Avocado_Egg_Toast_Cups_1_uvis8v.avif" title="Click to see image" alt="Avocado Egg Toast Cups">Avocado Egg Toast Cups</a>
-                <a href="#" data-keywords="garlic,paprika,cheakpeas,cheakpea" onclick="showPage('crispyChickpeaSnack')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/Crispy_Chickpea_snack_1_okfeab.avif" title="Click to see image" alt="Crispy Chickpea Snack">Crispy Chickpea Snack</a>
-                <a href="#" data-keywords="pear,peanut butter,peanutbutter,apple" onclick="showPage('peanutButterAppleNachos')"  class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif" title="Click to see image" alt="peanut Butter Apple Nachos">Peanut Butter Apple Nachos</a>
-                <a href="#" data-keywords="basil,mozzarella,tomatoes,tomatoe" onclick="showPage('miniCapreseSkewers')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/Mini_caprese_skewer_1_yiwcrc.avif" title="Click to see image" alt="Mini Caprese Skewers">Mini Caprese Skewers</a>
-                <a href="#" data-keywords="cheese,nachos,cornflakes,mango" onclick="showPage('cheesyMangoPoppers')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/ChatGPT_Image_May_15_2025_03_18_28_PM_1_zeq5x4.avif" title="Click to see image" alt="Cheesy Mango Poppers">Cheesy Mango Poppers</a>
-                <a href="#" data-keywords="garri, cookies,sugar" onclick="showPage('garriCookies')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1756387907/ChatGPT_Image_Aug_28_2025_03_14_34_PM_11zon_l2hj8t.avif" title="Click to see image" alt="Garri cookies in a baking tray">Garri Cookies</a>
-                <a href="#" data-keywords="rice,healthy,yogurt,mint,vegitables" onclick="showPage('riceAndYogurtBowl')" class="snackImage recipe"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif" title="Click to see image" alt="rice with yogurtin a white bowl">Rice & Yogurt Bowl </a>
+          <!--Link all the recipe pages here-->
+          <a
+            href="#"
+            data-keywords="egg,eggs,noodles,Lettuce,chicken"
+            onclick="showPage('instantRamenTacos')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif"
+              title="Click to see image"
+              alt="Instant Ramen Tacos"
+            />Instant Ramen Tacos</a
+          >
+          <a
+            href="#"
+            data-keywords="plantains,plantain,tomatoe"
+            onclick="showPage('plantainNachos')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif"
+              title="Click to see details"
+              alt="Crispy Plantain Nachos"
+            />Plantain Nachos</a
+          >
+          <a
+            href="#"
+            data-keywords="chili,peanut butter,popcorn"
+            onclick="showPage('spicyPeanutButterPopcorn')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif"
+              title="Click to see details"
+              alt="Spicy Peanut Butter Popcorn"
+            />Spicy Peanut Butter Popcorn</a
+          >
+          <a
+            href="#"
+            data-keywords="eggs,egg,milk,bread"
+            onclick="showPage('savoryFrenchToastSticks')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/IMG_20250710_092333_1_glg6ik.avif"
+              title="Click to see details"
+              alt="French Toast Sticks"
+            />Savory French Toast Sticks
+          </a>
+          <a
+            href="#"
+            data-keywords="plantain,nachos,tomatoe"
+            onclick="showPage('spicyCorn&CoconutBites')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif"
+              title="Click to see image"
+              alt="Spicy Corn and Coconut Bites"
+            />Spicy Corn & Coconut Bites</a
+          >
+          <a
+            href="#"
+            data-keywords="plantain,cinnamon"
+            onclick="showPage('plantainCinnamonRolls')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif"
+              title="Click to see image"
+              alt="Plantain Cinnamon Rolls"
+            />Plantain Cinnamon Rolls</a
+          >
+          <a
+            href="#"
+            data-keywords="plantain,egg"
+            onclick="showPage('plantainEggCups')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif"
+              title="Click to see image"
+              alt="Plantain Egg Cups"
+            />Plantain Egg Cups</a
+          >
+          <a
+            href="#"
+            data-keywords="lime,coconut,corn"
+            onclick="showPage('chocoChiliBananaChips')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif"
+              title="Click to see image"
+              alt="Choco Chili Banana Chips"
+            />Choco Chili Banana Chips</a
+          >
+          <a
+            href="#"
+            onclick="showPage('nuttyDateEnergyRocks')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Energie_Steine_aus_Datteln_und_N%C3%BCssen_1_lqm8ah.avif"
+              title="Click to see image"
+              alt="Nutty Date Energy Rocks"
+            />Nutty Date Energy Rocks</a
+          >
+          <a
+            href="#"
+            onclick="showPage('crispyKalePakoras')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/Crispy_Kale_Pakoras_with_Mint_Chutney_1_etc34x.avif"
+              title="Click to see image"
+              alt="Crispy Kale Pakoras"
+            />Crispy Kale Pakoras</a
+          >
+          <a
+            href="#"
+            data-keywords="yogurt,cinamon,paprika,potatoes,Potato"
+            onclick="showPage('sweetPotatoBitesWithYogurtDip')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416750/ChatGPT-Image-May-3_-2025_-09_25_52-PM-_1__teaw4q.avif"
+              title="Click to see details"
+              alt="Sweet Potato Bites With Yogurt Dip"
+            />Sweet Potato Bites With Yogurt Dip</a
+          >
+          <a
+            href="#"
+            data-keywords="egg,eggs,noodles,cheese"
+            onclick="showPage('cheesyRamenNests')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif"
+              title="Click to see details"
+              alt="Ramen Nest"
+            />Cheesy Ramen Nest</a
+          >
+          <a
+            href="#"
+            data-keywords="chocolate,butter,banana,oats,oat"
+            onclick="showPage('bananaOatEnergyBites')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/ChatGPT-Image-May-3_-2025_-09_33_00-PM-_1__j7giel.avif"
+              title="Click to see details"
+              alt="Banana Oat Energy Bites"
+            />Banana Oat Energy Bites</a
+          >
+          <a
+            href="#"
+            data-keywords="paprika,cucumber"
+            onclick="showPage('zestyCucumberChips')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416739/ChatGPT-Image-May-3_-2025_-09_34_44-PM-_1__v8iram.avif"
+              title="Click to see details"
+              alt="Zesty Cucunber Chips"
+            />Zesty Cucumber Chips</a
+          >
+          <a
+            href="#"
+            onclick="showPage('frozenBananaS`moreBites')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416738/ChatGPT_Image_May_16_2025_03_44_16_PM_1_kgvh5w.avif"
+              title="Click to see image"
+              alt="Frozen Banana S´More Bites"
+            />Frozen Banana S´More Bites</a
+          >
+          <a
+            href="#"
+            data-keywords="bread,egg,eggs,avocado"
+            onclick="showPage('avocadoEggToastCups')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/Avocado_Egg_Toast_Cups_1_uvis8v.avif"
+              title="Click to see image"
+              alt="Avocado Egg Toast Cups"
+            />Avocado Egg Toast Cups</a
+          >
+          <a
+            href="#"
+            data-keywords="garlic,paprika,cheakpeas,cheakpea"
+            onclick="showPage('crispyChickpeaSnack')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/Crispy_Chickpea_snack_1_okfeab.avif"
+              title="Click to see image"
+              alt="Crispy Chickpea Snack"
+            />Crispy Chickpea Snack</a
+          >
+          <a
+            href="#"
+            data-keywords="pear,peanut butter,peanutbutter,apple"
+            onclick="showPage('peanutButterAppleNachos')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif"
+              title="Click to see image"
+              alt="peanut Butter Apple Nachos"
+            />Peanut Butter Apple Nachos</a
+          >
+          <a
+            href="#"
+            data-keywords="basil,mozzarella,tomatoes,tomatoe"
+            onclick="showPage('miniCapreseSkewers')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/Mini_caprese_skewer_1_yiwcrc.avif"
+              title="Click to see image"
+              alt="Mini Caprese Skewers"
+            />Mini Caprese Skewers</a
+          >
+          <a
+            href="#"
+            data-keywords="cheese,nachos,cornflakes,mango"
+            onclick="showPage('cheesyMangoPoppers')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416736/ChatGPT_Image_May_15_2025_03_18_28_PM_1_zeq5x4.avif"
+              title="Click to see image"
+              alt="Cheesy Mango Poppers"
+            />Cheesy Mango Poppers</a
+          >
+          <a
+            href="#"
+            data-keywords="garri, cookies,sugar"
+            onclick="showPage('garriCookies')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1756387907/ChatGPT_Image_Aug_28_2025_03_14_34_PM_11zon_l2hj8t.avif"
+              title="Click to see image"
+              alt="Garri cookies in a baking tray"
+            />Garri Cookies</a
+          >
+          <a
+            href="#"
+            data-keywords="rice,healthy,yogurt,mint,vegitables"
+            onclick="showPage('riceAndYogurtBowl')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif"
+              title="Click to see image"
+              alt="rice with yogurtin a white bowl"
+            />Rice & Yogurt Bowl
+          </a>
         </nav>
-        </section>
-        <!--bot-->
-        <div id="recipeBotForm" class="page" style="display:none;">
-            <form id="recipeBot" style="width: 80%; max-height: 60%;">
-<h2 style="color: orange;">Hi, I`m Resp🙂, your recipe suggestion Bot🤖.</h2>
-<p id="bot-question" style="color: white;">Ask me any recipe by inputing your name and ingredients below👇.</p>
-<div style="background-color: #fff3cd; color: orangered; padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 14px;">
-  <b>Note:</b> I only support <b>1 ingredient input</b> at the moment. Please enter your most <b>dominant</b> ingredient for better suggestions
-</div>
-<label for="userName">What is your name?</label>
-<input type="text" id="userName" placeholder="e.g John Mally" autocomplete="name">
-<label for="userInput">Which recipes do you have?</label>
-<input type="text" id="userInput" placeholder="e.g egg" autocomplete="off" required>
-<button type="button" onclick="findRecipe()">Suggest</button>
-</form>
-<div id="suggestions"></div>
-        </div>
-        <section>
-<!-- Pages -->
- <div id="riceAndYogurtBowl" class="page" style="display:none;">
-    <h2>Rice & Yogurt Bowl</h2>
-    <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif" title="Click to see details" tabindex="0" alt="rice with yogurtin a white bowl" loading="lazy">
-<h3>Ingredients</h3>
-<ul>
-    <li>1 cup cooked rice</li>
-    <li>Cucumber</li>
-    <li>Mint and pinch of Salt</li>
-    <li>1/2 cup plain yogurt</li>
-</ul>
-<h3>Instructions</h3>
-<ol>
-    <li>Mix 1 cup cooled rice with plain yogurt.</li>
-    <li>Add chopped cucumber, mint, and a pinch of salt.</li>
-    <li>Light, cooling, and probiotic-rich.</li>
-</ol>
-<button class="add-fav" data-key="riceAndYogurtBowl" data-name="Rice And Yogurt Bowl">Add to favs</button>
-</div>
-<div id="spicyPeanutButterPopcorn" class="page" style="display:none;">
-    <h2>Spicy Peanut Butter Popcorn</h2>
-    <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif" title="Click to see details" tabindex="0" alt="Spicy Peanut Butter Popcorn" loading="lazy">
-<h3>Ingredients</h3>
-<ul>
-    <li>5 cups popcorn</li>
-    <li>3 tbsp peanut butter</li>
-    <li>1 tbsp honey</li>
-    <li>1/2 tsp chili powder</li>
-    <li>Pinch of salt</li>
-</ul>
-<h3>Instructions</h3>
-<ol>
-    <li>Melt peanut butter, honey, and chili powder in a pot under low heat.</li>
-    <li>Pour over already cooked popcorn and mix evenly.</li>
-    <li>Let cool slightly before serving.</li>
-</ol>
-<button class="add-fav" data-key="spicyPeanutButterPopcorn" data-name="Spicy Peanut Butte Popcorn">Add to favs</button>
-</div>
-<div  id="savoryFrenchToastSticks" class="page" style="display:none;">
-            <h2>Savory French Toast Sticks</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif" tabindex="0" title="Click to see details" alt= "French Toast Sticks" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>4 slices of <b>bread</b></li>
-                <li>2 <b>eggs</b></li>
-                <li>1/4 cup <b>milk</b></li>
-                <li>1 tbsp grated <b>cheese</b>(<em>optional</em>)</li>
-                <li><b>Salt,black pepper, and chili flakes</b></li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Cut bread into sticks.</li>
-                <li>Whisk eggs with milk, cheese, salt, pepper, and chili.</li>
-                <li>Dip sticks and fry until golden on each side.</li>
-            </ol>  
-            <button class="add-fav" data-key="savoryFrenchToastSticks" data-name="Savory French Toast Sticks">Add to favs</button>
-</div>
+      </section>
+      <!--bot-->
+      <div id="recipeBotForm" class="page" style="display: none">
+        <form id="recipeBot" style="width: 80%; max-height: 60%">
+          <h2 style="color: orange">
+            Hi, I`m Resp🙂, your recipe suggestion Bot🤖.
+          </h2>
+          <p id="bot-question" style="color: white">
+            Ask me any recipe by inputing your name and ingredients below👇.
+          </p>
+          <div
+            style="
+              background-color: #fff3cd;
+              color: orangered;
+              padding: 10px;
+              border-radius: 6px;
+              margin-top: 10px;
+              font-size: 14px;
+            "
+          >
+            <b>Note:</b> I only support <b>1 ingredient input</b> at the moment.
+            Please enter your most <b>dominant</b> ingredient for better
+            suggestions
+          </div>
+          <label for="userName">What is your name?</label>
+          <input
+            type="text"
+            id="userName"
+            placeholder="e.g John Mally"
+            autocomplete="name"
+          />
+          <label for="userInput">Which recipes do you have?</label>
+          <input
+            type="text"
+            id="userInput"
+            placeholder="e.g egg"
+            autocomplete="off"
+            required
+          />
+          <button type="button" onclick="findRecipe()">Suggest</button>
+        </form>
 
-
-        <div class="page" style="display: none;" id="avocadoEggToastCups">
-            <h2>Avocado Egg Toast Cups</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Avocado_Egg_Toast_Cups_1_uvis8v.avif" tabindex="0" title="Click to see details" alt= "Avocado Egg Toast" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>2 slices of <b>bread</b></li>
-                <li>1 ripe <b>Avocado</b></li>
-                <li>2 <b>eggs</b></li>
-                <li>Salt & chili flakes</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Press bread slices into a greased muffin tin to form cups.</li>
-                <li>Crack an egg into each Bake at 180°C(350°F) for 12-15 mins.</li>
-                <li>Top with mashed avocado, salt, and chili flakes.</li>
-            </ol>
-            <button class="add-fav" data-key="avocadoEggToastCups" data-name="Avocado Egg Toast Cups">Add to favs</button>
+        <div id="suggestions"></div>
+      </div>
+      <section>
+        <!-- Pages -->
+        <div id="riceAndYogurtBowl" class="page" style="display: none">
+          <h2>Rice & Yogurt Bowl</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif"
+            title="Click to see details"
+            tabindex="0"
+            alt="rice with yogurtin a white bowl"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup cooked rice</li>
+            <li>Cucumber</li>
+            <li>Mint and pinch of Salt</li>
+            <li>1/2 cup plain yogurt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Mix 1 cup cooled rice with plain yogurt.</li>
+            <li>Add chopped cucumber, mint, and a pinch of salt.</li>
+            <li>Light, cooling, and probiotic-rich.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="riceAndYogurtBowl"
+            data-name="Rice And Yogurt Bowl"
+          >
+            Add to favs
+          </button>
         </div>
-
-         <div class="page" style="display: none;" id="bananaOatEnergyBites">
-             <h2>Banana Oat Energy Bites</h2>
-             <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_33_00-PM-_1__j7giel.avif" tabindex="0" title="Click to see details" alt= "Banana Oat Energy Bites" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 ripe banana</li>
-                <li>1/2 cup oats</li>
-                <li>1 tbsp peanut butter</li>
-                <li>1 tbsp chocolate chips or raisins</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Mash banana and mix with oats, peanut butter, and chips.</li>
-                <li>Roll into small balls.</li>
-                <li>Chill for 30 minutes in fridge befor serving</li>
-            </ol>
-            <button class="add-fav" data-key="bananaOatEnergyBites" data-name="Banana Oat Energy Bites">Add to favs</button>
+        <div id="spicyPeanutButterPopcorn" class="page" style="display: none">
+          <h2>Spicy Peanut Butter Popcorn</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif"
+            title="Click to see details"
+            tabindex="0"
+            alt="Spicy Peanut Butter Popcorn"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>5 cups popcorn</li>
+            <li>3 tbsp peanut butter</li>
+            <li>1 tbsp honey</li>
+            <li>1/2 tsp chili powder</li>
+            <li>Pinch of salt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>
+              Melt peanut butter, honey, and chili powder in a pot under low
+              heat.
+            </li>
+            <li>Pour over already cooked popcorn and mix evenly.</li>
+            <li>Let cool slightly before serving.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="spicyPeanutButterPopcorn"
+            data-name="Spicy Peanut Butte Popcorn"
+          >
+            Add to favs
+          </button>
         </div>
-
-          <div class="page" style="display: none;" id="cheesyRamenNests">
-            <h2>Cheesy Ramen Nests</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif" tabindex="0" title="Click to see details" alt= "Ramen Nest" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 packet instant noodles</li>
-                <li>1 egg</li>
-                <li>1/4 cup grated cheese</li>
-                <li>Black pepper</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Boil noodles without seaoning.</li>
-                <li>Drain with a sieve and mix with egg, cheese, and pepper.</li>
-                <li>Spoon into muffin tins and bake at 180¬C for 10/12 mins until golden.</li>
-            </ol>
-            <button class="add-fav" data-key="cheesyRamenNests" data-name="Cheesy Ramen Nests">Add to favs</button>
-        </div>
-        
-         <div class="page" style="display: none;" id="cheesyMangoPoppers">
-             <h2>Cheesy Mango Poppers</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/ChatGPT_Image_May_15_2025_03_18_28_PM_1_zeq5x4.avif" tabindex="0" title="Click to see details" alt= "Cheesy Mango Poppers" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Ripe mango cubes</li>
-                <li>Cream cheese</li>
-                <li>Crushed nachos or cornflakes</li>
-                <li>Toothpicks</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Freeze mango cubes for 30 minutes.</li>
-                <li>Wrap each cube with a thin layer of cream cheese.</li>
-                <li>Roll in crushed nachos or cornflakes.</li>
-                <li>Serve chilled with toothpicks.</li>
-            </ol>
-            <button class="add-fav" data-key="cheesyMangoPoppers" data-name="Cheesy Mango Poppers">Add to favs</button>
+        <div id="savoryFrenchToastSticks" class="page" style="display: none">
+          <h2>Savory French Toast Sticks</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="French Toast Sticks"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>4 slices of <b>bread</b></li>
+            <li>2 <b>eggs</b></li>
+            <li>1/4 cup <b>milk</b></li>
+            <li>1 tbsp grated <b>cheese</b>(<em>optional</em>)</li>
+            <li><b>Salt,black pepper, and chili flakes</b></li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Cut bread into sticks.</li>
+            <li>Whisk eggs with milk, cheese, salt, pepper, and chili.</li>
+            <li>Dip sticks and fry until golden on each side.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="savoryFrenchToastSticks"
+            data-name="Savory French Toast Sticks"
+          >
+            Add to favs
+          </button>
         </div>
 
-         <div class="page" style="display: none;" id="chocoChiliBananaChips">
-            <h2>Choco Chili Banana Chips</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif" tabindex="0" title="Click to see details" alt= "Choco Spicy Chili Banana Chips" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Ripe plantains</li>
-                <li>Melted dark chocolate</li>
-                <li>Pinch of chili powder</li>
-                <li>Salt</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Thinly slice plantains and bake or fry until crisp.</li>
-                <li>Dip half in melted chocolate.</li>
-                <li>Sprinkle with chili powder and salt.</li>
-                <li>Let it set and enjoy😉.</li>
-            </ol>
-            <button class="add-fav" data-key="chocoChiliBananaChips" data-name="Choco Chili Banana Chips">Add to favs</button>
+        <div class="page" style="display: none" id="avocadoEggToastCups">
+          <h2>Avocado Egg Toast Cups</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Avocado_Egg_Toast_Cups_1_uvis8v.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Avocado Egg Toast"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 slices of <b>bread</b></li>
+            <li>1 ripe <b>Avocado</b></li>
+            <li>2 <b>eggs</b></li>
+            <li>Salt & chili flakes</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Press bread slices into a greased muffin tin to form cups.</li>
+            <li>Crack an egg into each Bake at 180°C(350°F) for 12-15 mins.</li>
+            <li>Top with mashed avocado, salt, and chili flakes.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="avocadoEggToastCups"
+            data-name="Avocado Egg Toast Cups"
+          >
+            Add to favs
+          </button>
         </div>
 
-          <div class="page" style="display: none;" id="crispyChickpeaSnack">
-            <h2> Crispy Chickpea Snack</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Crispy_Chickpea_snack_1_okfeab.avif" tabindex="0" title="Click to see details" alt= "Banana Oat Energy Bites" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 can chickpeas</li>
-                <li>Olive oil</li>
-                <li>Smoked paprika + garlic powder + salt</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Rinse and dry chickpeas. </li>
-                <li>Toss with oil and spices.</li>
-                <li>Bake at 200°C (400°F) for 25–30 mins until crispy.</li>
-            </ol>
-            <button class="add-fav" data-key="crispyChickpeaSnack" data-name="Crispy Chickpea Snack">Add to favs</button>
+        <div class="page" style="display: none" id="bananaOatEnergyBites">
+          <h2>Banana Oat Energy Bites</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_33_00-PM-_1__j7giel.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Banana Oat Energy Bites"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 ripe banana</li>
+            <li>1/2 cup oats</li>
+            <li>1 tbsp peanut butter</li>
+            <li>1 tbsp chocolate chips or raisins</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Mash banana and mix with oats, peanut butter, and chips.</li>
+            <li>Roll into small balls.</li>
+            <li>Chill for 30 minutes in fridge befor serving</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="bananaOatEnergyBites"
+            data-name="Banana Oat Energy Bites"
+          >
+            Add to favs
+          </button>
         </div>
 
-            <div class="page" style="display: none;" id="crispyKalePakoras">
-            <h2>Crispy Kale Pakoras</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Crispy_Kale_Pakoras_with_Mint_Chutney_1_etc34x.avif" tabindex="0" title="Click to see details" alt= "Crispy Kale Pakoras" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Kale leaves</li>
-                <li>Chickpea flour(besan)</li>
-                <li>Turmeric, chili powder, salt</li>
-                <li>Water and oil(for frying)</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Mix flour and spices with water to make a thick batter.</li>
-                <li>Coat kale leaves and fry until crispy.</li>
-                <li>Serve hot with mint chutney or yogurt dip.</li>
-                <li>Let it set and enjoy😉.</li>
-            </ol>
-            <button class="add-fav" data-key="crispyKalePakoras" data-name="Crispy Kale Pakoras">Add to favs</button>
+        <div class="page" style="display: none" id="cheesyRamenNests">
+          <h2>Cheesy Ramen Nests</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Ramen Nest"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 packet instant noodles</li>
+            <li>1 egg</li>
+            <li>1/4 cup grated cheese</li>
+            <li>Black pepper</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Boil noodles without seaoning.</li>
+            <li>Drain with a sieve and mix with egg, cheese, and pepper.</li>
+            <li>
+              Spoon into muffin tins and bake at 180¬C for 10/12 mins until
+              golden.
+            </li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="cheesyRamenNests"
+            data-name="Cheesy Ramen Nests"
+          >
+            Add to favs
+          </button>
         </div>
 
-        <div class="page" style="display: none;" id="frozenBananaS`moreBites">
-            <h2>Frozen Banana S`more Bites</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/ChatGPT_Image_May_16_2025_03_44_16_PM_1_kgvh5w.avif" tabindex="0" title="Click to see details" alt= "Frozen Banana S`More Bites " loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Sliced bananas</li>
-                <li>Melted dark chocolate</li>
-                <li>Crushed graham crackers</li>
-                <li>Mini marshmellows</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Dip banana slices into chocolate. </li>
-                <li>Press into graham cracker crumbs and top with marshmellows.</li>
-                <li>Freeze until set.</li>
-            </ol>
-            <button class="add-fav" data-key="frozenBananaS`moreBites" data-name="Frozen Banana S`more Bites">Add to favs</button>
+        <div class="page" style="display: none" id="cheesyMangoPoppers">
+          <h2>Cheesy Mango Poppers</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/ChatGPT_Image_May_15_2025_03_18_28_PM_1_zeq5x4.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Cheesy Mango Poppers"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Ripe mango cubes</li>
+            <li>Cream cheese</li>
+            <li>Crushed nachos or cornflakes</li>
+            <li>Toothpicks</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Freeze mango cubes for 30 minutes.</li>
+            <li>Wrap each cube with a thin layer of cream cheese.</li>
+            <li>Roll in crushed nachos or cornflakes.</li>
+            <li>Serve chilled with toothpicks.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="cheesyMangoPoppers"
+            data-name="Cheesy Mango Poppers"
+          >
+            Add to favs
+          </button>
         </div>
 
-              <div class="page" style="display: none;" id="instantRamenTacos">
-            <h2>Instant Ramen Taco</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif" tabindex="0" title="Click to see details" alt= "Instant Ramen Taco" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 pack of instant noodles</li>
-                <li>1 egg</li>
-                <li>Oil for frying</li>
-                <li>Lettuce, shredded chicken, spicy mayo(for filling)</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Cook noodles slightly, then mix with beaten egg.</li>
-                <li>Shape into small taco shells using foil molds.</li>
-                <li>Fry until crispy and golden.</li>
-                <li>Fill with your choice of toppings.</li>
-            </ol>
-            <button class="add-fav" data-key="instantRamenTacos" data-name="Instant Ramen Tacos">Add to favs</button>
+        <div class="page" style="display: none" id="chocoChiliBananaChips">
+          <h2>Choco Chili Banana Chips</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Choco Spicy Chili Banana Chips"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Ripe plantains</li>
+            <li>Melted dark chocolate</li>
+            <li>Pinch of chili powder</li>
+            <li>Salt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Thinly slice plantains and bake or fry until crisp.</li>
+            <li>Dip half in melted chocolate.</li>
+            <li>Sprinkle with chili powder and salt.</li>
+            <li>Let it set and enjoy😉.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="chocoChiliBananaChips"
+            data-name="Choco Chili Banana Chips"
+          >
+            Add to favs
+          </button>
         </div>
 
-         <div class="page" style="display: none;" id="miniCapreseSkewers">
-            <h2>Mini Caprese Skewers</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Mini_caprese_skewer_1_yiwcrc.avif" tabindex="0" title="Click to see details" alt= "Banana Oat Energy Bites" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Cherry <b>tomatoes</b></li>
-                <li>Mini <b>mozzarella</b> balls</li>
-                <li>Fresh <b>Basil</b></li>
-                <li>Balsamic glaze</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Skewer one tomato, one mozarella ball, and a basil leaf onto tootpicks.</li>
-                <li>Drizzle with Balsamic glaze just before serving.</li>
-            </ol>
-            <button class="add-fav" data-key="miniCapreseSkewers" data-name="Mini Caprese Skewers">Add to favs</button>
+        <div class="page" style="display: none" id="crispyChickpeaSnack">
+          <h2>Crispy Chickpea Snack</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Crispy_Chickpea_snack_1_okfeab.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Banana Oat Energy Bites"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 can chickpeas</li>
+            <li>Olive oil</li>
+            <li>Smoked paprika + garlic powder + salt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Rinse and dry chickpeas.</li>
+            <li>Toss with oil and spices.</li>
+            <li>Bake at 200°C (400°F) for 25–30 mins until crispy.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="crispyChickpeaSnack"
+            data-name="Crispy Chickpea Snack"
+          >
+            Add to favs
+          </button>
         </div>
 
-         <div class="page" style="display: none;" id="nuttyDateEnergyRocks">
-            <h2>Nutty Date Energy Rocks</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Energie_Steine_aus_Datteln_und_N%C3%BCssen_1_lqm8ah.avif" tabindex="0" title="click to see deatails" alt="Nutty Date Energy Rocks snacks" loading="lazy" >
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Pitted dates</li>
-                <li>Roasted peanuts</li>
-                <li>Rolled oats</li>
-                <li>Honey</li>
-                <li>Cocoa powder</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Blend all ingredients into a sticky dough.</li>
-                <li>Roll into small rock-shaped balls.</li>
-                <li>Chill and serve as an energy-packed snack.</li>
-            </ol>
-            <button class="add-fav" data-key="nuttyDateEnergyRocks" data-name="Nutty Date Energy Rocks">Add to favs</button>
+        <div class="page" style="display: none" id="crispyKalePakoras">
+          <h2>Crispy Kale Pakoras</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Crispy_Kale_Pakoras_with_Mint_Chutney_1_etc34x.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Crispy Kale Pakoras"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Kale leaves</li>
+            <li>Chickpea flour(besan)</li>
+            <li>Turmeric, chili powder, salt</li>
+            <li>Water and oil(for frying)</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Mix flour and spices with water to make a thick batter.</li>
+            <li>Coat kale leaves and fry until crispy.</li>
+            <li>Serve hot with mint chutney or yogurt dip.</li>
+            <li>Let it set and enjoy😉.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="crispyKalePakoras"
+            data-name="Crispy Kale Pakoras"
+          >
+            Add to favs
+          </button>
         </div>
 
-        <div class="page" style="display: none;" id="peanutButterAppleNachos">
-            <h2>Peanut Butter Apple Nachos</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif" tabindex="0" title="Click to see details" alt= "Banana Oat Energy Bites" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 <b>Apple</b>, sliced thin</li>
-                <li>1 tbsp <b>peanut butter</b></li>
-                <li>Granola or crushed <b>nuts</b></li>
-                <li>Chocolate drizzle(optional)</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Layer apple slices on a plate.</li>
-                <li>Drizzle with melted peanut butter.</li>
-                <li>Add the chocolate drizzle as well and sprickle the granola or crushed nuts</li>
-            </ol>
-            <button class="add-fav" data-key="peanutButterAppleNachos" data-name="Peanut Butter Apple Nachos">Add to favs</button>
+        <div class="page" style="display: none" id="frozenBananaS`moreBites">
+          <h2>Frozen Banana S`more Bites</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/ChatGPT_Image_May_16_2025_03_44_16_PM_1_kgvh5w.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Frozen Banana S`More Bites "
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Sliced bananas</li>
+            <li>Melted dark chocolate</li>
+            <li>Crushed graham crackers</li>
+            <li>Mini marshmellows</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Dip banana slices into chocolate.</li>
+            <li>Press into graham cracker crumbs and top with marshmellows.</li>
+            <li>Freeze until set.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="frozenBananaS`moreBites"
+            data-name="Frozen Banana S`more Bites"
+          >
+            Add to favs
+          </button>
         </div>
 
-        <div class="page" style="display: none;" id="plantainNachos">
-    <h2>Plantain Nachos</h2>
-    <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif" tabindex="0" title="Click to see details" alt="Crispy Plantain Nachos" loading="lazy">
-<h3>Ingredients</h3>
-<ul>
-   <li>2 ripe plantains</li> 
-   <li>1 tbsp olive oil</li>
-   <li>Salt</li>
-   <li>Shredded cheese</li>
-   <li>Diced tomatoes, onions, and jalapeños</li>
-   <li>Sour cream or yogurt for topping</li>
-</ul>
-<h3>Instructions</h3>
-<ol>
-   <li> Slice plantains thinly and toss with olive oil and salt.</li>
-   <li> Bake at 180°C (350°F) for 15–20 mins until crispy.</li>
-    <li>Top with cheese and diced toppings.</li>
-    <li> Bake 5 more minutes. Serve with a dollop of sour cream.</li>
-</ol>
-<button class="add-fav" data-key="plantainNachos" data-name="Plantain Nachos">Add to favs</button>
-</div>
-
- <div id="plantainCinnamonRolls" class="page" style="display: none;">
-            <h2>Plantain Cinnamon Rolls</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif" tabindex="0" title="Click to see details" alt= "Plantain Cinnamon Rolls" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li> 1 ripe plantain</li>
-              
-                <li>
-                    ½ tsp ground cinnamon
-                </li>
-                <li>
-                    1 tsp butter or margarine
-                </li>
-                <li>
-                    Toothpicks or skewers (optional)
-                </li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>
-                    Peel the plantain and slice it lengthwise into very thin, flat strips.
-                </li>
-                <li>
-                    Lightly bake the strips in a little butter until soft and flexible (not crispy).
-                </li>
-                <li>
-                    Mix sugar (or honey) with cinnamon in a small bowl.
-                </li>
-                <li>
-                    Spread a thin layer of the cinnamon mix over each warm plantain strip.
-                </li>
-                <li>
-            Gently roll each strip like a cinnamon roll and secure with a toothpick if needed.
-        </li>
-        <li>
-            Let cool slightly and enjoy warm!
-                </li>
-            </ol>
-            <button class="add-fav" data-key="plantainCinnamonRolls" data-name="Plantain Cinnamon Rolls">Add to favs</button>
+        <div class="page" style="display: none" id="instantRamenTacos">
+          <h2>Instant Ramen Taco</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Instant Ramen Taco"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 pack of instant noodles</li>
+            <li>1 egg</li>
+            <li>Oil for frying</li>
+            <li>Lettuce, shredded chicken, spicy mayo(for filling)</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Cook noodles slightly, then mix with beaten egg.</li>
+            <li>Shape into small taco shells using foil molds.</li>
+            <li>Fry until crispy and golden.</li>
+            <li>Fill with your choice of toppings.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="instantRamenTacos"
+            data-name="Instant Ramen Tacos"
+          >
+            Add to favs
+          </button>
         </div>
 
-        <div class="page" style="display: none;" id="plantainEggCups">
-            <h2>Plantain Egg Cups</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif" tabindex="0" title="Click to see details" alt= "Plantain CEgg Cups" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>
-                    1 ripe plantain
-                </li>
-                <li>
-                    2 Eggs
-                </li>
-                <li>
-                 A pinch of salt
-                </li>
-                <li>
-                    A pinch of pepper
-                </li>
-                <li>Oil for greasing</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>
-                    Preheat your oven to 180°C (350°F).
-                </li>
-                <li>
-                    Slice the plantain into thin rounds.
-                </li>
-                <li>
-                    Lightly grease muffin cups with oil and press the plantain slices into the bottom to form a base.
-                </li>
-                <li>
-                    Crack an egg into each muffin cup over the plantain base. 
-                </li>
-                <li>
-                    Sprinkle a pinch of salt and pepper on each.
-                </li>
-                <li>
-                    Bake for 12–15 minutes, or until the eggs are set to your liking.
-                </li>
-                <li>
-                    Let them cool slightly before carefully removing from the muffin tin.
-                </li>
-            </ol>
-            <button class="add-fav" data-key="plantainEggCups" data-name="Plantain Egg Cups">Add to favs</button>
+        <div class="page" style="display: none" id="miniCapreseSkewers">
+          <h2>Mini Caprese Skewers</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Mini_caprese_skewer_1_yiwcrc.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Banana Oat Energy Bites"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Cherry <b>tomatoes</b></li>
+            <li>Mini <b>mozzarella</b> balls</li>
+            <li>Fresh <b>Basil</b></li>
+            <li>Balsamic glaze</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>
+              Skewer one tomato, one mozarella ball, and a basil leaf onto
+              tootpicks.
+            </li>
+            <li>Drizzle with Balsamic glaze just before serving.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="miniCapreseSkewers"
+            data-name="Mini Caprese Skewers"
+          >
+            Add to favs
+          </button>
         </div>
 
-         <div class="page" style="display: none;" id="spicyCorn&CoconutBites">
-            <h2>Spicy Corn & Coconut Bites</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif" tabindex="0" title="Click to see details" alt= "Spicy Corn and Coconut Bites" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>Sweet corn</li>
-                <li>Grated coconut</li>
-                <li>Chili flakes</li>
-                <li>Lime juice</li>
-                <li>Salt</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol><li>Mix corn, cocnut, chili flakes, and salt.</li>
-                <li>Squeeze lime juice and mix.</li>
-                <li>Form small balls and chili before serving.</li>
-            </ol>
-            <button class="add-fav" data-key="spicyPeanutButterPopcorn" data-name="Spicy Peanut Butter Popcorn">Add to favs</button>
+        <div class="page" style="display: none" id="nuttyDateEnergyRocks">
+          <h2>Nutty Date Energy Rocks</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Energie_Steine_aus_Datteln_und_N%C3%BCssen_1_lqm8ah.avif"
+            tabindex="0"
+            title="click to see deatails"
+            alt="Nutty Date Energy Rocks snacks"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Pitted dates</li>
+            <li>Roasted peanuts</li>
+            <li>Rolled oats</li>
+            <li>Honey</li>
+            <li>Cocoa powder</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Blend all ingredients into a sticky dough.</li>
+            <li>Roll into small rock-shaped balls.</li>
+            <li>Chill and serve as an energy-packed snack.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="nuttyDateEnergyRocks"
+            data-name="Nutty Date Energy Rocks"
+          >
+            Add to favs
+          </button>
         </div>
 
-         <div class="page" style="display: none;" id="sweetPotatoBitesWithYogurtDip">
-            <h2>sweet Potato Bites With Yogurt Dip</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416750/ChatGPT-Image-May-3_-2025_-09_25_52-PM-_1__teaw4q.avif" tabindex="0" title="Click to see details" alt= "Sweet Potato Bites With Yogurt Dip" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>2 medium sweet potatoes</li>
-                <li>Olive oil</li>
-                <li>Cinnamon + paprika/tomatoe</li>
-                <li>Salt</li>
-                <li>Greek yogurt(or any available yogurt you can get) + lemon juice for dip</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Cut sweet potatoes into small cubes, toss with oil, cinamon, paprika, and salt.</li>
-                <li>Bake at 200°C(400°F) for 25 mins.</li>
-                <li>Mix yogurt with a splash of lemon juice.</li>
-                <li>Serve as the yogurt as dip with the baked potatoes.</li>
-            </ol>
+        <div class="page" style="display: none" id="peanutButterAppleNachos">
+          <h2>Peanut Butter Apple Nachos</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Banana Oat Energy Bites"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 <b>Apple</b>, sliced thin</li>
+            <li>1 tbsp <b>peanut butter</b></li>
+            <li>Granola or crushed <b>nuts</b></li>
+            <li>Chocolate drizzle(optional)</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Layer apple slices on a plate.</li>
+            <li>Drizzle with melted peanut butter.</li>
+            <li>
+              Add the chocolate drizzle as well and sprickle the granola or
+              crushed nuts
+            </li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="peanutButterAppleNachos"
+            data-name="Peanut Butter Apple Nachos"
+          >
+            Add to favs
+          </button>
         </div>
 
-           <div class="page" style="display: none;" id="zestyCucumberChips">
-            <h2>Zesty Cucumber Chips</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_34_44-PM-_1__v8iram.avif" tabindex="0" title="Click to see details" alt= "Zesty Cucunber Chips" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 large cucumber</li>
-                <li>Lemon juice</li>
-                <li>Paprika</li>
-                <li>Salt</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>Slice cucumber thinly and lay on a baking sheet.</li>
-                <li>Drizzle with lemon juice and sprinkle paprika + salt.</li>
-                <li>Bake at 120°C(250°F) for 1 hour or until crisp.</li>
-            </ol>
-            <button class="add-fav" data-key="zestyCucumberChips" data-name="Zesty Cucumber Chips">Add to favs</button>
+        <div class="page" style="display: none" id="plantainNachos">
+          <h2>Plantain Nachos</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Crispy Plantain Nachos"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 ripe plantains</li>
+            <li>1 tbsp olive oil</li>
+            <li>Salt</li>
+            <li>Shredded cheese</li>
+            <li>Diced tomatoes, onions, and jalapeños</li>
+            <li>Sour cream or yogurt for topping</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Slice plantains thinly and toss with olive oil and salt.</li>
+            <li>Bake at 180°C (350°F) for 15–20 mins until crispy.</li>
+            <li>Top with cheese and diced toppings.</li>
+            <li>Bake 5 more minutes. Serve with a dollop of sour cream.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="plantainNachos"
+            data-name="Plantain Nachos"
+          >
+            Add to favs
+          </button>
         </div>
 
-          <div class="page" style="display: none;" id="garriCookies">
-            <h2>Garri Cookies</h2>
-            <img src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1756387907/ChatGPT_Image_Aug_28_2025_03_14_34_PM_11zon_l2hj8t.avif" tabindex="0" title="Click to see details" alt= "Garri cookies in a baking tray" loading="lazy">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>1 cup garri</li>
-                <li>1/2 cup butter(or margarine)</li>
-                <li>1/4 cup sugar</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>In a bowl, cream the butter and sugar together until light and fluffy.</li>
-                <li>Add garri and mix well until it forms a soft dough.</li>
-                <li>Roll small balls, flatten slightly, and place on a greased baking tray.</li>
-                <li>Bake at 180°C(350°F) for about 15 minutes or until golden brown.</li>
-                <li>Let them cool and enjoy😋!</li>
-            </ol>
-            <button class="add-fav" data-key="garriCookies" data-name="Garri Cookies">Add to favs</button>
+        <div id="plantainCinnamonRolls" class="page" style="display: none">
+          <h2>Plantain Cinnamon Rolls</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Plantain Cinnamon Rolls"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 ripe plantain</li>
+
+            <li>½ tsp ground cinnamon</li>
+            <li>1 tsp butter or margarine</li>
+            <li>Toothpicks or skewers (optional)</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>
+              Peel the plantain and slice it lengthwise into very thin, flat
+              strips.
+            </li>
+            <li>
+              Lightly bake the strips in a little butter until soft and flexible
+              (not crispy).
+            </li>
+            <li>Mix sugar (or honey) with cinnamon in a small bowl.</li>
+            <li>
+              Spread a thin layer of the cinnamon mix over each warm plantain
+              strip.
+            </li>
+            <li>
+              Gently roll each strip like a cinnamon roll and secure with a
+              toothpick if needed.
+            </li>
+            <li>Let cool slightly and enjoy warm!</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="plantainCinnamonRolls"
+            data-name="Plantain Cinnamon Rolls"
+          >
+            Add to favs
+          </button>
         </div>
-    </section>
+
+        <div class="page" style="display: none" id="plantainEggCups">
+          <h2>Plantain Egg Cups</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Plantain CEgg Cups"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 ripe plantain</li>
+            <li>2 Eggs</li>
+            <li>A pinch of salt</li>
+            <li>A pinch of pepper</li>
+            <li>Oil for greasing</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Preheat your oven to 180°C (350°F).</li>
+            <li>Slice the plantain into thin rounds.</li>
+            <li>
+              Lightly grease muffin cups with oil and press the plantain slices
+              into the bottom to form a base.
+            </li>
+            <li>Crack an egg into each muffin cup over the plantain base.</li>
+            <li>Sprinkle a pinch of salt and pepper on each.</li>
+            <li>
+              Bake for 12–15 minutes, or until the eggs are set to your liking.
+            </li>
+            <li>
+              Let them cool slightly before carefully removing from the muffin
+              tin.
+            </li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="plantainEggCups"
+            data-name="Plantain Egg Cups"
+          >
+            Add to favs
+          </button>
+        </div>
+
+        <div class="page" style="display: none" id="spicyCorn&CoconutBites">
+          <h2>Spicy Corn & Coconut Bites</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Spicy Corn and Coconut Bites"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>Sweet corn</li>
+            <li>Grated coconut</li>
+            <li>Chili flakes</li>
+            <li>Lime juice</li>
+            <li>Salt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Mix corn, cocnut, chili flakes, and salt.</li>
+            <li>Squeeze lime juice and mix.</li>
+            <li>Form small balls and chili before serving.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="spicyPeanutButterPopcorn"
+            data-name="Spicy Peanut Butter Popcorn"
+          >
+            Add to favs
+          </button>
+        </div>
+
+        <div
+          class="page"
+          style="display: none"
+          id="sweetPotatoBitesWithYogurtDip"
+        >
+          <h2>sweet Potato Bites With Yogurt Dip</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416750/ChatGPT-Image-May-3_-2025_-09_25_52-PM-_1__teaw4q.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Sweet Potato Bites With Yogurt Dip"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>2 medium sweet potatoes</li>
+            <li>Olive oil</li>
+            <li>Cinnamon + paprika/tomatoe</li>
+            <li>Salt</li>
+            <li>
+              Greek yogurt(or any available yogurt you can get) + lemon juice
+              for dip
+            </li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>
+              Cut sweet potatoes into small cubes, toss with oil, cinamon,
+              paprika, and salt.
+            </li>
+            <li>Bake at 200°C(400°F) for 25 mins.</li>
+            <li>Mix yogurt with a splash of lemon juice.</li>
+            <li>Serve as the yogurt as dip with the baked potatoes.</li>
+          </ol>
+        </div>
+
+        <div class="page" style="display: none" id="zestyCucumberChips">
+          <h2>Zesty Cucumber Chips</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_34_44-PM-_1__v8iram.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Zesty Cucunber Chips"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 large cucumber</li>
+            <li>Lemon juice</li>
+            <li>Paprika</li>
+            <li>Salt</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Slice cucumber thinly and lay on a baking sheet.</li>
+            <li>Drizzle with lemon juice and sprinkle paprika + salt.</li>
+            <li>Bake at 120°C(250°F) for 1 hour or until crisp.</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="zestyCucumberChips"
+            data-name="Zesty Cucumber Chips"
+          >
+            Add to favs
+          </button>
+        </div>
+
+        <div class="page" style="display: none" id="garriCookies">
+          <h2>Garri Cookies</h2>
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1756387907/ChatGPT_Image_Aug_28_2025_03_14_34_PM_11zon_l2hj8t.avif"
+            tabindex="0"
+            title="Click to see details"
+            alt="Garri cookies in a baking tray"
+            loading="lazy"
+          />
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 cup garri</li>
+            <li>1/2 cup butter(or margarine)</li>
+            <li>1/4 cup sugar</li>
+          </ul>
+          <h3>Instructions</h3>
+          <ol>
+            <li>
+              In a bowl, cream the butter and sugar together until light and
+              fluffy.
+            </li>
+            <li>Add garri and mix well until it forms a soft dough.</li>
+            <li>
+              Roll small balls, flatten slightly, and place on a greased baking
+              tray.
+            </li>
+            <li>
+              Bake at 180°C(350°F) for about 15 minutes or until golden brown.
+            </li>
+            <li>Let them cool and enjoy😋!</li>
+          </ol>
+          <button
+            class="add-fav"
+            data-key="garriCookies"
+            data-name="Garri Cookies"
+          >
+            Add to favs
+          </button>
+        </div>
+      </section>
     </main>
     <footer>
-        <h5>Follow us</h5>
-        <div class="social-icons">
-            <a href="https://de.pinterest.com/trytastyofficial/" target="_blank" title="Pinterest"><i class="bx bxl-pinterest"></i></a>
-            <a href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
-            <!--
+      <h5>Follow us</h5>
+      <div class="social-icons">
+        <a
+          href="https://de.pinterest.com/trytastyofficial/"
+          target="_blank"
+          title="Pinterest"
+          ><i class="bx bxl-pinterest"></i
+        ></a>
+        <a
+          href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
+          target="_blank"
+          title="YouTube"
+          ><i class="bx bxl-youtube"></i
+        ></a>
+        <!--
                 <h5>Follow Scyflix</h5>
                 <a href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="bx bxl-tiktok"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61566637364542" target="_blank" title="Facebook"><i class="bx bxl-facebook"></i></a>
@@ -697,36 +1262,36 @@
                 <a href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
             -->
-</div>
+      </div>
 
-<hr>
-<a href="v2/privacyGerman.html">Impressum & Datenschutz</a> <br>
-<a href="v2/submit.html">Submit a recipe</a>
-<p> &copy;2025 Scybud. All Rights reserved. </p>
+      <hr />
+      <a href="v2/privacyGerman.html">Impressum & Datenschutz</a> <br />
+      <a href="v2/submit.html">Submit a recipe</a>
+      <p>&copy;2025 Scybud. All Rights reserved.</p>
     </footer>
-        <script src="recipe.js" defer></script>
-       <script>
-         const favrecipes = JSON.parse(localStorage.getItem("favs")) || []; 
-         const favclass = document.querySelectorAll(".add-fav");
+    <script src="recipe.js" defer></script>
+    <script>
+      const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
+      const favclass = document.querySelectorAll(".add-fav");
 
-         favclass.forEach(fav => {
-            fav.addEventListener("click", (event) => {
-    const recipeName = fav.getAttribute("data-name"); // recipe name
-    const recipeKey = fav.getAttribute("data-key");   // key for showPage()
+      favclass.forEach((fav) => {
+        fav.addEventListener("click", (event) => {
+          const recipeName = fav.getAttribute("data-name"); // recipe name
+          const recipeKey = fav.getAttribute("data-key"); // key for showPage()
 
-    const recipeObj = {
-      name: recipeName,
-      key: recipeKey
-    };
-    const exists = favrecipes.some(f => f.key === recipeKey);
-    if(!exists) {
-        favrecipes.push(recipeObj);
-        localStorage.setItem("favs", JSON.stringify(favrecipes));
-    }
-    window.location.href = "v2/favs.html";
-            });
-         });
-       </script>
-    </body>
+          const recipeObj = {
+            name: recipeName,
+            key: recipeKey,
+          };
+          const exists = favrecipes.some((f) => f.key === recipeKey);
+          if (!exists) {
+            favrecipes.push(recipeObj);
+            localStorage.setItem("favs", JSON.stringify(favrecipes));
+          }
+          window.location.href = "v2/favs.html";
+        });
+      });
+    </script>
+  </body>
 </html>
 <!--Alhamdulillahi Rabbil Ahlamin-->
