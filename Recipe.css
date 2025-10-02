@@ -340,6 +340,17 @@ img {
 }
 iframe {
   margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+}
+#videosPage {
+  flex-direction: column;
+  display: flex;
+  height: auto;
+  width: auto;
 }
 #recipeSubmissionForm {
   color: black;
