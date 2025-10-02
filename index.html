@@ -484,8 +484,14 @@
             id="userInput"
             placeholder="e.g egg"
             autocomplete="off"
+            list="ingredients"
             required
           />
+          <datalist id="ingredients">
+            <option value="egg">Egg</option>
+            <option value="Plantain">Plantain</option>
+            <option value="Milk">Milk</option>
+          </datalist>
           <button type="button" onclick="findRecipe()">Suggest</button>
         </form>
 
