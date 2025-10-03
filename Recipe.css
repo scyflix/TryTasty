@@ -217,19 +217,6 @@ h2 {
     left: 0; /* slide in */
   }
 
-  /* Sidebar links */
-  .page-nav a {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
-  .page-nav a:hover {
-    transform: scale(1.05);
-    background: rgba(218, 0, 0, 0);
-  }
-
   /* Dark Mode button */
   #dark-mode {
     margin: 10px auto;
@@ -246,8 +233,9 @@ h2 {
     background: linear-gradient(90deg, orange, yellow);
     transform: scale(1.1);
   }
+  /* Sidebar links */
   .page-nav a {
-    padding: 0 60px;
+    padding: 0 20px;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -256,6 +244,10 @@ h2 {
     border: 2px solid yellow;
     border-radius: 10px;
     width: 80px;
+  }
+  .page-nav a:hover {
+    transform: scale(1.05);
+    background: rgba(218, 0, 0, 0);
   }
 }
 
@@ -288,11 +280,12 @@ footer {
 }
 
 .page-nav {
+  display: flex;
   gap: 10px;
   align-items: center;
+  padding: 0 40px 0 20px;
 }
 .page-nav a {
-  padding: 0 60px;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -300,7 +293,7 @@ footer {
   color: black;
   border: 2px solid yellow;
   border-radius: 10px;
-  width: 100px;
+  width: 120px;
 }
 .page-nav a:hover {
   text-decoration: none;
@@ -308,6 +301,9 @@ footer {
   border: 2px solid orange;
   transform: scale(1.05);
   border-radius: 10px;
+}
+.nav-icons {
+  padding: 5px 5px 2px 1px;
 }
 
 a {
