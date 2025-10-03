@@ -123,6 +123,31 @@
           box-shadow: 0 0 10px yellow;
         }
       }
+
+      #toast {
+        visibility: hidden; /* Hidden by default */
+        min-width: 250px;
+        margin: 0 auto;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 16px;
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.5s, visibility 0.5s;
+      }
+
+      /* Show the toast */
+      #toast.show {
+        visibility: visible;
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -221,6 +246,7 @@
 -->
       </nav>
     </header>
+    <div id="toast">Recipe saved successfully!</div>
     <main>
       <section>
         <nav class="page">
@@ -1312,7 +1338,14 @@
             favrecipes.push(recipeObj);
             localStorage.setItem("favs", JSON.stringify(favrecipes));
           }
-          window.location.href = "v2/favs.html";
+          // Show the toast notification
+          const toast = document.getElementById("toast");
+          toast.className = "show";
+
+          // Hide the toast after 3 seconds
+          setTimeout(() => {
+            toast.className = toast.className.replace("show", "");
+          }, 3000);
         });
       });
     </script>
