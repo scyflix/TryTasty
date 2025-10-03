@@ -235,7 +235,7 @@ h2 {
   }
   /* Sidebar links */
   .page-nav a {
-    padding: 0 20px;
+    padding: 0 30px;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -286,6 +286,7 @@ footer {
   padding: 0 40px 0 20px;
 }
 .page-nav a {
+  padding: 0 35px;
   text-align: center;
   display: flex;
   flex-direction: row;
