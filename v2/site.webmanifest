@@ -1,6 +1,7 @@
 {
   "name": "TryTasty",
   "short_name": "TryTasty",
+  "version": "2.0",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
@@ -13,7 +14,7 @@
       "type": "image/avif"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#ff6600",
   "background_color": "#ffffff",
   "start_url": "../index.html",
   "display": "standalone"
