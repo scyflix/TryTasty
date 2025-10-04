@@ -79,7 +79,6 @@ input:focus {
   height: 45px;
   transition: height 0.7s ease;
 }
-
 form {
   max-width: 500px;
   width: 85vw;
