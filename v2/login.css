@@ -65,6 +65,7 @@ input {
   width: 75vw;
   border: black solid 2px;
   margin-left: 4px;
+  border-radius: 20px;
 }
 textarea {
   height: 60px;
@@ -77,7 +78,7 @@ input:focus {
   outline: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   height: 45px;
-  transition: height 0.7s ease;
+  transition: all 0.7s ease;
 }
 form {
   max-width: 500px;
