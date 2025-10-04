@@ -2,20 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Cookiebot script -->
     <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
+      type="text/javascript"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-DDLCL6XBQR");
+    <!-- Google Analytics (gtag.js) -->
+    <script>
+      // Only initialize GA after consent
+      window.addEventListener("CookieConsentDeclaration", function () {
+        if (Cookiebot.consents.statistics) {
+          // Load gtag.js dynamically
+          const gtagScript = document.createElement("script");
+          gtagScript.src =
+            "https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR";
+          gtagScript.async = true;
+          document.head.appendChild(gtagScript);
+
+          // Initialize GA after script loads
+          gtagScript.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            window.gtag = gtag; // expose globally if needed
+            gtag("js", new Date());
+            gtag("config", "G-DDLCL6XBQR", { anonymize_ip: true });
+          };
+        }
+      });
     </script>
+
     <title>TryTasty | Quick & Tasty Snack Recipes</title>
     <meta charset="utf-8" />
     <meta
@@ -1333,6 +1353,12 @@
       <a href="v2/submit.html">Submit a recipe</a>
       <p>&copy;2025 Scybud. All Rights reserved.</p>
     </footer>
+    <script
+      id="CookieDeclaration"
+      src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
+      type="text/javascript"
+      async
+    ></script>
     <script src="recipe.js" defer></script>
     <script>
       const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
