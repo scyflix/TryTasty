@@ -410,10 +410,6 @@ button {
   font-size: 19px;
   padding: 5px;
 }
-button:focus {
-  rotate: 360deg;
-  transition: 0.9s;
-}
 button:hover {
   color: black;
   background-color: orange;

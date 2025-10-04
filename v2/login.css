@@ -92,7 +92,7 @@ form {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 4px 7px 30px rgb(98, 98, 98);
+  box-shadow: 2px 2px 50px 5px black inset;
 }
 form a {
   color: yellow;
@@ -183,10 +183,6 @@ button:hover {
   height: 35px;
   cursor: pointer;
   box-shadow: 0px 6px 10px black;
-}
-button:focus {
-  rotate: 360deg;
-  transition: 0.4s;
 }
 
 .page-nav {
