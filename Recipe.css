@@ -217,7 +217,7 @@ ol li {
   /* Sidebar */
   #sidebar {
     position: fixed;
-    top: 80px;
+    top: 0;
     left: -80vw; /* hidden by default */
     width: 60vw;
     height: 100vh;
