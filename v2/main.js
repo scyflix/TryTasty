@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Logout
-function logout() {
+window.logout = function () {
   signOut(auth)
     .then(() => {
       alert("You have just Logged out.");
@@ -125,4 +125,4 @@ function logout() {
       console.error("Lougout Error:", error);
       alert("Error Logging out: " + error.message);
     });
-}
+};
