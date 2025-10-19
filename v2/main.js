@@ -41,7 +41,7 @@ window.signup = function (event) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       alert("Signup successful!");
-      window.location.href = "submit.html";
+      window.location.href = "../index.html";
     })
     .catch((error) => {
       alert(error.message);
@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Logout
-window.logout = function () {
+function logout() {
   signOut(auth)
     .then(() => {
       alert("You have just Logged out.");
@@ -125,4 +125,4 @@ window.logout = function () {
       console.error("Lougout Error:", error);
       alert("Error Logging out: " + error.message);
     });
-};
+}
