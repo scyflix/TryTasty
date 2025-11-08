@@ -79,16 +79,6 @@ nav {
   font-weight: bold;
   flex-direction: row;
 }
-button:hover {
-  background-color: orange;
-  color: black;
-  border-radius: 10px;
-  font-size: larger;
-  width: 150px;
-  height: 35px;
-  cursor: pointer;
-  box-shadow: 0px 6px 10px black;
-}
 
 @media (max-width: 800px) {
   /* Menu Icon */

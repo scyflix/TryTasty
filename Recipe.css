@@ -133,73 +133,63 @@ a:hover {
 #bot-question {
   color: black;
 }
+/* Form */
 form {
-  max-width: 400px;
-  width: 70vw;
-  max-height: auto;
-  border-radius: 10px;
-  text-align: center;
+  width: 100%;
+  max-width: 480px;
   margin: auto;
-  padding: 20px;
-  background-color: #3e3e3e;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 1px 10px #969696;
+  gap: 16px;
+  background: #272727;
+  border-radius: 12px;
+}
+
+/* Form Labels */
+label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Inputs */
+input, textarea {
+  width: 90%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #1d1d1d;
+  border: 2px solid #444;
+  color: #fff;
+  transition: 0.25s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff8800;
+  box-shadow: 0 0 0 3px rgba(255,136,0,0.3);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: #ff6a00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 10px auto;
+}
+
+button:hover {
+  background: #ff8b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 #recipeSubmissionForm {
   color: black;
-}
-input {
-  height: 25px;
-  width: 95%;
-  border: black solid 2px;
-}
-textarea {
-  height: 50px;
-  width: 95%;
-  border: black solid 2px;
-}
-input:focus {
-  border-radius: 8px;
-  border-color: red;
-  outline: none;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 35px;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-textarea:focus {
-  border-radius: 8px;
-  border-color: red;
-  outline: none;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  height: 60px;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-
-label {
-  display: inline-block;
-  font-size: large;
-}
-button {
-  color: white;
-  background-color: orangered;
-  border-radius: 15px;
-  width: 150px;
-  height: auto;
-  font-size: 19px;
-  padding: 5px;
-}
-button:hover {
-  color: black;
-  background-color: orange;
-  border-radius: 30px;
-  width: 150px;
-  height: 35px;
 }
 .social-icons a {
   color: white;
