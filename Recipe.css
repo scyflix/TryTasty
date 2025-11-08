@@ -106,15 +106,21 @@ ol li {
   .snackImage:hover {
     transform: scale(1.04);
     box-shadow: 0 0 10px yellow;
+  } 
+  
+  img:focus {
+      width: 100%;
   }
 }
 img {
   width: 250px;
-  max-height: 400px;
-  border-radius: 20px;
-  box-shadow: 4px 4px rgba(255, 208, 97, 0.7);
+  max-width: 100%;
+  border-radius: 16px;
+  transition: all 0.5s ease;
 }
-
+img:hover {
+  transform: scale(1.05);
+}
 a {
   text-decoration: none;
   color: orangered;
