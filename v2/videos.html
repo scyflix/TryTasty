@@ -25,59 +25,58 @@
     <meta property="og:type" content="website" />
     <meta content="TryTasty" property="og:title" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="../Recipe.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
-    <header>
+        <header>
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div style="display: inline-flex; margin-left: 0" id="menuIconContainer">
-        <div class="menu-icon" onclick="toggleSidebar()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a">
-          TryTasty
-        </h1>
+        <a href="https://trytasty.de/">
+          <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a">
+            TryTasty
+          </h1>
+        </a>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
-          <i class="bx bx-x" style="color: white; font-size: 44px"></i>
-        </div>
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="2" stroke-linecap="round"
+       stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+</div>
         <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
           Light Mode
         </button>
         <a href="../index.html">
-          <i class="bx bx-home" style="color: #ffcc00; font-size: 24px"></i>
           <span style="color: white; text-decoration: none">Home</span>
         </a>
 
         <a href="#" onclick="showPage('recipeBotForm')">
-          <i class="bx bx-bot" style="color: #ffcc00; font-size: 24px"></i>
           <span style="color: white; text-decoration: none">Bot</span>
         </a>
         <a href="favs.html">
-          <i class="bx bx-heart" style="color: #ffcc00; font-size: 24px"></i>
-          <span style="color: white; text-decoration: none">Favs</span>
+          <span style="color: white; text-decoration: none">Favorites</span>
         </a>
         <a href="videos.html">
-          <i class="bx bx-video" style="color: #ffcc00; font-size: 24px"></i>
-          <span style="color: white; text-decoration: none">Videos</span>
+          <span style="color: white; text-decoration: none">Watch</span>
         </a>
         <a href="submit.html">
-          <i class="bx bx-upload" style="color: #ffcc00; font-size: 24px"></i>
-          <span style="color: white; text-decoration: none">Share</span>
+          <span style="color: white; text-decoration: none">Submit</span>
         </a>
 
         <a href="login.html">
-          <i class="bx bx-log-in" style="color: #ffcc00; font-size: 24px"></i>
           <span style="color: white; text-decoration: none">Login</span>
         </a>
       </nav>
@@ -184,49 +183,45 @@
         ></iframe>
       </section>
     </main>
+<footer>
 
-    <footer>
-      <h5>Follow Creator, learn as well!</h5>
-      <div class="social-icons">
-        <a
-          href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc"
-          target="_blank"
-          title="TikTok"
-          ><i class="bx bxl-tiktok"></i
-        ></a>
-        <a
-          href="https://www.facebook.com/profile.php?id=61566637364542"
-          target="_blank"
-          title="Facebook"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-        <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"
-          ><i class="bx bxl-twitter"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/scyflix5855/"
-          target="_blank"
-          title="Instagram"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/"
-          target="_blank"
-          title="LinkedIn"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a
-          href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg"
-          target="_blank"
-          title="YouTube"
-          ><i class="bx bxl-youtube"></i
-        ></a>
-      </div>
-      <hr />
-      <a href="privacyGerman.html">Impressum & Datenschutz</a> <br />
-      <a href="submit.html">Submit a recipe</a>
-      <p>&copy;2025 Scybud. All Rights reserved.</p>
-    </footer>
+  <h5>Follow us</h5>
+    <div class="social-icons">
+      <a
+        href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
+        target="_blank"
+        title="YouTube"
+        class="social-icon"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
+          />
+        </svg>
+      </a>
+
+      <!--
+              <h5>Follow Scyflix</h5>
+              <a href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="bx bxl-tiktok"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61566637364542" target="_blank" title="Facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/scyflix5855/" target="_blank" title="Instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
+          -->
+    </div>
+
+    <hr />
+    <a href="privacyGerman.html">Impressum & Datenschutz</a> <br />
+    <a href="submit.html">Submit a recipe</a>
+    <p>&copy;2025 TryTasty. All Rights reserved.</p>
+</footer>
     <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
     <script differ>
       kofiWidgetOverlay.draw("scybud", {

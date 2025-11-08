@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TryTasty MVP</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: all 0.6s ease;
+      }
+      header {
+        height: 40px;
+        background-color: #ff6600;
+        color: white;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      main {
+        border-radius: 10px;
+        margin: 10px auto;
+        padding: 30px;
+        display: block;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        width: 92vw;
+      }
+      .post p {
+        white-space: normal;
+        overflow-wrap: break-word;
+      }
+      .post {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 90vw;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      #forminputbtn {
+        outline: none;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        width: 60%;
+        height: 20px;
+      }
+      input {
+        outline: none;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        width: 50vw;
+        height: 20px;
+      }
+      label {
+        font-size: larger;
+        font-weight: 700;
+        display: block;
+      }
+      textarea {
+        outline: none;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        width: 50vw;
+        height: 70px;
+      }
+      form {
+        border-radius: 20px;
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      #postbtn {
+        width: 140px;
+        height: 30px;
+        margin: 0 0 10px 0;
+        background-color: rgb(243, 243, 23);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      #postbtn:hover {
+        background-color: rgb(255, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TryTasty</h1>
+      <input
+        id="forminputbtn"
+        type="text"
+        onclick="openform()"
+        placeholder="Post something..."
+      />
+      <button>Login</button>
+    </header>
+    <main>
+      <section id="allForms" style="display: none">
+        <form id="postForm">
+          <h2>Create a post</h2>
+          <label for="postTitle"> Title </label>
+          <input
+            type="text"
+            id="postTitle"
+            name="postTitle"
+            placeholder="Post Title"
+            required
+          />
+          <label for="postContent"> Content </label>
+          <textarea
+            id="postContent"
+            name="postContent"
+            placeholder="Write something tasty"
+            required
+          ></textarea>
+          <button id="postbtn" onclick="post()" type="button">Post</button>
+        </form>
+      </section>
+      <section id="postedContent"></section>
+    </main>
+    <script>
+      function openform() {
+        const form = document.getElementById("allForms");
+        const forminputbtn = document.getElementById("forminputbtn");
+        const postedContentSection = document.getElementById("postedContent");
+        postedContentSection.style.display = "none";
+        forminputbtn.style.display = "none";
+        form.style.display = "block";
+      }
+      function post() {
+        const postTitle = document.getElementById("postTitle").value;
+        const postContent = document.getElementById("postContent").value;
+        if (!postTitle || !postContent) {
+          alert("Your post must have a title and content");
+          return;
+        } else {
+          const titleElement = document.createElement("h3");
+          const contentElement = document.createElement("p");
+          titleElement.innerText = postTitle;
+          contentElement.innerText = postContent;
+          const postDiv = document.createElement("div");
+          postDiv.classList.add("post");
+          postDiv.appendChild(titleElement);
+          postDiv.appendChild(contentElement);
+          const postedContentSection = document.getElementById("postedContent");
+          postedContentSection.style.display = "block";
+          postedContentSection.prepend(postDiv);
+          const form = document.getElementById("allForms");
+          const postForm = document.getElementById("postForm");
+          postForm.reset();
+          form.style.display = "none";
+          const forminputbtn = document.getElementById("forminputbtn");
+          forminputbtn.style.display = "block";
+        }
+      }
+    </script>
+    <script type="module">
+      // Import the functions I need from the SDKs I need import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+      // Import Firebase Authentication and Cloud Firestore
+      import { getAuth } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+
+      // My web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
+        authDomain: "trytasty-64537.firebaseapp.com",
+        projectId: "trytasty-64537",
+        storageBucket: "trytasty-64537.firebasestorage.app",
+        messagingSenderId: "379426398000",
+        appId: "1:379426398000:web:0c64ccb05920174406b2f5", // This is YOUR ShareTasty appId!
+        measurementId: "G-B2NB6SKZP6", // This is for Google Analytics for Firebase
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      // Initialize Analytics and get a reference to the service
+      const analytics = getAnalytics(app); // If you want to use Analytics
+
+      // Initialize Firebase Authentication and get a reference to the service
+      const auth = getAuth(app);
+
+      // Initialize Cloud Firestore and get a reference to the service
+      const db = getFirestore(app);
+    </script>
+
+    <script src="main.js"></script>
+    Expand
+  </body>
+</html>

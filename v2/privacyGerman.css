@@ -118,7 +118,7 @@ section {
 }
 
 h2 {
-  color: #e65c00;
+  color: #ff9d00;
   margin-bottom: 10px;
   border-bottom: 2px solid #ffa94d;
   padding-bottom: 5px;
@@ -275,7 +275,7 @@ footer {
 
 a {
   text-decoration: none;
-  color: orangered;
+  color: rgb(229, 255, 0);
 }
 
 a:hover {
