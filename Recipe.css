@@ -10,8 +10,18 @@ body {
   font-size: 20px;
   font-display: swap;
 }
+@keyframes slideup {
+  from {
+    margin: 100px auto;
+  }
+  to {
+    margin: 0 auto;
+  }
+  animation: slideup 2s ease;
+}
 
 main {
+  animation: slideup 2s ease;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
@@ -45,7 +55,7 @@ iframe {
   border-radius: 8px;
   padding: 10px;
   background-color: #141414;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 .snackImage img {
   width: 100%;
@@ -71,7 +81,7 @@ iframe {
 
 .snackImage:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(223, 223, 223, 0.9);
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.462);
 }
 section {
   margin-bottom: 40px;
@@ -106,10 +116,10 @@ ol li {
   .snackImage:hover {
     transform: scale(1.04);
     box-shadow: 0 0 10px yellow;
-  } 
-  
+  }
+
   img:focus {
-      width: 100%;
+    width: 100%;
   }
 }
 img {
@@ -153,7 +163,8 @@ label {
 }
 
 /* Inputs */
-input, textarea {
+input,
+textarea {
   width: 90%;
   padding: 14px;
   border-radius: 10px;
@@ -163,9 +174,10 @@ input, textarea {
   transition: 0.25s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #ff8800;
-  box-shadow: 0 0 0 3px rgba(255,136,0,0.3);
+  box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.3);
   outline: none;
 }
 
@@ -186,7 +198,7 @@ button {
 button:hover {
   background: #ff8b1a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 #recipeSubmissionForm {
   color: black;

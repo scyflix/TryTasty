@@ -71,7 +71,9 @@ window.login = function (event) {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       alert("Login successful!");
-      window.location.href = "../index.html";
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 2000);
     })
     .catch((error) => {
       alert(error.message);
@@ -92,7 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (user) {
       if (welcomeText)
-        welcomeText.innerText = `Hi, ${
+        welcomeText.innerText = `User: ${
           user.displayName || user.email || "user"
         }`;
       if (logoutBtn) logoutBtn.style.display = "block";
@@ -118,8 +120,10 @@ window.addEventListener("DOMContentLoaded", () => {
 window.logout = function () {
   signOut(auth)
     .then(() => {
-      alert("You have just Logged out.");
-      window.location.href = "welcome.html";
+      setTimeout(() => {
+        welcomeText.innerText = "You have just Logged out.";
+        window.location.href = "welcome.html";
+      }, 2000);
     })
     .catch((error) => {
       console.error("Lougout Error:", error);

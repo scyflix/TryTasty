@@ -33,16 +33,25 @@ p {
   font-weight: light;
   padding: 20px 5px 10px 5px;
 }
+@keyframes slideup {
+  from {
+    margin: 500px auto;
+  }
+  to {
+    margin: 80px auto;
+  }
+}
 main {
+  animation: slideup 2s ease;
   border-radius: 15px;
   margin: 80px auto;
   max-width: 600px;
-  max-height: 600px;
+  height: auto;
   display: block;
   justify-content: center;
   align-items: center;
   background-color: #1e1e1e;
-color: white;
+  color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: pulse 5s infinite;
 }
@@ -61,25 +70,33 @@ color: white;
   }
 }
 /* Responsive Design */
-@media (max-width: 100%) {
+@media (max-width: 600px) {
   main {
-    width: 99%;
+    width: 95%;
+  }
+  button {
+    display: block;
+    width: 90%;
   }
 }
+/* Buttons */
 button {
+  background: #ff6a00;
   color: white;
-  background-color: orangered;
-  border-radius: 5px;
-  width: 150px;
-  height: 30px;
-  text-decoration: none;
-  margin: 20px auto;
-  transition: all 0.9s ease;
-  animation: pulse 5s infinite;
+  border: none;
+  padding: 14px;
+  border-radius: 10px 5px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 10px auto;
 }
-button:focus {
-  rotate: 360deg;
-  transition: 0.4s;
+
+button:hover {
+  background: #ff8b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 a {
   text-decoration: none;
@@ -87,15 +104,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-button:hover {
-  color: black;
-  font-size: larger;
-  background-color: orange;
-  border-radius: 15px;
-  width: 150px;
-  height: 35px;
-  animation: none;
-}
+
 .social-icons a {
   color: black;
   font-size: 28px;
@@ -116,4 +125,13 @@ footer {
   height: auto;
   width: auto;
   bottom: 0;
+}
+
+/* Links */
+a {
+  color: #ffb03a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }

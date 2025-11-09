@@ -15,12 +15,13 @@ This project is part of **Scybud**, a student-led creative brand exploring tech,
 - 🎯 Beginner-friendly foundation for future expansion
 - Basic recipe bot
 - Save recipes to favorite list
+- 👥 User accounts
 
 ---
 
 ## 🔮 Later features
 
-- 👥 User accounts and profiles
+- 👥 User profiles
 - 📝 Recipe uploads with images
 - ❤️ Likes, comments, and social interaction
 
@@ -28,7 +29,7 @@ This project is part of **Scybud**, a student-led creative brand exploring tech,
 
 ## 🌐 Live Site
 
--👉 [Visit TryTasty v1](https://scyflix.github.io/TryTasty/v1/)
+-👉 [Visit TryTasty v1](https://trytasty.de/v1/)
 -👉 [Visit TryTasty v2](https://tytasty.de/)
 
 ---
@@ -57,4 +58,4 @@ For licensing or partnership inquiries, contact:
 
 ## 🙌 Credits
 
-Created with passion under the **Scybud** brand — driven by creativity, curiosity, and a love for good food.
+Created with passion under the **Scybud** brand by Abdulroqib Oladipo — driven by creativity, curiosity, and a love for good food.

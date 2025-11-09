@@ -24,7 +24,7 @@ header {
   transition: left 0.6s ease;
 }
 #sidebar.show {
-  left: -10px; /* slide in */
+  left: 0; /* slide in */
   border-radius: 10px;
 }
 
