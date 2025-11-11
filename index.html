@@ -43,6 +43,7 @@
         }
       });
     </script>
+    <script type="module" src="v2/main.js" defer></script>
     <title>TryTasty | Quick & Tasty Snack Recipes</title>
     <meta charset="utf-8" />
     <meta
@@ -93,7 +94,7 @@
         gap: 5px;
         transition: all 0.5s ease;
       }
-      /* Popup styling */
+      /* Popup styling 
       #popup {
         position: fixed;
         top: 0;
@@ -128,7 +129,7 @@
           transform: scale(1);
         }
       }
-
+*/
       #toast {
         visibility: hidden; /* Hidden by default */
         min-width: 250px;
@@ -160,22 +161,24 @@
       <h1>TryTasty</h1>
       <h2 style="color: #1a1a1a">Try The Taste</h2>
     </div>
-    <!-- Popup HTML -->
-    <div id="popup">
-      <div id="popup-content">
-        <h2>Welcome to TryTasty!</h2>
-        <p>
-          <strong>TryTasty</strong> is a fun recipe project made by
-          <strong>Scybud</strong>, a student-led brand that loves to create and
-          share.
-        </p>
-        <p>
-          Here, you'll find simple and creative snack ideas built with code and
-          love.
-        </p>
-        <button onclick="closePopup()">Enter</button>
-      </div>
-    </div>
+    <!--
+      Popup HTML 
+     <div id="popup">
+       <div id="popup-content">
+         <h2>Welcome to TryTasty!</h2>
+         <p>
+           <strong>TryTasty</strong> is a fun recipe project made by
+           <strong>Scybud</strong>, a student-led brand that loves to create and
+           share.
+         </p>
+         <p>
+           Here, you'll find simple and creative snack ideas built with code and
+           love.
+         </p>
+         <button onclick="closePopup()">Enter</button>
+       </div>
+     </div>
+    -->
 
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
@@ -193,10 +196,10 @@
       <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
           <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
             stroke="white"
             stroke-width="2"
             stroke-linecap="round"
@@ -212,7 +215,7 @@
         <a href="index.html">
           <span style="color: white; text-decoration: none">Home</span>
         </a>
-
+        
         <a href="#" onclick="showPage('recipeBotForm')">
           <span style="color: white; text-decoration: none">Bot</span>
         </a>
@@ -225,13 +228,14 @@
         <a href="v2/submit.html">
           <span style="color: white; text-decoration: none">Submit</span>
         </a>
-
+        
         <a href="v2/login.html">
           <span style="color: white; text-decoration: none">Login</span>
         </a>
         <button id="logoutBtn" onclick="window.location.href=`v2/login.html`;">
           Logout
         </button>
+        <div id="welcomeText" style="margin: 10px; font-weight: bold;"></div>
       </nav>
     </header>
     <div id="toast">Recipe saved successfully!</div>
@@ -1309,7 +1313,7 @@
       <a href="v2/submit.html">Submit a recipe</a>
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
-    <script src="recipe.js" defer></script>
+    <script src="recipe.js" ></script>
     <script>
       const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
       const favclass = document.querySelectorAll(".add-fav");

@@ -16,12 +16,13 @@ header {
   position: fixed;
   top: 10px;
   left: -80vw; /* hidden by default */
-  width: 30vw;
+  width: 50vw;
   height: 100vh;
   background: #1a1a1a;
   display: flex;
   flex-direction: column;
   transition: left 0.6s ease;
+  overflow-x: hidden;
 }
 #sidebar.show {
   left: 0; /* slide in */
@@ -80,7 +81,7 @@ nav {
   flex-direction: row;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   /* Menu Icon */
   .menu-icon {
     width: 25px;
@@ -100,7 +101,7 @@ nav {
   #sidebar {
     top: 15px;
     left: -100%; /* hidden by default */
-    width: 60vw;
+    width: 90vw;
   }
   #sidebar.show {
     left: 0; /* slide in */
@@ -125,9 +126,6 @@ nav {
   /* Sidebar links */
   .page-nav a {
     margin-top: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
     text-decoration: none;
     color: black;
     border: 2px solid yellow;
@@ -146,13 +144,11 @@ span {
   gap: 10px;
   justify-content: start;
   align-items: center;
-  padding: 40px 20px 0;
+  padding: 40px auto 0;
 }
 .page-nav a {
-  padding: 0 35px;
+  padding: 0 auto;
   text-align: center;
-  display: flex;
-  flex-direction: row;
   text-decoration: none;
   color: black;
   border: 2px solid yellow;

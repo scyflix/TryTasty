@@ -59,6 +59,7 @@ if (localStorage.getItem("darkMode") === "true") {
   darkMode();
 }
 
+/*
 //check if user has already seen the popup
 const popup = this.document.getElementById("popup");
 if (popup) {
@@ -74,7 +75,7 @@ function closePopup() {
   const popup = document.getElementById("popup");
   popup.style.display = "none";
 }
-
+*/
 //show recipes on click
 function showPage(pageId) {
   const pages = document.querySelectorAll(".page");
