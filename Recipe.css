@@ -12,14 +12,14 @@ body {
 }
 @keyframes slideup {
   from {
+    opacity: 0;
     margin: 100px auto;
   }
   to {
+    opacity: 1;
     margin: 0 auto;
   }
-  animation: slideup 2s ease;
 }
-
 main {
   animation: slideup 2s ease;
   max-width: 900px;
@@ -80,7 +80,7 @@ iframe {
 }
 
 .snackImage:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   box-shadow: 0 0 8px rgba(119, 116, 116, 0.462);
 }
 section {
@@ -113,10 +113,6 @@ ol li {
   .snackImage {
     width: 100%;
   }
-  .snackImage:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 10px yellow;
-  }
 
   img:focus {
     width: 100%;
@@ -129,7 +125,7 @@ img {
   transition: all 0.5s ease;
 }
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 a {
   text-decoration: none;
