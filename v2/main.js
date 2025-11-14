@@ -121,7 +121,7 @@ window.logout = function () {
   signOut(auth)
     .then(() => {
       setTimeout(() => {
-        welcomeText.innerText = "You have just Logged out.";
+        alert("You have just logged out")
         window.location.href = "welcome.html";
       }, 2000);
     })

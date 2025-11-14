@@ -1,0 +1,107 @@
+html, body {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  height: 50px;
+  background: radial-gradient(circle, orange, yellow);
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  height: 60px;
+  max-height: 75px;
+}
+body {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Push footer to the bottom */
+  font-family: arial, sans-serif;
+  background-color: rgb(94, 94, 94);
+  color: white;
+  line-height: 1.6;
+  padding: 0 10px;
+  font-size: 20px;
+}
+@keyframes slideup {
+  from {
+    opacity: 0;
+    margin: 100px auto;
+  }
+  to {
+    opacity: 1;
+    margin: 0 auto;
+  }
+}
+main {
+  flex: 1;
+  animation: slideup 2s ease;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 30px 2px rgb(0, 0, 0);
+}
+a {
+  text-decoration: none;
+  color: orangered;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 28px;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #e69500;
+}
+#scybudApps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+#scybudApps a {
+  text-decoration: none;
+}
+#scybudApps .container {
+  display: flex;
+  flex-direction: column; /* FIXED HERE */
+  align-items: center;
+  justify-content: center;
+}
+#scybudApps a span {
+  margin-top: 5px;
+  color: #f1f1f1;
+  font-size: 12px;
+}
+#scybudApps .container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background-color: whitesmoke;
+}
+#scybudApps img:hover {
+  transform: scale(1.15);
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: whitesmoke;
+  box-shadow: 0 0 20px 2px rgb(190, 190, 190);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 14px;
+  height: auto;
+  width: auto;
+}

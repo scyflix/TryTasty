@@ -1,16 +1,4 @@
-header {
-  display: flex;
-  height: 50px;
-  background: radial-gradient(circle, orange, yellow);
-  padding: 0 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  height: 60px;
-  max-height: 75px;
-}
+
 /* Sidebar */
 #sidebar {
   position: fixed;
@@ -38,7 +26,7 @@ header {
 .menu-icon span {
   background-color: black;
   width: 25px;
-  height: 3px;
+  height: 4px;
   display: block;
   margin: 5px 5px;
   border-radius: 10px;
@@ -161,15 +149,4 @@ span {
   border: 2px solid orange;
   transform: scale(1.05);
   border-radius: 10px;
-}
-footer {
-  text-align: center;
-  margin-top: 30px;
-  color: whitesmoke;
-  box-shadow: 0 0 20px 2px rgb(190, 190, 190);
-  background-color: rgb(0, 0, 0);
-  border-radius: 15px;
-  height: auto;
-  width: auto;
-  bottom: 0;
 }

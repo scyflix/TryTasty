@@ -1,137 +1,189 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
-  background-color: beige;
-  color: #333;
+  background: #5e5e5e;
+  color: #ffffff;
   text-align: center;
-  animation: colorChange 5s infinite;
-  background-color: rgb(94, 94, 94);
 }
-h1 {
-  font-weight: bolder;
-  padding-top: 20px;
-}
-#logo {
-  width: 100px;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  border: black 10px;
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  margin: 10px;
-}
-#logo:hover {
-  width: 200px;
-  height: 200px;
-}
-p {
-  font-size: larger;
-  font-weight: light;
-  padding: 20px 5px 10px 5px;
-}
-@keyframes slideup {
-  from {
-    margin: 500px auto;
-  }
-  to {
-    margin: 80px auto;
-  }
-}
+
+/* Hero Section */
 main {
-  animation: slideup 2s ease;
-  border-radius: 15px;
-  margin: 80px auto;
   max-width: 600px;
-  height: auto;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  background-color: #1e1e1e;
+  width: 90%;
+  margin: 80px auto;
+  padding: 30px 20px;
+  border-radius: 15px;
+  background: #1e1e1e;
   color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: pulse 5s infinite;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+  animation: pulse 5s infinite, slideup 1.2s ease;
 }
-@keyframes pulse {
-  0% {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 1;
-  }
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
-/* Responsive Design */
-@media (max-width: 600px) {
-  main {
-    width: 95%;
-  }
-  button {
-    display: block;
-    width: 90%;
-  }
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
+
 /* Buttons */
 button {
+  display: block;
+  width: 90%;
+  max-width: 350px;
+  margin: 12px auto;
+  padding: 14px;
+  border: none;
   background: #ff6a00;
   color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 10px 5px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.2s;
-  margin: 10px auto;
+  transition: 0.25s ease;
 }
 
 button:hover {
   background: #ff8b1a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.35);
 }
 
-.social-icons a {
-  color: black;
-  font-size: 28px;
-  margin: 0 12px;
-  text-decoration: none;
-  transition: color 0.3s;
+/* Footer */
+footer {
+  margin-top: auto;
+  background: #000;
+  padding: 30px 0;
+  color: #ddd;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.4);
 }
-.social-icons a:hover {
+
+#logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+#logo:hover {
+  transform: scale(1.4);
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
   color: orangered;
 }
-footer {
-  text-align: center;
-  margin-top: 30px;
-  color: whitesmoke;
-  box-shadow: 0 0 20px 2px rgb(0, 0, 0);
-  background-color: rgb(0, 0, 0);
-  border-radius: 15px;
-  height: auto;
-  width: auto;
-  bottom: 0;
+
+/* Scybud Apps Section */
+#scybudApps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 15px;
 }
 
-/* Links */
-a {
+#scybudApps a .container {
+  text-align: center;
+  width: 85px;
+}
+
+#scybudApps img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 4px;
+  transition: 0.2s;
+}
+
+#scybudApps img:hover {
+  transform: scale(1.15);
+}
+
+#scybudApps span {
+  color: #ddd;
+  font-size: 12px;
+}
+
+/* Footer small links */
+footer a {
   color: #ffb03a;
   text-decoration: none;
 }
-a:hover {
+
+footer a:hover {
   text-decoration: underline;
+}
+
+footer p {
+  margin-top: 6px;
+}
+
+/* Animations */
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  main {
+    margin: 60px auto;
+    padding: 25px 15px;
+  }
+
+  #scybudApps img {
+    width: 55px;
+    height: 55px;
+  }
+
+  button {
+    width: 95%;
+  }
 }
