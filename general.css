@@ -1,6 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   scroll-behavior: smooth;
-  box-sizing: border-box;
 }
 header {
   display: flex;
@@ -69,7 +72,7 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 15px;
 }
 #scybudApps a {
   text-decoration: none;
