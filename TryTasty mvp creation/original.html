@@ -4,29 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TryTasty MVP</title>
+    <link rel="stylesheet" href="../v2/form.css" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        transition: all 0.6s ease;
+      * {
+        box-sizing: border-box;
       }
-      header {
-        height: 40px;
-        background-color: #ff6600;
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Push footer to the bottom */
+        font-family: arial, sans-serif;
+        background-color: rgb(94, 94, 94);
         color: white;
+        line-height: 1.6;
+        font-size: 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      header {
+        min-height: 40px;
+        background: radial-gradient(circle, orange, yellow);
+        color: rgb(0, 0, 0);
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
+        border-radius: 12px;
+      }
+      header h1 {
+        font-size: 1.5em;
       }
       main {
         border-radius: 10px;
         margin: 10px auto;
         padding: 30px;
         display: block;
+        background-color: #1e1e1e;
+
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        width: 92vw;
+        width: 80vw;
       }
       .post p {
         white-space: normal;
@@ -37,7 +66,7 @@
         border: 1px solid #ccc;
         padding: 10px;
         margin-bottom: 10px;
-        width: 90vw;
+        width: 100%;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       }
       #forminputbtn {
@@ -47,52 +76,24 @@
         border-radius: 10px;
         padding: 5px 10px;
         width: 60%;
-        height: 20px;
+        height: 40px;
       }
-      input {
-        outline: none;
-        border: none;
-        background-color: white;
+      #postedContent {
+        width: 100%;
+      }
+      .loginBtn {
+        background: #ffa600;
+        padding: 0 10px;
+        margin-bottom: 4px;
         border-radius: 10px;
-        padding: 5px 10px;
-        width: 50vw;
-        height: 20px;
+        text-decoration: none;
+        color: #ccc;
+        transition: all 0.4s ease;
       }
-      label {
-        font-size: larger;
-        font-weight: 700;
-        display: block;
+      .loginBtn:hover {
+        transform: scale(1.04);
       }
-      textarea {
-        outline: none;
-        border: none;
-        background-color: white;
-        border-radius: 10px;
-        padding: 5px 10px;
-        width: 50vw;
-        height: 70px;
-      }
-      form {
-        border-radius: 20px;
-        background-color: #ccc;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-      }
-      #postbtn {
-        width: 140px;
-        height: 30px;
-        margin: 0 0 10px 0;
-        background-color: rgb(243, 243, 23);
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      }
-      #postbtn:hover {
-        background-color: rgb(255, 255, 0);
-      }
+      
     </style>
   </head>
   <body>
@@ -104,7 +105,7 @@
         onclick="openform()"
         placeholder="Post something..."
       />
-      <button>Login</button>
+        <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
     </header>
     <main>
       <section id="allForms" style="display: none">
@@ -166,38 +167,6 @@
         }
       }
     </script>
-    <script type="module">
-      // Import the functions I need from the SDKs I need import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-      // Import Firebase Authentication and Cloud Firestore
-      import { getAuth } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
-      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
-
-      // My web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
-        authDomain: "trytasty-64537.firebaseapp.com",
-        projectId: "trytasty-64537",
-        storageBucket: "trytasty-64537.firebasestorage.app",
-        messagingSenderId: "379426398000",
-        appId: "1:379426398000:web:0c64ccb05920174406b2f5", // This is YOUR ShareTasty appId!
-        measurementId: "G-B2NB6SKZP6", // This is for Google Analytics for Firebase
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-
-      // Initialize Analytics and get a reference to the service
-      const analytics = getAnalytics(app); // If you want to use Analytics
-
-      // Initialize Firebase Authentication and get a reference to the service
-      const auth = getAuth(app);
-
-      // Initialize Cloud Firestore and get a reference to the service
-      const db = getFirestore(app);
-    </script>
-
-    <script src="main.js"></script>
-    Expand
+    <script type="module" src="../v2/main.js"></script>
   </body>
 </html>

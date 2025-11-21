@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { updateProfile } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
 import {
   getAuth,
@@ -27,6 +28,7 @@ const auth = getAuth(app);
 // Signup
 window.signup = function (event) {
   event.preventDefault();
+  const userName = document.getElementById("userName").value;
   const email = document.getElementById("emailForSignup").value;
   const password = document.getElementById("passwordForSignup").value;
   const confirmPassword = document.getElementById(
@@ -38,15 +40,21 @@ window.signup = function (event) {
     return;
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      alert("Signup successful!");
-      window.location.href = "../index.html";
-    })
-    .catch((error) => {
-      alert(error.message);
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    return updateProfile(userCredential.user, {
+      displayName: userName
     });
-};
+  })
+  .then(() => {
+    alert("Signup successful!");
+    window.location.href = "../index.html";
+  })
+  .catch((error) => {
+    alert(error.message);
+  });
+}
 
 // Google Sign-In
 window.googleLogin = function () {
@@ -94,8 +102,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (user) {
       if (welcomeText)
-        welcomeText.innerText = `User: ${
-          user.displayName || user.email || "user"
+        welcomeText.innerText = ` ${
+          user.displayName || user.email || user.userName || "user"
         }`;
       if (logoutBtn) logoutBtn.style.display = "block";
       if (loginBtn) loginBtn.style.display = "none";

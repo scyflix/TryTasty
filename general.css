@@ -5,6 +5,17 @@
 html, body {
   scroll-behavior: smooth;
 }
+body {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Push footer to the bottom */
+  font-family: arial, sans-serif;
+  background-color: rgb(94, 94, 94);
+  color: white;
+  line-height: 1.6;
+  padding: 0 10px;
+  font-size: 20px;
+}
 header {
   display: flex;
   height: 50px;
@@ -18,27 +29,7 @@ header {
   height: 60px;
   max-height: 75px;
 }
-body {
-    display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Push footer to the bottom */
-  font-family: arial, sans-serif;
-  background-color: rgb(94, 94, 94);
-  color: white;
-  line-height: 1.6;
-  padding: 0 10px;
-  font-size: 20px;
-}
-@keyframes slideup {
-  from {
-    opacity: 0;
-    margin: 100px auto;
-  }
-  to {
-    opacity: 1;
-    margin: 0 auto;
-  }
-}
+/*MAIN ELEMENT*/
 main {
   flex: 1;
   animation: slideup 2s ease;
@@ -48,6 +39,17 @@ main {
   background-color: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 2px 30px 2px rgb(0, 0, 0);
+}
+/*SLIDEUP AND FADEIN ANIMATION FOR MAIN ELEMENT*/
+@keyframes slideup {
+  from {
+    opacity: 0;
+    margin: 100px auto;
+  }
+  to {
+    opacity: 1;
+    margin: 0 auto;
+  }
 }
 a {
   text-decoration: none;
