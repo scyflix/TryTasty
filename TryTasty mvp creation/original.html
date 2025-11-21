@@ -17,12 +17,10 @@
       body {
         display: flex;
         flex-direction: column;
-        min-height: 100vh; /* Push footer to the bottom */
         font-family: arial, sans-serif;
         background-color: rgb(94, 94, 94);
         color: white;
         line-height: 1.6;
-        font-size: 20px;
       }
       * {
         box-sizing: border-box;
@@ -93,7 +91,10 @@
       .loginBtn:hover {
         transform: scale(1.04);
       }
-      
+      .paceholderText {
+        opacity: 0.4;
+        font-size: small;
+      }
     </style>
   </head>
   <body>
@@ -129,7 +130,9 @@
           <button id="postbtn" onclick="post()" type="button">Post</button>
         </form>
       </section>
-      <section id="postedContent"></section>
+      <section id="postedContent">
+        <p class="paceholderText">Posts show here...</p>
+      </section>
     </main>
     <script>
       function openform() {
