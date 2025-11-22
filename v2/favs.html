@@ -195,6 +195,15 @@
       <a href="submit.html">Submit a recipe</a>
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+        <script differ>
+      kofiWidgetOverlay.draw("scybud", {
+        type: "floating-chat",
+        "floating-chat.donateButton.text": "Support Us",
+        "floating-chat.donateButton.background-color": "#fcbf47",
+        "floating-chat.donateButton.text-color": "#323842",
+      });
+    </script>
     <script>
       const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
       const favsection = document.getElementById("favs");
