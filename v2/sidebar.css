@@ -1,22 +1,30 @@
-
 /* Sidebar */
 #sidebar {
   position: fixed;
-  top: 10px;
-  left: -80vw; /* hidden by default */
-  width: 50vw;
-  height: 100vh;
-  background: #1a1a1a;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;      /* required for scrolling */
+  background: #1e1e1e;
+  padding:0 20px 20px 20px ;
   display: flex;
   flex-direction: column;
   transition: left 0.6s ease;
-  overflow-x: hidden;
+  overflow-y: auto;   /* <--- enables vertical scrolling */
+  overflow-x: hidden; /* <--- prevents side scroll */
+  border-radius: 10px;
+  color: beige;
 }
+
 #sidebar.show {
   left: 0; /* slide in */
   border-radius: 10px;
 }
-
+.actionBtns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 /* Menu Icon */
 .menu-icon {
   width: 25px;
@@ -28,7 +36,7 @@
   width: 25px;
   height: 4px;
   display: block;
-  margin: 5px 5px;
+  margin: 4px 0;
   border-radius: 10px;
   transition: 0.6s;
 }
@@ -37,19 +45,6 @@
   align-items: center;
 }
 /* Dark Mode button */
-#dark-mode {
-  margin: 10px auto;
-  border-radius: 5px;
-  background-color: #ffbe5b;
-  color: black;
-  font-size: 15px;
-  width: 120px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s;
-}
 #dark-mode:hover {
   background: linear-gradient(90deg, orange, yellow);
   transform: scale(1.1);
@@ -81,32 +76,18 @@ nav {
     width: 25px;
     height: 4px;
     display: block;
-    margin: 5px 0;
+    margin: 4px 0;
     border-radius: 10px;
     transition: 0.6s;
   }
   /* Sidebar */
   #sidebar {
-    top: 15px;
-    left: -100%; /* hidden by default */
-    width: 90vw;
+    width: 85vw;
   }
   #sidebar.show {
     left: 0; /* slide in */
   }
 
-  /* Dark Mode button */
-  #dark-mode {
-    margin: 10px auto;
-    border-radius: 5px;
-    background-color: #ff9900;
-    color: black;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
   #dark-mode:hover {
     background: linear-gradient(90deg, orange, yellow);
     transform: scale(1.1);
@@ -123,26 +104,21 @@ nav {
     transform: scale(1.05);
   }
 }
-span {
-  color: black;
-  font-size: 24px;
-}
 .page-nav {
   display: flex;
-  gap: 10px;
-  justify-content: start;
-  align-items: center;
-  padding: 40px auto 0;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
+
 .page-nav a {
-  padding: 0 auto;
+  display: block;
+  width: 100%;      /* Every link becomes equal width */
   text-align: center;
-  text-decoration: none;
-  color: black;
   border: 2px solid yellow;
   border-radius: 10px;
-  width: 150px;
 }
+
 .page-nav a:hover {
   text-decoration: none;
   transition: transform 0.4s ease, border 0.2s;

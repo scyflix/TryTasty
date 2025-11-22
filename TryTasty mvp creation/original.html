@@ -42,7 +42,14 @@
         align-items: center;
         border-radius: 12px;
       }
-      header h1 {
+      a {
+        text-decoration: none;
+                color: rgb(0, 0, 0);
+      }
+      header a h1:hover {
+        opacity: 0.8;
+      }
+      header a h1 {
         font-size: 1.5em;
       }
       main {
@@ -99,7 +106,9 @@
   </head>
   <body>
     <header>
-      <h1>TryTasty</h1>
+      <a href="../index.html">
+        <h1>TryTasty</h1>
+      </a>
       <input
         id="forminputbtn"
         type="text"

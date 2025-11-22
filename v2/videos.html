@@ -28,12 +28,20 @@
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="../Recipe.css" />
     <link rel="stylesheet" href="../general.css" />
+    <link rel="stylesheet" href="form.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
   </head>
   <body>
+       <!--PRELOADER-->
+    <div id="preloader">
+      <h1>TryTasty</h1>
+      <div class="loadBar">
+        <div class="loadLine"></div>
+      </div>
+    </div>
     <header>
       <div class="menu-icon" onclick="toggleSidebar()">
         <span></span>
@@ -63,9 +71,14 @@
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </div>
-        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-          Light Mode
-        </button>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+          <button id="logoutBtn" onclick="window.location.href=`v2/login.html`;">
+            Logout
+          </button>
+        </div>
         <a href="../index.html">
           <span style="color: white; text-decoration: none">Home</span>
         </a>
@@ -86,6 +99,11 @@
         <a href="login.html">
           <span style="color: white; text-decoration: none">Login</span>
         </a>
+         <a href="TryTasty mvp creation/original.html">
+          <span style="color: white; text-decoration: none">Social</span>
+        </a>
+        <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
+      </nav>
       </nav>
     </header>
     <main>

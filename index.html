@@ -82,21 +82,6 @@
     <link rel="manifest" href="v2/site.webmanifest" />
 
     <style>
-      #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle, rgb(180, 180, 2), rgb(153, 99, 0));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        color: #1a1a1a;
-        gap: 5px;
-        transition: all 0.5s ease;
-      }
       /* Popup styling 
       #popup {
         position: fixed;
@@ -157,31 +142,34 @@
         visibility: visible;
         opacity: 1;
       }
+     
     </style>
   </head>
   <body>
     <div id="preloader">
       <h1>TryTasty</h1>
-      <h2 style="color: #1a1a1a">Try The Taste</h2>
+      <div class="loadBar">
+        <div class="loadLine"></div>
+      </div>
     </div>
     <!--
       Popup HTML 
-     <div id="popup">
-       <div id="popup-content">
-         <h2>Welcome to TryTasty!</h2>
-         <p>
-           <strong>TryTasty</strong> is a fun recipe project made by
-           <strong>Scybud</strong>, a student-led brand that loves to create and
-           share.
-         </p>
-         <p>
-           Here, you'll find simple and creative snack ideas built with code and
-           love.
-         </p>
-         <button onclick="closePopup()">Enter</button>
-       </div>
-     </div>
-    -->
+      <div id="popup">
+        <div id="popup-content">
+          <h2>Welcome to TryTasty!</h2>
+          <p>
+            <strong>TryTasty</strong> is a fun recipe project made by
+            <strong>Scybud</strong>, a student-led brand that loves to create and
+            share.
+          </p>
+          <p>
+            Here, you'll find simple and creative snack ideas built with code and
+            love.
+          </p>
+          <button onclick="closePopup()">Enter</button>
+        </div>
+      </div>
+      -->
 
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
@@ -212,9 +200,14 @@
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </div>
-        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-          Light Mode
-        </button>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+          <button id="logoutBtn" onclick="window.location.href=`v2/login.html`;">
+            Logout
+          </button>
+        </div>
         <a href="index.html">
           <span style="color: white; text-decoration: none">Home</span>
         </a>
@@ -238,9 +231,6 @@
         <a href="TryTasty mvp creation/original.html">
           <span style="color: white; text-decoration: none">Social</span>
         </a>
-        <button id="logoutBtn" onclick="window.location.href=`v2/login.html`;">
-          Logout
-        </button>
         <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
       </nav>
     </header>
