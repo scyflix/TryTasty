@@ -39,6 +39,13 @@
         margin-top: 20px;
         min-width: 80%;
       }
+      .fav-link {
+        display: flex;
+        justify-content: center;
+        }
+        .fav-link a {
+          margin-right: 20px;
+        }
     </style>
   </head>
 
@@ -234,7 +241,8 @@
         favrecipes.forEach((recipe) => {
           const a = document.createElement("a");
           a.href = `../index.html?recipe=${recipe.key}`; // link stays on page
-          a.textContent = recipe.name; // recipe name
+          a.textContent = recipe.name + ","; // recipe name
+
           a.className = "fav-link"; // optional CSS class
           a.onclick = () => showPage(recipe.key); // show the recipe
           favsection.appendChild(a);

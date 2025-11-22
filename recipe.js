@@ -120,7 +120,7 @@ window.findRecipe = function () {
   }
 
   if (matches.length > 0) {
-    suggestions.innerHTML = `<h3>${userName}, based on your ingredients, i suggest you try these recipes:</h3> <br> ${matches.join(
+    suggestions.innerHTML = `${userName}, based on your ingredients, i suggest you try: <br> ${matches.join(
       "<br>"
     )}`;
   } else {
