@@ -57,25 +57,31 @@
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
-        <!--USER PROFILE LINK-->
-        <a href="userProfile.html" class="userProfileLink">
-          <img src="../User profile.svg" alt="An svg image of user profile" class="profileImg">
-          <span>Profile</span>
-        </a>
-        <div class="menu-icon" onclick="toggleSidebar()">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+         <div class="upperNavContainer">
+          <div class="menu-icon" onclick="toggleSidebar()">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+          <!--USER PROFILE LINK-->
+          <a href="userProfile.html" class="userProfileLink">
+            <img
+              src="../User profile.svg"
+              alt="An svg image of user profile"
+              class="profileImg"
+            />
+            <span>Profile</span>
+          </a>
         </div>
         <div class="actionBtns">
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
@@ -112,6 +118,9 @@
       </nav>
     </header>
     <main>
+      <div class="statsBox">
+          <p>Recipes Submitted: <span id="submittedCount">0</span></p>
+        </div>
       <p id="non-userMessage">
         Read our <a href="privacyGerman.html">recipe submission terms</a> and
         <a href="login.html">Login</a> to submit a recipe
@@ -120,7 +129,7 @@
         <form
           action="https://formspree.io/f/myzpzgej"
           method="POST"
-          style="font-size: larger; color: white"
+          id="submitRecipeForm"
         >
           <h1>Share A Recipe</h1>
           <label for="name">
@@ -155,7 +164,7 @@
           <p>
             <b>Note:</b>Your ingredients and intructions should have a column(:)
           </p>
-          <button type="submit">Submit</button>
+          <button id="recipeSubmissionBtn" type="button">Submit</button>
         </form>
       </section>
     </main>
@@ -260,30 +269,6 @@
           textarea.style.height = textarea.scrollHeight + "px";
         });
       });
-    </script>
-
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
-        authDomain: "trytasty-64537.firebaseapp.com",
-        projectId: "trytasty-64537",
-        storageBucket: "trytasty-64537.appspot.com",
-        messagingSenderId: "379426398000",
-        appId: "1:379426398000:web:49b7236df3218d7306b2f5",
-        measurementId: "G-ZMW8ZTX39M",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
     </script>
     <script type="module" src="main.js"></script>
     <script src="../recipe.js"></script>

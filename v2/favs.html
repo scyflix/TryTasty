@@ -27,8 +27,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Recipe.css" />
     <link rel="stylesheet" href="sidebar.css" />
-    <link rel="stylesheet" href="../general.css">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="../general.css" />
+    <link rel="stylesheet" href="form.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -42,10 +42,10 @@
       .fav-link {
         display: flex;
         justify-content: center;
-        }
-        .fav-link a {
-          margin-right: 20px;
-        }
+      }
+      .fav-link a {
+        margin-right: 20px;
+      }
     </style>
   </head>
 
@@ -71,25 +71,31 @@
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
-        <!--USER PROFILE LINK-->
-        <a href="userProfile.html" class="userProfileLink">
-          <img src="../User profile.svg" alt="An svg image of user profile" class="profileImg">
-          <span>Profile</span>
-        </a>
-        <div class="menu-icon" onclick="toggleSidebar()">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+        <div class="upperNavContainer">
+          <div class="menu-icon" onclick="toggleSidebar()">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+          <!--USER PROFILE LINK-->
+          <a href="userProfile.html" class="userProfileLink">
+            <img
+              src="../User profile.svg"
+              alt="An svg image of user profile"
+              class="profileImg"
+            />
+            <span>Profile</span>
+          </a>
         </div>
         <div class="actionBtns">
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
@@ -100,7 +106,7 @@
           </button>
         </div>
         <a href="../index.html">
-          <span >Home</span>
+          <span>Home</span>
         </a>
 
         <a href="../index.html#recipeBot" onclick="showPage('recipeBotForm')">
@@ -135,6 +141,16 @@
       >
         Favorites
       </h1>
+      <div class="statsBox">
+         <button
+            class="add-fav"
+            data-key="zestyCucumberChips"
+            data-name="Zesty Cucumber Chips"
+          >
+            Add to favs
+          </button>
+        <p>Favorites: <span id="favCount">0</span></p>
+      </div>
       <section id="favs"></section>
       <button type="button" id="clearFavs">Clear Favs</button>
     </main>
@@ -170,48 +186,44 @@
                 <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
             -->
       </div>
- <hr>
+      <hr />
       <div id="FromScybud">
-
         <h5>Also From Scybud</h5>
         <div id="scybudApps">
-        
-        <a href="https://scyflix.github.io/RushSite/" target="_blank">
-          <div class="container">
-          <img
-            src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
-            alt="RushSite Logo"
-            />
-            <span>RushSite</span>
-          </div>
-        </a>
-        <a href="https://trytasty.de/" target="_blank">
-          <div class="container">
-
-            <img
-            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
-            alt="TryTasty Logo"
-            />
-            <span>TryTasty</span>
-          </div>
-        </a>
-        <a href="https://scyflix.github.io/Playbud/" target="_blank">
-         <div class="container">
-
-           <img
-             src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
-             alt="Playbud Logo"
-           />
-           <span>Playbud</span>
-         </div>
-        </a>
-        <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
-         <div class="container">
-           <img
-             src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
-             alt="Scybud Logo"
-             />
-             <span>Scybud</span>
+          <a href="https://scyflix.github.io/RushSite/" target="_blank">
+            <div class="container">
+              <img
+                src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                alt="RushSite Logo"
+              />
+              <span>RushSite</span>
+            </div>
+          </a>
+          <a href="https://trytasty.de/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
+                alt="TryTasty Logo"
+              />
+              <span>TryTasty</span>
+            </div>
+          </a>
+          <a href="https://scyflix.github.io/Playbud/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                alt="Playbud Logo"
+              />
+              <span>Playbud</span>
+            </div>
+          </a>
+          <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                alt="Scybud Logo"
+              />
+              <span>Scybud</span>
             </div>
           </a>
         </div>
@@ -224,7 +236,9 @@
     </footer>
     <script type="module" src="main.js"></script>
     <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-        <script differ>
+       <script src="../fav.js"></script>
+
+    <script differ>
       kofiWidgetOverlay.draw("scybud", {
         type: "floating-chat",
         "floating-chat.donateButton.text": "Support Us",
@@ -233,32 +247,7 @@
       });
     </script>
     <script>
-      const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
-      const favsection = document.getElementById("favs");
-      const clearFavs = document.getElementById("clearFavs");
-      if (favrecipes.length === 0) {
-        favsection.innerHTML = "<h2>You don`t have a favorite yet😓</h2>";
-        clearFavs.style.display = "none";
-      } else {
-        clearFavs.style.display = "block";
-        favrecipes.forEach((recipe) => {
-          const a = document.createElement("a");
-          a.href = `../index.html?recipe=${recipe.key}`; // link stays on page
-          a.textContent = recipe.name + ","; // recipe name
-
-          a.className = "fav-link"; // optional CSS class
-          a.onclick = () => showPage(recipe.key); // show the recipe
-          favsection.appendChild(a);
-        });
-      }
-      if (clearFavs) {
-        clearFavs.addEventListener("click", () => {
-          if (confirm("Are you sure? All saved favorites will be cleared.")) {
-            localStorage.removeItem("favs");
-            favsection.innerHTML = "<h2>You dont have a favorite yet😓</h2>";
-          }
-        });
-      }
+    
     </script>
 
     <script src="../recipe.js"></script>

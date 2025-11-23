@@ -13,13 +13,13 @@
   transition: left 0.6s ease;
   border-radius: 10px;
   color: beige;
-  overflow-y: auto;   /* <--- enables vertical scrolling */
-  overflow-x: auto; /* <--- prevents side scroll */
+  overflow-y: auto;   /* enables vertical scrolling */
+  overflow-x: auto; /* prevents side scroll */
 }
 /* SIDEBAR SCROLLBAR */
 /* width */
 #sidebar::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
 }
 
 /* Track */
@@ -81,11 +81,12 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
   margin-bottom: 30px;
   list-style: none;
   font-weight: bold;
   flex-direction: row;
+    overflow-y: auto;   /* enables vertical scrolling */
+  overflow-x: auto; 
 }
 
 @media (max-width: 600px) {

@@ -51,7 +51,7 @@ main {
   flex: 1;
   animation: slideup 2s ease;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   background-color: #1e1e1e;
   border-radius: 8px;
@@ -89,7 +89,7 @@ main {
   }
   to {
     opacity: 1;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }
 a {
@@ -100,13 +100,18 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+.upperNavContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
 /*USER PROFILE LINK*/
 a.userProfileLink {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 10px auto 0;
 }
 /*USER PROFILE IMAGE STYLE*/
 a .profileImg {

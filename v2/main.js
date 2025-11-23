@@ -40,21 +40,20 @@ window.signup = function (event) {
     return;
   }
 
-
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    return updateProfile(userCredential.user, {
-      displayName: userName
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      return updateProfile(userCredential.user, {
+        displayName: userName,
+      });
+    })
+    .then(() => {
+      alert("Signup successful!");
+      window.location.href = "../index.html";
+    })
+    .catch((error) => {
+      alert(error.message);
     });
-  })
-  .then(() => {
-    alert("Signup successful!");
-    window.location.href = "../index.html";
-  })
-  .catch((error) => {
-    alert(error.message);
-  });
-}
+};
 
 // Google Sign-In
 window.googleLogin = function () {
@@ -99,12 +98,16 @@ window.addEventListener("DOMContentLoaded", () => {
     const recipeForm = document.getElementById("recipeSubmissionForm");
     const loginBtn = document.getElementById("loginBtn");
     const videosPage = document.getElementById("videosPage");
+    const userName = document.getElementById("userName");
+    const Useremail = document.getElementById("Useremail");
 
     if (user) {
       if (welcomeText)
         welcomeText.innerText = ` ${
           user.displayName || user.email || user.userName || "user"
         }`;
+      if (Useremail) Useremail.innerText = `${user.email || "-"}`;
+      if (userName) userName.innerText = `${user.userName || "No Username"}`;
       if (logoutBtn) logoutBtn.style.display = "block";
       if (loginBtn) loginBtn.style.display = "none";
       if (popup) popup.style.display = "none";
@@ -113,6 +116,9 @@ window.addEventListener("DOMContentLoaded", () => {
       if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
       if (videosPage) videosPage.style.display = "block";
     } else {
+            if (Useremail) Useremail.innerText = `${"Login first"}`;
+            if (userName)
+              userName.innerText = `${"No Username"}`;
       if (logoutBtn) logoutBtn.style.display = "none";
       if (popup) popup.style.display = "block";
       if (nonUserMessage) nonUserMessage.style.display = "block";
@@ -129,7 +135,7 @@ window.logout = function () {
   signOut(auth)
     .then(() => {
       setTimeout(() => {
-        alert("You have just logged out")
+        alert("You have just logged out");
         window.location.href = "welcome.html";
       }, 2000);
     })

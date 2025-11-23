@@ -127,3 +127,41 @@ window.findRecipe = function () {
     suggestions.textContent = `${userName}, sorry I do not have a recipe for that yet 😓.`;
   }
 };
+
+//FOR RECIPE SUBMITTION
+const RecipeForm = document.getElementById("submitRecipeForm");
+let savedCount = JSON.parse(localStorage.getItem("savedCount")) || 0;
+const recipeSubmissionBtn = document.getElementById("recipeSubmissionBtn");
+const submittedCount = document.getElementById("submittedCount");
+let count = Number(savedCount);
+submittedCount.innerText = count;
+
+recipeSubmissionBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  //form inputs
+  const recipeOwnername = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  //Do not let submitted count work untill all fields are filled
+  if (!recipeOwnername || !message || !email) {
+    alert("Please fill all fields");
+    return;
+  } else {
+    count++;
+    submittedCount.innerText = count;
+    localStorage.setItem("savedCount", JSON.stringify(count));
+  }
+  //Let form work normally(Formspree handles the rest)
+  RecipeForm.submit();
+});
+
+document.getElementById("clearCountBtn").addEventListener("click", () => {
+  localStorage.removeItem("savedCount");
+  count = 0;
+  submittedCount.innerText = 0;
+});
+
+
+
