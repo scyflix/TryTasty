@@ -43,13 +43,13 @@
         <div class="loadLine"></div>
       </div>
     </div>
-    <header>
-      <div class="menu-icon" onclick="toggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div style="display: inline-flex; margin-left: 0" id="menuIconContainer">
+     <header>
+      <div style="display: flex; margin-left: 0" id="menuIconContainer">
+        <div class="menu-icon" onclick="toggleSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <a href="https://trytasty.de/">
           <h1 style="margin: 3px 10px 2px 5px; font-size: 25px; color: #1a1a1a">
             TryTasty
@@ -57,6 +57,7 @@
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
+  
         <div class="menu-icon" onclick="toggleSidebar()">
           <svg
             width="32"
@@ -72,28 +73,33 @@
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </div>
-        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-          Light Mode
-        </button>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+        </div>
         <a href="../index.html">
-          <span style="color: white; text-decoration: none">Home</span>
+          <span >Home</span>
         </a>
 
-        <a href="#" onclick="showPage('recipeBotForm')">
-          <span style="color: white; text-decoration: none">Bot</span>
+        <a href="../index.html#recipeBot" onclick="showPage('recipeBotForm')">
+          <span>Bot</span>
         </a>
         <a href="favs.html">
-          <span style="color: white; text-decoration: none">Favorites</span>
+          <span>Favorites</span>
         </a>
         <a href="videos.html">
-          <span style="color: white; text-decoration: none">Watch</span>
+          <span>Watch</span>
         </a>
         <a href="submit.html">
-          <span style="color: white; text-decoration: none">Submit</span>
+          <span>Submit</span>
         </a>
 
         <a href="login.html">
-          <span style="color: white; text-decoration: none">Login</span>
+          <span>Login</span>
+        </a>
+        <a href="TryTasty mvp creation/original.html">
+          <span>Social</span>
         </a>
       </nav>
     </header>

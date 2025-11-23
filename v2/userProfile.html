@@ -15,7 +15,7 @@
 
       gtag("config", "G-DDLCL6XBQR");
     </script>
-    <title>TryTasty | Videos</title>
+    <title>TryTasty | Login</title>
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -25,24 +25,45 @@
     <meta property="og:type" content="website" />
     <meta content="TryTasty" property="og:title" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS LINKS-->
+      <link rel="stylesheet" href="../Recipe.css" />
     <link rel="stylesheet" href="sidebar.css" />
-    <link rel="stylesheet" href="../Recipe.css" />
-    <link rel="stylesheet" href="../general.css" />
+    <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="form.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
   </head>
+  <script>
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
   <body>
-       <!--PRELOADER-->
+   <!--PRELOADER-->
     <div id="preloader">
       <h1>TryTasty</h1>
       <div class="loadBar">
         <div class="loadLine"></div>
       </div>
     </div>
-   <header>
+        <!-- Popup HTML -->
+    <div id="popup">
+      <div id="popup-content">
+        <h2>Terms and Condition</h2>
+        <p style="font-size: large">
+          By continuing, you agree that you have read our
+          <a href="privacyGerman.html">Privacy Policy</a> and understand & that
+          you agree to our Conditons for Recipe submission in section 6 of the
+          <a href="privacyGerman.html">Privacy Policy</a> page.
+        </p>
+        <button onclick="closePopup()">Continue</button>
+      </div>
+    </div>
+
+      <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon" onclick="toggleSidebar()">
           <span></span>
@@ -56,6 +77,7 @@
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
+            <div class="upperNavContainer"></div>
         <!--USER PROFILE LINK-->
         <a href="userProfile.html" class="userProfileLink">
           <img src="../User profile.svg" alt="An svg image of user profile" class="profileImg">
@@ -111,83 +133,7 @@
       </nav>
     </header>
     <main>
-      <h1
-        id="pageTitle"
-        style="
-          text-align: center;
-          border-bottom: 3px solid orangered;
-          color: orangered;
-        "
-      >
-        Videos
-      </h1>
-      <h1 id="non-userMessage">
-        <a href="login.html">Login</a> to watch videos
-      </h1>
-      <!--  
-          <section>
-            <p> Love cakes? You're  for a treat! <em>Kalm Cakes</em> shares fun, creative, and delicious cake videos on TikTok — from fluffy sponges to eye-popping cake art. 🍰<br>
-              Watch her videos below and get inspired to bake something sweet today!</p>
-            </section>
-            <section style="max-height: 700px;">
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kalm.bakes" data-unique-id="kalm.bakes" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" >
-                   <section> 
-                      <a target="_blank" href="https://www.tiktok.com/@kalm.bakes?refer=creator_embed">@kalm.bakes</a> 
-                  </section>
-               </blockquote> 
-               <script differ async src="https://www.tiktok.com/embed.js"></script>
-            </section>
-      -->
-      <section id="videosPage">
-        <iframe
-          src="https://res.cloudinary.com/dc1bmavl5/video/upload/v1763814608/lv_0_20251114235851_lvrpqd.mp4"
-          title="TryTasty video player"
-          frameborder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://youtube.com/embed/KyaVdybiPVY?si=MjeMkkrklDtW5JVf"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://youtube.com/embed/Th1oKlZfYfc?si=uky6k0T7Vb7gjyzk"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://youtube.com/embed/VqO9uRMWUqE?si=iDoaVQqC0si_8hhp"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/JJ6Xv2lJieE?si=W233CfFMdaSlyUsc"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://youtube.com/embed/62Vswot4D3s?si=w52tzmMNaxzljxmr"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </section>
+    
     </main>
     <footer>
       <h5>Follow us</h5>
@@ -212,14 +158,14 @@
         </a>
 
         <!--
-              <h5>Follow Scyflix</h5>
-              <a href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="bx bxl-tiktok"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=61566637364542" target="_blank" title="Facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.instagram.com/scyflix5855/" target="_blank" title="Instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com//abdulroqib-oladipo-a85197253/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
-          -->
+                <h5>Follow Scyflix</h5>
+                <a href="https://www.tiktok.com/@scyflix5855?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"><i class="bx bxl-tiktok"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61566637364542" target="_blank" title="Facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://x.com/Scyflix5855" target="_blank" title="Twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/scyflix5855/" target="_blank" title="Instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/abdulroqib-oladipo-a85197253/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UCvkuxqW8dq9G_yD55rO_4sg" target="_blank" title="YouTube"><i class="bx bxl-youtube"></i></a>
+            -->
       </div>
  <hr>
       <div id="FromScybud">
