@@ -46,6 +46,17 @@
       .fav-link a {
         margin-right: 20px;
       }
+      #searchContainer {
+        width: 70vw;
+        z-index: 0.5;
+        margin-top: 20px;
+      }
+      #searchContainer.shadow {
+        background: rgb(0, 0, 0, 0.6);
+      }
+      #searchInput {
+        width: 70%;
+      }
     </style>
   </head>
 
@@ -69,6 +80,13 @@
             TryTasty
           </h1>
         </a>
+        <div id="searchContainer">
+          <input type="search" name="searchInput" id="searchInput" placeholder="Search anything">
+          <button type="button" id="searchBtn">Search</button>
+          <div id="searchSuggestions">
+            <p id="suggestionsText"></p>
+          </div>
+        </div>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="upperNavContainer">
@@ -128,10 +146,9 @@
         <a href="TryTasty mvp creation/original.html">
           <span>Social</span>
         </a>
-        <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
       </nav>
     </header>
-    <main>
+    <main id="body">
       <h1
         style="
           text-align: center;
@@ -240,8 +257,26 @@
       });
     </script>
     <script>
-    
-    </script>
+    const searchInput = document.getElementById("searchInput");
+    const favs = document.getElementById("favs");
+    const body = document.getElementById("body");
+    const searchBtn = document.getElementById("searchBtn");
+    const suggestionsText = document.getElementById("suggestionsText");
+    searchBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const searchValue = searchInput.value.toLowerCase();
+      const bodyText = body.innerText.toLowerCase();
+      if(bodyText.includes(searchValue) && searchValue != "") {
+    suggestionsText.innerText = `Found: "${searchValue}"`;
+      } else {
+    suggestionsText.innerText = `Nothing like "${searchValue}"`;
+      }
+      
+    })
+    console.log('document readyState:', document.readyState);
+console.log('search input element:', document.getElementById('searchInput'));
+
+        </script>
 
     <script src="../recipe.js"></script>
   </body>
