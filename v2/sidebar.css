@@ -65,7 +65,7 @@
 }
 #menuIconContainer {
   display: flex;
-  align-items: center;z
+  align-items: center;
 }
 
 /* Dark Mode button */
@@ -79,6 +79,7 @@ span {
 }
 nav {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 30px;

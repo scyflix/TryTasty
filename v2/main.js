@@ -104,10 +104,10 @@ window.addEventListener("DOMContentLoaded", () => {
     if (user) {
       if (welcomeText)
         welcomeText.innerText = ` ${
-          user.displayName || user.email || user.userName || "user"
+          user.displayName || user.email || "user"
         }`;
-      if (Useremail) Useremail.innerText = `${user.email || "-"}`;
-      if (userName) userName.innerText = `${user.userName || "No Username"}`;
+      if (Useremail) Useremail.innerText = user.email || "-";
+      if (userName) userName.innerText = user.displayName || "No Username";
       if (logoutBtn) logoutBtn.style.display = "block";
       if (loginBtn) loginBtn.style.display = "none";
       if (popup) popup.style.display = "none";
@@ -116,9 +116,9 @@ window.addEventListener("DOMContentLoaded", () => {
       if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
       if (videosPage) videosPage.style.display = "block";
     } else {
-            if (Useremail) Useremail.innerText = `${"Login first"}`;
+            if (Useremail) Useremail.innerText = "Login first";
             if (userName)
-              userName.innerText = `${"No Username"}`;
+              userName.innerText = "No Username";
       if (logoutBtn) logoutBtn.style.display = "none";
       if (popup) popup.style.display = "block";
       if (nonUserMessage) nonUserMessage.style.display = "block";
