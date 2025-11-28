@@ -11,6 +11,43 @@ const sidebar = document.getElementById("sidebar");
 function toggleSidebar() {
   sidebar.classList.toggle("show");
 }
+
+const sidebarElement = document.getElementById("sidebar");
+const mainContentElement = document.getElementById("main");
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener("touchstart", (event) => {
+  touchStartX = event.touches[0].clientX;
+});
+
+document.addEventListener("touchend", (event) => {
+  touchEndX = event.changedTouches[0].clientX;
+
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Swipe Right = Open Sidebar (only if swipe starts near screen edge)
+  if (swipeDistance > 80 && touchStartX < 60) {
+    openSidebarElement();
+  }
+
+  // Swipe Left = Close Sidebar (only if already open)
+  if (swipeDistance < -80 && sidebarElement.classList.contains("open")) {
+    closeSidebarElement();
+  }
+});
+
+function openSidebarElement() {
+  sidebarElement.classList.add("open");
+  mainContentElement.classList.add("shift");
+}
+
+function closeSidebarElement() {
+  sidebarElement.classList.remove("open");
+  mainContentElement.classList.remove("shift");
+}
+
 //dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
