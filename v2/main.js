@@ -25,67 +25,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Signup
-window.signup = function (event) {
-  event.preventDefault();
-  const userName = document.getElementById("userName").value;
-  const email = document.getElementById("emailForSignup").value;
-  const password = document.getElementById("passwordForSignup").value;
-  const confirmPassword = document.getElementById(
-    "re-enterPasswordForSignup"
-  ).value;
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      return updateProfile(userCredential.user, {
-        displayName: userName,
-      });
-    })
-    .then(() => {
-      alert("Signup successful!");
-      window.location.href = "../index.html";
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
-};
 
 // Google Sign-In
 window.googleLogin = function () {
   const provider = new GoogleAuthProvider();
-
+  
   signInWithPopup(auth, provider)
-    .then((result) => {
-      alert(`Welcome, ${result.user.displayName}`);
-      window.location.href = "submit.html";
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
+  .then((result) => {
+    alert(`Welcome, ${result.user.displayName}`);
+    window.location.href = "submit.html";
+  })
+  .catch((error) => {
+    alert(error.message);
+  });
 };
 
-// Email/Password Login
-window.login = function (event) {
-  event.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      alert("Login successful!");
-      setTimeout(() => {
-        window.location.href = "../index.html";
-      }, 2000);
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
-};
 
 // Wait for DOM so getElementById won't return null if script is in <head>
 window.addEventListener("DOMContentLoaded", () => {
@@ -97,41 +51,93 @@ window.addEventListener("DOMContentLoaded", () => {
     const nonUserMessage = document.getElementById("non-userMessage");
     const recipeForm = document.getElementById("recipeSubmissionForm");
     const loginBtn = document.getElementById("loginBtn");
+    const signupBtn = document.getElementById("signupBtn");
     const videosPage = document.getElementById("videosPage");
     const userName = document.getElementById("userName");
     const Useremail = document.getElementById("Useremail");
-
+    const loginLink = document.getElementById("loginLink");
+    
+    //If user is singed in do the following
     if (user) {
-      if (welcomeText)
-        welcomeText.innerText = ` ${
-          user.displayName || user.email || "user"
-        }`;
-      if (Useremail) Useremail.innerText = user.email || "-";
-      if (userName) userName.innerText = user.displayName || "No Username";
-      if (logoutBtn) logoutBtn.style.display = "block";
-      if (loginBtn) loginBtn.style.display = "none";
-      if (popup) popup.style.display = "none";
-      if (loginInputForm) loginInputForm.style.display = "none";
-      if (nonUserMessage) nonUserMessage.style.display = "none";
-      if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
-      if (videosPage) videosPage.style.display = "block";
-    } else {
-            if (Useremail) Useremail.innerText = "Login first";
-            if (userName)
-              userName.innerText = "No Username";
-      if (logoutBtn) logoutBtn.style.display = "none";
-      if (popup) popup.style.display = "block";
-      if (nonUserMessage) nonUserMessage.style.display = "block";
-      if (recipeForm) recipeForm.style.display = "none";
-      if (welcomeText) welcomeText.innerText = ""; // clear greeting
-      if (loginInputForm) loginInputForm.style.display = "block";
-      if (videosPage) videosPage.style.display = "none";
+    if (welcomeText)
+      welcomeText.innerText = ` ${user.displayName || user.email || "user"}`;
+    if (Useremail) Useremail.innerText = user.email || "-";
+    if (userName) userName.innerText = user.displayName || "No Username";
+    if (logoutBtn) logoutBtn.style.display = "block";
+    if (loginBtn) loginBtn.style.display = "none";
+    if (popup) popup.style.display = "none";
+    if (loginInputForm) loginInputForm.style.display = "none";
+    if (nonUserMessage) nonUserMessage.style.display = "none";
+    if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
+    if (videosPage) videosPage.style.display = "block";
+    if (loginLink) loginLink.style.display = "none";
+    } 
+    
+    //If user is NOT signed in do the following
+    else {
+    if (Useremail) Useremail.innerText = "Login first";
+    if (userName) userName.innerText = "No Username";
+    if (logoutBtn) logoutBtn.style.display = "none";
+    if (popup) popup.style.display = "block";
+    if (nonUserMessage) nonUserMessage.style.display = "block";
+    if (recipeForm) recipeForm.style.display = "none";
+    if (welcomeText) welcomeText.innerText = ""; // clear greeting
+    if (loginInputForm) loginInputForm.style.display = "block";
+    if (videosPage) videosPage.style.display = "none";
+    if (loginLink) loginLink.style.display = "block";
     }
-  });
-});
+    });
+    });
+    
+    // Signup
+    signupBtn.addEventListener("click", () => {
+      const userName = document.getElementById("userName").value;
+      const email = document.getElementById("emailForSignup").value;
+      const password = document.getElementById("passwordForSignup").value;
+      const confirmPassword = document.getElementById(
+        "re-enterPasswordForSignup"
+      ).value;
+    
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+    
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          return updateProfile(userCredential.user, {
+            displayName: userName,
+          });
+        })
+        .then(() => {
+          alert("Signup successful!");
+          window.location.href = "../index.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    });
+
+    // Email/Password Login
+    loginBtn.addEventListener("click", () => {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert("Login successful!");
+          setTimeout(() => {
+            window.location.href = "../index.html";
+          }, 2000);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+      });
+      
 
 // Logout
-window.logout = function () {
+logoutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {
       setTimeout(() => {
@@ -143,4 +149,4 @@ window.logout = function () {
       console.error("Lougout Error:", error);
       alert("Error Logging out: " + error.message);
     });
-};
+});

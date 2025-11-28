@@ -14,7 +14,7 @@
       gtag("js", new Date());
 
       gtag("config", "G-DDLCL6XBQR");
-    </script>
+      </script>
     <title>TryTasty | Login</title>
     <meta charset="utf-8" />
     <meta
@@ -33,11 +33,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
   </head>
-  <script>
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
 
   <body>
     <!--PRELOADER-->
@@ -47,20 +42,7 @@
         <div class="loadLine"></div>
       </div>
     </div>
-    <!-- Popup HTML -->
-    <div id="popup">
-      <div id="popup-content">
-        <h2>Terms and Condition</h2>
-        <p style="font-size: large">
-          By continuing, you agree that you have read our
-          <a href="privacyGerman.html">Privacy Policy</a> and understand & that
-          you agree to our Conditons for Recipe submission in section 6 of the
-          <a href="privacyGerman.html">Privacy Policy</a> page.
-        </p>
-        <button onclick="closePopup()">Continue</button>
-      </div>
-    </div>
-
+    
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon" onclick="toggleSidebar()">
@@ -77,60 +59,74 @@
       <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
           <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
           >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </div>
-        <div class="actionBtns">
-          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-            Light Mode
-          </button>
-        </div>
-        <a href="../index.html">
-          <span>Home</span>
-        </a>
-
-        <a href="../index.html#recipeBot" onclick="showPage('recipeBotForm')">
-          <span>Bot</span>
-        </a>
-        <a href="favs.html">
-          <span>Favorites</span>
-        </a>
-        <a href="videos.html">
-          <span>Watch</span>
-        </a>
-        <a href="submit.html">
-          <span>Submit</span>
-        </a>
-
-        <a href="login.html">
-          <span>Login</span>
-        </a>
-        <a href="../TryTasty mvp creation/original.html">
-          <span>Social</span>
-        </a>
-      </nav>
-    </header>
-    <main>
-      <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
-      <div id="login-form">
-        <form>
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+      <div class="actionBtns">
+        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+          Light Mode
+        </button>
+      </div>
+      <a href="../index.html">
+        <span>Home</span>
+      </a>
+      
+      <a href="../index.html#recipeBot">
+        <span>Bot</span>
+      </a>
+      <a href="favs.html">
+        <span>Favorites</span>
+      </a>
+      <a href="videos.html">
+        <span>Watch</span>
+      </a>
+      <a href="submit.html">
+        <span>Submit</span>
+      </a>
+      
+      <a href="login.html">
+        <span>Login</span>
+      </a>
+      <a href="../TryTasty mvp creation/original.html">
+        <span>Social</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Popup HTML -->
+  <div id="popup">
+    <div id="popup-content">
+      <h2>Terms and Condition</h2>
+      <p style="font-size: large">
+        By continuing, you agree that you have read our
+        <a href="privacyGerman.html">Privacy Policy</a> and understand & that
+        you agree to our Conditons for Recipe submission in section 6 of the
+        <b>Privacy Policy</b> page.
+      </p>
+      <button id="closePopup">Continue</button>
+    </div>
+  </div>
+  <main>
+    <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
+      <div id="auth-form">
+        <button id="logoutBtn" style="display: none">Logout</button>
+        <form id="loginForm">
           <div id="loginInputForm">
             <h3>Login To TryTasty</h3>
             <label for="email">Email:</label>
             <input
               id="email"
               type="email"
-              placeholder="examble@gmail.com"
+              placeholder="example@gmail.com"
               autocomplete="email"
             />
             <label for="password">Password:</label>
@@ -140,17 +136,47 @@
               placeholder="Enter Your Password"
               autocomplete="current-password"
             />
-            <button id="loginBtn" type="button" onclick="login(event)">
+            <button id="loginBtn" type="button">
               Login
             </button>
           </div>
-          <section id="logoutBtn" style="display: none">
-            <h3>Logout Of TryTasty</h3>
-            <button id="logoutBtn" onclick="logout()">Logout</button>
-          </section>
-          <p>New user? <a href="signup.html">Signup Here</a></p>
+          <p>New user? <a id="signupFormLink" href="#">Signup</a></p>
         </form>
       </div>
+      
+              <!--SIGNUP FORM-->
+               <form id="signupForm" style="display: none;">
+              <h3>Signup To TryTasty</h3>
+              <div class="auth-form">
+                <label for="userName">Username:</label>
+                <input
+                  type="text"
+                  name="userName"
+                  id="userName"
+                  placeholder="Create a username"
+                />
+                <label for="emailForSignup">Email:</label>
+                <input
+                  id="emailForSignup"
+                  type="email"
+                  placeholder="examble@gmail.com"
+                />
+                <label for="passwordForSignup">Password:</label>
+                <input
+                  id="passwordForSignup"
+                  type="password"
+                  placeholder="Enter Your Password"
+                />
+                <label for="re-enterPasswordForSignup">Re-enter Password:</label>
+                <input
+                  id="re-enterPasswordForSignup"
+                  type="password"
+                  placeholder="Repeat Password"
+                />
+                <button type="button" id="signupBtn">Signup</button>
+                <p>Have an account? <a id="loginFormLink" href="#">Login</a></p>
+              </div>
+            </form>
     </main>
     <footer>
       <h5>Follow us</h5>
@@ -232,30 +258,7 @@
       <a href="submit.html">Submit a recipe</a>
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyAuKSZm7BF9pxHW6kkAbhP0pbUw9QxErd0",
-        authDomain: "trytasty-64537.firebaseapp.com",
-        projectId: "trytasty-64537",
-        storageBucket: "trytasty-64537.appspot.com",
-        messagingSenderId: "379426398000",
-        appId: "1:379426398000:web:49b7236df3218d7306b2f5",
-        measurementId: "G-ZMW8ZTX39M",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-    <script type="module" src="main.js"></script>
-    <script src="../recipe.js"></script>
+       <script type="module" src="main.js" defer></script>
+    <script src="../recipe.js" defer></script>
   </body>
 </html>

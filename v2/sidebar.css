@@ -4,39 +4,39 @@
   top: 0;
   left: -100%;
   width: 300px;
-  height: 100vh;      /* required for scrolling */
+  height: 100vh; /* required for scrolling */
   background: #1e1e1e;
-  padding:0 20px 20px 20px ;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   transition: left 0.6s ease;
   border-radius: 10px;
   color: beige;
-  overflow-y: auto;   /* enables vertical scrolling */
+  overflow-y: auto; /* enables vertical scrolling */
   overflow-x: auto; /* prevents side scroll */
 }
 /* SIDEBAR SCROLLBAR */
 /* width */
 #sidebar::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 /* Track */
 #sidebar::-webkit-scrollbar-track {
-    background: #444; /* softer dark */
-    border-radius: 10px;
+  background: #444; /* softer dark */
+  border-radius: 10px;
 }
 
 /* Handle */
 #sidebar::-webkit-scrollbar-thumb {
-    background: #ffd900;
-    border-radius: 10px;
+  background: #ffd900;
+  border-radius: 10px;
 }
 
 /* Handle hover */
 #sidebar::-webkit-scrollbar-thumb:hover {
-    background: #e0bf00; /* darker yellow, still consistent */
+  background: #e0bf00; /* darker yellow, still consistent */
 }
 
 #sidebar.show {
@@ -81,13 +81,12 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
   margin-bottom: 30px;
   list-style: none;
   font-weight: bold;
   flex-direction: row;
-    overflow-y: auto;   /* enables vertical scrolling */
-  overflow-x: auto; 
+  overflow-y: auto; /* enables vertical scrolling */
+  overflow-x: auto;
 }
 
 @media (max-width: 600px) {
@@ -126,9 +125,6 @@ nav {
     border: 2px solid yellow;
     border-radius: 10px;
   }
-  .page-nav a:hover {
-    transform: scale(1.05);
-  }
 }
 .page-nav {
   display: flex;
@@ -139,16 +135,17 @@ nav {
 
 .page-nav a {
   display: block;
-  width: 100%;      /* Every link becomes equal width */
+  width: 100%; /* Every link becomes equal width */
   text-align: center;
   border: 2px solid yellow;
   border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
 .page-nav a:hover {
   text-decoration: none;
-  transition: transform 0.4s ease, border 0.2s;
   border: 2px solid orange;
   transform: scale(1.05);
   border-radius: 10px;
+  background: #282828;
 }
