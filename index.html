@@ -136,13 +136,12 @@
         opacity: 0;
         transition: opacity 0.5s, visibility 0.5s;
       }
-
+      
       /* Show the toast */
       #toast.show {
         visibility: visible;
         opacity: 1;
       }
-    
     </style>
   </head>
   <body>
@@ -185,7 +184,7 @@
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
-          <div class="upperNavContainer">
+        <div class="upperNavContainer">
           <div class="menu-icon" onclick="toggleSidebar()">
             <svg
               width="32"
@@ -215,12 +214,15 @@
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
             Light Mode
           </button>
-          <button id="logoutBtn" onclick="window.location.href=`v2/login.html`;">
+          <button
+            id="logoutBtn"
+            onclick="window.location.href=`v2/login.html`;"
+          >
             Logout
           </button>
         </div>
         <a href="index.html">
-          <span >Home</span>
+          <span>Home</span>
         </a>
 
         <a href="#" onclick="showPage('recipeBotForm')">
@@ -250,50 +252,50 @@
         <nav class="page">
           <!--Link all the recipe pages here-->
           <a
-          href="#"
-          data-keywords="plantains,plantain,tomatoe"
-          onclick="showPage('plantainNachos')"
-          class="snackImage recipe"
-          ><img
-          src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif"
-          title="Click to see details"
-          alt="Crispy Plantain Nachos"
-          />Plantain Nachos</a
+            href="#"
+            data-keywords="plantains,plantain,tomatoe"
+            onclick="showPage('plantainNachos')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif"
+              title="Click to see details"
+              alt="Crispy Plantain Nachos"
+            />Plantain Nachos</a
           >
           <a
-          href="#"
-          data-keywords="chili,peanut butter,popcorn"
-          onclick="showPage('spicyPeanutButterPopcorn')"
-          class="snackImage recipe"
-          ><img
-          src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif"
-          title="Click to see details"
-          alt="Spicy Peanut Butter Popcorn"
-          />Spicy Peanut Butter Popcorn</a
+            href="#"
+            data-keywords="chili,peanut butter,popcorn"
+            onclick="showPage('spicyPeanutButterPopcorn')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif"
+              title="Click to see details"
+              alt="Spicy Peanut Butter Popcorn"
+            />Spicy Peanut Butter Popcorn</a
           >
           <a
-          href="#"
-          data-keywords="eggs,egg,milk,bread"
-          onclick="showPage('savoryFrenchToastSticks')"
-          class="snackImage recipe"
-          ><img
-          src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/IMG_20250710_092333_1_glg6ik.avif"
-          title="Click to see details"
-          alt="French Toast Sticks"
-          />Savory French Toast Sticks
-        </a>
-        <a
-          href="#"
-          data-keywords="egg,eggs,noodles,Lettuce,chicken"
-          onclick="showPage('instantRamenTacos')"
-          class="snackImage recipe"
-          ><img
-            src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif"
-            title="Click to see image"
-            alt="Instant Ramen Tacos"
-          />Instant Ramen Tacos</a
-        >
-        <a
+            href="#"
+            data-keywords="eggs,egg,milk,bread"
+            onclick="showPage('savoryFrenchToastSticks')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/IMG_20250710_092333_1_glg6ik.avif"
+              title="Click to see details"
+              alt="French Toast Sticks"
+            />Savory French Toast Sticks
+          </a>
+          <a
+            href="#"
+            data-keywords="egg,eggs,noodles,Lettuce,chicken"
+            onclick="showPage('instantRamenTacos')"
+            class="snackImage recipe"
+            ><img
+              src="https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif"
+              title="Click to see image"
+              alt="Instant Ramen Tacos"
+            />Instant Ramen Tacos</a
+          >
+          <a
             href="#"
             data-keywords="plantain,nachos,tomatoe"
             onclick="showPage('spicyCorn&CoconutBites')"
@@ -1363,7 +1365,7 @@
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
     <script src="recipe.js"></script>
-   <script src="fav.js"></script>
+    <script src="fav.js"></script>
   </body>
 </html>
 <!--Alhamdulillahi Rabbil Ahlamin-->

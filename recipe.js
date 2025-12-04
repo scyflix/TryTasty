@@ -7,7 +7,7 @@ window.onload = function () {
     }, 500); // Delay to allow fade-out effect
   }
 //PopUp
-const closePopup = this.document.getElementById("closePopup");
+const closePopup = document.getElementById("closePopup");
      closePopup.addEventListener("click", () => {
        document.getElementById("popup").style.display = "none";
      });
