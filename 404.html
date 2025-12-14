@@ -6,35 +6,33 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../favicon/apple-touch-icon.png"
+      href="v2/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../favicon/favicon-32x32.png"
+      href="v2/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../favicon/favicon-16x16.png"
+      href="v2/favicon-16x16.png"
     />
     <title>Page Not Found</title>
     <style>
       :root {
-        --accent1: #00ff85;
-        --accent2: #1e90ff;
-        --accent3: #ff0099;
+        --accent1: #ffff00;
+        --accent2: orangered;
+        --accent3: orange;
         --bg: #0d0d0d;
         --text-color: #ffffff;
       }
-      html, body {
-        margin: 0;
-        padding: 0;
-width: 100vw;     
-height: 100dvh; 
-}
+   html {
+    height: 100vh;
+    width: 100vw;
+   }
       body {
   font-family: "Poppins", sans-serif;
 background: var(--bg);
@@ -47,7 +45,7 @@ color: var(--text-color);
         text-align: center;
       }
       #notFound {
-        font-size: 14rem;
+        font-size: 10rem;
         background: linear-gradient(
           90deg,
           var(--accent1),
@@ -73,12 +71,25 @@ color: var(--text-color);
       a:hover {
         opacity: 0.7;
       }
-      #robot {
+        #robot {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: bounce 4s linear infinite;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px) scale(1.02);
+        }
+        100% {
+          transform: translateY(0);
+        }
       }
       .robotHead {
         border: 2px solid var(--accent1);
@@ -156,7 +167,7 @@ color: var(--text-color);
       <h1><span id="notFound">404</span></h1>
       <p>Page Not Found</p>
       <p>Gosh! We are lost again 😕.</p>
-      <a href="/">Go Home</a>
+      <a href="index.html">Go Home</a>
     </main>
   </body>
 </html>
