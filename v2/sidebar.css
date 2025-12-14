@@ -8,6 +8,7 @@
   background: #1e1e1e;
   padding: 0 20px 20px 20px;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: nowrap;
   transition: left 0.6s ease;

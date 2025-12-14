@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (welcomeText)
       welcomeText.innerText = ` ${user.displayName || user.email || "user"}`;
     if (Useremail) Useremail.innerText = user.email || "-";
-    if (userName) userName.innerText = user.displayName || "No Username";
+    if (userName) userName.innerText = user.displayName || "Profile";
     if (logoutBtn) logoutBtn.style.display = "block";
     if (loginBtn) loginBtn.style.display = "none";
     if (popup) popup.style.display = "none";
@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //If user is NOT signed in do the following
     else {
     if (Useremail) Useremail.innerText = "Login first";
-    if (userName) userName.innerText = "No Username";
+    if (userName) userName.innerText = "Login first";
     if (logoutBtn) logoutBtn.style.display = "none";
     if (popup) popup.style.display = "block";
     if (nonUserMessage) nonUserMessage.style.display = "block";

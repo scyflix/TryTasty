@@ -1,6 +1,16 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --link-color: #ff4500;
+  --bg: #5e5e5e;
+  --main-bg: #1e1e1e;
+  --color: #ffffff;
+  --padding: 10px;
+  --font-size: 1rem;
+  --radius: 8px;
+  --header-bg: radial-gradient(circle, orange, yellow);
+}
 
 html,
 body {
@@ -11,11 +21,11 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Push footer to the bottom */
   font-family: arial, sans-serif;
-  background-color: rgb(94, 94, 94);
-  color: white;
+  background-color: var(--bg);
+  color: var(--color);
   line-height: 1.6;
-  padding: 0 10px;
-  font-size: 20px;
+  padding: 0 var(--padding);
+  font-size: var(--font-size);
 }
 /*PRELOADER*/
 #preloader {
@@ -36,13 +46,13 @@ body {
 header {
   display: flex;
   height: 50px;
-  background: radial-gradient(circle, orange, yellow);
-  padding: 0 10px;
+  background: var(--header-bg);
+  padding: 0 var(--padding);
   position: sticky;
   top: 0;
   z-index: 1000;
   margin: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius);
   height: 60px;
   max-height: 75px;
 }
@@ -52,12 +62,12 @@ main {
   animation: slideup 2s ease;
   max-width: 900px;
   margin: 20px auto;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border-radius: 8px;
+  padding: calc(var(--padding) * 2);
+  background-color: var(--main-bg);
+  border-radius: var(--radius);
   box-shadow: 0 2px 30px 2px rgb(0, 0, 0);
 }
-     /*LOADER ANIMATION*/
+/*LOADER ANIMATION*/
 .loadBar {
   background: rgba(255, 217, 111, 0.9);
   width: 190px;
@@ -67,7 +77,7 @@ main {
 }
 .loadLine,
 .loadBar {
-  border-radius: 4px;
+  border-radius: calc(var(--radius) / 2);
 }
 .loadLine {
   background: #ff4500;
@@ -87,13 +97,13 @@ main {
 #preloader h1 {
   animation: slideIn 4s ease;
 }
-@keyframes  slideIn{
-from {
-  transform: translateX(-100px);
-}
-to {
-  transform: translateX(0);
-}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 /*SLIDEUP AND FADEIN ANIMATION FOR MAIN ELEMENT*/
 @keyframes slideup {
@@ -108,7 +118,7 @@ to {
 }
 a {
   text-decoration: none;
-  color: #ff4500;
+  color: var(--link-color);
 }
 
 a:hover {
@@ -135,9 +145,11 @@ a .profileImg {
 }
 a.userProfileLink span {
   color: beige;
-  font-size: 10px;
+  font-size: calc(var(--font-size) / 1.5);
   margin: 0;
 }
+
+
 .social-icons a {
   color: white;
   font-size: 28px;
@@ -166,7 +178,7 @@ a.userProfileLink span {
 #scybudApps a span {
   margin-top: 5px;
   color: #f1f1f1;
-  font-size: 12px;
+  font-size: calc(var(--font-size) / 1.5);
 }
 #scybudApps .container img {
   width: 50px;
@@ -187,4 +199,30 @@ footer {
   border-radius: 14px;
   height: auto;
   width: auto;
+}
+
+#bottomNavContainer {
+  display: none;
+}
+@media (max-width: 394px) {
+  a.toastNavLink {
+    display: none;
+  }
+#bottomNavContainer {
+  display: flex;
+  margin-top: auto;
+  position: sticky;
+  bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto 20px;
+  padding: calc(var(--padding) / 2) calc(var(--padding) * 2);
+  flex-wrap: wrap;
+  backdrop-filter: blur(40px) brightness(20%);
+  border-radius: 12px;
+}
+#bottomNavContainer a {
+  color: #e69500;
+}
 }
