@@ -149,7 +149,6 @@ a.userProfileLink span {
   margin: 0;
 }
 
-
 .social-icons a {
   color: white;
   font-size: 28px;
@@ -208,22 +207,27 @@ footer {
   a.toastNavLink {
     display: none;
   }
-#bottomNavContainer {
-  display: flex;
-  margin-top: auto;
-  position: sticky;
-  bottom: 10px;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: 10px auto 20px;
-  padding: 20px calc(var(--padding) * 2);
-  flex-wrap: wrap;
-  backdrop-filter: blur(40px) brightness(20%);
-  border-radius: 12px;
+  #bottomNavContainer {
+    display: flex;
+    margin: auto;
+    position: sticky;
+    bottom: 3px;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: 20px calc(var(--padding) * 2);
+    flex-wrap: wrap;
+    backdrop-filter: blur(60px) brightness(60%);
+    border-radius: var(--radius);
+  }
+  #bottomNavContainer a {
+    width: calc(var(--font-size) * 2);
+    height: calc(var(--font-size) * 2);
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
 }
-#bottomNavContainer a {
-  width: calc(var(--font-size) * 2);
+#bottomNavContainer a:hover {
   color: #e69500;
-}
+  transform: translateY(-1px);
 }
