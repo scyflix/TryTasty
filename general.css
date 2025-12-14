@@ -231,3 +231,7 @@ footer {
   color: #e69500;
   transform: translateY(-1px);
 }
+
+#bottomNavContainer a.active {
+  color: #ffbf00fe;
+}

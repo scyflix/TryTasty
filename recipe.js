@@ -1,3 +1,12 @@
+//TOAST NAVIGATION ACTIVE STATE
+const toastLink = document.querySelectorAll("#bottomNavContainer a");
+
+toastLink.forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+
 window.onload = function () {
   const preloader = document.getElementById("preloader");
   if (preloader) {
@@ -6,12 +15,12 @@ window.onload = function () {
       preloader.style.display = "none";
     }, 500); // Delay to allow fade-out effect
   }
-//PopUp
-const closePopup = document.getElementById("closePopup");
-     closePopup.addEventListener("click", () => {
-       document.getElementById("popup").style.display = "none";
-     });
-
+  //PopUp
+  const closePopup = document.getElementById("closePopup");
+  closePopup.addEventListener("click", () => {
+    document.getElementById("popup").style.display = "none";
+  });
+  
   //SIGNUP AND LOGIN FORMS
   const signupFormLink = document.getElementById("signupFormLink");
   const signupForm = document.getElementById("signupForm");
@@ -23,7 +32,7 @@ const closePopup = document.getElementById("closePopup");
     signupForm.style.display = "block";
     loginForm.style.display = "none";
   });
-  
+
   loginFormLink.addEventListener("click", (event) => {
     event.preventDefault();
     signupForm.style.display = "none";
@@ -186,3 +195,4 @@ document.getElementById("clearCountBtn").addEventListener("click", () => {
   count = 0;
   submittedCount.innerText = 0;
 });
+
