@@ -52,11 +52,12 @@
 /* Menu Icon */
 .menu-icon {
   width: 25px;
+  height: 25px;
   cursor: pointer;
   margin: 10px 10px 10px 0;
 }
 .menu-icon span {
-  background-color: black;
+  background: #f5f5f5;
   width: 25px;
   height: 4px;
   display: block;
@@ -92,40 +93,9 @@ nav {
 }
 
 @media (max-width: 600px) {
-  /* Menu Icon */
-  .menu-icon {
-    width: 25px;
-    cursor: pointer;
-    margin: 10px 10px 10px 0;
-  }
-  .menu-icon span {
-    background-color: rgb(0, 0, 0);
-    width: 25px;
-    height: 4px;
-    display: block;
-    margin: 4px 0;
-    border-radius: 10px;
-    transition: 0.6s;
-  }
   /* Sidebar */
   #sidebar {
     width: 85vw;
-  }
-  #sidebar.show {
-    left: 0; /* slide in */
-  }
-
-  #dark-mode:hover {
-    background: linear-gradient(90deg, orange, yellow);
-    transform: scale(1.1);
-  }
-  /* Sidebar links */
-  .page-nav a {
-    margin-top: 0;
-    text-decoration: none;
-    color: black;
-    border: 2px solid yellow;
-    border-radius: 10px;
   }
 }
 .page-nav {
