@@ -48,7 +48,7 @@ input:focus, textarea:focus {
 }
 
 /* Buttons */
-button, #popup button {
+button, #popup-button, #logoutBtn {
   background: #ff6a00;
   color: #1d1d1d;
   border: none;

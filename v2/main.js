@@ -64,20 +64,19 @@ window.addEventListener("DOMContentLoaded", () => {
     if (Useremail) Useremail.innerText = user.email || "-";
     if (userName) userName.innerText = user.displayName || "Profile";
     if (logoutBtn) logoutBtn.style.display = "block";
-    if (loginBtn) loginBtn.style.display = "none";
+    if (loginBtn) loginBtn.innerText = "Logout";
     if (popup) popup.style.display = "none";
     if (loginInputForm) loginInputForm.style.display = "none";
     if (nonUserMessage) nonUserMessage.style.display = "none";
     if (recipeForm) recipeForm.style.display = "block"; // show form to logged-in users
     if (videosPage) videosPage.style.display = "block";
-    if (loginLink) loginLink.style.display = "none";
     } 
     
     //If user is NOT signed in do the following
     else {
     if (Useremail) Useremail.innerText = "Login first";
     if (userName) userName.innerText = "Login first";
-    if (logoutBtn) logoutBtn.style.display = "none";
+    if (logoutBtn) logoutBtn.innerText = "Login";
     if (popup) popup.style.display = "block";
     if (nonUserMessage) nonUserMessage.style.display = "block";
     if (recipeForm) recipeForm.style.display = "none";

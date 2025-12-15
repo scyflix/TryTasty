@@ -70,11 +70,6 @@
   align-items: center;
 }
 
-/* Dark Mode button */
-#dark-mode:hover {
-  background: linear-gradient(90deg, orange, yellow);
-  transform: scale(1.1);
-}
 span {
   color: beige;
   font-size: 24px;
@@ -106,8 +101,6 @@ nav {
 }
 
 .page-nav a {
-  display: block;
-  width: 100%; /* Every link becomes equal width */
   text-align: center;
   border: 2px solid yellow;
   border-radius: 10px;
