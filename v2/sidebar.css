@@ -114,3 +114,9 @@ nav {
   border-radius: 10px;
   background: #282828;
 }
+
+.page-nav p {
+  opacity: 0.22;
+  text-align: center;
+  margin-top: auto;
+}
