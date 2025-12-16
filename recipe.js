@@ -45,7 +45,9 @@ const sidebar = document.getElementById("sidebar");
 function toggleSidebar() {
   sidebar.classList.toggle("show");
 }
-
+const paragraph = document.createElement("p");
+paragraph.innerText = "Version: 2.04.00";
+ sidebar.appendChild(paragraph);
 //dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");

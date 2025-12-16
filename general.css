@@ -10,7 +10,7 @@
   --font-size: 1rem;
   --radius: 8px;
   --header-bg: #ffa500;
-  --header-color: rgb(236, 236, 236);
+  --header-color: #ececec;
 }
 
 html,
@@ -165,35 +165,6 @@ a.userProfileLink span {
 .social-icons a:hover {
   color: #e69500;
 }
-#scybudApps {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-#scybudApps a {
-  text-decoration: none;
-}
-#scybudApps .container {
-  display: flex;
-  flex-direction: column; /* FIXED HERE */
-  align-items: center;
-  justify-content: center;
-}
-#scybudApps a span {
-  margin-top: 5px;
-  color: #f1f1f1;
-  font-size: calc(var(--font-size) / 1.5);
-}
-#scybudApps .container img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  background-color: whitesmoke;
-}
-#scybudApps img:hover {
-  transform: scale(1.15);
-}
 
 footer {
   text-align: center;
@@ -236,12 +207,12 @@ footer {
     justify-content: center;
     padding: 0;
   }
-
+  
   #bottomNavContainer a:hover {
     color: #e69500;
     transform: translateY(-1px);
   }
-
+  
   #bottomNavContainer a.active {
     color: #ffff00;
     background: var(--bg);
@@ -257,3 +228,70 @@ footer {
     margin: 3px 3px 0 0;
   }
 }
+
+#otherAppsIcon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 28px;
+  height: 28px;
+        gap: 4px;
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        z-index: 99999;
+      }
+      #otherAppsIcon span {
+        background: #ffffff;
+        width: 5px;
+        height: 5px;
+        margin: 0;
+      }
+      #sidebar #FromScybud {
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        background: #464646;
+        padding: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.7s ease;
+      }
+      #sidebar #FromScybud.showApps {
+           padding: 10px;
+           width: auto;
+           height: auto;
+          }
+          #scybudApps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+          }
+          #scybudApps a {
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+      }
+      #scybudApps .container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+      }
+      #scybudApps a span {
+        margin-top: 5px;
+        color: #ffffff;
+        font-size: calc(var(--font-size) / 1.5);
+      }
+      #scybudApps .container img {
+          border-radius: 20px;
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          background-color: whitesmoke;
+        }
+        #scybudApps img:hover {
+          transform: scale(1.06);
+        }
