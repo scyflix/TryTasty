@@ -14,7 +14,7 @@
       gtag("js", new Date());
 
       gtag("config", "G-DDLCL6XBQR");
-      </script>
+    </script>
     <title>TryTasty | Login</title>
     <meta charset="utf-8" />
     <meta
@@ -32,6 +32,49 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
+    <style>
+      #otherAppsIcon {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 28px;
+        height: 28px;
+        gap: 4px;
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        z-index: 99999;
+      }
+      #otherAppsIcon span {
+        background: #ffffff;
+        width: 5px;
+        height: 5px;
+        margin: 0;
+      }
+      #sidebar #FromScybud {
+        position: absolute;
+        left: 40px;
+        bottom: 30px;
+        background: #464646;
+        padding: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.7s ease;
+      }
+      #sidebar #FromScybud.showApps {
+           padding: 10px;
+        width: auto;
+        height: auto;
+      }
+      #FromScybud a {
+        border: none;
+        border-radius: 20px;
+      }
+      img {
+        border-radius: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -42,7 +85,7 @@
         <div class="loadLine"></div>
       </div>
     </div>
-    
+
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon" onclick="toggleSidebar()">
@@ -51,73 +94,122 @@
           <span></span>
         </div>
         <a href="https://trytasty.de/">
-          <h1>
-            TryTasty
-          </h1>
+          <h1>TryTasty</h1>
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="menu-icon" onclick="toggleSidebar()">
           <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </div>
-      <div class="actionBtns">
-        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-          Light Mode
-        </button>
-            <a id="logoutBtn" href="login.html">
-            Logout
-          </a>
-      </div>
-      <a href="../index.html">
-        <span>Home</span>
-      </a>
-      
-      <a href="../index.html#recipeBot">
-        <span>Bot</span>
-      </a>
-      <a href="favs.html">
-        <span>Favorites</span>
-      </a>
-      <a href="videos.html">
-        <span>Watch</span>
-      </a>
-      <a href="submit.html">
-        <span>Submit</span>
-      </a>
-      
-      <a href="../TryTasty mvp creation/original.html">
-        <span>Social</span>
-      </a>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </div>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+          <a id="logoutBtn" href="login.html"> Logout </a>
+        </div>
+        <a href="../index.html">
+          <span>Home</span>
+        </a>
 
-    </nav>
-  </header>
-  <!-- Popup HTML -->
-  <div id="popup">
-    <div id="popup-content">
-      <h2>Terms and Condition</h2>
-      <p style="font-size: large">
-        By continuing, you agree that you have read our
-        <a href="privacyGerman.html">Privacy Policy</a> and understand & that
-        you agree to our Conditons for Recipe submission in section 6 of the
-        <b>Privacy Policy</b> page.
-      </p>
-      <button id="closePopup">Continue</button>
+        <a href="../index.html#recipeBot">
+          <span>Bot</span>
+        </a>
+        <a href="favs.html">
+          <span>Favorites</span>
+        </a>
+        <a href="videos.html">
+          <span>Watch</span>
+        </a>
+        <a href="submit.html">
+          <span>Submit</span>
+        </a>
+
+        <a href="../TryTasty mvp creation/original.html">
+          <span>Social</span>
+        </a>
+
+        <div id="FromScybud">
+          <h5>Scybud Apps</h5>
+          <div id="scybudApps">
+            <a href="https://scyflix.github.io/RushSite/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                  alt="RushSite Logo"
+                />
+                <span>RushSite</span>
+              </div>
+            </a>
+            <a href="https://trytasty.de/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
+                  alt="TryTasty Logo"
+                />
+                <span>TryTasty</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Playbud/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                  alt="Playbud Logo"
+                />
+                <span>Playbud</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                  alt="Scybud Logo"
+                />
+                <span>Scybud</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="otherAppsIcon" title="Other Apps">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- Popup HTML -->
+    <div id="popup">
+      <div id="popup-content">
+        <h2>Terms and Condition</h2>
+        <p style="font-size: large">
+          By continuing, you agree that you have read our
+          <a href="privacyGerman.html">Privacy Policy</a> and understand & that
+          you agree to our Conditons for Recipe submission in section 6 of the
+          <b>Privacy Policy</b> page.
+        </p>
+        <button id="closePopup">Continue</button>
+      </div>
     </div>
-  </div>
-  <main>
-    <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
+    <main>
+      <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
       <div id="auth-form">
         <button id="logoutBtn" style="display: none">Logout</button>
         <form id="loginForm">
@@ -137,47 +229,45 @@
               placeholder="Enter Your Password"
               autocomplete="current-password"
             />
-            <button id="loginBtn" type="button">
-              Login
-            </button>
+            <button id="loginBtn" type="button">Login</button>
           </div>
           <p>New user? <a id="signupFormLink" href="#">Signup</a></p>
         </form>
       </div>
-      
-              <!--SIGNUP FORM-->
-               <form id="signupForm" style="display: none;">
-              <h3>Signup To TryTasty</h3>
-              <div class="auth-form">
-                <label for="userName">Username:</label>
-                <input
-                  type="text"
-                  name="userName"
-                  id="userName"
-                  placeholder="Create a username"
-                />
-                <label for="emailForSignup">Email:</label>
-                <input
-                  id="emailForSignup"
-                  type="email"
-                  placeholder="examble@gmail.com"
-                />
-                <label for="passwordForSignup">Password:</label>
-                <input
-                  id="passwordForSignup"
-                  type="password"
-                  placeholder="Enter Your Password"
-                />
-                <label for="re-enterPasswordForSignup">Re-enter Password:</label>
-                <input
-                  id="re-enterPasswordForSignup"
-                  type="password"
-                  placeholder="Repeat Password"
-                />
-                <button type="button" id="signupBtn">Signup</button>
-                <p>Have an account? <a id="loginFormLink" href="#">Login</a></p>
-              </div>
-            </form>
+
+      <!--SIGNUP FORM-->
+      <form id="signupForm" style="display: none">
+        <h3>Signup To TryTasty</h3>
+        <div class="auth-form">
+          <label for="userName">Username:</label>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="Create a username"
+          />
+          <label for="emailForSignup">Email:</label>
+          <input
+            id="emailForSignup"
+            type="email"
+            placeholder="examble@gmail.com"
+          />
+          <label for="passwordForSignup">Password:</label>
+          <input
+            id="passwordForSignup"
+            type="password"
+            placeholder="Enter Your Password"
+          />
+          <label for="re-enterPasswordForSignup">Re-enter Password:</label>
+          <input
+            id="re-enterPasswordForSignup"
+            type="password"
+            placeholder="Repeat Password"
+          />
+          <button type="button" id="signupBtn">Signup</button>
+          <p>Have an account? <a id="loginFormLink" href="#">Login</a></p>
+        </div>
+      </form>
     </main>
     <footer>
       <h5>Follow us</h5>
@@ -259,7 +349,15 @@
       <a href="submit.html">Submit a recipe</a>
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
-       <script type="module" src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
     <script src="../recipe.js" defer></script>
+    <script>
+      const otherAppsIcon = document.getElementById("otherAppsIcon");
+      const FromScybud = document.getElementById("FromScybud");
+
+      otherAppsIcon.addEventListener("click", () => {
+        FromScybud.classList.toggle("showApps");
+      });
+    </script>
   </body>
 </html>

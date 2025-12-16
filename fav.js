@@ -1,4 +1,4 @@
-//add to favorite nd favorite count
+//add to favorite and favorite count
 const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
 const favclass = document.querySelectorAll(".add-fav");
 
@@ -35,30 +35,30 @@ favclass.forEach((fav) => {
   });
 });
 
-
 //Display saved recipes and clear button
-  const favsection = document.getElementById("favs");
-  const clearFavs = document.getElementById("clearFavs");
-  if (favrecipes.length === 0) {
-    favsection.innerHTML = "<h2>You don`t have a favorite yet😓</h2>";
-    clearFavs.style.display = "none";
-  } else {
-    clearFavs.style.display = "block";
-    favrecipes.forEach((recipe) => {
-      const a = document.createElement("a");
-      a.href = `../index.html?recipe=${recipe.key}`; // link stays on page
-      a.textContent = recipe.name + ","; // recipe name
+const favsection = document.getElementById("favs");
+const clearFavs = document.getElementById("clearFavs");
+if (favrecipes.length === 0) {
+  favsection.innerHTML = "<h2>You don`t have a favorite yet😓</h2>";
+  clearFavs.style.display = "none";
+} else {
+  clearFavs.style.display = "block";
+  favrecipes.forEach((recipe) => {
+    const a = document.createElement("a");
+    a.href = `../index.html?recipe=${recipe.key}`; // link stays on page
+    a.textContent = recipe.name + ","; // recipe name
 
-      a.className = "fav-link"; // optional CSS class
-      a.onclick = () => showPage(recipe.key); // show the recipe
-      favsection.appendChild(a);
-    });
-  }
-  if (clearFavs) {
-    clearFavs.addEventListener("click", () => {
-      if (confirm("Are you sure? All saved favorites will be cleared.")) {
-        localStorage.removeItem("favs");
-        favsection.innerHTML = "<h2>You dont have a favorite yet😓</h2>";
-      }
-    });
-  }
+    a.className = "fav-link"; // optional CSS class
+    a.onclick = () => showPage(recipe.key); // show the recipe
+    favsection.appendChild(a);
+  });
+}
+if (clearFavs) {
+  clearFavs.addEventListener("click", () => {
+    if (confirm("Are you sure? All saved favorites will be cleared.")) {
+      localStorage.removeItem("favs");
+      window.location.reload();
+      favsection.innerHTML = "<h2>You dont have a favorite yet😓</h2>";
+    }
+  });
+}

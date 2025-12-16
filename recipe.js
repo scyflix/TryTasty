@@ -20,13 +20,13 @@ window.onload = function () {
   closePopup.addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
   });
-  
+
   //SIGNUP AND LOGIN FORMS
   const signupFormLink = document.getElementById("signupFormLink");
   const signupForm = document.getElementById("signupForm");
   const loginForm = document.getElementById("loginForm");
   const loginFormLink = document.getElementById("loginFormLink");
-  
+
   signupFormLink.addEventListener("click", (event) => {
     event.preventDefault();
     signupForm.style.display = "block";
@@ -39,6 +39,8 @@ window.onload = function () {
     loginForm.style.display = "block";
   });
 };
+
+//SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
 function toggleSidebar() {
   sidebar.classList.toggle("show");
@@ -195,4 +197,3 @@ document.getElementById("clearCountBtn").addEventListener("click", () => {
   count = 0;
   submittedCount.innerText = 0;
 });
-
