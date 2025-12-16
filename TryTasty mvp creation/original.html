@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TryTasty MVP</title>
     <link rel="stylesheet" href="../v2/form.css" />
+    <link rel="stylesheet" href="../v2/sidebar.css">
     <style>
       * {
         box-sizing: border-box;
@@ -32,9 +33,9 @@
       }
 
       header {
+        background: #ffa500;
         min-height: 40px;
-        background: radial-gradient(circle, orange, yellow);
-        color: rgb(0, 0, 0);
+        color: #000000fa;
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
@@ -43,8 +44,9 @@
         border-radius: 12px;
       }
       a {
+                color: #000000fa;
+
         text-decoration: none;
-                color: rgb(0, 0, 0);
       }
       header a h1:hover {
         opacity: 0.8;
@@ -105,10 +107,72 @@
     </style>
   </head>
   <body>
+
     <header>
-      <a href="../index.html">
-        <h1>TryTasty</h1>
-      </a>
+    <!--PRELOADER-->
+    <div id="preloader">
+      <h1>TryTasty</h1>
+      <div class="loadBar">
+        <div class="loadLine"></div>
+      </div>
+    </div>
+    <header>
+      <div style="display: flex; margin-left: 0" id="menuIconContainer">
+        <div class="menu-icon" onclick="toggleSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="https://trytasty.de/">
+          <h1>TryTasty</h1>
+        </a>
+      </div>
+      <nav class="page-nav" id="sidebar">
+        <div class="upperNavContainer">
+          <div class="menu-icon" onclick="toggleSidebar()">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+        </div>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+            <a id="logoutBtn" href="../v2/login.html">
+            Logout
+          </a>
+        </div>
+        <a class="toastNavLink" href="../index.html">
+          <span>Home</span>
+        </a>
+        <a class="toastNavLink" href="../v2/favs.html">
+          <span>Favorites</span>
+        </a>
+        <a class="toastNavLink" href="../v2/videos.html">
+          <span>Watch</span>
+        </a>
+        <a href="../v2/submit.html">
+          <span>Submit</span>
+        </a>
+
+        <a href="original.html">
+          <span>Social</span>
+        </a>
+        <a href="../v2/privacyGerman.html"><span>Privacy Policy</span></a>
+
+      </nav>
+    </header>
       <input
         id="forminputbtn"
         type="text"
@@ -181,5 +245,6 @@
       }
     </script>
     <script type="module" src="../v2/main.js"></script>
+    <script src="../recipe.js"></script>
   </body>
 </html>

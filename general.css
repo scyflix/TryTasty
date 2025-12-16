@@ -46,7 +46,6 @@ body {
 }
 header {
   display: flex;
-  height: 50px;
   background: var(--header-bg);
   padding: 0 var(--padding);
   position: sticky;
