@@ -45,10 +45,10 @@ const sidebar = document.getElementById("sidebar");
 function toggleSidebar() {
   sidebar.classList.toggle("show");
 }
-//Version number 
+//Version number
 const paragraph = document.createElement("p");
-paragraph.innerText = "Version: 2.04.00";
- sidebar.appendChild(paragraph);
+paragraph.innerText = "Version: 2.04.03";
+sidebar.appendChild(paragraph);
 
 // dark mode
 function darkMode() {
@@ -92,8 +92,7 @@ function darkMode() {
 
     if (footer) footer.style.backgroundColor = "black";
     if (header)
-      header.style.background =
-        "radial-gradient(circle, yellow, orangered)";
+      header.style.background = "radial-gradient(circle, yellow, orangered)";
     if (main) main.style.backgroundColor = "rgb(49, 48, 48)";
 
     snackcard.forEach((card) => {
@@ -104,7 +103,6 @@ function darkMode() {
     if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
   }
 }
-
 
 /*
 //check if user has already seen the popup
@@ -144,12 +142,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 //To show the recipe bot form
-window.findRecipe = function () {
-  const userName = document.getElementById("userName").value.trim();
-  const userInput = document
-    .getElementById("userInput")
-    .value.trim()
-    .toLowerCase();
+function findRecipe() {
+  const userName = document.getElementById("searcher").value.trim();
+  const userInput = document.getElementById("userInput").value.trim()
+.toLowerCase();
   const suggestions = document.getElementById("suggestions");
   const recipe = document.getElementsByClassName("recipe");
   let matches = [];
@@ -173,7 +169,7 @@ window.findRecipe = function () {
   } else {
     suggestions.textContent = `${userName}, sorry I do not have a recipe for that yet 😓.`;
   }
-};
+}
 
 //FOR RECIPE SUBMITTION
 const RecipeForm = document.getElementById("submitRecipeForm");
