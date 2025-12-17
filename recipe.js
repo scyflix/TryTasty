@@ -45,10 +45,12 @@ const sidebar = document.getElementById("sidebar");
 function toggleSidebar() {
   sidebar.classList.toggle("show");
 }
+//Version number 
 const paragraph = document.createElement("p");
 paragraph.innerText = "Version: 2.04.00";
  sidebar.appendChild(paragraph);
-//dark mode
+
+// dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
   const footer = document.querySelector("footer");
@@ -56,45 +58,53 @@ function darkMode() {
   const header = document.querySelector("header");
   const main = document.querySelector("main");
   const snackcard = document.querySelectorAll(".snackImage");
-  // Toggle dark mode state
+
+  // Get current state (string!)
   let isDark = localStorage.getItem("darkMode") === "true";
+
+  // Toggle state
   isDark = !isDark;
   localStorage.setItem("darkMode", isDark);
 
-  if (isDark) {
+  if (!isDark) {
+    // LIGHT MODE
     body.style.backgroundColor = "#fffaf3";
     body.style.color = "#333";
+
     if (footer) {
       footer.style.backgroundColor = "#fffaf3";
       footer.style.color = "black";
     }
+
     if (header) header.style.background = "#ffd9a0";
     if (main) main.style.backgroundColor = "white";
+
     snackcard.forEach((card) => {
       card.style.backgroundColor = "#ffefbbff";
       card.style.color = "black";
     });
+
     if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
   } else {
+    // DARK MODE
     body.style.backgroundColor = "gray";
     body.style.color = "white";
+
     if (footer) footer.style.backgroundColor = "black";
     if (header)
-      header.style.background = "radial-gradient(circle, yellow, orangered)";
+      header.style.background =
+        "radial-gradient(circle, yellow, orangered)";
     if (main) main.style.backgroundColor = "rgb(49, 48, 48)";
+
     snackcard.forEach((card) => {
       card.style.backgroundColor = "black";
       card.style.color = "white";
     });
+
     if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
   }
 }
 
-// On page load, apply dark mode if set
-// ...existing preloader code...
-if (localStorage.getItem("darkMode") === "true") {
-  darkMode();
-}
 
 /*
 //check if user has already seen the popup
