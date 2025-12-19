@@ -219,25 +219,8 @@
           </button>
           <a id="logoutBtn" href="v2/login.html" ;> Logout </a>
         </div>
-        <a class="toastNavLink" href="index.html">
-          <span>Home</span>
-        </a>
-
         <a href="#" onclick="showPage('recipeBotForm'); toggleSidebar()">
           <span>Bot</span>
-        </a>
-        <a class="toastNavLink" href="v2/favs.html">
-          <span>Favorites</span>
-        </a>
-        <a class="toastNavLink" href="v2/videos.html">
-          <span>Watch</span>
-        </a>
-        <a href="v2/submit.html">
-          <span>Submit</span>
-        </a>
-
-        <a href="TryTasty mvp creation/original.html">
-          <span>Social</span>
         </a>
       </nav>
     </header>
@@ -491,26 +474,17 @@
       <div id="recipeBotForm" class="page" style="display: none">
         <form id="recipeBot">
           <h2 style="color: orange">
-            Hi, I`m Resp🙂, your recipe suggestion Bot🤖.
+            Hi, I`m Resp, your recipe suggestion Bot🤖.
           </h2>
-          <p id="bot-question" style="color: white">
-            Ask me any recipe by inputing your name and ingredients below👇.
+          <p id="bot-question">
+            Ask me any recipe by inputing your name and ingredients below.
           </p>
-          <div
-            style="
-              background-color: #fff3cd;
-              color: orangered;
-              padding: 10px;
-              border-radius: 6px;
-              margin-top: 10px;
-              font-size: 14px;
-            "
-          >
+          <div class="infoNote">
             <b>Note:</b> I only support <b>1 ingredient input</b> at the moment.
             Please enter your most <b>dominant</b> ingredient for better
             suggestions
           </div>
-          <label for="userName">Your name</label>
+          <label for="searcher">Your name</label>
           <input
             type="text"
             id="searcher"
@@ -529,7 +503,7 @@
           <button type="button" onclick="findRecipe()">Suggest</button>
         </form>
 
-        <div id="suggestions"></div>
+        <section id="suggestions"></section>
       </div>
       <section>
         <!-- Pages -->
@@ -1329,17 +1303,17 @@
           />
         </svg>
       </a>
-      
+
       <a href="v2/favs.html" aria-label="Favorites">
         <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -960 960 960"
-        fill="currentColor"
-        aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
         >
-        <path
-        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
-        />
+          <path
+            d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
+          />
         </svg>
       </a>
 
@@ -1369,6 +1343,7 @@
         </svg>
       </a>
     </nav>
+    <script src="rootNav.js"></script>
     <script src="recipe.js" defer></script>
     <script src="fav.js"></script>
   </body>

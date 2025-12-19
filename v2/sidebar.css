@@ -54,13 +54,13 @@
 .menu-icon {
   width: 25px;
   height: 25px;
-  cursor: pointer;
   margin: 10px 10px 10px 0;
+  cursor: pointer;
 }
 .menu-icon span {
   background: #f5f5f5;
-  width: 25px;
-  height: 4px;
+  width: 1.8rem;
+  height: 0.2rem;
   display: block;
   margin: 4px 0;
   border-radius: 10px;
@@ -71,10 +71,6 @@
   align-items: center;
 }
 
-span {
-  color: beige;
-  font-size: 24px;
-}
 nav {
   display: flex;
   gap: 10px;
@@ -87,7 +83,10 @@ nav {
   overflow-y: auto; /* enables vertical scrolling */
   overflow-x: auto;
 }
-
+span {
+  color: beige;
+  font-size: 24px;
+}
 @media (max-width: 600px) {
   /* Sidebar */
   #sidebar {
@@ -106,12 +105,14 @@ nav {
   border: 2px solid yellow;
   border-radius: 10px;
   transition: all 0.4s ease;
+  color: beige;
+  font-size: 24px;
 }
 
 .page-nav a:hover {
   text-decoration: none;
   border: 2px solid orange;
-  transform: scale(1.05);
+  transform: scale(1.02);
   border-radius: 10px;
   background: #282828;
 }

@@ -39,7 +39,7 @@ favclass.forEach((fav) => {
 const favsection = document.getElementById("favs");
 const clearFavs = document.getElementById("clearFavs");
 if (favrecipes.length === 0) {
-  favsection.innerHTML = "<h2>You don`t have a favorite yet😓</h2>";
+  favsection.innerHTML = "<h2 class=infoNote>You don`t have a favorite yet😓</h2>";
   clearFavs.style.display = "none";
 } else {
   clearFavs.style.display = "block";

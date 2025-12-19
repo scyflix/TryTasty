@@ -40,16 +40,6 @@ window.onload = function () {
   });
 };
 
-//SIDEBAR TOGGLE
-const sidebar = document.getElementById("sidebar");
-function toggleSidebar() {
-  sidebar.classList.toggle("show");
-}
-//Version number
-const paragraph = document.createElement("p");
-paragraph.innerText = "Version: 2.04.03";
-sidebar.appendChild(paragraph);
-
 // dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
@@ -68,37 +58,10 @@ function darkMode() {
 
   if (!isDark) {
     // LIGHT MODE
-    body.style.backgroundColor = "#fffaf3";
-    body.style.color = "#333";
-
-    if (footer) {
-      footer.style.backgroundColor = "#fffaf3";
-      footer.style.color = "black";
-    }
-
-    if (header) header.style.background = "#ffd9a0";
-    if (main) main.style.backgroundColor = "white";
-
-    snackcard.forEach((card) => {
-      card.style.backgroundColor = "#ffefbbff";
-      card.style.color = "black";
-    });
-
+    if (darkModeBtn) body.classList.add("lightMode");
     if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
   } else {
-    // DARK MODE
-    body.style.backgroundColor = "gray";
-    body.style.color = "white";
-
-    if (footer) footer.style.backgroundColor = "black";
-    if (header)
-      header.style.background = "radial-gradient(circle, yellow, orangered)";
-    if (main) main.style.backgroundColor = "rgb(49, 48, 48)";
-
-    snackcard.forEach((card) => {
-      card.style.backgroundColor = "black";
-      card.style.color = "white";
-    });
+    if (darkModeBtn) body.classList.remove("lightMode");
 
     if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
   }
@@ -144,14 +107,14 @@ window.addEventListener("DOMContentLoaded", () => {
 //To show the recipe bot form
 function findRecipe() {
   const userName = document.getElementById("searcher").value.trim();
-  const userInput = document.getElementById("userInput").value.trim()
-.toLowerCase();
+  const userInput = document.getElementById("userInput").value.trim();
+  const infoNote = document.querySelector(".infoNote");
   const suggestions = document.getElementById("suggestions");
   const recipe = document.getElementsByClassName("recipe");
   let matches = [];
 
   if (userInput === "" || userName === "") {
-    alert("Please enter your name and ingredients.");
+    infoNote.innerHTML = `<p>Please enter your name and ingredients.`;
     return;
   }
   for (let i = 0; i < recipe.length; i++) {

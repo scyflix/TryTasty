@@ -36,11 +36,6 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
   </head>
-  <script>
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
 
   <body>
     <!--PRELOADER-->
@@ -59,9 +54,7 @@
           <span></span>
         </div>
         <a href="https://trytasty.de/">
-          <h1>
-            TryTasty
-          </h1>
+          <h1>TryTasty</h1>
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
@@ -95,28 +88,9 @@
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
             Light Mode
           </button>
-      <a id="logoutBtn" href="login.html">
-            Logout
-          </a>
+          <a id="logoutBtn" href="login.html"> Logout </a>
         </div>
-        <a class="toastNavLink" href="../index.html">
-          <span>Home</span>
-        </a>
-        <a class="toastNavLink" href="favs.html">
-          <span>Favorites</span>
-        </a>
-        <a class="toastNavLink" href="videos.html">
-          <span>Watch</span>
-        </a>
-        <a href="submit.html">
-          <span>Submit</span>
-        </a>
-
-        <a href="../TryTasty mvp creation/original.html">
-          <span>Social</span>
-        </a>
-        <a href="privacyGerman.html"><span>Privacy Policy</span></a>
-
+      <!--ADD NAV LINKS WITH JS FROM NAV:JS-->
       </nav>
     </header>
     <main>
@@ -137,63 +111,64 @@
         </div>
       </section>
     </main>
-   
-<!-- Small screen bottom navigation -->
-<nav id="bottomNavContainer">
-  <a href="../index.html" aria-label="Home">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 -960 960 960"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z"
-      />
-    </svg>
-  </a>
 
-  <a href="favs.html" aria-label="Favorites">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 -960 960 960"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
-      />
-    </svg>
-  </a>
+    <!-- Small screen bottom navigation -->
+    <nav id="bottomNavContainer">
+      <a href="../index.html" aria-label="Home">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z"
+          />
+        </svg>
+      </a>
 
-  <a href="videos.html" aria-label="Videos">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 -960 960 960"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Z"
-      />
-    </svg>
-  </a>
+      <a href="favs.html" aria-label="Favorites">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
+          />
+        </svg>
+      </a>
 
-  <a href="userProfile.html" aria-label="Profile">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 -960 960 960"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
-      />
-    </svg>
-  </a>
-</nav>
-<script type="module" src="main.js"></script>
-<script src="../recipe.js"></script>
-<script src="../fav.js"></script>
-</body>
+      <a href="videos.html" aria-label="Videos">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Z"
+          />
+        </svg>
+      </a>
+
+      <a href="userProfile.html" aria-label="Profile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
+          />
+        </svg>
+      </a>
+    </nav>
+    <script type="module" src="main.js"></script>
+    <script src="../recipe.js"></script>
+    <script src="../fav.js"></script>
+    <script src="nav.js"></script>
+  </body>
 </html>

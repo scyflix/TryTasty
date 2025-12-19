@@ -94,30 +94,14 @@
             Logout
           </a>
         </div>
-       <a class="toastNavLink" href="../index.html">
-          <span>Home</span>
-        </a>
-        <a class="toastNavLink" href="favs.html">
-          <span>Favorites</span>
-        </a>
-        <a class="toastNavLink" href="videos.html">
-          <span>Watch</span>
-        </a>
-        <a href="submit.html">
-          <span>Submit</span>
-        </a>
-
-        <a href="../TryTasty mvp creation/original.html">
-          <span>Social</span>
-        </a>
-        <a href="privacyGerman.html"><span>Privacy Policy</span></a>
+      <!--Add links with js from nav.js-->
       </nav>
     </header>
     <main>
       <div class="statsBox">
         <p>Recipes Submitted: <span id="submittedCount">0</span></p>
       </div>
-      <p id="non-userMessage">
+      <p id="non-userMessage" class="infoNote">
         Read our <a href="privacyGerman.html">recipe submission terms</a> and
         <a href="login.html">Login</a> to submit a recipe
       </p>
@@ -157,7 +141,7 @@
               required
             ></textarea>
           </label>
-          <p>
+          <p class="infoNote">
             <b>Note:</b>Your ingredients and intructions should have a column(:)
           </p>
           <button id="recipeSubmissionBtn" type="button">Submit</button>
@@ -230,5 +214,6 @@
     </script>
     <script type="module" src="main.js"></script>
     <script src="../recipe.js"></script>
+        <script src="nav.js"></script>
   </body>
 </html>
