@@ -43,12 +43,7 @@ window.onload = function () {
 // dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
-  const footer = document.querySelector("footer");
-  const body = document.body;
-  const header = document.querySelector("header");
-  const main = document.querySelector("main");
-  const snackcard = document.querySelectorAll(".snackImage");
-
+  
   // Get current state (string!)
   let isDark = localStorage.getItem("darkMode") === "true";
 
