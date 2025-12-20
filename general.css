@@ -13,26 +13,31 @@
   --header-color: #ececec;
   --shadow: 0 2px 30px 2px rgb(0, 0, 0);
   --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+  --infoNote-bg: #fff3cd;
+  --infoNote-color: #ff4500;
 }
 body.lightMode {
-  --bg: #f1f1f1;
-  --main-bg: #c6c5c5;
-  --color: #0d0d0d;
+  --bg: #fffaf3;
+  --main-bg: ##fffdfa;
+  --color: #333;
   --header-bg: #ffd9a0;
   --header-color: #0d0d0d;
-  --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
     --preloader-bg: linear-gradient(135deg, #807d7d, #363636);
+      --infoNote-bg: #ff4500;
+  --infoNote-color: #fff3cd;
 }
 html,
 body {
   scroll-behavior: smooth;
 }
 body {
+  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Push footer to the bottom */
   font-family: arial, sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--color);
   line-height: 1.6;
   padding: 0 var(--padding);
@@ -63,7 +68,7 @@ header {
   margin: 10px;
   border-radius: var(--radius);
   height: 40px;
-  max-height: 75px;
+  max-height: 95px;
 }
 h1 {
   margin: 3px 10px 2px 5px;
@@ -89,8 +94,8 @@ main {
 }
 .infoNote {
   text-align: center;
-              background-color: #fff3cd;
-              color: orangered;
+              background-color: var(--infoNote-bg);
+              color: var(--infoNote-color);
               padding: 10px;
               border-radius: 6px;
               margin-top: 10px;
@@ -109,7 +114,7 @@ main {
   border-radius: calc(var(--radius) / 2);
 }
 .loadLine {
-  background: #ff4500;
+  background: var(--infoNote-color);
   height: 4px;
   width: 100px;
   animation: movingLine 0.9s alternate infinite;

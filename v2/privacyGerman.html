@@ -21,8 +21,7 @@
     name="description" content="Learn how TryTasty collects, uses, and protects
     your personal data. Read our Privacy Policy to understand your rights and
     how we keep your information secure." />
-    
-    <link rel="stylesheet" href="privacyGerman.css" />
+
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="../general.css" />
     <link rel="stylesheet" href="form.css" />
@@ -33,6 +32,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
+
+    <style>
+      h2 {
+        color: #ff9d00;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ffa94d;
+        padding-bottom: 5px;
+      }
+    </style>
   </head>
   <header>
     <div style="display: flex; margin-left: 0" id="menuIconContainer">
@@ -65,11 +73,9 @@
         <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
           Light Mode
         </button>
-     <a id="logoutBtn" href="login.html">
-            Logout
-          </a>
+        <a id="logoutBtn" href="login.html"> Logout </a>
       </div>
-     <!--Add links with js from nav.js-->
+      <!--Add links with js from nav.js-->
     </nav>
   </header>
   <body>
@@ -192,7 +198,6 @@
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
     <script src="../recipe.js"></script>
-        <script src="nav.js"></script>
-
+    <script src="nav.js"></script>
   </body>
 </html>

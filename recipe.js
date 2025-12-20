@@ -43,7 +43,7 @@ window.onload = function () {
 // dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
-  
+  const body = document.body
   // Get current state (string!)
   let isDark = localStorage.getItem("darkMode") === "true";
 
@@ -57,7 +57,6 @@ function darkMode() {
     if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
   } else {
     if (darkModeBtn) body.classList.remove("lightMode");
-
     if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
   }
 }

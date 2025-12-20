@@ -1,3 +1,16 @@
+:root {
+  --sidebar-bg: #1e1e1e;
+  --color: #f5f5dc;
+  --span: #f5f5f5;
+  --cancel-icon-bg: #161616;
+  --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+body.lightMode {
+  --sidebar-bg: #ffffff;
+  --color: #161616;
+  --span: #161616;
+  --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
 /* Sidebar */
 #sidebar {
   position: fixed;
@@ -5,8 +18,9 @@
   z-index: 1;
   left: -100%;
   width: 300px;
+  box-shadow: var(--shadow);
   height: 100vh; /* required for scrolling */
-  background: #1e1e1e;
+  background-color: var(--sidebar-bg);
   padding: 0 20px 20px 20px;
   display: flex;
   justify-content: flex-start;
@@ -14,7 +28,7 @@
   flex-wrap: nowrap;
   transition: left 0.6s ease;
   border-radius: 10px;
-  color: beige;
+  color: var(--color);
   overflow-y: auto; /* enables vertical scrolling */
   overflow-x: auto; /* prevents side scroll */
 }
@@ -58,13 +72,17 @@
   cursor: pointer;
 }
 .menu-icon span {
-  background: #f5f5f5;
+  background: var(--span);
   width: 1.8rem;
   height: 0.2rem;
   display: block;
   margin: 4px 0;
   border-radius: 10px;
   transition: 0.6s;
+}
+.menu-icon svg {
+  border-radius: 6px;
+  background: var(--cancel-icon-bg);
 }
 #menuIconContainer {
   display: flex;
@@ -84,7 +102,7 @@ nav {
   overflow-x: auto;
 }
 span {
-  color: beige;
+  color: var(--span);
   font-size: 24px;
 }
 @media (max-width: 600px) {
@@ -105,7 +123,7 @@ span {
   border: 2px solid yellow;
   border-radius: 10px;
   transition: all 0.4s ease;
-  color: beige;
+  color: var(--span);
   font-size: 24px;
 }
 
@@ -114,11 +132,11 @@ span {
   border: 2px solid orange;
   transform: scale(1.02);
   border-radius: 10px;
-  background: #282828;
+  background: rgba(40, 40, 40, 0.2);
 }
 
 .page-nav p {
-  opacity: 0.22;
+  opacity: 0.3;
   text-align: center;
   margin-top: auto;
 }
