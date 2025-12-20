@@ -7,14 +7,15 @@ toastLink.forEach((link) => {
   }
 });
 
-window.onload = function () {
+window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  if (preloader) {
+
     preloader.style.opacity = "0";
     setTimeout(() => {
       preloader.style.display = "none";
     }, 500); // Delay to allow fade-out effect
-  }
+
+})
   //PopUp
   const closePopup = document.getElementById("closePopup");
   closePopup.addEventListener("click", () => {
@@ -38,7 +39,6 @@ window.onload = function () {
     signupForm.style.display = "none";
     loginForm.style.display = "block";
   });
-};
 
 // dark mode
 function darkMode() {
