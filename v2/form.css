@@ -1,4 +1,17 @@
-
+:root {
+  --form-bg: #272727;
+  --input-textarea-bg: #1d1d1d;
+  --input-textarea-color: #fff;
+  --input-textarea-border: #444;
+  --btn-bg: #ff6a00;
+}
+body.lightMode {
+  --form-bg: #27272731;
+  --input-textarea-bg: #ada4a43a;
+  --input-textarea-color: #000000;
+  --input-textarea-border: #4444447c;
+  --btn-bg: #ff6a00;
+}
 /* Form */
 form {
   width: 100%;
@@ -8,7 +21,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: #272727;
+  background: var(--form-bg);
   border-radius: 12px;
 }
 
@@ -23,9 +36,9 @@ input, textarea {
   width: 100%;
   padding: 14px;
   border-radius: 10px;
-  background: #1d1d1d;
-  border: 2px solid #444;
-  color: #fff;
+  background: var(--input-textarea-bg);
+  border: 2px solid var(--input-textarea-border);
+  color: var(--input-textarea-color);
   transition: 0.25s;
 }
 textarea {
@@ -39,8 +52,7 @@ input:focus, textarea:focus {
 
 /* Buttons */
 button, #popup-button, #logoutBtn {
-  background: #ff6a00;
-  color: #1d1d1d;
+  background: var(--btn-bg);
   border: none;
   padding: 14px;
   border-radius: 10px;

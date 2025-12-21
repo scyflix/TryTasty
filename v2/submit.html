@@ -114,6 +114,7 @@
           <h1>Share A Recipe</h1>
           <label for="name">
             Your name:
+          </label>
             <input
               id="name"
               type="text"
@@ -121,9 +122,9 @@
               placeholder="e.g. John Mally"
               required
             />
-          </label>
           <label for="email">
             Your email:
+          </label>
             <input
               type="email"
               id="email"
@@ -131,16 +132,18 @@
               placeholder="example@gmail.com"
               required
             />
-          </label>
-          <label for="message">
+          <label for="ingredients">
             Your recipe:
+          </label>
             <textarea
-              id="message"
-              name="message"
-              placeholder="Ingredients:egg, milk. Instructions:Mix egg and milk with..."
+              id="ingredients"
+              name="ingredients"
+              placeholder="Ingredients:egg, milk."
               required
             ></textarea>
-          </label>
+            <label for="instructions">Instructions:</label>
+            <textarea name="instructions" id="instructions"
+            placeholder="Instructions:Mix egg and milk with..."></textarea>
           <p class="infoNote">
             <b>Note:</b>Your ingredients and intructions should have a column(:)
           </p>
