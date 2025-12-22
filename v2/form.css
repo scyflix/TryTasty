@@ -4,7 +4,7 @@
   --input-textarea-color: #fff;
   --input-textarea-border: #444;
 }
-body.lightMode {
+body.lightMode form{
   --form-bg: #27272731;
   --input-textarea-bg: #ada4a43a;
   --input-textarea-color: #000000;
