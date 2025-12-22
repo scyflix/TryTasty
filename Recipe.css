@@ -1,8 +1,8 @@
-:root {
+body main nav{
   --snackImg-color: #f1f1f1;
   --snackImg-bg: #141414;
 }
-body.lightMode {
+body.lightMode main nav{
   --snackImg-color: #333;
   --snackImg-bg: #feebbb;
 }

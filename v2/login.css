@@ -70,3 +70,16 @@
   text-decoration: none;
 }
 
+.infoNoteLogin {
+  display: none;
+    text-align: center;
+  background-color: var(--infoNote-bg);
+  color: var(--infoNote-color);
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+p.errorShow {
+  display: block;
+}

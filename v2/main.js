@@ -20,6 +20,7 @@ const userName = document.getElementById("userName");
 const Useremail = document.getElementById("Useremail");
 const loginLink = document.getElementById("loginLink");
 const googleBtn = document.querySelectorAll(".google-btn");
+const infoNoteLogin = document.querySelector(".infoNoteLogin");
 
 window.googleLogin = async () => {
   try {
@@ -31,38 +32,9 @@ window.googleLogin = async () => {
   }
 };
 googleBtn.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
+  btn.addEventListener("click", () => {
     googleLogin();
   });
-});
-
-// Listen for auth state changes
-onUserAuthChange((user) => {
-  if (user) {
-    welcomeText &&
-      (welcomeText.innerText = user.displayName || user.email || "User");
-    Useremail && (Useremail.innerText = user.email || "-");
-    userName && (userName.innerText = user.displayName || "Profile"); // ✅ fixed
-    logoutBtn && (logoutBtn.style.display = "block");
-    loginBtn && (loginBtn.innerText = "Logout");
-    popup && (popup.style.display = "none");
-    loginInputForm && (loginInputForm.style.display = "none");
-    nonUserMessage && (nonUserMessage.style.display = "none");
-    recipeForm && (recipeForm.style.display = "block");
-    videosPage && (videosPage.style.display = "block");
-  } else {
-    Useremail && (Useremail.innerText = "Login first");
-    userName && (userName.innerText = "Login first"); // ✅ fixed
-    logoutBtn && (logoutBtn.innerText = "Login");
-    popup && (popup.style.display = "block");
-    nonUserMessage && (nonUserMessage.style.display = "block");
-    recipeForm && (recipeForm.style.display = "none");
-    welcomeText && (welcomeText.innerText = "");
-    loginInputForm && (loginInputForm.style.display = "block");
-    videosPage && (videosPage.style.display = "none");
-    loginLink && (loginLink.style.display = "block");
-  }
 });
 
 // Signup
@@ -98,13 +70,25 @@ signupBtn.addEventListener("click", async () => {
 loginBtn.addEventListener("click", async () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
+  console.log("Email:", email);
+  console.log("Password:", password);
 
   try {
     await login(email, password); // calls auth.js login()
     alert("Login successful!");
     window.location.href = "../index.html"; // redirect after login
   } catch (error) {
-    alert(error.message);
+    infoNoteLogin.classList.add("errorShow");
+    if ((error.message = "Firebase: Error (auth/invalid-credential)")) {
+      infoNoteLogin.textContent =
+        "The credential is malformed or expired. Try google signin";
+    } else if ((error.message = "Firebase: Error (auth/too-many-requests).")) {
+      infoNoteLogin.textContent = "Too many requests. Try again later";
+    } else if ((error.message = "Firebase: Error (auth/user-not-found).")) {
+      infoNoteLogin.textContent = "No user exists with this email.";
+    } else {
+      infoNoteLogin.textContent = error.message;
+    }
   }
 });
 
@@ -116,5 +100,33 @@ logoutBtn.addEventListener("click", async () => {
     window.location.href = "welcome.html"; // redirect after logout
   } catch (error) {
     alert(error.message);
+  }
+});
+
+// Listen for auth state changes
+onUserAuthChange((user) => {
+  if (user) {
+    welcomeText &&
+      (welcomeText.innerText = user.displayName || user.email || "User");
+    Useremail && (Useremail.innerText = user.email || "-");
+    userName && (userName.innerText = user.displayName || "Profile"); // ✅ fixed
+    logoutBtn && (logoutBtn.style.display = "block");
+    loginBtn && (loginBtn.innerText = "Logout");
+    popup && (popup.style.display = "none");
+    loginInputForm && (loginInputForm.style.display = "none");
+    nonUserMessage && (nonUserMessage.style.display = "none");
+    recipeForm && (recipeForm.style.display = "block");
+    videosPage && (videosPage.style.display = "block");
+  } else {
+    Useremail && (Useremail.innerText = "Login first");
+    userName && (userName.innerText = "Login first"); // ✅ fixed
+    logoutBtn && (logoutBtn.innerText = "Login");
+    popup && (popup.style.display = "block");
+    nonUserMessage && (nonUserMessage.style.display = "block");
+    recipeForm && (recipeForm.style.display = "none");
+    welcomeText && (welcomeText.innerText = "");
+    loginInputForm && (loginInputForm.style.display = "block");
+    videosPage && (videosPage.style.display = "none");
+    loginLink && (loginLink.style.display = "block");
   }
 });
