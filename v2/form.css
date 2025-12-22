@@ -1,9 +1,8 @@
-:root {
+ form {
   --form-bg: #272727;
   --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;
   --input-textarea-border: #444;
-  --btn-bg: #ff6a00;
 }
 body.lightMode {
   --form-bg: #27272731;
@@ -61,12 +60,16 @@ button, #popup-button, #logoutBtn {
   cursor: pointer;
   transition: 0.2s;
   margin: 10px auto;
+  min-width: 40%;
 }
 
 button:hover {
   background: #ff8b1a;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+button:focus {
+  opacity: 0.9;
 }
 
 #logoutBtn, #loginLink {
@@ -85,4 +88,20 @@ background: #ff6b6b;
 
 #logoutBtn:active {
   transform: scale(0.96);
+}
+#actionBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column; 
+}
+#actionBtn button {
+  width: 80%;
+  margin-bottom: 0;
+}
+.or {
+  opacity: 0.4;
 }

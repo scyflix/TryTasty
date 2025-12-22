@@ -37,6 +37,21 @@
   }
 }
 
+.google-btn {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.google-btn svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: #3b3b3b;
+}
 
 /* Social Icons */
 .social-icons a {

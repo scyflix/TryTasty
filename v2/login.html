@@ -75,7 +75,7 @@
             Light Mode
           </button>
         </div>
-       
+
         <div id="FromScybud">
           <h5>Scybud Apps</h5>
           <div id="scybudApps">
@@ -165,7 +165,32 @@
               placeholder="Enter Your Password"
               autocomplete="current-password"
             />
-            <button id="loginBtn" type="button">Login</button>
+
+            <div id="actionBtn">
+              <button id="loginBtn" type="button">Login</button>
+              <p class="or">Or</p>
+              <button class="google-btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                  <path
+                    fill="#FFC107"
+                    d="M43.6 20.4h-1.9V20H24v8h11.3C33.9 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.2 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.6 20-21 0-1.2-.1-2.4-.4-3.6z"
+                  />
+                  <path
+                    fill="#FF3D00"
+                    d="M6.3 14.7l6.6 4.8C14.3 16.1 18.8 13 24 13c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.2 29.5 3 24 3 15.6 3 8.4 8.2 6.3 14.7z"
+                  />
+                  <path
+                    fill="#4CAF50"
+                    d="M24 45c5.3 0 10.3-2 14-5.2l-6.5-5.3C29.8 36.8 27 38 24 38c-5.3 0-9.9-3.1-11.7-7.5l-6.6 5.1C8.4 39.8 15.6 45 24 45z"
+                  />
+                  <path
+                    fill="#1976D2"
+                    d="M43.6 20.4h-1.9V20H24v8h11.3c-1.3 3.4-4.4 6-8.3 6-5.3 0-9.9-3.1-11.7-7.5l-6.6 5.1C11.1 39.8 17.3 45 24 45c10.5 0 20-7.6 20-21 0-1.2-.1-2.4-.4-3.6z"
+                  />
+                </svg>
+                Continue with Google
+              </button>
+            </div>
           </div>
           <p>New user? <a id="signupFormLink" href="#">Signup</a></p>
         </form>
@@ -179,7 +204,7 @@
           <input
             type="text"
             name="userName"
-            id="userName"
+            id="userNameInput"
             placeholder="Create a username"
           />
           <label for="emailForSignup">Email:</label>
@@ -200,7 +225,31 @@
             type="password"
             placeholder="Repeat Password"
           />
-          <button type="button" id="signupBtn">Signup</button>
+          <div id="actionBtn">
+            <button type="button" id="signupBtn">Signup</button>
+            <p class="or">Or</p>
+            <button class="google-btn" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path
+                  fill="#FFC107"
+                  d="M43.6 20.4h-1.9V20H24v8h11.3C33.9 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.2 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.6 20-21 0-1.2-.1-2.4-.4-3.6z"
+                />
+                <path
+                  fill="#FF3D00"
+                  d="M6.3 14.7l6.6 4.8C14.3 16.1 18.8 13 24 13c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.2 29.5 3 24 3 15.6 3 8.4 8.2 6.3 14.7z"
+                />
+                <path
+                  fill="#4CAF50"
+                  d="M24 45c5.3 0 10.3-2 14-5.2l-6.5-5.3C29.8 36.8 27 38 24 38c-5.3 0-9.9-3.1-11.7-7.5l-6.6 5.1C8.4 39.8 15.6 45 24 45z"
+                />
+                <path
+                  fill="#1976D2"
+                  d="M43.6 20.4h-1.9V20H24v8h11.3c-1.3 3.4-4.4 6-8.3 6-5.3 0-9.9-3.1-11.7-7.5l-6.6 5.1C11.1 39.8 17.3 45 24 45c10.5 0 20-7.6 20-21 0-1.2-.1-2.4-.4-3.6z"
+                />
+              </svg>
+              Continue with Google
+            </button>
+          </div>
           <p>Have an account? <a id="loginFormLink" href="#">Login</a></p>
         </div>
       </form>
@@ -244,7 +293,7 @@
     </footer>
     <script type="module" src="main.js" defer></script>
     <script src="../recipe.js" defer></script>
-        <script src="nav.js"></script>
+    <script src="nav.js"></script>
     <script>
       const otherAppsIcon = document.getElementById("otherAppsIcon");
       const FromScybud = document.getElementById("FromScybud");
