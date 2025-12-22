@@ -10,6 +10,7 @@ body.lightMode form{
   --input-textarea-color: #000000;
   --input-textarea-border: #4444447c;
   --btn-bg: #ff6a00;
+  --link: #000000;
 }
 /* Form */
 form {
@@ -22,6 +23,10 @@ form {
   gap: 16px;
   background: var(--form-bg);
   border-radius: 12px;
+}
+form a {
+  color: var(--link);
+  text-decoration: underline;
 }
 
 /* Form Labels */
