@@ -190,7 +190,7 @@ a .profileImg {
 }
 a.userProfileLink span {
   color: var(--color);
-  font-size: clamp(0.5rem, 2vw, 10%);
+  font-size: clamp(0.6rem, 2vw, 10%);
   margin: 0;
 }
 

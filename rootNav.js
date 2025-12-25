@@ -55,7 +55,7 @@ if (upperNavContainer) {
         </svg>
             <span id="userName"></span>
           </a>
-          <div class="menu-icon" onclick="toggleSidebar()">
+          <div class="menu-icon">
             <svg
               width="32"
               height="32"
