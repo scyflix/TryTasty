@@ -69,74 +69,82 @@ googleBtn.forEach((btn) => {
   });
 });
 
-// Signup
-signupBtn.addEventListener("click", async () => {
-  const userNameInputValue = document.getElementById("userNameInput").value;
-  const email = document.getElementById("emailForSignup").value;
-  const password = document.getElementById("passwordForSignup").value;
-  const confirmPassword = document.getElementById(
-    "re-enterPasswordForSignup"
-  ).value;
+if (signupBtn) {
+  // Signup
+  signupBtn.addEventListener("click", async () => {
+    const userNameInputValue = document.getElementById("userNameInput").value;
+    const email = document.getElementById("emailForSignup").value;
+    const password = document.getElementById("passwordForSignup").value;
+    const confirmPassword = document.getElementById(
+      "re-enterPasswordForSignup"
+    ).value;
 
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  try {
-    const user = await signup(userNameInputValue, email, password);
-
-    const userName = document.getElementById("userName");
-    if (userName) userName.innerText = user.displayName;
-
-    alert("Signup successful!");
-    window.location.href = "../index.html";
-  } catch (error) {
-    alert(error.message);
-  }
-});
-
-// Login
-loginBtn.addEventListener("click", async () => {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  console.log("Email:", email);
-  console.log("Password:", password);
-  if (!email || !password) {
-    infoNoteLogin.textContent = "Email and password are required";
-    return;
-  }
-
-  try {
-    await login(email, password);
-    alert("Login successful!");
-    window.location.href = "../index.html";
-  } catch (error) {
-    infoNoteLogin.classList.add("errorShow");
-
-    if (error.message === "Firebase: Error (auth/invalid-credential)") {
-      infoNoteLogin.textContent =
-        "The credential is malformed or expired. Try google signin";
-    } else if (error.message === "Firebase: Error (auth/too-many-requests).") {
-      infoNoteLogin.textContent = "Too many requests. Try again later";
-    } else if (error.message === "Firebase: Error (auth/user-not-found).") {
-      infoNoteLogin.textContent = "No user exists with this email.";
-    } else if (error.message === "Firebase: Error (auth/invalid-credential).") {
-      infoNoteLogin.textContent =
-        "Wrong input.User signed-up with google or user has no account.";
-    } else {
-      infoNoteLogin.textContent = error.message;
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
     }
-  }
-});
+
+    try {
+      const user = await signup(userNameInputValue, email, password);
+
+      const userName = document.getElementById("userName");
+      if (userName) userName.innerText = user.displayName;
+
+      alert("Signup successful!");
+      window.location.href = "../index.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });
+}
+
+if (loginBtn) {
+  // Login
+  loginBtn.addEventListener("click", async () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+    if (!email || !password) {
+      infoNoteLogin.textContent = "Email and password are required";
+      return;
+    }
+
+    try {
+      await login(email, password);
+      alert("Login successful!");
+      window.location.href = "../index.html";
+    } catch (error) {
+      infoNoteLogin.classList.add("errorShow");
+
+      if (error.message === "Firebase: Error (auth/invalid-credential)") {
+        infoNoteLogin.textContent =
+          "The credential is malformed or expired. Try google signin";
+      } else if (
+        error.message === "Firebase: Error (auth/too-many-requests)."
+      ) {
+        infoNoteLogin.textContent = "Too many requests. Try again later";
+      } else if (error.message === "Firebase: Error (auth/user-not-found).") {
+        infoNoteLogin.textContent = "No user exists with this email.";
+      } else if (
+        error.message === "Firebase: Error (auth/invalid-credential)."
+      ) {
+        infoNoteLogin.textContent =
+          "Wrong input. User signed-up with google or user has no account.";
+      } else {
+        infoNoteLogin.textContent = error.message;
+      }
+    }
+  });
+}
 
 // Logout
 logoutBtn.addEventListener("click", async () => {
   try {
     await logout();
     alert("Logged out successfully!");
-    window.location.href = "welcome.html";
+    window.location.href = "https://trytasty.de/v2/welcome.html";
   } catch (error) {
     alert(error.message);
   }

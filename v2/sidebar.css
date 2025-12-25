@@ -1,15 +1,15 @@
-:root {
+#sidebar {
   --sidebar-bg: #1e1e1e;
   --color: #f5f5dc;
-  --span: #f5f5f5;
   --cancel-icon-bg: #161616;
   --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  --link-border: yellow;
 }
-body.lightMode {
-  --sidebar-bg: #ffffff;
+body.lightMode #sidebar {
+  --sidebar-bg: beige;
   --color: #161616;
-  --span: #161616;
   --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  --link-border: orange;
 }
 /* Sidebar */
 #sidebar {
@@ -72,7 +72,7 @@ body.lightMode {
   cursor: pointer;
 }
 .menu-icon span {
-  background: var(--span);
+  background: var(--color);
   width: 1.8rem;
   height: 0.2rem;
   display: block;
@@ -80,10 +80,7 @@ body.lightMode {
   border-radius: 10px;
   transition: 0.6s;
 }
-.menu-icon svg {
-  border-radius: 6px;
-  background: var(--cancel-icon-bg);
-}
+
 #menuIconContainer {
   display: flex;
   align-items: center;
@@ -120,7 +117,7 @@ span {
 
 .page-nav a {
   text-align: center;
-  border: 2px solid yellow;
+  border: 2px solid var(--link-border);
   border-radius: 10px;
   transition: all 0.4s ease;
   color: var(--span);

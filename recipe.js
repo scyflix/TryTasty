@@ -10,56 +10,73 @@ toastLink.forEach((link) => {
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
 
-    preloader.style.opacity = "0";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500); // Delay to allow fade-out effect
-
-})
-  //PopUp
-  const closePopup = document.getElementById("closePopup");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500); // Delay to allow fade-out effect
+});
+//PopUp
+const closePopup = document.getElementById("closePopup");
+if (closePopup) {
   closePopup.addEventListener("click", () => {
     document.getElementById("popup").style.display = "none";
   });
+}
 
-  //SIGNUP AND LOGIN FORMS
-  const signupFormLink = document.getElementById("signupFormLink");
-  const signupForm = document.getElementById("signupForm");
-  const loginForm = document.getElementById("loginForm");
-  const loginFormLink = document.getElementById("loginFormLink");
+//SIGNUP AND LOGIN FORMS
+const signupFormLink = document.getElementById("signupFormLink");
+const signupForm = document.getElementById("signupForm");
+const loginForm = document.getElementById("loginForm");
+const loginFormLink = document.getElementById("loginFormLink");
 
+if (signupFormLink) {
   signupFormLink.addEventListener("click", (event) => {
     event.preventDefault();
     signupForm.style.display = "block";
     loginForm.style.display = "none";
   });
-
+}
+if (loginFormLink) {
   loginFormLink.addEventListener("click", (event) => {
     event.preventDefault();
     signupForm.style.display = "none";
     loginForm.style.display = "block";
   });
+}
 
 // dark mode
 function darkMode() {
   const darkModeBtn = document.getElementById("dark-mode");
-  const body = document.body
-  // Get current state (string!)
+  const body = document.body;
+
+  // Read + convert to boolean
   let isDark = localStorage.getItem("darkMode") === "true";
 
-  // Toggle state
+  // Toggle
   isDark = !isDark;
-  localStorage.setItem("darkMode", isDark);
 
-  if (!isDark) {
-    // LIGHT MODE
-    if (darkModeBtn) body.classList.add("lightMode");
-    if (darkModeBtn) darkModeBtn.textContent = "Dark Mode";
-  } else {
-    if (darkModeBtn) body.classList.remove("lightMode");
-    if (darkModeBtn) darkModeBtn.textContent = "Light Mode";
+  // Apply UI
+  body.classList.toggle("lightMode", !isDark);
+  if (darkModeBtn) {
+    darkModeBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
   }
+
+  // Save
+  localStorage.setItem("darkMode", isDark);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const darkModeBtn = document.getElementById("dark-mode");
+  const body = document.body;
+
+  const isDark = localStorage.getItem("darkMode") === "true";
+
+  body.classList.toggle("lightMode", !isDark);
+  if (darkModeBtn) {
+    darkModeBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
+  }
+});
+
 
 /*
 //check if user has already seen the popup
@@ -134,31 +151,39 @@ let savedCount = JSON.parse(localStorage.getItem("savedCount")) || 0;
 const recipeSubmissionBtn = document.getElementById("recipeSubmissionBtn");
 const submittedCount = document.getElementById("submittedCount");
 let count = Number(savedCount);
-submittedCount.innerText = count;
+if (submittedCount) {
+  submittedCount.innerText = count;
+}
 
-recipeSubmissionBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+if (recipeSubmissionBtn) {
+  recipeSubmissionBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  //form inputs
-  const recipeOwnername = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+    //form inputs
+    const recipeOwnername = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const ingredients = document.getElementById("ingredients").value;
+    const instructions = document.getElementById("instructions").value;
 
-  //Do not let submitted count work untill all fields are filled
-  if (!recipeOwnername || !message || !email) {
-    alert("Please fill all fields");
-    return;
-  } else {
-    count++;
-    submittedCount.innerText = count;
-    localStorage.setItem("savedCount", JSON.stringify(count));
+    //Do not let submitted count work untill all fields are filled
+    if (!recipeOwnername || !instructions || !email || !ingredients) {
+      alert("Please fill all fields");
+      return;
+    } else {
+      count++;
+      submittedCount.innerText = count;
+      localStorage.setItem("savedCount", JSON.stringify(count));
+    }
+    //Let form work normally(Formspree handles the rest)
+    RecipeForm.submit();
+  });
+
+  const clearCountBtn = document.getElementById("clearCountBtn");
+  if (clearCountBtn) {
+    clearCountBtn.addEventListener("click", () => {
+      localStorage.removeItem("savedCount");
+      count = 0;
+      submittedCount.innerText = 0;
+    });
   }
-  //Let form work normally(Formspree handles the rest)
-  RecipeForm.submit();
-});
-
-document.getElementById("clearCountBtn").addEventListener("click", () => {
-  localStorage.removeItem("savedCount");
-  count = 0;
-  submittedCount.innerText = 0;
-});
+}
