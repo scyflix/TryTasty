@@ -139,13 +139,15 @@ if (loginBtn) {
   });
 }
 
-// Logout
-logoutBtn.addEventListener("click", async () => {
-  try {
-    await logout();
-    alert("Logged out successfully!");
-    window.location.href = "https://trytasty.de/v2/welcome.html";
-  } catch (error) {
-    alert(error.message);
-  }
-});
+if(logoutBtn) {
+  // Logout
+  logoutBtn.addEventListener("click", async () => {
+    try {
+      await logout();
+      alert("Logged out successfully!");
+      window.location.href = "https://trytasty.de/v2/welcome.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });
+}

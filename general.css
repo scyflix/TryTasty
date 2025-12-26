@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
   --link-color: #ff4500;
   --btn-bg: #ff6a00;
@@ -44,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Push footer to the bottom */
-  font-family: arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: var(--color);
   line-height: 1.6;

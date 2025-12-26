@@ -86,18 +86,6 @@ body.lightMode #sidebar {
   align-items: center;
 }
 
-nav {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  list-style: none;
-  font-weight: bold;
-  flex-direction: row;
-  overflow-y: auto; /* enables vertical scrolling */
-  overflow-x: auto;
-}
 span {
   color: var(--span);
   font-size: 24px;
@@ -111,7 +99,7 @@ span {
 .page-nav {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
   width: 100%;
 }
 
@@ -122,6 +110,7 @@ span {
   transition: all 0.4s ease;
   color: var(--span);
   font-size: 24px;
+  font-weight: 600;
 }
 
 .page-nav a:hover {

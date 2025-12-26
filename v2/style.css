@@ -13,7 +13,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #5e5e5e;
   color: #ffffff;
   text-align: center;
