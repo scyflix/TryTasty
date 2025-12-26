@@ -10,6 +10,12 @@ function setupMenuIcons() {
   });
 }
 
+const botLink = document.querySelector(".botLink");
+if(botLink) {
+  botLink.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+  });
+}
 //Create Sidebar links in an array
 const navLinks = [
   { text: "Home", href: "index.html", class: "toastNavLink" },

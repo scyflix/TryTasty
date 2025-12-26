@@ -139,7 +139,7 @@ if (loginBtn) {
   });
 }
 
-if(logoutBtn) {
+if (logoutBtn) {
   // Logout
   logoutBtn.addEventListener("click", async () => {
     try {

@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//To show the recipe bot form
+//For the recipe bot form
 function findRecipe() {
   const userName = document.getElementById("searcher").value.trim();
   const userInput = document.getElementById("userInput").value.trim();

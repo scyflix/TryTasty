@@ -22,7 +22,18 @@ iframe {
   top: 0;
   border-radius: 12px;
 }
+#popup.popuphide {
+  display: none;
+}
 
+#popup.popupshow {
+  display: flex;
+}
+
+
+#recipeBotForm {
+  display: none;
+}
 nav.page {
   display: flex;
   gap: 18px;

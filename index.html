@@ -4,46 +4,41 @@
   <head>
     <link rel="canonical" href="https://trytasty.de/index.html" />
     <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
-    <!-- Cookiebot script -->
+    <!-- Cookiebot -->
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
       data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
       type="text/javascript"
+      defer
     ></script>
+
+    <!-- Cookie declaration -->
     <script
       id="CookieDeclaration"
       src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
       type="text/javascript"
-      async
+      defer
     ></script>
 
-    <!-- Google Analytics (gtag.js) -->
     <script>
-      // Only initialize GA after consent
-      window.addEventListener("CookieConsentDeclaration", function () {
+      window.addEventListener("CookiebotOnConsentReady", function () {
         if (Cookiebot.consents.statistics) {
-          // Load gtag.js dynamically
-          const gtagScript = document.createElement("script");
-          gtagScript.src =
-            "https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR";
-          gtagScript.async = true;
-          document.head.appendChild(gtagScript);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-DDLCL6XBQR", { anonymize_ip: true });
 
-          // Initialize GA after script loads
-          gtagScript.onload = function () {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            window.gtag = gtag; // expose globally if needed
-            gtag("js", new Date());
-            gtag("config", "G-DDLCL6XBQR", { anonymize_ip: true });
-          };
+          const s = document.createElement("script");
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR";
+          s.async = true;
+          document.head.appendChild(s);
         }
       });
     </script>
-    <script type="module" src="v2/main.js" defer></script>
+
     <title>TryTasty | Quick & Tasty Snack Recipes</title>
     <meta charset="utf-8" />
     <meta
@@ -82,7 +77,7 @@
     <link rel="manifest" href="v2/site.webmanifest" />
 
     <style>
-      /* Popup styling 
+      /*
       #popup {
         position: fixed;
         top: 0;
@@ -151,24 +146,23 @@
         <div class="loadLine"></div>
       </div>
     </div>
-    <!--
-      Popup HTML 
-      <div id="popup">
-        <div id="popup-content">
-          <h2>Welcome to TryTasty!</h2>
-          <p>
-            <strong>TryTasty</strong> is a fun recipe project made by
-            <strong>Scybud</strong>, a student-led brand that loves to create and
-            share.
-          </p>
-          <p>
-            Here, you'll find simple and creative snack ideas built with code and
-            love.
-          </p>
-          <button onclick="closePopup()">Enter</button>
-        </div>
-      </div>
-      -->
+<!--
+  <div id="popup">
+    <div id="popup-content">
+      <h2>Welcome to TryTasty!</h2>
+      <p>
+        <strong>TryTasty</strong> is a fun recipe project made by
+        <strong>Scybud</strong>, a student-led brand that loves to create and
+        share.
+      </p>
+      <p>
+        Here, you'll find simple and creative snack ideas built with code and
+        love.
+      </p>
+      <button id="closePopup">Enter</button>
+    </div>
+  </div>
+    -->
 
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
@@ -195,7 +189,7 @@
           </button>
           <a id="loginLink" href="v2/login.html" ;> Logout </a>
         </div>
-        <a href="#" onclick="showPage('recipeBotForm'); toggleSidebar()">
+        <a href="#" class="botLink" onclick="showPage('recipeBotForm')">
           <span>Bot</span>
         </a>
       </nav>
@@ -447,7 +441,16 @@
         </nav>
       </section>
       <!--bot-->
-      <div id="recipeBotForm" class="page" style="display: none">
+      <div id="recipeBotForm" class="page">
+        <!--Base44 created ai 
+        <iframe
+          src="https://culinary-canvas-5daf9903.base44.app"
+          width="100%"
+          height="600"
+          frameborder="0"
+          style="border: none; border-radius: 24px"
+        ></iframe>
+        -->
         <form id="recipeBot">
           <h2 style="color: orange">
             Hi, I`m Resp, your recipe suggestion Bot🤖.
@@ -1319,9 +1322,10 @@
         </svg>
       </a>
     </nav>
-    <script src="rootNav.js"></script>
+    <script src="rootNav.js" derfer></script>
     <script src="recipe.js" defer></script>
-    <script src="fav.js"></script>
+    <script type="module" src="v2/main.js" defer></script>
+    <script src="fav.js" defer></script>
   </body>
 </html>
 <!--Alhamdulillahi Rabbil Ahlamin-->
