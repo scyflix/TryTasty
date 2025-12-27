@@ -1,0 +1,98 @@
+  * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: arial, sans-serif;
+        background-color: rgb(94, 94, 94);
+        line-height: 1.6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background: #ffa500;
+        min-height: 40px;
+        color: #000000fa;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: 12px;
+      }
+      a {
+                color: #000000fa;
+
+        text-decoration: none;
+      }
+      header a h1:hover {
+        opacity: 0.8;
+      }
+      header a h1 {
+        font-size: 1.5em;
+      }
+      main {
+        border-radius: 10px;
+        margin: 10px auto;
+        padding: 30px;
+        display: block;
+        background-color: #1e1e1e;
+
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        width: 80vw;
+      }
+      .post p {
+        white-space: normal;
+        overflow-wrap: break-word;
+      }
+      .post {
+            color: #ccc;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      #forminputbtn {
+        outline: none;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px 10px;
+        width: 60%;
+        height: 40px;
+      }
+      #postedContent {
+        width: 100%;
+      }
+      .loginBtn {
+        background: #ffa600;
+        padding: 0 10px;
+        margin-bottom: 4px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #ccc;
+        transition: all 0.4s ease;
+      }
+      .loginBtn:hover {
+        transform: scale(1.04);
+      }
+      .paceholderText {
+        opacity: 0.4;
+        color: #ccc;
+        font-size: small;
+      }
