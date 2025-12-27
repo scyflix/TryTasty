@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 /*
 //check if user has already seen the popup
 const popup = this.document.getElementById("popup");
@@ -95,12 +94,23 @@ function closePopup() {
   popup.style.display = "none";
 }
 */
+const pages = document.querySelectorAll(".page");
+function backToHome() {
+  pages.forEach((page) => {
+    if (page.querySelector(".backBtn")) return;
+    const backLink = document.createElement("a");
+    backLink.href = "./index.html";
+    backLink.textContent = "← Back";
+    backLink.classList.add("backBtn");
+    page.prepend(backLink);
+  });
+}
 //show recipes on click
 function showPage(pageId) {
-  const pages = document.querySelectorAll(".page");
   pages.forEach((page) => (page.style.display = "none"));
   const page = document.getElementById(pageId);
   if (page) {
+    backToHome();
     page.style.display = "block";
   }
 }

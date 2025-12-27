@@ -33,7 +33,7 @@ onUserAuthChange((user) => {
     userName && (userName.innerText = user.displayName || "Profile");
 
     logoutBtn && (logoutBtn.style.display = "block");
-    loginBtn && (loginBtn.innerText = "Logout");
+    loginLink && (loginLink.innerText = "Logout");
     popup && (popup.style.display = "none");
     loginInputForm && (loginInputForm.style.display = "none");
     nonUserMessage && (nonUserMessage.style.display = "none");
@@ -42,14 +42,14 @@ onUserAuthChange((user) => {
   } else {
     Useremail && (Useremail.innerText = "Login first");
     userName && (userName.innerText = "Login first");
-    logoutBtn && (logoutBtn.innerText = "Login");
+    loginLink && (loginLink.innerText = "Login");
+    loginLink && (loginLink.style.display = "block");
     popup && (popup.style.display = "block");
     nonUserMessage && (nonUserMessage.style.display = "block");
     recipeForm && (recipeForm.style.display = "none");
     welcomeText && (welcomeText.innerText = "");
     loginInputForm && (loginInputForm.style.display = "block");
     videosPage && (videosPage.style.display = "none");
-    loginLink && (loginLink.style.display = "block");
   }
 });
 
