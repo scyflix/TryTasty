@@ -9,7 +9,7 @@ body.lightMode form{
 
 }
 /* Form */
-form {
+.auth-form {
   --form-bg: #272727;
   --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;
@@ -29,17 +29,22 @@ form a {
   color: var(--link);
   text-decoration: underline;
 }
+form a:hover {
+  opacity: 0.6;
+}
 
 /* Form Labels */
 label {
   font-size: 15px;
   font-weight: 600;
+  margin: 10px 0;
 }
 
 /* Inputs */
 input, textarea {
   width: 100%;
   padding: 14px;
+  margin: 20px 0;
   border-radius: 10px;
   background: var(--input-textarea-bg);
   border: 2px solid var(--input-textarea-border);

@@ -44,28 +44,24 @@
     </div>
 
     <header>
-        <div style="display: flex; margin-left: 0" id="menuIconContainer">
+      <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon">
           <span></span>
           <span></span>
           <span></span>
         </div>
         <a href="https://trytasty.de/">
-          <h1>
-            TryTasty
-          </h1>
+          <h1>TryTasty</h1>
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="upperNavContainer">
           <!--USER PROFILE LINK-->
-        
         </div>
         <div class="actionBtns">
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
             Light Mode
           </button>
-        
         </div>
 
         <div id="FromScybud">
@@ -128,19 +124,19 @@
       <div id="popup-content">
         <h2>Terms and Condition</h2>
         <p style="font-size: large">
-          By continuing, you agree that you have read our
-          <a href="privacyGerman.html">Privacy Policy</a> and understand & that
-          you agree to our Conditons for Recipe submission in section 6 of the
-          <b>Privacy Policy</b> page.
+          By continuing, you agree that you have read and understand our
+          <a href="privacyGerman.html#recipeSubmission">Privacy Policy</a> &
+          that you agree to our Conditons for Recipe submission in section 6 of
+          the <b>Privacy Policy</b> page.
         </p>
         <button id="closePopup">Continue</button>
       </div>
     </div>
     <main>
-      <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
-      <div id="auth-form">
-        <button id="logoutBtn" style="display: none">Logout</button>
-        <form id="loginForm">
+      <form>
+        <div id="loginForm" class="auth-form">
+          <div id="welcomeText"></div>
+          <button id="logoutBtn" style="display: none">Logout</button>
           <div id="loginInputForm">
             <h3>Login To TryTasty</h3>
             <p class="infoNoteLogin"></p>
@@ -158,6 +154,10 @@
               placeholder="Enter Your Password"
               autocomplete="current-password"
             />
+            <p class="infoText">
+              Logging in means you agree to the
+              <a href="privacyGerman.html">Terms of use</a>.
+            </p>
 
             <div id="actionBtn">
               <button id="loginBtn" type="button">Login</button>
@@ -184,15 +184,15 @@
                 Continue with Google
               </button>
             </div>
+            <p>New user? <a id="signupFormLink" href="#">Signup</a></p>
           </div>
-          <p>New user? <a id="signupFormLink" href="#">Signup</a></p>
-        </form>
-      </div>
+        </div>
+      </form>
 
       <!--SIGNUP FORM-->
-      <form id="signupForm" style="display: none">
-        <h3>Signup To TryTasty</h3>
-        <div class="auth-form">
+      <form>
+        <div class="auth-form" id="signupForm" style="display: none">
+          <h3>Signup To TryTasty</h3>
           <label for="userName">Username:</label>
           <input
             type="text"
@@ -218,6 +218,10 @@
             type="password"
             placeholder="Repeat Password"
           />
+          <p class="infoText">
+            Signing-up means you agree to the
+            <a href="privacyGerman.html">Terms of use</a>.
+          </p>
           <div id="actionBtn">
             <button type="button" id="signupBtn">Signup</button>
             <p class="or">Or</p>

@@ -22,7 +22,11 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
   color: #fff;
 }
-
+.infoText {
+  opacity: 0.5;
+  font-size: 12px;
+  text-align: center;
+}
 /* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
