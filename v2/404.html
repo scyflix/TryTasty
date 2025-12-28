@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="v2/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="v2/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="v2/favicon-16x16.png"
+    />
+    <title>Page Not Found</title>
+    <style>
+      :root {
+        --accent1: #ffff00;
+        --accent2: orangered;
+        --accent3: orange;
+        --bg: #0d0d0d;
+        --text-color: #ffffff;
+      }
+   html {
+    height: 100vh;
+    width: 100vw;
+   }
+      body {
+  font-family: "Poppins", sans-serif;
+background: var(--bg);
+color: var(--text-color);
+      }
+      main {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      #notFound {
+        font-size: 10rem;
+        background: linear-gradient(
+          90deg,
+          var(--accent1),
+          var(--accent2),
+          var(--accent3)
+        );
+        background-clip: text;
+        color: transparent;
+        z-index: -1;
+        margin: 0;
+      }
+      body p:nth-child(4) {
+        margin-bottom: 30px;
+      }
+      a {
+        text-decoration: none;
+        background: var(--accent1);
+        color: #0d0d0d;
+        padding: 20px;
+        border-radius: 12px;
+        font-weight: 700;
+      }
+      a:hover {
+        opacity: 0.7;
+      }
+        #robot {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: bounce 4s linear infinite;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px) scale(1.02);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .robotHead {
+        border: 2px solid var(--accent1);
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px auto 0;
+      }
+      #eyes {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .eye {
+        margin-top: 10px;
+        padding-top: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--accent2);
+      }
+      .eyeball {
+        background: var(--accent3);
+        box-shadow: 0 0 10px var(--accent3), 0 0 20px var(--accent3);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: eyemove 5s ease infinite;
+      }
+      @keyframes eyemove {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(10px, 0);
+        }
+        50% {
+          transform: translate(10px, 10px);
+        }
+        75% {
+          transform: translate(-3px, 8px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      .mouth {
+        margin: auto;
+        width: 40px;
+        height: 4px;
+        background: var(--accent2);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="robot">
+        <div class="robotHead">
+          <div id="eyes">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+          </div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+      
+      <h1><span id="notFound">404</span></h1>
+      <p>Page Not Found</p>
+      <p>Gosh! We are lost again 😕.</p>
+      <a href="index.html">Go Home</a>
+    </main>
+  </body>
+</html>

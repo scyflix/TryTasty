@@ -12,30 +12,30 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
+
       gtag("config", "G-DDLCL6XBQR");
     </script>
-    <title>TryTasty | Login</title>
+    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
+    <title>TryTasty | Share a recipe</title>
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="View your TryTasty profile.Track your recipes and favorites count, and enjoy your cooking experience."
+      content="Contribute to the TryTasty community by submitting your own recipe. Inspire others with your ingredients, steps, and food creativity.
+"
     />
     <meta property="og:type" content="website" />
     <meta content="TryTasty" property="og:title" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS LINKS-->
     <link rel="stylesheet" href="../Recipe.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="../general.css" />
     <link rel="stylesheet" href="form.css" />
-    <link rel="stylesheet" href="userProfile.css" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
   </head>
-
   <body>
     <!--PRELOADER-->
     <div id="preloader">
@@ -44,8 +44,7 @@
         <div class="loadLine"></div>
       </div>
     </div>
-
-   <header>
+    <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon">
           <span></span>
@@ -53,45 +52,72 @@
           <span></span>
         </div>
         <a href="https://trytasty.de/">
-          <h1>
-            TryTasty
-          </h1>
+          <h1>TryTasty</h1>
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="upperNavContainer">
           <!--USER PROFILE LINK-->
-        
         </div>
         <div class="actionBtns">
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
             Light Mode
           </button>
-        
-          <a id="loginLink" href="login.html">
-            Logout
-          </a>
+
+          <a id="loginLink" href="login.html"> Logout </a>
         </div>
-       <!--Add links with js-->
+        <!--Add links with js-->
       </nav>
     </header>
-    
     <main>
-      <section id="userDetails">
-        <div class="userProfileContainer">
-          <img
-            src="../User profile.svg"
-            alt="An svg image of user profile"
-            class="profileImg"
+      <div class="statsBox">
+        <p>Recipes Submitted: <span id="submittedCount">0</span></p>
+      </div>
+      <p id="non-userMessage" class="infoNote">
+        Read our <a href="privacyGerman.html">recipe submission terms</a> and
+        <a href="login.html">Login</a> to submit a recipe
+      </p>
+      <section id="recipeSubmissionForm">
+        <form
+          action="https://formspree.io/f/myzpzgej"
+          method="POST"
+          id="submitRecipeForm"
+        >
+          <h1>Share A Recipe</h1>
+          <label for="name"> Your name: </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="e.g. John Mally"
+            required
           />
-          <span id="userName"></span>
-          <p>Email: <span id="Useremail"></span></p>
-        </div>
-
-        <div class="statsBox">
-          <p>Favorites: <span id="favCount">0</span></p>
-          <p>Recipes Submitted: <span id="submittedCount">0</span></p>
-        </div>
+          <label for="email"> Your email: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <label for="ingredients"> Your recipe: </label>
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            placeholder="Ingredients:egg, milk."
+            required
+          ></textarea>
+          <label for="instructions">Instructions:</label>
+          <textarea
+            name="instructions"
+            id="instructions"
+            placeholder="Instructions:Mix egg and milk with..."
+          ></textarea>
+          <p class="infoNote">
+            <b>Note:</b>Your ingredients and intructions should have a column(:)
+          </p>
+          <button id="recipeSubmissionBtn" type="button">Submit</button>
+        </form>
       </section>
     </main>
 
@@ -149,9 +175,17 @@
         </svg>
       </a>
     </nav>
+    <script>
+      // Auto-resize textareas
+      document.querySelectorAll("textarea").forEach((textarea) => {
+        textarea.addEventListener("input", () => {
+          textarea.style.height = "auto";
+          textarea.style.height = textarea.scrollHeight + "px";
+        });
+      });
+    </script>
     <script type="module" src="main.js"></script>
     <script src="../recipe.js"></script>
-    <script src="../fav.js"></script>
     <script src="nav.js"></script>
   </body>
 </html>

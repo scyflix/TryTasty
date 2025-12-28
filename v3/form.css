@@ -9,7 +9,7 @@ body.lightMode form{
 
 }
 /* Form */
-.auth-form {
+.auth-form, #recipeBot {
   --form-bg: #272727;
   --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;

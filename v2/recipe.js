@@ -1,3 +1,4 @@
+
 //TOAST NAVIGATION ACTIVE STATE
 const toastLink = document.querySelectorAll("#bottomNavContainer a");
 
@@ -87,13 +88,9 @@ if (popup) {
     document.getElementById("popup").style.display = "none"; // Hide popup
   }
 }
-
-function closePopup() {
-  localStorage.setItem("popupShown", "true"); // Remember that popup was shown
-  const popup = document.getElementById("popup");
-  popup.style.display = "none";
-}
 */
+
+
 const pages = document.querySelectorAll(".page");
 function backToHome() {
   pages.forEach((page) => {
@@ -114,6 +111,7 @@ function showPage(pageId) {
     page.style.display = "block";
   }
 }
+
 // Check if a recipe key is passed in the URL
 window.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);

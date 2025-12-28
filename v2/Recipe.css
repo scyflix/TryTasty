@@ -1,0 +1,197 @@
+body main nav {
+  --snackImg-color: #f1f1f1;
+  --snackImg-bg: #141414;
+}
+body.lightMode main nav {
+  --snackImg-color: #333;
+  --snackImg-bg: #feebbb;
+}
+
+/* Popup Overlay */
+#popup {
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Popup Box */
+#popup-content {
+  background: #3b3b3b;
+  padding: 28px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 14px;
+  text-align: center;
+  animation: fadeIn 0.25s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+#toast {
+  visibility: hidden; /* Hidden by default */
+  min-width: 250px;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* Show the toast */
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+#videosPage {
+  flex-direction: column;
+  display: flex;
+  height: auto;
+  width: auto;
+}
+
+#videosPage iframe {
+  margin: 0 auto;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+  border-radius: 12px;
+}
+#popup.popuphide {
+  display: none;
+}
+
+#popup.popupshow {
+  display: flex;
+}
+
+a.backBtn {
+  text-decoration: none;
+  border: 1px solid #e65c00;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  padding: 6px;
+  color: var(--color);
+  font-size: clamp(1.3rem, 1.5rem, 1.5rem);
+}
+
+#recipeBotForm {
+  display: none;
+}
+nav.page {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.snackImage {
+  text-align: center;
+  text-decoration: none;
+  color: var(--snackImg-color);
+  border-radius: 6px;
+  width: 30%;
+  height: 170px;
+  overflow: hidden;
+  background-color: var(--snackImg-bg);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.362);
+}
+.snackImage img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+.snackImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.462);
+}
+#suggestions {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  list-style: none;
+  font-weight: bold;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #e65c00;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffa94d;
+  padding-bottom: 5px;
+}
+h3 {
+  margin-top: 10px;
+  color: #ff4500;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .snackImage {
+    width: 100%;
+  }
+
+  img:focus {
+    width: 100%;
+  }
+  iframe {
+    min-height: 400px;
+    height: 40vh;
+  }
+}
+img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
+img:hover {
+  transform: scale(1.02);
+}
+a {
+  text-decoration: none;
+  color: orangered;
+}
+
+a:hover {
+  text-decoration: underline;
+}

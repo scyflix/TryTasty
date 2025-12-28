@@ -19,11 +19,11 @@ if (botLink) {
 //Create Sidebar links in an array
 const navLinks = [
   { text: "Home", href: "index.html", class: "toastNavLink" },
-  { text: "Favorites", href: "v2/favs.html", class: "toastNavLink" },
-  { text: "Videos", href: "v2/videos.html", class: "toastNavLink" },
-  { text: "Submit", href: "v2/submit.html" },
+  { text: "Favorites", href: "v3/favs.html", class: "toastNavLink" },
+  { text: "Videos", href: "v3/videos.html", class: "toastNavLink" },
+  { text: "Submit", href: "v3/submit.html" },
   { text: "Community", href: "../TryTasty mvp creation/original.html" },
-  { text: "Privacy Policy", href: "v2/privacyGerman.html" },
+  { text: "Privacy Policy", href: "v3/privacyGerman.html" },
 ];
 
 //Loop through each link and create a new one for each link
@@ -47,7 +47,7 @@ sidebar.appendChild(paragraph);
 
 const upperNavContainer = document.querySelector(".upperNavContainer");
 if (upperNavContainer) {
-  upperNavContainer.innerHTML = `<a href="v2/userProfile.html" class="userProfileLink">
+  upperNavContainer.innerHTML = `<a href="v3/userProfile.html" class="userProfileLink">
            <svg
            class="profileImg"
           xmlns="http://www.w3.org/2000/svg"

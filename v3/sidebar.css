@@ -1,0 +1,128 @@
+#sidebar {
+  --sidebar-bg: #1e1e1e;
+  --color: #f5f5dc;
+  --cancel-icon-bg: #161616;
+  --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  --link-border: yellow;
+}
+body.lightMode #sidebar {
+  --sidebar-bg: beige;
+  --color: #161616;
+  --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  --link-border: orange;
+}
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: -100%;
+  width: 300px;
+  box-shadow: var(--shadow);
+  height: 100vh; /* required for scrolling */
+  background-color: var(--sidebar-bg);
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: left 0.6s ease;
+  border-radius: 10px;
+  color: var(--color);
+  overflow-y: auto; /* enables vertical scrolling */
+  overflow-x: auto; /* prevents side scroll */
+}
+/* SIDEBAR SCROLLBAR */
+/* width */
+#sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#sidebar::-webkit-scrollbar-track {
+  background: #444; /* softer dark */
+  border-radius: 10px;
+}
+
+/* Handle */
+#sidebar::-webkit-scrollbar-thumb {
+  background: #ffd900;
+  border-radius: 10px;
+}
+
+/* Handle hover */
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #e0bf00; /* darker yellow, still consistent */
+}
+
+#sidebar.show {
+  left: 0; /* slide in */
+  border-radius: 10px;
+}
+.actionBtns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* Menu Icon */
+.menu-icon {
+  width: 25px;
+  height: 25px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}
+.menu-icon span {
+  background: var(--color);
+  width: 1.8rem;
+  height: 0.2rem;
+  display: block;
+  margin: 4px 0;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+
+#menuIconContainer {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  color: var(--span);
+  font-size: 24px;
+}
+@media (max-width: 600px) {
+  /* Sidebar */
+  #sidebar {
+    width: 85vw;
+  }
+}
+.page-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.page-nav a {
+  text-align: center;
+  border: 2px solid var(--link-border);
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  color: var(--span);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.page-nav a:hover {
+  text-decoration: none;
+  border: 2px solid orange;
+  transform: scale(1.02);
+  border-radius: 10px;
+  background: rgba(40, 40, 40, 0.2);
+}
+
+.page-nav p {
+  opacity: 0.3;
+  text-align: center;
+  margin-top: auto;
+}

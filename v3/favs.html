@@ -12,28 +12,41 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
+
       gtag("config", "G-DDLCL6XBQR");
     </script>
-    <title>TryTasty | Login</title>
+    <title>TryTasty | Favorites</title>
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="View your TryTasty profile.Track your recipes and favorites count, and enjoy your cooking experience."
+      content="View your saved recipes and amount of saved recipe all in one page. Explore flavors, try something new, and cook with confidence."
     />
+    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
     <meta property="og:type" content="website" />
     <meta content="TryTasty" property="og:title" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS LINKS-->
     <link rel="stylesheet" href="../Recipe.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="../general.css" />
     <link rel="stylesheet" href="form.css" />
-    <link rel="stylesheet" href="userProfile.css" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
+    <style>
+      main {
+        margin-top: 20px;
+        min-width: 80%;
+      }
+      .fav-link {
+        display: flex;
+        justify-content: center;
+      }
+      .fav-link a {
+        margin-right: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -44,8 +57,7 @@
         <div class="loadLine"></div>
       </div>
     </div>
-
-   <header>
+    <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon">
           <span></span>
@@ -72,27 +84,16 @@
             Logout
           </a>
         </div>
-       <!--Add links with js-->
+       
       </nav>
     </header>
-    
-    <main>
-      <section id="userDetails">
-        <div class="userProfileContainer">
-          <img
-            src="../User profile.svg"
-            alt="An svg image of user profile"
-            class="profileImg"
-          />
-          <span id="userName"></span>
-          <p>Email: <span id="Useremail"></span></p>
-        </div>
-
-        <div class="statsBox">
-          <p>Favorites: <span id="favCount">0</span></p>
-          <p>Recipes Submitted: <span id="submittedCount">0</span></p>
-        </div>
-      </section>
+    <main id="body">
+      <h2>Favorites</h2>
+      <div class="statsBox">
+        <p>Favorites: <span id="favCount">0</span></p>
+      </div>
+      <section id="favs"></section>
+      <button type="button" id="clearFavs">Clear Favs</button>
     </main>
 
     <!-- Small screen bottom navigation -->
@@ -149,9 +150,10 @@
         </svg>
       </a>
     </nav>
-    <script type="module" src="main.js"></script>
-    <script src="../recipe.js"></script>
-    <script src="../fav.js"></script>
-    <script src="nav.js"></script>
+    <script type="module" src="main.js" defer></script>
+    <script src="../recipe.js" defer></script>
+    <script src="../fav.js" defer></script>
+        <script src="nav.js"></script>
+
   </body>
 </html>
