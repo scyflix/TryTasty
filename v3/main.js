@@ -21,40 +21,47 @@ const loginLink = document.getElementById("loginLink");
 const googleBtn = document.querySelectorAll(".google-btn");
 const infoNoteLogin = document.querySelector(".infoNoteLogin");
 
+//Authstatechanged(loggedin)
+function loggedIn(user) {
+  welcomeText &&
+    (welcomeText.textContent =
+      "Name:" + " " + user.displayName || "Name:" + " " + user.email || "User");
+
+  Useremail && (Useremail.textContent = user.email || "-");
+
+  userName &&
+    (userName.textContent = user.displayName.slice(0, 5) + "..." || "Profile");
+
+  logoutBtn && (logoutBtn.style.display = "block");
+  loginLink && (loginLink.innerText = "Logout");
+  popup && (popup.style.display = "none");
+  loginInputForm && (loginInputForm.style.display = "none");
+  nonUserMessage && (nonUserMessage.style.display = "none");
+  recipeForm && (recipeForm.style.display = "block");
+  videosPage && (videosPage.style.display = "block");
+}
+
+//authstatechanged(loggedout)
+function loggedout() {
+  logoutBtn && (logoutBtn.style.display = "none");
+  Useremail && (Useremail.innerText = "Login first");
+  userName && (userName.innerText = "Login first");
+  loginLink && (loginLink.innerText = "Login");
+  loginLink && (loginLink.style.display = "block");
+  popup && (popup.style.display = "block");
+  nonUserMessage && (nonUserMessage.style.display = "block");
+  recipeForm && (recipeForm.style.display = "none");
+  welcomeText && (welcomeText.innerText = "");
+  loginInputForm && (loginInputForm.style.display = "block");
+  videosPage && (videosPage.style.display = "none");
+}
+
 // Listen for auth state changes
 onUserAuthChange((user) => {
   if (user) {
-    welcomeText &&
-      (welcomeText.textContent =
-        "Name:" + " " + user.displayName ||
-        "Name:" + " " + user.email ||
-        "User");
-
-    Useremail && (Useremail.textContent = user.email || "-");
-
-    userName &&
-      (userName.textContent =
-        user.displayName.slice(0, 5) + "..." || "Profile");
-
-    logoutBtn && (logoutBtn.style.display = "block");
-    loginLink && (loginLink.innerText = "Logout");
-    popup && (popup.style.display = "none");
-    loginInputForm && (loginInputForm.style.display = "none");
-    nonUserMessage && (nonUserMessage.style.display = "none");
-    recipeForm && (recipeForm.style.display = "block");
-    videosPage && (videosPage.style.display = "block");
+    loggedIn(user);
   } else {
-    logoutBtn && (logoutBtn.style.display = "none");
-    Useremail && (Useremail.innerText = "Login first");
-    userName && (userName.innerText = "Login first");
-    loginLink && (loginLink.innerText = "Login");
-    loginLink && (loginLink.style.display = "block");
-    popup && (popup.style.display = "block");
-    nonUserMessage && (nonUserMessage.style.display = "block");
-    recipeForm && (recipeForm.style.display = "none");
-    welcomeText && (welcomeText.innerText = "");
-    loginInputForm && (loginInputForm.style.display = "block");
-    videosPage && (videosPage.style.display = "none");
+    loggedout();
   }
 });
 
@@ -126,7 +133,6 @@ if (loginBtn) {
       infoNoteLogin.textContent = "Email and password are required";
       return;
     }
-
     try {
       await login(email, password);
       alert("Login successful!");

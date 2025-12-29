@@ -135,8 +135,6 @@
     <main>
       <form autocomplete="off">
         <div id="loginForm" class="auth-form">
-          <div id="welcomeText"></div>
-          <button id="logoutBtn" style="display: none">Logout</button>
           <div id="loginInputForm">
             <h3>Login To TryTasty</h3>
             <p class="infoNoteLogin"></p>
@@ -145,14 +143,14 @@
               id="email"
               type="email"
               placeholder="example@gmail.com"
-              autocomplete="email"
+              autocomplete="off"
             />
             <label for="password">Password:</label>
             <input
               id="password"
               type="password"
               placeholder="Enter Your Password"
-              autocomplete="current-password"
+              autocomplete="off"
             />
             <p class="infoText">
               Logging in means you agree to the
