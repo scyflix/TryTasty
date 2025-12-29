@@ -116,9 +116,6 @@ if (loginBtn) {
   loginBtn.addEventListener("click", async () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
-    console.log("Email:", email);
-    console.log("Password:", password);
     if (!email || !password) {
       infoNoteLogin.textContent = "Email and password are required";
       return;

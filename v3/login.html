@@ -133,7 +133,7 @@
       </div>
     </div>
     <main>
-      <form>
+      <form autocomplete="off">
         <div id="loginForm" class="auth-form">
           <div id="welcomeText"></div>
           <button id="logoutBtn" style="display: none">Logout</button>
@@ -190,12 +190,13 @@
       </form>
 
       <!--SIGNUP FORM-->
-      <form>
+      <form autocomplete="off">
         <div class="auth-form" id="signupForm" style="display: none">
           <h3>Signup To TryTasty</h3>
-                      <p class="infoNoteSignup"></p>
+          <p class="infoNoteSignup"></p>
           <label for="userName">Username:</label>
           <input
+            autocomplete="username"
             type="text"
             name="userName"
             id="userNameInput"
@@ -203,12 +204,14 @@
           />
           <label for="emailForSignup">Email:</label>
           <input
+            autocomplete="email"
             id="emailForSignup"
             type="email"
             placeholder="examble@gmail.com"
           />
           <label for="passwordForSignup">Password:</label>
           <input
+            autocomplete="new-password"
             id="passwordForSignup"
             type="password"
             placeholder="Enter Your Password"
