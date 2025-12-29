@@ -32,7 +32,9 @@ onUserAuthChange((user) => {
 
     Useremail && (Useremail.textContent = user.email || "-");
 
-    userName && (userName.textContent = user.displayName || "Profile");
+    userName &&
+      (userName.textContent =
+        user.displayName.slice(0, 5) + "..." || "Profile");
 
     logoutBtn && (logoutBtn.style.display = "block");
     loginLink && (loginLink.innerText = "Logout");
@@ -42,6 +44,7 @@ onUserAuthChange((user) => {
     recipeForm && (recipeForm.style.display = "block");
     videosPage && (videosPage.style.display = "block");
   } else {
+    logoutBtn && (logoutBtn.style.display = "none");
     Useremail && (Useremail.innerText = "Login first");
     userName && (userName.innerText = "Login first");
     loginLink && (loginLink.innerText = "Login");
@@ -158,7 +161,7 @@ if (logoutBtn) {
     try {
       await logout();
       alert("Logged out successfully!");
-      window.location.href = "https://trytasty.de/v2/welcome.html";
+      window.location.href = "https://trytasty.de/v3/welcome.html";
     } catch (error) {
       alert(error.message);
     }
