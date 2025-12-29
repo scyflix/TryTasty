@@ -336,3 +336,6 @@ footer {
 #scybudApps img:hover {
   transform: scale(1.06);
 }
+.mayHide.hideSection {
+  display: none;
+}

@@ -36,7 +36,7 @@ navLinks.forEach((link) => {
 
 //Version number
 const paragraph = document.createElement("p");
-paragraph.innerText = "Version: 03.00.00";
+paragraph.innerText = "Version: 03.0.8";
 sidebar.appendChild(paragraph);
 
 const upperNavContainer = document.querySelector(".upperNavContainer");

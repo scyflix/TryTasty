@@ -45,7 +45,7 @@
       </div>
     </div>
     <header>
-      <div style="display: flex; margin-left: 0" id="menuIconContainer">
+      <div id="menuIconContainer">
         <div class="menu-icon">
           <span></span>
           <span></span>
@@ -70,18 +70,19 @@
       </nav>
     </header>
     <main>
-      <div class="statsBox">
-        <p>Recipes Submitted: <span id="submittedCount">0</span></p>
-      </div>
       <p id="non-userMessage" class="infoNote">
         Read our <a href="privacyGerman.html">recipe submission terms</a> and
         <a href="login.html">Login</a> to submit a recipe
       </p>
       <section id="recipeSubmissionForm">
+        <div class="statsBox">
+          <p>Recipes Submitted: <span id="submittedCount">0</span></p>
+        </div>
         <form
           action="https://formspree.io/f/myzpzgej"
           method="POST"
           id="submitRecipeForm"
+          class="form"
         >
           <h1>Share A Recipe</h1>
           <label for="name"> Your name: </label>

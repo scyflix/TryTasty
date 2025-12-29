@@ -25,11 +25,16 @@ const infoNoteLogin = document.querySelector(".infoNoteLogin");
 onUserAuthChange((user) => {
   if (user) {
     welcomeText &&
-      (welcomeText.innerText = user.displayName || user.email || "User");
+      (welcomeText.textContent =
+        "Name:" + " " + user.displayName ||
+        "Name:" + " " + user.email ||
+        "User");
 
-    Useremail && (Useremail.innerText = user.email || "-");
+    Useremail && (Useremail.textContent = user.email || "-");
 
-    userName && (userName.innerText = user.displayName || "Profile");
+    userName &&
+      (userName.textContent =
+        user.displayName.slice(0, 5) + "..." || "Profile");
 
     logoutBtn && (logoutBtn.style.display = "block");
     loginLink && (loginLink.innerText = "Logout");
