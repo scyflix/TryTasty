@@ -32,9 +32,7 @@ onUserAuthChange((user) => {
 
     Useremail && (Useremail.textContent = user.email || "-");
 
-    userName &&
-      (userName.textContent =
-        user.displayName.slice(0, 5) + "..." || "Profile");
+    userName && (userName.textContent = user.displayName || "Profile");
 
     logoutBtn && (logoutBtn.style.display = "block");
     loginLink && (loginLink.innerText = "Logout");
@@ -121,9 +119,6 @@ if (loginBtn) {
   loginBtn.addEventListener("click", async () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
-    console.log("Email:", email);
-    console.log("Password:", password);
     if (!email || !password) {
       infoNoteLogin.textContent = "Email and password are required";
       return;
