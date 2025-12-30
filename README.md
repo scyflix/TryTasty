@@ -30,8 +30,8 @@ This project is part of **Scybud**, a student-led creative brand exploring tech,
 ## 🌐 Live Site
 
 -👉 [Visit TryTasty v1](https://trytasty.de/v1/)
--👉 [Visit TryTasty v2](https://tytasty.de/)
-
+-👉 [Visit TryTasty v2](https://tytasty.de/v2/)
+-👉 [Visit TryTasty v3] (https://trytast.de)
 ---
 
 ## 🛠️ Built With
