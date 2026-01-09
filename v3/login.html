@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+         <!-- Cookiebot -->
+<script
+  id="Cookiebot"
+  src="https://consent.cookiebot.com/uc.js"
+  data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
+  type="text/javascript"
+  defer
+></script>
 
-      gtag("config", "G-DDLCL6XBQR");
-    </script>
+<!-- Cookie declaration -->
+<script
+  id="CookieDeclaration"
+  src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
+  type="text/javascript"
+  defer
+></script>
+
+<!-- logic -->
+<script src="./../cookie-consent.js" defer></script>
+
     <title>TryTasty | Login</title>
     <meta charset="utf-8" />
     <meta
@@ -156,6 +162,9 @@
               Logging in means you agree to the
               <a href="privacyGerman.html">Terms of use</a>.
             </p>
+            <p class="infoText">
+              You also permit us to send marketing emails to you.
+            </p>
 
             <div id="actionBtn">
               <button id="loginBtn" type="button">Login</button>
@@ -223,6 +232,9 @@
           <p class="infoText">
             Signing-up means you agree to the
             <a href="privacyGerman.html">Terms of use</a>.
+          </p>
+          <p class="infoText">
+            You also permit us to send marketing emails to you.
           </p>
           <div id="actionBtn">
             <button type="button" id="signupBtn">Signup</button>
@@ -348,6 +360,7 @@
     <script src="../recipe.js" defer></script>
     <script src="nav.js"></script>
     <script>
+   
       const otherAppsIcon = document.getElementById("otherAppsIcon");
       const FromScybud = document.getElementById("FromScybud");
 
@@ -355,5 +368,6 @@
         FromScybud.classList.toggle("showApps");
       });
     </script>
+    
   </body>
 </html>

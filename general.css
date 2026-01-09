@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --link-color: #ff4500;
+  --link-color: #ff7300;
+  --link-color-hover: #f59f1d;
   --btn-bg: #ff6a00;
   --bg: #464545;
   --main-bg: #1e1e1e;
@@ -21,6 +22,8 @@
   --filter: blur(60px) brightness(60%);
   --active-color: #ffff00;
   --icon-color: #ffffff;
+  --toast-color-success: green;
+  --toast-color-error: #ff4500;
 }
 body.lightMode {
   --bg: #ebe9e5e8;
@@ -29,12 +32,13 @@ body.lightMode {
   --header-bg: #ffd9a0;
   --header-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
-  --preloader-bg: linear-gradient(135deg, #807d7d, #363636);
+  --preloader-bg: linear-gradient(135deg, #807d7d, #f5f5dc);
   --infoNote-bg: #ff4500;
   --infoNote-color: #fff3cd;
-  --filter: blur(60px) brightness(60%);
+  --filter: blur(20px) brightness(90%);
   --active-color: #ff4500;
 }
+
 html,
 body {
   scroll-behavior: smooth;
@@ -42,7 +46,7 @@ body {
   margin: 0;
 }
 body {
-  transition: background-color 0.9s ease-in-out, color 0.9s ease-in-out;
+  transition: background-color 0.9s ease, color 0.9s ease-in-out;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Push footer to the bottom */
@@ -74,9 +78,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin: 10px;
+  margin: 0 ;
   border-radius: var(--radius);
-  height: 40px;
+  height: 50px;
   max-height: 95px;
 }
 h1 {
@@ -95,6 +99,35 @@ main {
   background-color: var(--main-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+#toast {
+  visibility: hidden; /* Hidden by default */
+  min-width: 250px;
+  margin: 0 auto;
+  backdrop-filter: var(--filter);
+  color: var(--toast-color-success);
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* Show the toast */
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+#toast.error {
+  visibility: visible;
+  opacity: 1;
+  color: var(--toast-color-error);
 }
 .infoNote a {
   text-decoration: underline;
@@ -123,7 +156,7 @@ main {
   border-radius: calc(var(--radius) / 2);
 }
 .loadLine {
-  background: var(--infoNote-color);
+  background: #ff4500;
   height: 4px;
   width: 100px;
   animation: movingLine 0.9s alternate infinite;
@@ -165,6 +198,7 @@ a {
 }
 
 a:hover {
+  color: var(--link-color-hover);
   text-decoration: underline;
 }
 .upperNavContainer {
@@ -292,8 +326,8 @@ footer {
   position: absolute;
   left: 40px;
   bottom: 30px;
-  background: #464646;
   padding: 0;
+  background: var(--bg);
   width: 0;
   height: 0;
   overflow: hidden;
@@ -331,7 +365,7 @@ footer {
   width: 50px;
   height: 50px;
   object-fit: contain;
-  background-color: var(--color);
+  background-color: var(--infoNote-bg);
 }
 #scybudApps img:hover {
   transform: scale(1.06);

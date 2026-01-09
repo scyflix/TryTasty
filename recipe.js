@@ -133,8 +133,8 @@ function findRecipe() {
   const recipe = document.getElementsByClassName("recipe");
   let matches = [];
 
-  if (userInput === "" || userName === "") {
-    infoNote.innerHTML = `<p>Please enter your name and ingredients.`;
+  if (!userName || !userInput) {
+    infoNote.innerHTML = `<p>Please enter your name and ingredients.</p>`;
     return;
   }
   for (let i = 0; i < recipe.length; i++) {
@@ -187,12 +187,5 @@ if (recipeSubmissionBtn) {
     RecipeForm.submit();
   });
 
-  const clearCountBtn = document.getElementById("clearCountBtn");
-  if (clearCountBtn) {
-    clearCountBtn.addEventListener("click", () => {
-      localStorage.removeItem("savedCount");
-      count = 0;
-      submittedCount.innerText = 0;
-    });
-  }
+
 }

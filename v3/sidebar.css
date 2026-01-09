@@ -66,14 +66,18 @@ body.lightMode #sidebar {
 }
 /* Menu Icon */
 .menu-icon {
-  width: 25px;
+  width: 1.8rem;
   height: 25px;
   margin: 10px 10px 10px 0;
   cursor: pointer;
 }
+.menu-icon:hover {
+opacity: 0.8;
+transform: translateY(-1px);
+}
 .menu-icon span {
   background: var(--color);
-  width: 1.8rem;
+  width: 100%;
   height: 0.2rem;
   display: block;
   margin: 4px 0;
@@ -111,14 +115,16 @@ span {
   color: var(--span);
   font-size: 24px;
   font-weight: 600;
+  background: linear-gradient(#5656564b 0 0) left/0 100% no-repeat;
 }
 
 .page-nav a:hover {
+  background-size: 100% 100%;
   text-decoration: none;
   border: 2px solid orange;
   transform: scale(1.02);
   border-radius: 10px;
-  background: rgba(40, 40, 40, 0.2);
+  color: var(--span);
 }
 
 .page-nav p {

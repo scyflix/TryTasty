@@ -1,4 +1,3 @@
-
 /* Popup Overlay */
 #popup {
   position: fixed;
@@ -31,8 +30,14 @@
 }
 /* Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @keyframes slideup {
   from {
@@ -71,14 +76,15 @@
 }
 
 /* Links */
- form a {
+form a {
   color: #ffb03a;
   text-decoration: none;
 }
 
-.infoNoteLogin, .infoNoteSignup {
+.infoNoteLogin,
+.infoNoteSignup {
   display: none;
-    text-align: center;
+  text-align: center;
   background-color: var(--infoNote-bg);
   color: var(--infoNote-color);
   padding: 10px;
@@ -90,21 +96,54 @@ p.errorShow {
   display: block;
   animation: blink 2s ease;
 }
-@keyframes blink{
-0% {
-  background: var(--infoNote-bg);
-  color: (--infoNote-color);
-} 25% {
+@keyframes blink {
+  0% {
+    background: var(--infoNote-bg);
+    color: (--infoNote-color);
+  }
+  25% {
     background: var(--infoNote-color);
-  color: (--infoNote-bg);
-} 30% {
-  background: var(--infoNote-bg);
-  color: white;
-} 45% {
+    color: (--infoNote-bg);
+  }
+  30% {
+    background: var(--infoNote-bg);
+    color: white;
+  }
+  45% {
     background: var(--infoNote-color);
-  color: (--infoNote-bg);
-} 100% {
-  background: var(--infoNote-bg);
-  color: (--infoNote-color);
-} 
+    color: (--infoNote-bg);
+  }
+  100% {
+    background: var(--infoNote-bg);
+    color: (--infoNote-color);
+  }
+}
+
+.disable {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.disable::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid transparent;
+  border-right-color: #151515;
+  border-radius: 50%;
+  animation: rotate 0.7s linear infinite;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.auth-form input {
+  margin: 12px 0;
 }

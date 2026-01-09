@@ -71,103 +71,114 @@ color: var(--text-color);
       a:hover {
         opacity: 0.7;
       }
-        #robot {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: bounce 4s linear infinite;
-      }
+   .container {
+  text-align: center;
+  color: #c66a09;
+  margin-top: 60px;
+}
 
-      @keyframes bounce {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(6px) scale(1.02);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      .robotHead {
-        border: 2px solid var(--accent1);
-        width: 100px;
-        height: 100px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 40px auto 0;
-      }
-      #eyes {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-      }
-      .eye {
-        margin-top: 10px;
-        padding-top: 10px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: var(--accent2);
-      }
-      .eyeball {
-        background: var(--accent3);
-        box-shadow: 0 0 10px var(--accent3), 0 0 20px var(--accent3);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        animation: eyemove 5s ease infinite;
-      }
-      @keyframes eyemove {
-        0% {
-          transform: translate(0, 0);
-        }
-        25% {
-          transform: translate(10px, 0);
-        }
-        50% {
-          transform: translate(10px, 10px);
-        }
-        75% {
-          transform: translate(-3px, 8px);
-        }
-        100% {
-          transform: translate(0, 0);
-        }
-      }
+.pot {
+  position: relative;
+  width: 180px;
+  height: 140px;
+  margin: 0 auto 30px;
+}
 
-      .mouth {
-        margin: auto;
-        width: 40px;
-        height: 4px;
-        background: var(--accent2);
-      }
+/* Pot body */
+.body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--accent3);
+  border-radius: 0 0 30px 30px;
+}
+
+/* Lid */
+.lid {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 18px;
+  background: var(--accent2);
+  border-radius: 20px;
+  animation: lidBounce 2s ease-in-out infinite;
+}
+
+/* Handles */
+.handle {
+  position: absolute;
+  top: 55px;
+  width: 35px;
+  height: 18px;
+  border: 4px solid var(--accent3);
+  border-radius: 20px;
+}
+
+.handle.left {
+  left: -30px;
+}
+
+.handle.right {
+  right: -30px;
+}
+
+/* Steam */
+.steam {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: steam 2.5s infinite ease-in-out;
+}
+
+.s1 { left: 40px; animation-delay: 0s; }
+.s2 { left: 80px; animation-delay: 0.5s; }
+.s3 { left: 120px; animation-delay: 1s; }
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.2);
+  }
+}
+
+@keyframes lidBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
     </style>
   </head>
   <body>
     <main>
-      <div id="robot">
-        <div class="robotHead">
-          <div id="eyes">
-            <div class="eye">
-              <div class="eyeball"></div>
-            </div>
-            <div class="eye">
-              <div class="eyeball"></div>
-            </div>
-          </div>
-          <div class="mouth"></div>
-        </div>
-      </div>
+      <div class="container">
+    <div class="pot">
+      <div class="steam s1"></div>
+      <div class="steam s2"></div>
+      <div class="steam s3"></div>
+      <div class="lid"></div>
+      <div class="body"></div>
+      <div class="handle left"></div>
+      <div class="handle right"></div>
+    </div>
       
       <h1><span id="notFound">404</span></h1>
       <p>Page Not Found</p>
-      <p>Gosh! We are lost again 😕.</p>
-      <a href="index.html">Go Home</a>
+      <p>Oops… this recipe is still cooking 🍲.</p>
+      <a href="index.html">Back to kitchen</a>
     </main>
   </body>
 </html>

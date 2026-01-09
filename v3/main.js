@@ -4,7 +4,7 @@ import {
   login,
   logout,
   onUserAuthChange,
-} from "./../v2/js/auth.js";
+} from "./../v3/js/auth.js";
 
 const logoutBtn = document.getElementById("logoutBtn");
 const welcomeText = document.getElementById("welcomeText");
@@ -28,10 +28,8 @@ function loggedIn(user) {
       "Name:" + " " + user.displayName || "Name:" + " " + user.email || "User");
 
   Useremail && (Useremail.textContent = user.email || "-");
-
   userName &&
     (userName.textContent = user.displayName.slice(0, 5) + "..." || "Profile");
-
   logoutBtn && (logoutBtn.style.display = "block");
   loginLink && (loginLink.style.display = "none");
   popup && (popup.style.display = "none");
@@ -45,7 +43,7 @@ function loggedIn(user) {
 function loggedout() {
   logoutBtn && (logoutBtn.style.display = "none");
   Useremail && (Useremail.innerText = "Login first");
-  userName && (userName.innerText = "Login first");
+  userName && (userName.innerText = "username");
   loginLink && (loginLink.innerText = "Login");
   loginLink && (loginLink.style.display = "block");
   popup && (popup.style.display = "block");
@@ -65,16 +63,6 @@ onUserAuthChange((user) => {
   }
 });
 
-window.googleLogin = async () => {
-  try {
-    const result = await googleLogin();
-    window.location.href = "submit.html";
-    alert(`Welcome, ${result.user.displayName}`);
-  } catch (e) {
-    alert(e.message);
-  }
-};
-
 googleBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     googleLogin();
@@ -84,6 +72,7 @@ googleBtn.forEach((btn) => {
 if (signupBtn) {
   // Signup
   signupBtn.addEventListener("click", async () => {
+    signupBtn.classList.add("disable");
     const userNameInputValue = document.getElementById("userNameInput").value;
     const email = document.getElementById("emailForSignup").value;
     const password = document.getElementById("passwordForSignup").value;
@@ -93,16 +82,19 @@ if (signupBtn) {
     const infoNoteSignup = document.querySelector(".infoNoteSignup");
 
     if (!userNameInputValue || !password || !confirmPassword) {
+      signupBtn.classList.remove("disable");
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Please fill all forms.";
       return;
     }
     if (!email.includes("@")) {
+      signupBtn.classList.remove("disable");
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Please input a valid email address";
       return;
     }
     if (password !== confirmPassword) {
+      signupBtn.classList.remove("disable");
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Passwords do not match.";
       return;
@@ -115,6 +107,8 @@ if (signupBtn) {
       if (userName) userName.innerText = user.displayName;
 
       alert("Signup successful!");
+      loginBtn.classList.remove("disable");
+
       window.location.href = "../index.html";
     } catch (error) {
       infoNoteSignup.classList.add("errorShow");
@@ -127,17 +121,21 @@ if (signupBtn) {
 if (loginBtn) {
   // Login
   loginBtn.addEventListener("click", async () => {
+    loginBtn.classList.add("disable");
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     if (!email || !password) {
+      loginBtn.classList.remove("disable");
       infoNoteLogin.textContent = "Email and password are required";
       return;
     }
     try {
       await login(email, password);
       alert("Login successful!");
+      loginBtn.classList.remove("disable");
       window.location.href = "../index.html";
     } catch (error) {
+      loginBtn.classList.remove("disable");
       infoNoteLogin.classList.add("errorShow");
 
       if (error.message === "Firebase: Error (auth/invalid-credential)") {
@@ -167,7 +165,7 @@ if (logoutBtn) {
     try {
       await logout();
       alert("Logged out successfully!");
-      window.location.href = "https://trytasty.de/v3/welcome.html";
+      window.location.href = "welcome.html";
     } catch (error) {
       alert(error.message);
     }

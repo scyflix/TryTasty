@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe | TryTasty</title>
+    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
         <!-- Cookiebot -->
 <script
   id="Cookiebot"
@@ -21,91 +25,120 @@
 <!-- logic -->
 <script src="./../cookie-consent.js" defer></script>
 
-    <title>Profile | TryTasty</title>
+    <title>TryTasty | Videos</title>
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="View your TryTasty profile.Track your recipes and favorites count, and enjoy your cooking experience."
+      content="Explore TryTasty videos featuring real recipe testing, reactions, and behind-the-scenes cooking moments—no tutorials, just honest food content.
+"
     />
     <meta property="og:type" content="website" />
     <meta content="TryTasty" property="og:title" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS LINKS-->
-    <link rel="stylesheet" href="../Recipe.css" />
-    <link rel="stylesheet" href="sidebar.css" />
-    <link rel="stylesheet" href="../general.css" />
-    <link rel="stylesheet" href="form.css" />
-    <link rel="stylesheet" href="userProfile.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
-  </head>
 
+    <link rel="stylesheet" href="../Recipe.css" />
+    <link rel="stylesheet" href="../general.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="renderRecipe.css" />
+    <link rel="stylesheet" href="../Recipe.css" />
+  </head>
   <body>
-    <!--PRELOADER-->
     <div id="preloader">
       <h1>TryTasty</h1>
       <div class="loadBar">
         <div class="loadLine"></div>
       </div>
     </div>
-
-   <header>
+    <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
-        <div class="menu-icon">
+        <div
+          aria-label="Menu Icon"
+          arial-roledescription="icon"
+          class="menu-icon"
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
         <a href="https://trytasty.de/">
-          <h1>
-            TryTasty
-          </h1>
+          <h1>TryTasty</h1>
         </a>
       </div>
       <nav class="page-nav" id="sidebar">
         <div class="upperNavContainer">
           <!--USER PROFILE LINK-->
-        
         </div>
         <div class="actionBtns">
           <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
             Light Mode
           </button>
+          <a id="loginLink" href="login.html"> Login </a>
         </div>
-       <!--Add links with js-->
+
+        <div id="FromScybud">
+          <h5>Scybud Apps</h5>
+          <div id="scybudApps">
+            <a href="https://scyflix.github.io/RushSite/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                  alt="RushSite Logo"
+                />
+                <span>RushSite</span>
+              </div>
+            </a>
+            <a href="https://trytasty.de/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
+                  alt="TryTasty Logo"
+                />
+                <span>TryTasty</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Playbud/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                  alt="Playbud Logo"
+                />
+                <span>Playbud</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                  alt="Scybud Logo"
+                />
+                <span>Scybud</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="otherAppsIcon" title="Other Apps">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
-    
-    <main>
-      <section id="userDetails">
-        <div class="userProfileContainer">
-          <svg class="profileImage"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -960 960 960"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
-          />
-        </svg>
-          <div id="welcomeText"></div>
-          <p>Email: <span id="Useremail"></span></p>
-        </div>
 
-        <div class="statsBox">
-          <p>Favorites: <span id="favCount">0</span></p>
-          <p>Recipes Submitted: <span id="submittedCount">0</span></p>
-        </div>
-      </section>
-      <div class="redActions">
-        <button id="logoutBtn" style="display: none">Logout</button>
-      </div>
+    <div id="toast">Recipe saved successfully!</div>
+    <main id="recipe">
+
     </main>
-
     <!-- Small screen bottom navigation -->
     <nav id="bottomNavContainer">
       <a href="../index.html" aria-label="Home">
@@ -160,10 +193,18 @@
         </svg>
       </a>
     </nav>
-    <script type="module" src="main.js"></script>
-    <script src="../recipe.js"></script>
-    <script type="module" src="../fav.js"></script>
-    <script src="nav.js"></script>
-    
+    <script type="module" src="js/renderRecipe.js" defer></script>
+    <script src="nav.js" defer></script>
+    <script type="module" src="main.js" defer></script>
+    <script src="../recipe.js" defer></script>
+    <script>
+   
+      const otherAppsIcon = document.getElementById("otherAppsIcon");
+      const FromScybud = document.getElementById("FromScybud");
+
+      otherAppsIcon.addEventListener("click", () => {
+        FromScybud.classList.toggle("showApps");
+      });
+    </script>
   </body>
 </html>

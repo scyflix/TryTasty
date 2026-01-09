@@ -1,0 +1,529 @@
+{
+  "recipes": [
+    {
+      "id": "plantain-nachos",
+      "title": "Plantain Nachos",
+      "description": "Crispy plantain nachos made with ripe plantains, melted cheese, and fresh toppings. A perfect snack or party appetizer with a savory crunch.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif",
+      "dataKeywords": "plantains,plantain,tomatoe",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 25,
+      "servings": 2,
+
+      "ingredients": [
+        "2 ripe plantains",
+        "1 tbsp olive oil",
+        "Salt",
+        "Shredded cheese",
+        "Diced tomatoes, onions, and jalapeños",
+        "Sour cream or yogurt for topping"
+      ],
+      "steps": [
+        "Slice the plantains thinly and toss with olive oil and salt.",
+        "Bake at 180°C (350°F) for 20 minutes until crispy.",
+        "Remove from oven and top with shredded cheese and diced toppings.",
+        "Bake for 5 more minutes until the cheese melts.",
+        "Serve warm with a dollop of sour cream or yogurt."
+      ]
+    },
+
+    {
+      "id": "spicy-peanut-butter-popcorn",
+      "title": "Spicy Peanut Butter Popcorn",
+      "description": "Spicy Peanut Butter Popcorn made with popcorn, peanut butter and honey. Perfect for movie nights and small snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif",
+      "dataKeywords": "chili,peanut butter,popcorn",
+
+      "prepTimeMin": 4,
+      "cookTimeMin": 10,
+      "servings": 3,
+
+      "ingredients": [
+        "6 cups popcorn",
+        "3 tbsp peanut butter",
+        "1 tbsp honey",
+        "1/2 tsp chili powder",
+        "Pinch of salt"
+      ],
+      "steps": [
+        "Melt peanut butter, honey, and chili powder in a pot under low heat.",
+        "Pour over already cooked popcorn and mix evenly.",
+        "Let cool slightly before serving."
+      ]
+    },
+
+    {
+      "id": "savory-french-toast-sticks",
+      "title": "Savory French Toast Sticks",
+      "description": "Savory French Toast Sticks made with bread, eggs, milk and grated cheese. Perfect for breakfast.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif",
+      "dataKeywords": "eggs,egg,milk,bread",
+
+      "prepTimeMin": 22,
+      "cookTimeMin": 16,
+
+      "servings": 1,
+      "ingredients": [
+        "4 slices of bread",
+        "2 eggs",
+        "1/4 cup milk",
+        "1 tbsp grated cheese(optional)",
+        "Salt,black pepper, and chili flakes"
+      ],
+      "steps": [
+        "Cut bread into sticks.",
+        "Whisk eggs with milk, cheese, salt, pepper, and chili.",
+        "Dip sticks and fry until golden on each side.",
+        "Serve warm with grated cheese sprickled on it."
+      ]
+    },
+
+    {
+      "id": "instant-ramen-tacos",
+      "title": "Instant Ramen Taco",
+      "description": "Instant Ramen Taco made with instant noodles, egg, lettuce and shredded cheese. Perfect for breakfast and tasty snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif",
+      "dataKeywords": "egg,eggs,noodles,Lettuce,chicken",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 15,
+
+      "servings": 1,
+      "ingredients": [
+        "1 pack of instant noodles",
+        "1 egg",
+        "Oil for frying",
+        "Lettuce, shredded chicken, spicy mayo(for filling)"
+      ],
+      "steps": [
+        "Cook noodles slightly, then mix with beaten egg.",
+        "Shape into small taco shells using foil molds.",
+        "Fry until crispy and golden.",
+        "Fill with your choice of toppings."
+      ]
+    },
+
+    {
+      "id": "spicy-corn-and-coconut-bites",
+      "title": "Spicy Corn & Coconut Bites",
+      "description": "Spicy Corn & Coconut Bites made with Sweet corn, Grated coconut, Lime juice and Chili flakes. Perfect for instant and tasty snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif",
+      "dataKeywords": "corn,coconut,chili",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 0,
+
+      "servings": 2,
+      "ingredients": [
+        "Sweet corn",
+        "Grated coconut",
+        "Chili flakes",
+        "Lime juice",
+        "Salt"
+      ],
+      "steps": [
+        "Mix corn, coconut, chili flakes, and salt in a bowl.",
+        "Squeeze lime juice into the mixture and mix.",
+        "Form the mixture into small balls and chill for 10min before serving."
+      ]
+    },
+
+    {
+      "id": "plantain-cinnamon-rolls",
+      "title": "Plantain Cinnamon Rolls",
+      "description": "Plantain Cinnamon Rolls made with ripe plantain, ground cinnamon and butter. Perfect for appetizers.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif",
+      "dataKeywords": "plantains,plantain,cinnamon",
+
+      "prepTimeMin": 13,
+      "cookTimeMin": 3,
+
+      "servings": 2,
+      "ingredients": [
+        "2 ripe plantains",
+        "1 tsp ground cinnamon",
+        "2 tsp butter or margarine",
+        "Toothpicks or skewers (optional)"
+      ],
+      "steps": [
+        "Peel the plantain and slice it lengthwise into very thin, flat strips.",
+        "Lightly bake the strips in a little butter for 3 minutes until soft and flexible (not crispy).",
+        "Mix sugar (or honey) with cinnamon in a small bowl.",
+        "Spread a thin layer of the cinnamon mix over each warm plantain strip.",
+        "Gently roll each strip like a cinnamon roll and secure with a toothpick(s) or skewer(s) if needed.",
+        "Let cool slightly and enjoy warm!"
+      ]
+    },
+
+    {
+      "id": "plantain-egg-cups",
+      "title": "Plantain Egg Cups",
+      "description": "Plantain Egg Cups made with ripe plantain, egg and salt. Perfect for breakfast.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif",
+      "dataKeywords": "plantains,plantain,egg",
+
+      "prepTimeMin": 18,
+      "cookTimeMin": 15,
+      "servings": 3,
+      "ingredients": [
+        "2 ripe plantains",
+        "2 eggs",
+        "A pinch of salt",
+        "A pinch of pepper",
+        "Oil for greasing"
+      ],
+      "steps": [
+        "Preheat your oven for 10 minutes to 180°C (350°F).",
+        "Slice the plantain into thin rounds.",
+        "Lightly grease muffin cups with oil and press the plantain slices into the bottom to form a base.",
+        "Crack an egg into each muffin cup over the plantain base.",
+        "Sprinkle a pinch of salt and pepper on each.",
+        "Bake for 12–15 minutes, or until the eggs are set to your liking.",
+        "Let them cool slightly before carefully removing from the muffin tin."
+      ]
+    },
+
+    {
+      "id": "choco-chili-banana-chips",
+      "title": "Choco Chili Banana Chips",
+      "description": "Choco Chili Banana Chips made with ripe plantain, dark chocolate and chili powder. A perfect snack or party appetizer with a savory crunch.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif",
+      "dataKeywords": "plantains,banana,chili",
+
+      "prepTimeMin": 7,
+      "cookTimeMin": 10,
+
+      "servings": 3,
+      "ingredients": [
+        "2 ripe plantains",
+        "Melted dark chocolate",
+        "Pinch of chili powder",
+        "Salt"
+      ],
+      "steps": [
+        "Thinly slice plantains and bake or fry until crisp.",
+        "Dip half side of the baked(or fried) plantain in melted chocolate.",
+        "Sprinkle with chili powder and salt.",
+        "Let it set and enjoy."
+      ]
+    },
+
+    {
+      "id": "nutty-date-energy-rocks",
+      "title": "Nutty Date Energy Rocks",
+      "description": " Nutty Date Energy Rocks are perfect for a quick, natural energy boost before workouts or during busy days. They also make a healthy, guilt-free snack that satisfies sweet cravings without refined sugar.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Energie_Steine_aus_Datteln_und_N%C3%BCssen_1_lqm8ah.avif",
+      "dataKeywords": "date,oat,honey",
+
+      "prepTimeMin": 13,
+      "cookTimeMin": 0,
+
+      "servings": 1,
+      "ingredients": [
+        "Pitted date",
+        "Roast peanuts",
+        "Rolled oats",
+        "Honey",
+        "Cocoa powder"
+      ],
+      "steps": [
+        "Blend all ingredients into a sticky dough.",
+        "Roll into small rock-shaped balls.",
+        "Chill and serve as an energy-packed snack."
+      ]
+    },
+
+    {
+      "id": "sweet-potato-bites-with-yougurt-dip",
+      "title": "sweet Potato Bites With Yogurt Dip",
+      "description": "This is a very tasty snack. It can be taken as appetizer or just a quick snack.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416750/ChatGPT-Image-May-3_-2025_-09_25_52-PM-_1__teaw4q.avif",
+      "dataKeywords": "yogurt,cinamon,paprika,potatoes,Potato",
+
+      "prepTimeMin": 12,
+      "cookTimeMin": 20,
+
+      "servings": 2,
+      "ingredients": [
+        "2 medium sweet potatoes",
+        "Cooking oil",
+        "Cinnamon + parika",
+        "Salt",
+        "Greek yogurt(or available yogurt you can get) + lemon juice for dip"
+      ],
+      "steps": [
+        "Cut sweet potatoes into small cubes , toss with oil cinnamon ,paprika, and salt.",
+        "Bake at 180°c(356°F) for 20 mins.",
+        "Mix yogurt with a splash of lemon juice.",
+        "Serve the yogurt as a dip with baked potatoes."
+      ]
+    },
+
+    {
+      "id": "cheesy-ramen-nest",
+      "title": "Cheesy Ramen Nests",
+      "description": "Cheesy ramen nest is a perfect dish for breakfast or lunch with its sponge-like texture and flavour-rich taste. ",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif",
+      "dataKeywords": "egg,eggs,noodles,cheese",
+
+      "prepTimeMin": 3,
+      "cookTimeMin": 12,
+
+      "servings": 3,
+      "ingredients": [
+        "1 packet instant noodles",
+        "1 egg",
+        "1/4 cup grated cheese ",
+        "Black pepper "
+      ],
+      "steps": [
+        "Boil noodles without seasoning for 2 minutes.",
+        "Drain with a sieve and mix with egg ,cheese , and pepper.",
+        "Spoon into muffins tins and bake at 180°C for 14 mins until golden. "
+      ]
+    },
+
+    {
+      "id": "banana-oat-energy-bites",
+      "title": "Banana Oat Energy Bites",
+      "description": "Banana oat energy bites are quick no-bake snacks made from mashed bananas and oats that deliver steady energy. They’re perfect for school, workouts, or busy days when you need something healthy and satisfying.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_33_00-PM-_1__j7giel.avif",
+      "dataKeywords": "chocolate,butter,banana,oats,oat",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 0,
+      "servings": 1,
+      "ingredients": [
+        "1 ripe banana",
+        "1/2 cup oats",
+        "1 tbsp peanut butter",
+        "1 tbsp chocolate chips or raisins"
+      ],
+      "steps": [
+        "Mash banana and mix with oats, peanut butter, and chips.",
+        "Roll into small balls.",
+        "Chill for 30 minutes in fridge befor serving"
+      ]
+    },
+
+    {
+      "id": "zesty-cucumber-chips",
+      "title": "Zesty Cucumber Chips",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/ChatGPT-Image-May-3_-2025_-09_34_44-PM-_1__v8iram.avif",
+      "dataKeywords": "paprika,cucumber",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 60,
+      "servings": 2,
+
+      "ingredients": ["1 large cucumber", "Lemon juice", "Paprika", "Salt"],
+      "steps": [
+        "Slice cucumber thinly and lay on a baking sheet.",
+        "Drizzle with lemon juice and sprinkle paprika + salt.",
+        "Bake at 120°C(250°F) for 6o minutes until crisp."
+      ]
+    },
+
+    {
+      "id": "frozen-banana-s´more-bites",
+      "title": "Frozen Banana S`more Bites",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/ChatGPT_Image_May_16_2025_03_44_16_PM_1_kgvh5w.avif",
+      "dataKeywords": "banana, chocolate, marshmellows",
+
+      "prepTimeMin": 12,
+      "cookTimeMin": 0,
+      "servings": 2,
+
+      "ingredients": [
+        "2 bananas",
+        "Melted dark chocolate",
+        "Crushed graham crackers",
+        "Mini marshmellows"
+      ],
+      "steps": [
+        "Cut bananas into thick slices.",
+        "Dip banana slices into chocolate.",
+        "Press into graham cracker crumbs and top with marshmellows.",
+        "Freeze until set."
+      ]
+    },
+
+    {
+      "id": "avocado-egg-toast-cups",
+      "title": "Avocado Egg Toast Cups",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Avocado_Egg_Toast_Cups_1_uvis8v.avif",
+      "dataKeywords": "bread,egg,eggs,avocado",
+
+      "prepTimeMin": 7,
+      "cookTimeMin": 15,
+      "servings": 2,
+
+      "ingredients": [
+        "2 slices of bread",
+        "1 ripe Avocado",
+        "2 eggs",
+        "Salt and chili flakes"
+      ],
+      "steps": [
+        "Press bread slices into a greased muffin tin to form cups.",
+        "Crack an egg into each.",
+        "Bake at 180°C(360°F) for 15 minutes.",
+        "Top with mashed avocado and chili flakes."
+      ]
+    },
+
+    {
+      "id": "crispy-chickpea-snack",
+      "title": "Crispy Chickpea Snack",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Crispy_Chickpea_snack_1_okfeab.avif",
+      "dataKeywords": "garlic,paprika,cheakpeas,cheakpea",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 30,
+      "servings": 2,
+
+      "ingredients": [
+        "1 can of chickpeas",
+        "Olive oil",
+        "Smoked paprika, garlic powder and salt",
+        "Salt and chili flakes"
+      ],
+      "steps": [
+        "Rinse and dry chickpeas.",
+        "Toss in a bowl with oil and spices.",
+        "Bake at 200°C (400°F) for 30 mins until crispy."
+      ]
+    },
+
+    {
+      "id": "peanut-butter-apple-nachos",
+      "title": "Peanut Butter Apple Nachos",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif",
+      "dataKeywords": "pear,peanut butter,peanutbutter,apple",
+
+      "prepTimeMin": 8,
+      "cookTimeMin": 0,
+      "servings": 1,
+
+      "ingredients": [
+        "1 Apple",
+        "1 tbsp peanut butter",
+        "Granola or crushed nuts",
+        "Chocolate drizzle(optional)"
+      ],
+      "steps": [
+        "Cut apples into thin slices.",
+        "Layer apple slices on a plate.",
+        "Melt peanut butter and drizzle it on the layered apples.",
+        "Add the chocolate drizzle as well and sprickle the granola or crushed nuts."
+      ]
+    },
+
+    {
+      "id": "mini-caprese-skewers",
+      "title": "Mini Caprese Skewers",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/Mini_caprese_skewer_1_yiwcrc.avif",
+      "dataKeywords": "basil,mozzarella,tomatoes,tomatoe",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 0,
+      "servings": 2,
+
+      "ingredients": [
+        "4 cherry tomatoes",
+        "4 mini mozzarella ball ",
+        "4  leaves of fresh basils"
+      ],
+      "steps": [
+        "Skewer one tomato, one mozarrella ,and a basil leaf onto toothpicks.",
+        "Season with black pepper or any season of your choice. "
+      ]
+    },
+
+    {
+      "id": "cheesy-mango-poppers",
+      "title": "Cheesy Mango Poppers",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416736/ChatGPT_Image_May_15_2025_03_18_28_PM_1_zeq5x4.avif",
+      "dataKeywords": "cheese,nachos,cornflakes,mango",
+
+      "prepTimeMin": 16,
+      "cookTimeMin": 0,
+      "servings": 2,
+
+      "ingredients": [
+        "Ripe mango ",
+        "Cream cheese ",
+        "Crushed nachos or cornflakes",
+        "Toothpicks"
+      ],
+      "steps": [
+        "Cut mango into cubes.",
+        "Freeze mango cubes for 30 minutes.",
+        "Wrap each cube with a thin layer of cream cheese. ",
+        "Roll in crushed nachos or cornflakes.",
+        "Serve chilled with toothpicks"
+      ]
+    },
+
+    {
+      "id": "garri-cookies",
+      "title": "Garri cookies",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1756387907/ChatGPT_Image_Aug_28_2025_03_14_34_PM_11zon_l2hj8t.avif",
+      "dataKeywords": "garri, cookies,sugar",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 15,
+      "servings": 2,
+
+      "ingredients": [
+        "1 cup of powdered garri",
+        "1/2 cup butter(margarine)",
+        "1/4 cup sugar"
+      ],
+      "steps": [
+        "In a bowl , cream the butter and sugar together until light and fluffy.",
+        "Add garri and mix well until it forms a soft dough. ",
+        "Roll into small balls , flatten slightly, and place on a greased baking tray.",
+        "Bake at 180°(350F) for about 15 minutes or unti golden brown.",
+        "Let them cool and enjoy!"
+      ]
+    },
+    
+{
+  "id": "rice-and-yogurt-bowl",
+  "title": "Rice & Yogurt Bowl",
+  "description": "A cool, creamy bowl of rice mixed with yogurt, cucumber, and mint — refreshing, light, and probiotic-rich.",
+  "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif",
+  "dataKeywords": "rice,healthy,yogurt,mint,vegetables,cooling",
+
+  "prepTimeMin": 8,
+  "cookTimeMin": 0,
+  "servings": 1,
+
+  "ingredients": [
+    "1 cup cooked rice",
+    "1/2 cup plain yogurt",
+    "Chopped cucumber",
+    "Fresh mint",
+    "Pinch of salt"
+  ],
+
+  "steps": [
+    "Add cooked and cooled rice to a bowl.",
+    "Stir in plain yogurt until evenly coated.",
+    "Mix in chopped cucumber, mint, and a pinch of salt.",
+    "Serve chilled."
+  ]
+}
+
+  ]
+}

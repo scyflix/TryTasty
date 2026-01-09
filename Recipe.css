@@ -1,11 +1,131 @@
-body main nav {
-  --snackImg-color: #f1f1f1;
-  --snackImg-bg: #141414;
-}
 body.lightMode main nav {
   --snackImg-color: #333;
   --snackImg-bg: #feebbb;
 }
+body.lightMode main {
+  --popular-bg: #ffffff;
+  --popular-border: rgba(0, 0, 0, 0.08);
+  --popular-shadow: rgba(0, 0, 0, 0.08);
+
+  --popular-heading: #e65100;
+  --popular-text: #000000;
+
+  --popular-divider: rgba(0, 0, 0, 0.1);
+
+  --popular-link: #171717b9;
+  --popular-link-hover: #e65100;
+
+  --faq-bg: #ffffff;
+  --faq-border: #e6e6e6;
+  --faq-summary-text: #222222;
+  --faq-answer-text: #555555;
+}
+body main {
+  --popular-bg: #121212;
+  --popular-border: rgba(255, 255, 255, 0.05);
+  --popular-shadow: rgba(0, 0, 0, 0.35);
+
+  --popular-heading: #ffa726;
+  --popular-text: #e3e3e3;
+
+  --popular-divider: rgba(255, 255, 255, 0.08);
+
+  --popular-link: #ffffff;
+  --popular-link-hover: #ffb74d;
+
+  --faq-bg: #0f0f0f;
+  --faq-border: #2a2a2a;
+  --faq-summary-text: #ffffff;
+  --faq-answer-text: #cfcfcf;
+}
+body main nav {
+  --snackImg-color: #f1f1f1;
+  --snackImg-bg: #141414;
+}
+
+.popular-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.8rem 2rem;
+  background: var(--popular-bg);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px var(--popular-shadow);
+  border: 1px solid var(--popular-border);
+}
+
+.popular-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--popular-heading);
+  letter-spacing: 0.5px;
+}
+
+.popular-intro {
+  color: var(--popular-text);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.popular-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem auto 0 auto;
+  max-width: 650px;
+}
+
+.popular-list li {
+  padding: 0.6rem 0.4rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--popular-divider);
+}
+
+.popular-list li:last-child {
+  border-bottom: none;
+}
+
+.popular-list a {
+  color: var(--popular-link);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.popular-list a:hover {
+  color: var(--popular-link-hover);
+  letter-spacing: 0.3px;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  margin-top: 1.5rem;
+  border-radius: 14px;
+  padding: 1rem;
+  border: 1px solid var(--faq-border);
+  background: var(--faq-bg);
+}
+
+.faq details {
+  margin-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--faq-border);
+  padding-bottom: 0.5rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--faq-summary-text);
+}
+
+.faq p {
+  margin-top: 0.3rem;
+  color: var(--faq-answer-text);
+}
+
 #videosPage {
   flex-direction: column;
   display: flex;
@@ -14,12 +134,12 @@ body.lightMode main nav {
 }
 
 #videosPage iframe {
-  margin: 0 auto;
   width: 100%;
-  height: 90vh;
+  height: 60vh;
   object-fit: cover;
   position: sticky;
   top: 0;
+  margin: 20px 0;
   border-radius: 12px;
 }
 #popup.popuphide {
@@ -32,14 +152,17 @@ body.lightMode main nav {
 
 a.backBtn {
   text-decoration: none;
-  border: 1px solid #e65c00;
   border-radius: 8px;
   background: var(--btn-bg);
   padding: 6px;
-  color: var(--color);
+  color: beige;
+  transition: opacity 0.5s ease;
   font-size: clamp(1.3rem, 1.5rem, 1.5rem);
 }
-
+main#recipe a.backBtn:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
 #recipeBotForm {
   display: none;
 }
@@ -97,21 +220,11 @@ h2 {
   margin-bottom: 10px;
   border-bottom: 2px solid #ffa94d;
   padding-bottom: 5px;
+  text-align: center;
 }
 h3 {
   margin-top: 10px;
   color: #ff4500;
-}
-
-ul,
-ol {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-ul li,
-ol li {
-  margin-bottom: 6px;
 }
 
 /* Responsive Design */

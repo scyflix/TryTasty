@@ -1,7 +1,6 @@
 import {
   EmailAuthProvider,
   GoogleAuthProvider,
-  linkWithCredential,
   linkWithPopup,
   signInWithPopup,
   signInWithEmailAndPassword,
@@ -16,20 +15,12 @@ import { auth } from "./firebase.js";
 
 // Google Sign-In
 export async function googleLogin() {
-  const provider = new GoogleAuthProvider();
-  const result = await signInWithPopup(auth, provider);
-  // Automatically add password provider if missing
-  const email = result.user.email;
-  // You can generate a random password or ask user later
-  const autoPassword = crypto.randomUUID().slice(0, 12);
-  try {
-    const credential = EmailAuthProvider.credential(email, autoPassword);
-    await linkWithCredential(auth.currentUser, credential);
-    console.log("Password provider linked automatically");
+    const provider = new GoogleAuthProvider();
+    try {
+    await signInWithPopup(auth, provider);
   } catch (err) {
-    console.log("Password linking skipped:", err.message);
+    console.log( err.message);
   }
-  return result;
 }
 
 // Email signup

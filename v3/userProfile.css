@@ -1,5 +1,9 @@
 main {
-      width: 90vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#userDetails {
+  height: auto;
 }
 .userProfileContainer {
   display: flex;
@@ -21,6 +25,19 @@ main {
   transition: border-radius 0.5s ease, transform 0.5s ease;
 }
 .userProfileContainer span {
-      font-size: 16px;
-      color: rgb(255, 106, 0);
+  font-size: 16px;
+  color: rgb(255, 106, 0);
+}
+.redActions {
+  margin-top: auto;
+  width: 100%;
+  border-top: 2px solid red;
+}
+.statsBox {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid orange;
+  padding: 0;
+  flex-wrap: wrap;
+  border-radius: 8px;
 }
