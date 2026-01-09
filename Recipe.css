@@ -112,7 +112,11 @@ body main nav {
 .faq details {
   margin-bottom: 0.6rem;
   border-bottom: 1px dashed var(--faq-border);
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.6s ease;
+}
+.faq details:hover {
+  background-color:#000000;
 }
 
 .faq summary {
