@@ -104,8 +104,10 @@ fetch("data/recipes.json")
                 </article>
           `;
 
-    addToFav();
-  })
+        })
+        .then(() => {
+          addToFav();
+        })
   .catch(() => {
     document.getElementById(
       "recipe"

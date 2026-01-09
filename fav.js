@@ -1,50 +1,41 @@
-const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
-
 //Export funtion to render recipe js
-export async function addToFav() {
+const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
+export function addToFav() {
 
-  document.addEventListener("DOMContentLoaded", () => {
-    //add to favorite and favorite count
-  const favclass = document.querySelectorAll(".add-fav");
+  //add to favorite and favorite count
+  const favBtns = document.querySelectorAll(".add-fav");
 
-  
-  favclass.forEach((fav) => {
+  favBtns.forEach((fav) => {
     fav.addEventListener("click", () => {
       const recipeName = fav.getAttribute("data-name");
       const recipeKey = fav.getAttribute("data-key");
 
       const exists = favrecipes.some((f) => f.key === recipeKey);
+
+      const toast = document.getElementById("toast");
+
       if (!exists) {
         favrecipes.push({ name: recipeName, key: recipeKey });
-
-        // save list
         localStorage.setItem("favs", JSON.stringify(favrecipes));
 
-        
-        // Toast notification
-        const toast = document.getElementById("toast");
-        toast.className = "show";
-        setTimeout(
-          () => (toast.className = toast.className.replace("show", "")),
-          3000
-        );
+        toast.textContent = "Saved to favorites";
+        toast.classList.remove("error");
+        toast.classList.add("show");
       } else {
-        // Toast notification
-        const toast = document.getElementById("toast");
-        toast.textContent = "Error! recipe not saved or recipe already exist.";
-        toast.className = "error";
-        setTimeout(
-          () => (toast.className = toast.className.replace("error", "")),
-          3000
-        );
+        toast.textContent = "Recipe already exists in favorites";
+        toast.classList.remove("show");
+        toast.classList.add("error");
       }
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+        toast.classList.remove("error");
+      }, 3000);
     });
   });
-  
-});
-//End of function
-}
 
+  //End of function
+}
 
 // Set number immediately when page loads
 const favCount = document.getElementById("favCount");
