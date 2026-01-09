@@ -83,7 +83,7 @@
       "id": "instant-ramen-tacos",
       "title": "Instant Ramen Taco",
       "description": "Instant Ramen Taco made with instant noodles, egg, lettuce and shredded cheese. Perfect for breakfast and tasty snacks.",
-      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/ChatGPT_Image_May_15_2025_03_20_52_PM_1_pq2efs.avif",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1767979068/instant-ramen-tacos_m6u3qq.webp",
       "dataKeywords": "egg,eggs,noodles,Lettuce,chicken",
 
       "prepTimeMin": 6,
@@ -264,13 +264,13 @@
       "id": "cheesy-ramen-nest",
       "title": "Cheesy Ramen Nests",
       "description": "Cheesy ramen nest is a perfect dish for breakfast or lunch with its sponge-like texture and flavour-rich taste. ",
-      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/ChatGPT-Image-May-3_-2025_-09_31_03-PM-_1__iaetf4.avif",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1767979068/cheesy-ramen-nest_tgu09z.webp",
       "dataKeywords": "egg,eggs,noodles,cheese",
 
       "prepTimeMin": 3,
       "cookTimeMin": 12,
 
-      "servings": 3,
+      "servings": 2,
       "ingredients": [
         "1 packet instant noodles",
         "1 egg",
@@ -497,33 +497,32 @@
         "Let them cool and enjoy!"
       ]
     },
-    
-{
-  "id": "rice-and-yogurt-bowl",
-  "title": "Rice & Yogurt Bowl",
-  "description": "A cool, creamy bowl of rice mixed with yogurt, cucumber, and mint — refreshing, light, and probiotic-rich.",
-  "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif",
-  "dataKeywords": "rice,healthy,yogurt,mint,vegetables,cooling",
 
-  "prepTimeMin": 8,
-  "cookTimeMin": 0,
-  "servings": 1,
+    {
+      "id": "rice-and-yogurt-bowl",
+      "title": "Rice & Yogurt Bowl",
+      "description": "A cool, creamy bowl of rice mixed with yogurt, cucumber, and mint — refreshing, light, and probiotic-rich.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto:eco/v1757086463/jnqjc66srjc0k2zadz1l_nsnwwo.avif",
+      "dataKeywords": "rice,healthy,yogurt,mint,vegetables,cooling",
 
-  "ingredients": [
-    "1 cup cooked rice",
-    "1/2 cup plain yogurt",
-    "Chopped cucumber",
-    "Fresh mint",
-    "Pinch of salt"
-  ],
+      "prepTimeMin": 8,
+      "cookTimeMin": 0,
+      "servings": 1,
 
-  "steps": [
-    "Add cooked and cooled rice to a bowl.",
-    "Stir in plain yogurt until evenly coated.",
-    "Mix in chopped cucumber, mint, and a pinch of salt.",
-    "Serve chilled."
-  ]
-}
+      "ingredients": [
+        "1 cup cooked rice",
+        "1/2 cup plain yogurt",
+        "Chopped cucumber",
+        "Fresh mint",
+        "Pinch of salt"
+      ],
 
+      "steps": [
+        "Add cooked and cooled rice to a bowl.",
+        "Stir in plain yogurt until evenly coated.",
+        "Mix in chopped cucumber, mint, and a pinch of salt.",
+        "Serve chilled."
+      ]
+    }
   ]
 }

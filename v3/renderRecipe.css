@@ -45,7 +45,6 @@ ol li {
 }
 .flexRecipeContent img {
   order: 2;
-    aspect-ratio: 4 / 6;
 }
 .flexRecipeContent .recipeTexts {
   order: 1;
