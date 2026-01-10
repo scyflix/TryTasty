@@ -267,6 +267,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     padding: 20px calc(var(--padding) * 2);
     flex-wrap: wrap;
     backdrop-filter: var(--filter);
@@ -274,7 +275,7 @@ footer {
   }
   #bottomNavContainer a {
     width: calc(var(--font-size) * 2);
-    height: calc(var(--font-size) * 2);
+    height: 100%;
     color: var(--icon-color);
     transition: all 0.5s ease;
     display: flex;
@@ -285,6 +286,8 @@ footer {
 
   #bottomNavContainer a:hover {
     color: var(--header-bg);
+      border: 2px solid;
+      border-radius: 4px;
     transform: translateY(-1px);
   }
 
