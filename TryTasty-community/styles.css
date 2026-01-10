@@ -57,6 +57,7 @@
 }
 
 :root {
+    --link-border: yellow;
     --form-bg: #272727;
     --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;
@@ -83,7 +84,7 @@
   --toast-color-error: #ff4500;
 }
 body.lightMode {
-
+  --link-border: orange;
     --input-textarea-bg: #ffffff;
   --input-textarea-color: #1a1a1a;
   --input-textarea-border: #cfcfcf;
@@ -125,9 +126,12 @@ body {
 
 header {
   background: var(--header-bg);
-  min-height: 20px;
   color: var(--header-color);
   padding: 0 10px;
+  position: sticky;
+  
+    top: 0;
+  z-index: 2;
   display: grid;
   gap: 10px;
   place-items: center;
@@ -144,15 +148,18 @@ header a h1 {
   color: var(--header-color);
   font-size: 1.5em;
 }
-
 main {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 300px auto;
+}
+.mainContents {
   border-radius: 10px;
   margin: 10px auto;
   padding: 30px;
   display: block;
   background-color: var(--main-bg);
   box-shadow: var(--shadow);
-  width: 80vw;
 }
 a {
   color: var(--link-color);
@@ -169,11 +176,12 @@ a:hover {
   overflow-wrap: break-word;
 }
 .post h2 {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(1.2rem, 2vw, 1.3rem);
 }
 .post h3 {
     font-size: clamp(1rem, 2vw, 1.1rem);
   position: sticky;
+
   padding: 0 0 10px;
   margin: 6px 0 0;
   border-bottom: 2px solid var(--color);
@@ -192,7 +200,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 .postContainer.clicked {
-   overflow-y: scroll;
+   overflow-y: auto;
 }
 /* Post container SCROLLBAR */
 /* width */
@@ -225,6 +233,9 @@ a:hover {
   padding: 5px 10px;
   max-width: 400px;
   height: 40px;
+}
+#forminputbtn:hover {
+  opacity: 0.9;
 }
 #postedContent {
   width: 100%;
@@ -279,7 +290,16 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.3);
   outline: none;
 }
-
+a.backBtn {
+  text-decoration: none;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  padding: 6px;
+  margin-bottom: 12px;
+  color: beige;
+  transition: opacity 0.5s ease;
+  font-size: clamp(1.3rem, 1.5rem, 1.5rem);
+}
 .recipePageLink {
     background: var(--btn-bg);
   border: none;
@@ -338,5 +358,55 @@ button:focus, .recipePageLink:focus {
   main {
     width: 98%;
     padding: 12px;
+  }
+}
+
+aside.sidebar {
+  background-color: var(--form-bg);
+  height: 100dvh;
+  position: sticky;
+  padding-top: 90px;
+  top: 0;
+  left: 0;
+}
+aside.sidebar nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+a.page-nav {
+  text-align: center;
+  border: 1px solid var(--link-border);
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  color: var(--span);
+  width: 90%;
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(#5656564b 0 0) left/0 100% no-repeat;
+}
+hr {
+  width: 100%;
+}
+aside h2 {
+  margin: 0;
+  padding: 0;
+}
+a.page-nav:hover {
+  background-size: 100% 100%;
+  text-decoration: none;
+  transform: scale(1.02);
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  aside {
+    display: none;
+  }
+  main {
+    grid-template-columns: auto;
   }
 }
