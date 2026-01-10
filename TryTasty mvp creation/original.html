@@ -8,7 +8,6 @@
   </head>
   <body>
 
-    <header>
     <!--PRELOADER-->
     <div id="preloader">
       <h1>TryTasty</h1>
@@ -16,6 +15,7 @@
         <div class="loadLine"></div>
       </div>
     </div>
+    <header>
         <a href="https://trytasty.de/">
           <h1>TryTasty</h1>
         </a>
@@ -24,10 +24,10 @@
       <input
         id="forminputbtn"
         type="text"
-        onclick="openform()"
         placeholder="Post something..."
       />
       <a href="../index.html" class="recipePageLink">Recipes</a>
+      
     </header>
     <main>
       <section id="allForms" style="display: none">
@@ -48,50 +48,12 @@
             placeholder="Write something tasty"
             required
           ></textarea>
-          <button id="postbtn" onclick="post()" type="button">Post</button>
+          <button id="postbtn" type="button">Post</button>
         </form>
       </section>
       <section id="postedContent">
-        <p class="paceholderText">Posts show here...</p>
       </section>
     </main>
-    <script>
-      function openform() {
-        const form = document.getElementById("allForms");
-        const forminputbtn = document.getElementById("forminputbtn");
-        const postedContentSection = document.getElementById("postedContent");
-        postedContentSection.style.display = "none";
-        forminputbtn.style.display = "none";
-        form.style.display = "block";
-      }
-      function post() {
-        const postTitle = document.getElementById("postTitle").value;
-        const postContent = document.getElementById("postContent").value;
-        if (!postTitle || !postContent) {
-          alert("Your post must have a title and content");
-          return;
-        } else {
-          const titleElement = document.createElement("h3");
-          const contentElement = document.createElement("p");
-          titleElement.innerText = postTitle;
-          contentElement.innerText = postContent;
-          const postDiv = document.createElement("div");
-          postDiv.classList.add("post");
-          postDiv.appendChild(titleElement);
-          postDiv.appendChild(contentElement);
-          const postedContentSection = document.getElementById("postedContent");
-          postedContentSection.style.display = "block";
-          postedContentSection.prepend(postDiv);
-          const form = document.getElementById("allForms");
-          const postForm = document.getElementById("postForm");
-          postForm.reset();
-          form.style.display = "none";
-          const forminputbtn = document.getElementById("forminputbtn");
-          forminputbtn.style.display = "block";
-        }
-      }
-    </script>
-    <script type="module" src="../v3/main.js"></script>
-    <script src="../recipe.js"></script>
+<script type="module" src="post.js" defer></script>
   </body>
 </html>

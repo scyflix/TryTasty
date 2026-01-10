@@ -7,7 +7,7 @@ import {
 } from "./../v3/js/auth.js";
 
 const logoutBtn = document.getElementById("logoutBtn");
-const welcomeText = document.getElementById("welcomeText");
+export const welcomeText = document.getElementById("welcomeText");
 const popup = document.getElementById("popup");
 const loginInputForm = document.getElementById("loginInputForm");
 const nonUserMessage = document.getElementById("non-userMessage");
@@ -22,11 +22,10 @@ const googleBtn = document.querySelectorAll(".google-btn");
 const infoNoteLogin = document.querySelector(".infoNoteLogin");
 
 //Authstatechanged(loggedin)
-function loggedIn(user) {
-  welcomeText &&
+ function loggedIn(user) {
+welcomeText &&
     (welcomeText.textContent =
-      "Name:" + " " + user.displayName || "Name:" + " " + user.email || "User");
-
+      user.displayName || user.email || "User");
   Useremail && (Useremail.textContent = user.email || "-");
   userName &&
     (userName.textContent = user.displayName.slice(0, 5) + "..." || "Profile");
