@@ -1,19 +1,34 @@
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
+const sidebarContainer = document.querySelector(".sidebarContainer");
 
+function sidebarfunc() {
+  sidebar.classList.toggle("show");
+  sidebarContainer.classList.toggle("appear");
+  document.body.classList.toggle("lockScroll");
+}
 function setupMenuIcons() {
   const menuIcon = document.querySelectorAll(".menu-icon");
   menuIcon.forEach((icon) => {
     icon.addEventListener("click", () => {
-      sidebar.classList.toggle("show");
+      sidebarfunc();
     });
+  });
+
+  sidebarContainer.addEventListener("click", () => {
+    sidebarfunc();
   });
 }
 
 const botLink = document.querySelector(".botLink");
+const popularSection = document.querySelector(".popular-section");
+const faq = document.querySelector(".faq");
+
 if (botLink) {
   botLink.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
+   sidebarfunc();
+faq.classList.toggle("hide")
+popularSection.classList.toggle("hide")
   });
 }
 //Create Sidebar links in an array

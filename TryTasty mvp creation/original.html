@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TryTasty MVP</title>
-    <link rel="stylesheet" href="../v2/form.css" />
+    <title>TryTasty Community</title>
 <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,29 +16,18 @@
         <div class="loadLine"></div>
       </div>
     </div>
-    <header>
-      <div style="display: flex; margin-left: 0" id="menuIconContainer">
-        <div class="menu-icon" onclick="toggleSidebar()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
         <a href="https://trytasty.de/">
           <h1>TryTasty</h1>
         </a>
       </div>
-      <nav class="page-nav" id="sidebar">
-        <a href="../index.html">Recipes</a>
-      </nav>
-    </header>
+   
       <input
         id="forminputbtn"
         type="text"
         onclick="openform()"
         placeholder="Post something..."
       />
-      <a href="../v2/userProfile.html">        <div id="welcomeText" style="margin: 10px; font-weight: bold"></div>
-</a>
+      <a href="../index.html" class="recipePageLink">Recipes</a>
     </header>
     <main>
       <section id="allForms" style="display: none">
@@ -103,7 +91,7 @@
         }
       }
     </script>
-    <script type="module" src="../v2/main.js"></script>
+    <script type="module" src="../v3/main.js"></script>
     <script src="../recipe.js"></script>
   </body>
 </html>

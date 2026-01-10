@@ -11,6 +11,9 @@ body.lightMode #sidebar {
   --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   --link-border: orange;
 }
+.lockScroll {
+  overflow: hidden;
+}
 /* Sidebar */
 #sidebar {
   position: fixed;
@@ -109,7 +112,7 @@ span {
 
 .page-nav a {
   text-align: center;
-  border: 2px solid var(--link-border);
+  border: 1px solid var(--link-border);
   border-radius: 10px;
   transition: all 0.4s ease;
   color: var(--span);
@@ -121,7 +124,7 @@ span {
 .page-nav a:hover {
   background-size: 100% 100%;
   text-decoration: none;
-  border: 2px solid orange;
+  border-color: var(--link-border);
   transform: scale(1.02);
   border-radius: 10px;
   color: var(--span);
@@ -131,4 +134,17 @@ span {
   opacity: 0.3;
   text-align: center;
   margin-top: auto;
+}
+
+.sidebarContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.sidebarContainer.appear {
+  display: block;
 }

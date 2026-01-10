@@ -65,18 +65,21 @@
           </h1>
         </a>
       </div>
+      
+      <div class="sidebarContainer">
+      </div>
       <nav class="page-nav" id="sidebar">
-        <div class="upperNavContainer">
-          <!--USER PROFILE LINK-->
-        
-        </div>
-        <div class="actionBtns">
-          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-            Light Mode
-          </button>
-        </div>
-       <!--Add links with js-->
-      </nav>
+          <div class="upperNavContainer">
+            <!--USER PROFILE LINK-->
+            
+          </div>
+          <div class="actionBtns">
+            <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+              Light Mode
+            </button>
+          </div>
+          <!--Add links with js-->
+        </nav>
     </header>
     
     <main>
@@ -164,6 +167,14 @@
     <script src="../recipe.js"></script>
     <script type="module" src="../fav.js"></script>
     <script src="nav.js"></script>
-    
+    <script>
+      const emailText = document.getElementById("Useremail");
+
+emailText.addEventListener("click", () => {
+  navigator.clipboard.writeText(emailText.textContent);
+    alert("email copied to clipboard")
+});
+
+    </script>
   </body>
 </html>

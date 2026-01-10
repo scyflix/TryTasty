@@ -5,6 +5,11 @@ main {
 #userDetails {
   height: auto;
 }
+#Useremail {
+    color: #ffa726;   /* or whatever text color you use */
+  text-decoration: none;
+  cursor: default;
+}
 .userProfileContainer {
   display: flex;
   justify-content: center;

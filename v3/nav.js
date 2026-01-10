@@ -1,12 +1,22 @@
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
+const sidebarContainer = document.querySelector(".sidebarContainer");
 
+function sidebarfunc() {
+  sidebar.classList.toggle("show");
+  sidebarContainer.classList.toggle("appear");
+  document.body.classList.toggle("lockScroll");
+}
 function setupMenuIcons() {
   const menuIcon = document.querySelectorAll(".menu-icon");
   menuIcon.forEach((icon) => {
     icon.addEventListener("click", () => {
-      sidebar.classList.toggle("show");
+      sidebarfunc();
     });
+  });
+
+  sidebarContainer.addEventListener("click", () => {
+    sidebarfunc();
   });
 }
 
@@ -15,8 +25,8 @@ const navLinks = [
   { text: "Home", href: "../index.html", class: "toastNavLink" },
   { text: "Favorites", href: "favs.html", class: "toastNavLink" },
   { text: "Videos", href: "videos.html", class: "toastNavLink" },
-  { text: "Submit", href: "submit.html" },
   { text: "Community", href: "../TryTasty mvp creation/original.html" },
+  { text: "Submit", href: "submit.html" },
   { text: "Privacy Policy", href: "privacyGerman.html" },
 ];
 

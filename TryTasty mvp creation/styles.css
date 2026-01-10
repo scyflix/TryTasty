@@ -1,98 +1,208 @@
-  * {
-        box-sizing: border-box;
-      }
+* {
+  box-sizing: border-box;
+}
 
-      html,
-      body {
-        scroll-behavior: smooth;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        font-family: arial, sans-serif;
-        background-color: rgb(94, 94, 94);
-        line-height: 1.6;
-      }
-      * {
-        box-sizing: border-box;
-      }
+:root {
+    --form-bg: #272727;
+    --input-textarea-bg: #1d1d1d;
+  --input-textarea-color: #fff;
+  --input-textarea-border: #444;
+  --link-color: #ff7300;
+  --link-color-hover: #f59f1d;
+  --btn-bg: #ff6a00;
+  --bg: #464545;
+  --main-bg: #1e1e1e;
+  --color: #ffffff;
+  --padding: 10px;
+  --font-size: 1rem;
+  --radius: 8px;
+  --header-bg: #ffa500;
+  --header-color: #ececec;
+  --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.402);
+  --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+  --infoNote-bg: #fff3cd;
+  --infoNote-color: #ff4500;
+  --filter: blur(60px) brightness(60%);
+  --active-color: #ffff00;
+  --icon-color: #ffffff;
+  --toast-color-success: green;
+  --toast-color-error: #ff4500;
+}
+body.lightMode {
 
-      html,
-      body {
-        scroll-behavior: smooth;
-      }
+    --input-textarea-bg: #ffffff;
+  --input-textarea-color: #1a1a1a;
+  --input-textarea-border: #cfcfcf;
+    --form-bg: #f5f5f5;
+  --bg: #ebe9e5e8;
+  --main-bg: #fffdfa;
+  --color: #333;
+  --header-bg: #ffd9a0;
+  --header-color: #0d0d0d;
+  --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
+  --preloader-bg: linear-gradient(135deg, #807d7d, #f5f5dc);
+  --infoNote-bg: #ff4500;
+  --infoNote-color: #fff3cd;
+  --filter: blur(20px) brightness(90%);
+  --active-color: #ff4500;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  font-family: arial, sans-serif;
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+* {
+  box-sizing: border-box;
+}
 
-      header {
-        background: #ffa500;
-        min-height: 40px;
-        color: #000000fa;
-        padding: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        border-radius: 12px;
-      }
-      a {
-                color: #000000fa;
+html,
+body {
+  scroll-behavior: smooth;
+}
 
-        text-decoration: none;
-      }
-      header a h1:hover {
-        opacity: 0.8;
-      }
-      header a h1 {
-        font-size: 1.5em;
-      }
-      main {
-        border-radius: 10px;
-        margin: 10px auto;
-        padding: 30px;
-        display: block;
-        background-color: #1e1e1e;
+header {
+  background: var(--header-bg);
+  min-height: 40px;
+  color: var(--header-color);
+  padding: 0 10px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr minmax(120px, 800px) 1fr;
+}
 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        width: 80vw;
-      }
-      .post p {
-        white-space: normal;
-        overflow-wrap: break-word;
-      }
-      .post {
-            color: #ccc;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 10px;
-        width: 100%;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      }
-      #forminputbtn {
-        outline: none;
-        border: none;
-        background-color: white;
-        border-radius: 10px;
-        padding: 5px 10px;
-        width: 60%;
-        height: 40px;
-      }
-      #postedContent {
-        width: 100%;
-      }
-      .loginBtn {
-        background: #ffa600;
-        padding: 0 10px;
-        margin-bottom: 4px;
-        border-radius: 10px;
-        text-decoration: none;
-        color: #ccc;
-        transition: all 0.4s ease;
-      }
-      .loginBtn:hover {
-        transform: scale(1.04);
-      }
-      .paceholderText {
-        opacity: 0.4;
-        color: #ccc;
-        font-size: small;
-      }
+a {
+  text-decoration: none;
+}
+header a h1:hover {
+  opacity: 0.8;
+}
+header a h1 {
+  color: var(--header-color);
+  font-size: 1.5em;
+}
+
+main {
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 30px;
+  display: block;
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow);
+  width: 80vw;
+}
+.post p {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.post {
+  color: var(--color);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+#forminputbtn {
+  outline: none;
+  border: none;
+  background-color: var(--bg);
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 60%;
+  height: 40px;
+}
+#postedContent {
+  width: 100%;
+}
+
+.paceholderText {
+  opacity: 0.4;
+  color: #ccc;
+  font-size: small;
+}
+
+form {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--form-bg);
+  border-radius: 12px;
+}
+/* Form Labels */
+label {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 0;
+  border-radius: 10px;
+  background: var(--input-textarea-bg);
+  border: 2px solid var(--input-textarea-border);
+  color: var(--input-textarea-color);
+  transition: 0.25s;
+}
+textarea {
+  min-height: 120px;
+}
+input:focus,
+textarea:focus {
+  border-color: #ff8800;
+  box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.3);
+  outline: none;
+}
+
+.recipePageLink {
+    background: var(--btn-bg);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 10px auto;
+  color: var(--color);
+}
+/* Button */
+button {
+  background: var(--btn-bg);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 10px auto;
+  min-width: 40%;
+}
+form button {
+  min-width: 100%;
+}
+button:hover, .recipePageLink:hover {
+  background: #ff8b1a;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+button:focus, .recipePageLink:focus {
+  opacity: 0.9;
+}
