@@ -151,13 +151,13 @@ header a h1 {
 main {
   display: grid;
   gap: 22px;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px 1fr;
 }
 .mainContents {
+  width: 100%;
   border-radius: 10px;
   margin: 10px auto;
   padding: 30px;
-  display: block;
   background-color: var(--main-bg);
   box-shadow: var(--shadow);
 }
@@ -407,6 +407,10 @@ a.page-nav:hover {
     display: none;
   }
   main {
+    padding: 0;
     grid-template-columns: auto;
+  }
+  .mainContents {
+    padding: 10px 4px 10px;
   }
 }
