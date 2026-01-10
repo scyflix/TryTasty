@@ -91,7 +91,7 @@ h1 {
 /*MAIN ELEMENT*/
 main {
   flex: 1;
-  animation: slideup 2s ease;
+  animation: slideup 1s ease;
   max-width: 900px;
   min-width: 90%;
   margin: 20px auto;

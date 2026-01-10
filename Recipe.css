@@ -12,8 +12,8 @@ body.lightMode main {
 
   --popular-divider: rgba(0, 0, 0, 0.1);
 
-  --popular-link: #171717b9;
-  --popular-link-hover: #e65100;
+  --popular-link-hover: #171717b9;
+  --popular-link: #e65100;
 
   --faq-bg: #ffffff;
   --faq-border: #e6e6e6;
@@ -30,8 +30,8 @@ body main {
 
   --popular-divider: rgba(255, 255, 255, 0.08);
 
-  --popular-link: #ffffff;
-  --popular-link-hover: #ffb74d;
+  --popular-link-hover: #ffffff;
+  --popular-link: #ffb74d;
 
   --faq-bg: #0f0f0f;
   --faq-border: #2a2a2a;
