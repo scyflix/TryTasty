@@ -169,6 +169,7 @@ a:hover {
   opacity: 0.6;
 }
 .post {
+  position: relative;
   display: flex;
 }
 .post p {
@@ -224,7 +225,19 @@ a:hover {
 .postContainer::-webkit-scrollbar-thumb:hover {
   background: #e0bf00; /* darker yellow, still consistent */
 }
-
+.seeMore {
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  margin: 20px 0;
+  right: 0;
+  background-color: var(--bg);
+  color: var(--color);
+  padding: 8px;
+}
+.seeMore:hover {
+  background-color: var(--form-bg);
+}
 #forminputbtn {
   outline: none;
   border: none;
@@ -322,7 +335,6 @@ button {
   cursor: pointer;
   transition: 0.2s;
   margin: 10px auto;
-  min-width: 40%;
 }
 form button {
   min-width: 100%;

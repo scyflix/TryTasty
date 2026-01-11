@@ -85,6 +85,7 @@ postDiv.classList.add("post");
 
       <h3>${post.title}</h3>
       <p>${post.content}</p>
+      <button class="seeMore">See More</button>
       </div>
       `;
 postedContentSection.prepend(postDiv);
