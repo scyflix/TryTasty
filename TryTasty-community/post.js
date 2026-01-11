@@ -42,11 +42,14 @@ function post(user) {
        title: postTitle,
       content: postContent,
       time: time,
+      id: crypto.randomUUID(),
       owner: user ? user.displayName : "Guest"
 }
 postStore.push(postData)
 localStorage.setItem("posts", JSON.stringify(postStore));
+
 renderPost(postData)
+
 postedContentSection.style.display = "block";
 
 // Reset UI 
@@ -61,8 +64,9 @@ document.getElementById("postForm").reset();
       } else {
         seeMoreBtn.style.display = "none";
       }
-}
 
+    }
+    
 function renderPost(post) {
   const postDiv = document.createElement("div");
   postDiv.title = "Click to read more";
@@ -85,40 +89,61 @@ function renderPost(post) {
             </a>
             <div class="postContainer">
             <div class="postHeader">
+            <div class="ownerData">
             <a href="../v3/userProfile.html">
             <h2 class="postOwner">${post.owner}</h2>
-</a>
-<p class="timeStamp">${post.time}</p>
+            </a>
+            <p class="timeStamp">${post.time}</p>
+            </div>
+            <div class="ownerActions">
+            <button type="button" class="deleteBtn">Delete</button>
+            </div>
 </div>
 
       <h3>${post.title}</h3>
       <p>${post.content}</p>
-      <button class="seeMore">See More</button>
+      <button type="button" class="seeMore">Read more</button>
       </div>
       `;
-
-  postedContentSection.prepend(postDiv);
-
-  const postContainer = postDiv.querySelector(".postContainer");
+      
+      postedContentSection.prepend(postDiv);
+      
+      const postContainer = postDiv.querySelector(".postContainer");
   const seeMoreBtn = postDiv.querySelector(".seeMore");
-
+  
   //See more button logic
-    if (postContainer.scrollHeight > postContainer.clientHeight) {
+  if (postContainer.scrollHeight > postContainer.clientHeight) {
       seeMoreBtn.style.display = "block";
       postContainer.style.paddingBottom = "35px";
+    
     } else {
       seeMoreBtn.style.display = "none";
     }
   
 
-  postContainer.addEventListener("click", () => {
-    postContainer.classList.toggle("clicked");
-  });
+    
+    seeMoreBtn.addEventListener("click", () => {
+      
+      const isClicked = postContainer.classList.toggle("clicked");
+      seeMoreBtn.textContent = isClicked ? "Read less" : "Read more";
+    });
+    
+   const deleteBtn = postDiv.querySelector(".deleteBtn");
+         deleteBtn.addEventListener("click", () => {
+           if (!confirm("Delete this post?")) return;
+postDiv.remove();
+
+const index = postStore.findIndex((p) => p.id === post.id);
+if (index !== -1) {
+  postStore.splice(index, 1);
 }
-
-
-
-
+localStorage.setItem("posts", JSON.stringify(postStore));
+         });
+  }
+  
+  
+  
+  
 // Listen for auth state changes
 onUserAuthChange((user) => {
   postbtn.addEventListener("click", () => post(user));

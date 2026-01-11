@@ -203,6 +203,24 @@ a:hover {
 .postContainer.clicked {
    overflow-y: auto;
 }
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.postHeader .deleteBtn {
+  border: none;
+padding: 6px 12px;
+  background: #ff6b6b;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.deleteBtn:hover {
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+.postHeader h2, .postHeader p  {
+  padding: 0;
+  margin: 0;
+}
 /* Post container SCROLLBAR */
 /* width */
 .postContainer::-webkit-scrollbar {
@@ -356,10 +374,6 @@ button:focus, .recipePageLink:focus {
   border: 2px solid #e69500;
   border-radius: 50%;
   transition: border-radius 0.5s ease, background-color 0.5s ease;
-}
-.postHeader h2, .postHeader p  {
-  padding: 0;
-  margin: 0;
 }
 .profileImg:hover {
   border-radius: var(--radius);
