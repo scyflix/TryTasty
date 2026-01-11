@@ -57,9 +57,9 @@
 }
 
 :root {
-    --link-border: yellow;
-    --form-bg: #272727;
-    --input-textarea-bg: #1d1d1d;
+  --link-border: yellow;
+  --form-bg: #272727;
+  --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;
   --input-textarea-border: #444;
   --link-color: #ff7300;
@@ -85,10 +85,10 @@
 }
 body.lightMode {
   --link-border: orange;
-    --input-textarea-bg: #ffffff;
+  --input-textarea-bg: #ffffff;
   --input-textarea-color: #1a1a1a;
   --input-textarea-border: #cfcfcf;
-    --form-bg: #f5f5f5;
+  --form-bg: #f5f5f5;
   --bg: #ebe9e5e8;
   --main-bg: #fffdfa;
   --color: #333;
@@ -115,9 +115,6 @@ body {
   background-color: var(--bg);
   line-height: 1.6;
 }
-* {
-  box-sizing: border-box;
-}
 
 html,
 body {
@@ -128,10 +125,6 @@ header {
   background: var(--header-bg);
   color: var(--header-color);
   padding: 0 10px;
-  position: sticky;
-  
-    top: 0;
-  z-index: 2;
   display: grid;
   gap: 10px;
   place-items: center;
@@ -163,7 +156,7 @@ main {
 }
 a {
   color: var(--link-color);
-  transition: opacity 0.3s ease ;
+  transition: opacity 0.3s ease;
 }
 a:hover {
   opacity: 0.6;
@@ -180,7 +173,7 @@ a:hover {
   font-size: clamp(1.2rem, 2vw, 1.3rem);
 }
 .post h3 {
-    font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
   position: sticky;
 
   padding: 0 0 10px;
@@ -201,7 +194,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 .postContainer.clicked {
-   overflow-y: auto;
+  overflow-y: auto;
 }
 .postHeader {
   display: flex;
@@ -209,7 +202,7 @@ a:hover {
 }
 .postHeader .deleteBtn {
   border: none;
-padding: 6px 12px;
+  padding: 6px 12px;
   background: #ff6b6b;
   box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -217,7 +210,8 @@ padding: 6px 12px;
 .deleteBtn:hover {
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
 }
-.postHeader h2, .postHeader p  {
+.postHeader h2,
+.postHeader p {
   padding: 0;
   margin: 0;
 }
@@ -332,7 +326,7 @@ a.backBtn {
   font-size: clamp(1.3rem, 1.5rem, 1.5rem);
 }
 .recipePageLink {
-    background: var(--btn-bg);
+  background: var(--btn-bg);
   border: none;
   padding: 14px;
   border-radius: 10px;
@@ -357,12 +351,14 @@ button {
 form button {
   min-width: 100%;
 }
-button:hover, .recipePageLink:hover {
+button:hover,
+.recipePageLink:hover {
   background: #ff8b1a;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
-button:focus, .recipePageLink:focus {
+button:focus,
+.recipePageLink:focus {
   opacity: 0.9;
 }
 .profileImg {
@@ -388,11 +384,13 @@ button:focus, .recipePageLink:focus {
 }
 aside.sidebar {
   background-color: var(--form-bg);
-  height: 100dvh;
+  max-height: 100dvh;
+  height: 100vh;
   position: sticky;
-  padding-top: 90px;
   top: 0;
   left: 0;
+  width: 100%;
+  border-radius: 10px;
 }
 aside.sidebar nav {
   display: flex;
@@ -432,10 +430,39 @@ a.page-nav:hover {
     display: none;
   }
   main {
-    padding: 0;
+    padding: 4px;
+    min-height: 100vh;
     grid-template-columns: auto;
   }
   .mainContents {
     padding: 10px 4px 10px;
   }
+}
+.writeIcon {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to left, var(--bg), var(--form-bg));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 22px;
+  right: 12px;
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}
+.writeIcon:hover {
+  opacity: 0.8;
+}
+#allForms {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.show,
+#allForms.show {
+  display: block;
 }

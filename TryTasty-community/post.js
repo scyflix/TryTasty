@@ -1,75 +1,76 @@
+//Import authstate
 import { onUserAuthChange } from "../v3/js/auth.js";
+
+//Hide preloader when page content loads
 window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      preloader.style.opacity = "0";
-      preloader.style.display = "none";
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  preloader.style.display = "none";
 });
 
-
-const postedContentSection = document.getElementById("postedContent");
-const postStore  = JSON.parse(localStorage.getItem("posts")) || []
-if(postStore ) {
-      postStore.forEach(renderPost);
-}
-
+//Open for funtion
 const forminputbtn = document.getElementById("forminputbtn");
 const postbtn = document.getElementById("postbtn");
+const writeIcon = document.querySelector(".writeIcon");
+
 function openform() {
-      
-      const form = document.getElementById("allForms");
+  const form = document.getElementById("allForms");
   const forminputbtn = document.getElementById("forminputbtn");
   const postedContentSection = document.getElementById("postedContent");
-  postedContentSection.style.display = "none";
-  forminputbtn.style.display = "none";
-  form.style.display = "block";
+  forminputbtn.classList.add("hide");
+  postedContentSection.classList.add("hide");
+  writeIcon.classList.add("hide");
+  form.classList.add("show");
 }
-forminputbtn.addEventListener("click", () => { 
-      openform()
-})
+
+//Implement open form funtion
+writeIcon.addEventListener("click", () => {
+  openform();
+});
+forminputbtn.addEventListener("click", () => {
+  openform();
+});
+
+const postedContentSection = document.getElementById("postedContent");
+const postStore = JSON.parse(localStorage.getItem("posts")) || [];
+if (postStore) {
+  postStore.forEach(renderPost);
+}
 
 function post(user) {
-      const postTitle = document.getElementById("postTitle").value;
-      const postContent = document.getElementById("postContent").value;
-      
-      if (!postTitle || !postContent) {
-            alert("Your post must have a title and content");
-            return;
-      }
-      
+  const postTitle = document.getElementById("postTitle").value;
+  const postContent = document.getElementById("postContent").value;
+
+  if (!postTitle || !postContent) {
+    alert("Your post must have a title and content");
+    return;
+  }
+
   const time = new Date().toLocaleString();
 
   const postData = {
-       title: postTitle,
-      content: postContent,
-      time: time,
-      id: crypto.randomUUID(),
-      owner: user ? user.displayName : "Guest"
+    title: postTitle,
+    content: postContent,
+    time: time,
+    id: crypto.randomUUID(),
+    owner: user ? user.displayName : "Guest",
+  };
+  postStore.push(postData);
+  localStorage.setItem("posts", JSON.stringify(postStore));
+
+  renderPost(postData);
+
+  postedContentSection.style.display = "block";
+
+  // Reset UI
+  document.getElementById("postForm").reset();
+  document.getElementById("allForms").classList.remove("show");
+  document.getElementById("forminputbtn").classList.remove("hide");
+  document.querySelector(".writeIcon").classList.remove("hide");
 }
-postStore.push(postData)
-localStorage.setItem("posts", JSON.stringify(postStore));
 
-renderPost(postData)
-
-postedContentSection.style.display = "block";
-
-// Reset UI 
-document.getElementById("postForm").reset();
- document.getElementById("allForms").style.display = "none"; 
- document.getElementById("forminputbtn").style.display = "block";
- 
- //See more logic
-      if (postContainer.scrollHeight > postContainer.clientHeight) {
-        seeMoreBtn.style.display = "block";
-        postContainer.style.paddingBottom = "35px";
-      } else {
-        seeMoreBtn.style.display = "none";
-      }
-
-    }
-    
 function renderPost(post) {
   const postDiv = document.createElement("div");
-  postDiv.title = "Click to read more";
   postDiv.classList.add("post");
 
   postDiv.innerHTML = `
@@ -105,59 +106,54 @@ function renderPost(post) {
       <button type="button" class="seeMore">Read more</button>
       </div>
       `;
-      
-      postedContentSection.prepend(postDiv);
-      
-      const postContainer = postDiv.querySelector(".postContainer");
+
+  postedContentSection.prepend(postDiv);
+  
+  const postContainer = postDiv.querySelector(".postContainer");
   const seeMoreBtn = postDiv.querySelector(".seeMore");
   
   //See more button logic
   if (postContainer.scrollHeight > postContainer.clientHeight) {
-      seeMoreBtn.style.display = "block";
-      postContainer.style.paddingBottom = "35px";
-    
-    } else {
-      seeMoreBtn.style.display = "none";
-    }
-  
-
-    
-    seeMoreBtn.addEventListener("click", () => {
-      
-      const isClicked = postContainer.classList.toggle("clicked");
-      seeMoreBtn.textContent = isClicked ? "Read less" : "Read more";
-    });
-    
-   const deleteBtn = postDiv.querySelector(".deleteBtn");
-         deleteBtn.addEventListener("click", () => {
-           if (!confirm("Delete this post?")) return;
-postDiv.remove();
-
-const index = postStore.findIndex((p) => p.id === post.id);
-if (index !== -1) {
-  postStore.splice(index, 1);
-}
-localStorage.setItem("posts", JSON.stringify(postStore));
-         });
+    seeMoreBtn.classList.add("show");
+    postContainer.style.paddingBottom = "35px";
+  } else {
+    seeMoreBtn.classList.add("hide");
   }
   
+  seeMoreBtn.addEventListener("click", () => {
+    const isClicked = postContainer.classList.toggle("clicked");
+    seeMoreBtn.textContent = isClicked ? "Read less" : "Read more";
+  });
   
-  
-  
+  const deleteBtn = postDiv.querySelector(".deleteBtn");
+  deleteBtn.addEventListener("click", () => {
+    if (!confirm("Delete this post?")) return;
+    postDiv.remove();
+    
+    const index = postStore.findIndex((p) => p.id === post.id);
+    if (index !== -1) {
+      postStore.splice(index, 1);
+    }
+    localStorage.setItem("posts", JSON.stringify(postStore));
+  });
+}
+
 // Listen for auth state changes
+
 onUserAuthChange((user) => {
-  postbtn.addEventListener("click", () => post(user));
+  postbtn.addEventListener("click", () => {
+   post(user);
+   window.location.reload();
+  })
 });
-
-
 window.addEventListener("resize", () => {
   document.querySelectorAll(".postContainer").forEach((post) => {
     const seeMoreBtn = post.querySelector(".seeMore");
 
     if (post.scrollHeight > post.clientHeight) {
-      seeMoreBtn.style.display = "block";
+      seeMoreBtn.classList.add("show");
     } else {
-      seeMoreBtn.style.display = "none";
+      seeMoreBtn.classList.add("hide");
     }
   });
 });
