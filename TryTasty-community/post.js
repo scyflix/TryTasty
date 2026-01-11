@@ -43,16 +43,18 @@ function post(user) {
       content: postContent,
       time: time,
       owner: user ? user.displayName : "Guest"
-  }
-  postStore.push(postData)
-    localStorage.setItem("posts", JSON.stringify(postStore));
+}
+postStore.push(postData)
+localStorage.setItem("posts", JSON.stringify(postStore));
 renderPost(postData)
+postedContentSection.style.display = "block";
 
 // Reset UI 
 document.getElementById("postForm").reset();
  document.getElementById("allForms").style.display = "none"; 
  document.getElementById("forminputbtn").style.display = "block";
 
+ ReadMore();
 }
 
 function renderPost(post) {
@@ -88,14 +90,26 @@ postDiv.classList.add("post");
       <button class="seeMore">See More</button>
       </div>
       `;
+
 postedContentSection.prepend(postDiv);
 
-      const postContainer = postDiv.querySelector(".postContainer");
-      postContainer.addEventListener("click", () => {
-        postContainer.classList.toggle("clicked");
-      });
+const postContainer = postDiv.querySelector(".postContainer");
+const seeMoreBtn = postDiv.querySelector(".seeMore");
 
-      postedContentSection.style.display = "block";
+postContainer.addEventListener("click", () => {
+      postContainer.classList.toggle("clicked");
+});
+      
+
+      //See more button logic
+      function ReadMore() {
+            if (postContainer.scrollHeight > postContainer.clientHeight) {
+                  seeMoreBtn.style.display = "block";
+                  postContainer.style.paddingBottom = "35px"
+            } else {
+                  seeMoreBtn.style.display = "none";
+            }
+      }
       }
 
 
@@ -106,4 +120,15 @@ onUserAuthChange((user) => {
   postbtn.addEventListener("click", () => post(user));
 });
 
-    
+
+window.addEventListener("resize", () => {
+  document.querySelectorAll(".postContainer").forEach((post) => {
+    const seeMoreBtn = post.querySelector(".seeMore");
+
+    if (post.scrollHeight > post.clientHeight) {
+      seeMoreBtn.style.display = "block";
+    } else {
+      seeMoreBtn.style.display = "none";
+    }
+  });
+});

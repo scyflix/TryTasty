@@ -372,7 +372,6 @@ button:focus, .recipePageLink:focus {
     padding: 12px;
   }
 }
-
 aside.sidebar {
   background-color: var(--form-bg);
   height: 100dvh;
