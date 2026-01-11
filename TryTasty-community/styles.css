@@ -230,7 +230,7 @@ a:hover {
   position: absolute;
   bottom: 0;
   margin: 20px 0;
-  right: 0;
+  right: 4px;
   background-color: var(--bg);
   color: var(--color);
   padding: 8px;

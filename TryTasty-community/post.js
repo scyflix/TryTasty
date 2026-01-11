@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 const postedContentSection = document.getElementById("postedContent");
 const postStore  = JSON.parse(localStorage.getItem("posts")) || []
 if(postStore ) {
-     postStore.forEach(renderPost);
+      postStore.forEach(renderPost);
 }
 
 const forminputbtn = document.getElementById("forminputbtn");
@@ -30,12 +30,12 @@ forminputbtn.addEventListener("click", () => {
 function post(user) {
       const postTitle = document.getElementById("postTitle").value;
       const postContent = document.getElementById("postContent").value;
-
+      
       if (!postTitle || !postContent) {
-    alert("Your post must have a title and content");
-    return;
-  }
-  
+            alert("Your post must have a title and content");
+            return;
+      }
+      
   const time = new Date().toLocaleString();
 
   const postData = {
@@ -53,34 +53,40 @@ postedContentSection.style.display = "block";
 document.getElementById("postForm").reset();
  document.getElementById("allForms").style.display = "none"; 
  document.getElementById("forminputbtn").style.display = "block";
-
- ReadMore();
+ 
+ //See more logic
+      if (postContainer.scrollHeight > postContainer.clientHeight) {
+        seeMoreBtn.style.display = "block";
+        postContainer.style.paddingBottom = "35px";
+      } else {
+        seeMoreBtn.style.display = "none";
+      }
 }
 
 function renderPost(post) {
-const postDiv = document.createElement("div"); 
+  const postDiv = document.createElement("div");
   postDiv.title = "Click to read more";
-postDiv.classList.add("post");
+  postDiv.classList.add("post");
 
-            postDiv.innerHTML = `
-      <a href="../v3/userProfile.html">
-      <svg
-   class="profileImg"
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 -960 960 960"
-   fill="currentColor"
-   aria-hidden="true"
-   >
-   <path
-   d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
-   />
-   </svg>
-   
-   </a>
-   <div class="postContainer">
-<div class="postHeader">
-<a href="../v3/userProfile.html">
-<h2 class="postOwner">${post.owner}</h2>
+  postDiv.innerHTML = `
+            <a href="../v3/userProfile.html">
+            <svg
+            class="profileImg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="currentColor"
+            aria-hidden="true"
+            >
+            <path
+            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
+            />
+            </svg>
+            
+            </a>
+            <div class="postContainer">
+            <div class="postHeader">
+            <a href="../v3/userProfile.html">
+            <h2 class="postOwner">${post.owner}</h2>
 </a>
 <p class="timeStamp">${post.time}</p>
 </div>
@@ -91,26 +97,24 @@ postDiv.classList.add("post");
       </div>
       `;
 
-postedContentSection.prepend(postDiv);
+  postedContentSection.prepend(postDiv);
 
-const postContainer = postDiv.querySelector(".postContainer");
-const seeMoreBtn = postDiv.querySelector(".seeMore");
+  const postContainer = postDiv.querySelector(".postContainer");
+  const seeMoreBtn = postDiv.querySelector(".seeMore");
 
-postContainer.addEventListener("click", () => {
-      postContainer.classList.toggle("clicked");
-});
-      
+  //See more button logic
+    if (postContainer.scrollHeight > postContainer.clientHeight) {
+      seeMoreBtn.style.display = "block";
+      postContainer.style.paddingBottom = "35px";
+    } else {
+      seeMoreBtn.style.display = "none";
+    }
+  
 
-      //See more button logic
-      function ReadMore() {
-            if (postContainer.scrollHeight > postContainer.clientHeight) {
-                  seeMoreBtn.style.display = "block";
-                  postContainer.style.paddingBottom = "35px"
-            } else {
-                  seeMoreBtn.style.display = "none";
-            }
-      }
-      }
+  postContainer.addEventListener("click", () => {
+    postContainer.classList.toggle("clicked");
+  });
+}
 
 
 
