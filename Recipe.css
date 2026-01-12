@@ -17,6 +17,7 @@ body.lightMode main {
 
   --faq-bg: #ffffff;
   --faq-border: #e6e6e6;
+  --faq-hover: #e8e8e8;
   --faq-summary-text: #222222;
   --faq-answer-text: #555555;
 }
@@ -35,6 +36,7 @@ body main {
 
   --faq-bg: #0f0f0f;
   --faq-border: #2a2a2a;
+  --faq-hover: #000000;
   --faq-summary-text: #ffffff;
   --faq-answer-text: #cfcfcf;
 }
@@ -44,9 +46,8 @@ body main nav {
 }
 
 .popular-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.8rem 2rem;
+  margin: 1rem auto;
+  padding: 1.8rem 1rem;
   background: var(--popular-bg);
   border-radius: 16px;
   box-shadow: 0 20px 40px var(--popular-shadow);
@@ -116,7 +117,7 @@ body main nav {
   transition: background-color 0.6s ease;
 }
 .faq details:hover {
-  background-color:#000000;
+  background-color: var(--faq-hover);
 }
 
 .faq summary {

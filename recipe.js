@@ -1,16 +1,19 @@
 //TOAST NAVIGATION ACTIVE STATE
-const toastLink = document.querySelectorAll("#bottomNavContainer a");
+document.addEventListener("DOMContentLoaded", () => {
+  const toastLink = document.querySelectorAll("#bottomNavContainer a");
+  
+  toastLink.forEach((link) => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
+    }
+  });
 
-toastLink.forEach((link) => {
-  if (link.href === window.location.href) {
-    link.classList.add("active");
-  }
-});
+})
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   preloader.style.opacity = "0";
-    preloader.style.display = "none";
+  preloader.style.display = "none";
 });
 //PopUp
 const closePopup = document.getElementById("closePopup");
@@ -183,6 +186,4 @@ if (recipeSubmissionBtn) {
     //Let form work normally(Formspree handles the rest)
     RecipeForm.submit();
   });
-
-
 }

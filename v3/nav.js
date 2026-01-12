@@ -1,3 +1,5 @@
+
+
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
 const sidebarContainer = document.querySelector(".sidebarContainer");
@@ -81,3 +83,73 @@ if (upperNavContainer) {
             </div>`;
   setupMenuIcons();
 }
+
+const bottomNavContainer = document.getElementById("bottomNavContainer");
+bottomNavContainer.innerHTML = `
+ <a href="../index.html" aria-label="Home">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Z"
+          />
+        </svg>
+          <span>Home</span>
+
+      </a>
+
+      <a href="favs.html" aria-label="Favorites">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"
+          />
+        </svg>
+          <span>Favorites</span>
+
+      </a>
+
+      <a href="videos.html" aria-label="Videos">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Z"
+          />
+        </svg>
+          <span>Videos</span>
+
+      </a>
+      
+      <a href="userProfile.html" aria-label="Profile">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 -960 960 960"
+    fill="currentColor"
+    aria-hidden="true"
+    >
+    <path
+    d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
+    />
+  </svg>
+    <span>Profile</span>
+</a>
+
+
+<a href="../TryTasty-community/original.html" aria-label="Community">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
+    <path d="M320-540q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32Zm320 0q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32ZM200-200v-104q0-34 17.5-61.5T264-408q45-23 90.5-33.5T440-452q-19 14-32 36.5T395-360v160H200Zm365 0v-160q0-29-13-51.5T520-452q55 1 100.5 11.5T711-408q29 15 46 42.5t17 61.5v104H565Z"/>
+  </svg>
+  <span>Community</span>
+</a>
+`;
