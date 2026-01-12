@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TryTasty Community</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/post.css" />
+    <link rel="stylesheet" href="css/nav.css" />
   </head>
   <body>
     <!--PRELOADER-->
@@ -15,57 +17,73 @@
       </div>
     </div>
     <header>
-        <a href="https://trytasty.de/">
-          <h1>TryTasty</h1>
-        </a>
+      <div>
+        <div class="menuIconContainer">
+          <div aria-label="menu icon" class="menuIcon">
+            <span></span><span></span><span></span>
+          </div>
+          
+          <a href="https://trytasty.de/">
+            <h1>TryTasty</h1>
+          </a>
+        </div>
       </div>
-   
-      <input
-        id="forminputbtn"
-        type="text"
-        placeholder="Post something..."
-      />
-      <a href="../index.html" class="recipePageLink">Recipes</a>
 
+      <input id="forminputbtn" type="text" placeholder="Post something..." />
+      <a href="../index.html" class="recipePageLink">Recipes</a>
     </header>
     <main>
       <aside class="sidebar">
+        <div class="menuIcon cancelIcon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </div>
         <nav>
           <h2>Navigation</h2>
-          <hr>
-                <a href="../index.html" class="page-nav">Recipes</a>
-<a href="../v3/userProfile.html" class="page-nav">Profile</a>
-</nav>
-<div aria-label="post button" class="writeIcon"><span>✍️</span></div>
+          <hr />
+          <a href="../index.html" class="page-nav">Recipes</a>
+          <a href="../v3/userProfile.html" class="page-nav">Profile</a>
+        </nav>
+        <div aria-label="post button" class="writeIcon"><span>✍️</span></div>
       </aside>
-<div class="mainContents">
-  <section id="allForms">
-    <a class="backBtn" href="original.html">←Back</a>
-    <form id="postForm">
-      <h2>Create a post</h2>
-      <label for="postTitle"> Title </label>
-      <input
-      type="text"
-      id="postTitle"
-      name="postTitle"
-      placeholder="Post Title"
-      required
-      />
-      <label for="postContent"> Content </label>
-      <textarea
-      id="postContent"
-      name="postContent"
-      placeholder="Write something tasty"
-      required
-      ></textarea>
-      <button id="postbtn" type="button">Post</button>
-    </form>
-  </section>
-  <section id="postedContent">
-  </section>
-</div>
-  
+      <div class="mainContents">
+        <section id="allForms">
+          <a class="backBtn" href="original.html">←Back</a>
+          <form id="postForm">
+            <h2>Create a post</h2>
+            <label for="postTitle"> Title </label>
+            <input
+              type="text"
+              id="postTitle"
+              name="postTitle"
+              placeholder="Post Title"
+              required
+            />
+            <label for="postContent"> Content </label>
+            <textarea
+              id="postContent"
+              name="postContent"
+              placeholder="Write something tasty"
+              required
+            ></textarea>
+            <button id="postbtn" type="button">Post</button>
+          </form>
+        </section>
+        <section id="postedContent"></section>
+      </div>
     </main>
-<script type="module" src="post.js" defer></script>
-</body>
+    <script src="js/nav.js" defer></script>
+    <script type="module" src="js/post.js" defer></script>
+  </body>
 </html>

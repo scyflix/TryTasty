@@ -1,5 +1,5 @@
 //Import authstate
-import { onUserAuthChange } from "../v3/js/auth.js";
+import { onUserAuthChange } from "../../v3/js/auth.js";
 
 //Hide preloader when page content loads
 window.addEventListener("load", () => {
@@ -41,7 +41,7 @@ function post(user) {
   const postTitle = document.getElementById("postTitle").value;
   const postContent = document.getElementById("postContent").value;
 
-  if (!postTitle || !postContent) {
+  if ( !postContent) {
     alert("Your post must have a title and content");
     return;
   }
