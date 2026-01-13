@@ -1,5 +1,6 @@
 //Import authstate
-import { onUserAuthChange } from "../../v3/js/auth.js";
+import { onUserAuthChange } from "./../../v3/js/auth.js";
+import {sidebarFunc} from "./nav.js"
 
 //Hide preloader when page content loads
 window.addEventListener("load", () => {
@@ -26,6 +27,7 @@ function openform() {
 //Implement open form funtion
 writeIcon.addEventListener("click", () => {
   openform();
+  sidebarFunc()
 });
 forminputbtn.addEventListener("click", () => {
   openform();
@@ -40,6 +42,7 @@ if (postStore) {
 function post(user) {
   const postTitle = document.getElementById("postTitle").value;
   const postContent = document.getElementById("postContent").value;
+const imgUrl = document.getElementById("imgUrl").value;
 
   if ( !postContent) {
     alert("Your post must have a title and content");
@@ -51,15 +54,16 @@ function post(user) {
   const postData = {
     title: postTitle,
     content: postContent,
+    image: imgUrl,
     time: time,
     id: crypto.randomUUID(),
     owner: user ? user.displayName : "Guest",
   };
   postStore.push(postData);
   localStorage.setItem("posts", JSON.stringify(postStore));
-
+  
   renderPost(postData);
-
+  
   postedContentSection.style.display = "block";
 
   // Reset UI
@@ -99,15 +103,16 @@ function renderPost(post) {
             <div class="ownerActions">
             <button type="button" class="deleteBtn">Delete</button>
             </div>
-</div>
+            </div>
 
       <h3>${post.title}</h3>
       <p>${post.content}</p>
+      <img src="${post.image}">
       <button type="button" class="seeMore">Read more</button>
       </div>
       `;
+      postedContentSection.prepend(postDiv);
 
-  postedContentSection.prepend(postDiv);
   
   const postContainer = postDiv.querySelector(".postContainer");
   const seeMoreBtn = postDiv.querySelector(".seeMore");

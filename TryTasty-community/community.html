@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TryTasty Community</title>
+    <title>Community | TryTasty </title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/post.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -59,7 +59,7 @@
       </aside>
       <div class="mainContents">
         <section id="allForms">
-          <a class="backBtn" href="original.html">←Back</a>
+          <a class="backBtn" href="community.html">←Back</a>
           <form id="postForm">
             <h2>Create a post</h2>
             <label for="postTitle"> Title </label>
@@ -74,16 +74,18 @@
             <textarea
               id="postContent"
               name="postContent"
-              placeholder="Write something tasty"
+              placeholder="Write something tasty..."
               required
             ></textarea>
+            <label for="imgUrl">Image URL</label>
+            <input type="url" placeholder="URL for your image" name="imgUrl" id="imgUrl">
             <button id="postbtn" type="button">Post</button>
           </form>
         </section>
         <section id="postedContent"></section>
       </div>
     </main>
-    <script src="js/nav.js" defer></script>
+    <script type="module" src="js/nav.js" defer></script>
     <script type="module" src="js/post.js" defer></script>
   </body>
 </html>

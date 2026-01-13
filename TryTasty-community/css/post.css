@@ -31,6 +31,7 @@
 }
 .postContainer.clicked {
   overflow-y: auto;
+  max-height: auto;
 }
 .postHeader {
   display: flex;
@@ -55,6 +56,7 @@
 /* width */
 .postContainer::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */
@@ -72,6 +74,13 @@
 /* Handle hover */
 .postContainer::-webkit-scrollbar-thumb:hover {
   background: #e0bf00; /* darker yellow, still consistent */
+}
+.post img {
+  max-width: 100%;
+  width: auto;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: var(--radius);
 }
 .seeMore {
   width: fit-content;

@@ -27,7 +27,7 @@ const navLinks = [
   { text: "Home", href: "../index.html", class: "toastNavLink" },
   { text: "Favorites", href: "favs.html", class: "toastNavLink" },
   { text: "Videos", href: "videos.html", class: "toastNavLink" },
-  { text: "Community", href: "../TryTasty-community/original.html" },
+  { text: "Community", href: "../TryTasty-community/community.html" },
   { text: "Submit", href: "submit.html" },
   { text: "Privacy Policy", href: "privacyGerman.html" },
 ];
@@ -146,7 +146,7 @@ bottomNavContainer.innerHTML = `
 </a>
 
 
-<a href="../TryTasty-community/original.html" aria-label="Community">
+<a href="../TryTasty-community/community.html" aria-label="Community">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
     <path d="M320-540q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32Zm320 0q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32ZM200-200v-104q0-34 17.5-61.5T264-408q45-23 90.5-33.5T440-452q-19 14-32 36.5T395-360v160H200Zm365 0v-160q0-29-13-51.5T520-452q55 1 100.5 11.5T711-408q29 15 46 42.5t17 61.5v104H565Z"/>
   </svg>

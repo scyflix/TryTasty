@@ -128,7 +128,7 @@ header {
 }
 
 header a h1:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 header a h1 {
   color: var(--header-color);
@@ -309,6 +309,10 @@ a.page-nav:hover {
 @media (max-width: 800px) {
   header {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 50px;
     width: 100%;
   }
   main {
