@@ -1,13 +1,13 @@
 #sidebar {
   --sidebar-bg: #1e1e1e;
   --color: #f5f5dc;
-  --cancel-icon-bg: #161616;
+  --icon-color: #161616;
   --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
   --link-border: yellow;
 }
 body.lightMode #sidebar {
-  --sidebar-bg: beige;
   --color: #161616;
+  --sidebar-bg: beige;
   --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   --link-border: orange;
 }
@@ -79,7 +79,7 @@ opacity: 0.8;
 transform: translateY(-1px);
 }
 .menu-icon span {
-  background: var(--color);
+  background: var(--icon-color);
   width: 100%;
   height: 0.2rem;
   display: block;

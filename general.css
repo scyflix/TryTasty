@@ -14,7 +14,7 @@
   --font-size: 1rem;
   --radius: 8px;
   --header-bg: #ffa500;
-  --header-color: #ececec;
+  --header-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgb(0, 0, 0);
   --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
   --infoNote-bg: #fff3cd;
@@ -30,7 +30,6 @@ body.lightMode {
   --main-bg: #fffdfa;
   --color: #333;
   --header-bg: #ffd9a0;
-  --header-color: #0d0d0d;
   --icon-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
   --preloader-bg: linear-gradient(135deg, #807d7d, #f5f5dc);
