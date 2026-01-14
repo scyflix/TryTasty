@@ -5,6 +5,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --link-color: #ff7300;
+  --link-color-hover: #f59f1d;
+  --btn-bg: #ff6a00;
+  --bg: #464545;
+  --main-bg: #1e1e1e;
+  --color: #ffffff;
+  --padding: 10px;
+  --font-size: 1rem;
+  --radius: 8px;
+  --header-bg: #ffa500;
+  --header-color: #0d0d0d;
+  --shadow: 0 2px 30px 2px rgb(0, 0, 0);
+  --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+  --infoNote-bg: #fff3cd;
+  --infoNote-color: #ff4500;
+  --filter: blur(11px) ;
+  --active-color: #ffff00;
+  --icon-color: #ffffff;
+  --toast-color-success: green;
+  --toast-color-error: #ff4500;
+}
+body.lightMode {
+  --main-bg: #fffdfa;
+  --color: #333;
+  --filter: blur(20px) brightness(90%);
+  --active-color: #ff4500;
+}
+
 html,
 body {
   height: 100%;
@@ -14,7 +43,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  background: #5e5e5e;
+  background: url("https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
   text-align: center;
 }
@@ -26,7 +57,7 @@ main {
   margin: 80px auto;
   padding: 30px 20px;
   border-radius: 15px;
-  background: #1e1e1e;
+  backdrop-filter: var(--filter);
   color: white;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
   animation: pulse 5s infinite, slideup 1.2s ease;
@@ -69,12 +100,14 @@ button:hover {
 
 /* Footer */
 footer {
-  margin-top: auto;
-  background: #000;
-  padding: 30px 0;
-  color: #ddd;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-top: 30px;
+  color: var(--color);
+  box-shadow: var(--shadow);
+  background-color: var(--main-bg);
+  border-radius: 14px;
+  height: auto;
+  width: auto;
 }
 
 #logo {
@@ -100,7 +133,7 @@ footer h5 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 12px;
   margin-top: 15px;
 }
 
