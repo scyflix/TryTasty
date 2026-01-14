@@ -71,6 +71,18 @@ body {
   z-index: 9999;
   transition: all 0.5s ease;
 }
+#preloader h1 {
+  animation: slideIn 4s ease;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 header {
   display: flex;
   background: var(--header-bg);
@@ -83,10 +95,13 @@ header {
   height: 50px;
   max-height: 95px;
 }
+header h1 {
+  color: var(--header-color);
+}
 h1 {
   margin: 3px 10px 2px 5px;
   font-size: 25px;
-  color: var(--header-color);
+  color: var(--color);
 }
 /*MAIN ELEMENT*/
 main {
@@ -168,17 +183,6 @@ main {
   }
   to {
     transform: translateX(200px);
-  }
-}
-#preloader h1 {
-  animation: slideIn 4s ease;
-}
-@keyframes slideIn {
-  from {
-    transform: translateX(-100px);
-  }
-  to {
-    transform: translateX(0);
   }
 }
 /*SLIDEUP AND FADEIN ANIMATION FOR MAIN ELEMENT*/
