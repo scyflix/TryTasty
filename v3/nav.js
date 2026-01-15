@@ -2,11 +2,11 @@
 
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
-const sidebarContainer = document.querySelector(".sidebarContainer");
+const overlay = document.querySelector(".overlay");
 
 function sidebarfunc() {
   sidebar.classList.toggle("show");
-  sidebarContainer.classList.toggle("appear");
+  overlay.classList.toggle("appear");
   document.body.classList.toggle("lockScroll");
 }
 function setupMenuIcons() {
@@ -17,7 +17,7 @@ function setupMenuIcons() {
     });
   });
 
-  sidebarContainer.addEventListener("click", () => {
+  overlay.addEventListener("click", () => {
     sidebarfunc();
   });
 }
