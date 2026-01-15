@@ -179,6 +179,11 @@ nav.page {
   margin-bottom: 30px;
   font-weight: bold;
 }
+h2.available {
+  color: var(--color);
+  padding: 62px 0 22px 0;
+  font-size: clamp(2rem, 2rem, 2.5rem);
+}
 .snackImage {
   text-align: center;
   text-decoration: none;
