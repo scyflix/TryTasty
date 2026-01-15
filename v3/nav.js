@@ -25,6 +25,7 @@ function setupMenuIcons() {
 //Create Sidebar links in an array
 const navLinks = [
   { text: "Home", href: "../index.html", class: "toastNavLink" },
+  { text: "Recipes", href: "../index.html#recipeList" },
   { text: "Favorites", href: "favs.html", class: "toastNavLink" },
   { text: "Videos", href: "videos.html", class: "toastNavLink" },
   { text: "Community", href: "../TryTasty-community/community.html" },
