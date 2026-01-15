@@ -74,6 +74,9 @@ body.lightMode #sidebar {
   margin: 10px 10px 10px 0;
   cursor: pointer;
 }
+.menu-icon:focus {
+  background: #1e1e1e;
+}
 .menu-icon:hover {
 opacity: 0.8;
 transform: translateY(-1px);
@@ -106,7 +109,7 @@ span {
 .page-nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   width: 100%;
 }
 
@@ -136,7 +139,7 @@ span {
   margin-top: auto;
 }
 
-.sidebarContainer {
+.overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100vw;
@@ -145,6 +148,6 @@ span {
   padding: 0;
   display: none;
 }
-.sidebarContainer.appear {
+.overlay.appear {
   display: block;
 }
