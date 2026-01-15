@@ -20,6 +20,7 @@
   --infoNote-bg: #fff3cd;
   --infoNote-color: #ff4500;
   --filter: blur(60px) brightness(60%);
+  --bottomNav-color: #1e1e1e;
   --active-color: #ffff00;
   --icon-color: #ffffff;
   --toast-color-success: green;
@@ -36,6 +37,7 @@ body.lightMode {
   --infoNote-bg: #ff4500;
   --infoNote-color: #fff3cd;
   --filter: blur(20px) brightness(90%);
+    --bottomNav-color: #e3e3e3;
   --active-color: #ff4500;
 }
 
@@ -274,7 +276,7 @@ footer {
     height: 100%;
     padding: 20px calc(var(--padding) * 2);
     flex-wrap: wrap;
-    backdrop-filter: var(--filter);
+    background-color: var(--bottomNav-color);
     border-radius: var(--radius) var(--radius) 0 0;
   }
   #bottomNavContainer a {
