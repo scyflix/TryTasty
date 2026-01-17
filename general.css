@@ -298,6 +298,7 @@ footer {
 
   #bottomNavContainer a:hover {
     opacity: 0.8;
+    border-top: 1px solid;
     text-decoration: none;
     transform: translateY(-1px);
   }
