@@ -4,8 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --link-color: #ff7300;
-  --link-color-hover: #f59f1d;
+  --link-color: #f59f1d;
+  --link-color-hover: #ff7300;
   --btn-bg: #ff6a00;
   --bg: #464545;
   --main-bg: #1e1e1e;
@@ -199,6 +199,7 @@ main {
   }
 }
 a {
+  transition: 0.4s;
   text-decoration: none;
   color: var(--link-color);
 }

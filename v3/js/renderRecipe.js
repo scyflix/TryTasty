@@ -76,8 +76,8 @@ fetch("data/recipes.json")
                   <p>${recipe.description}</p>
                   <section class="flexRecipeContent">
                   <img loading="lazy" src="${recipe.image}" alt="${
-      recipe.title
-    }" loading="lazy" />
+                    recipe.title
+                  }" loading="lazy" />
                   <div class="recipeTexts">
                   <section>
                   <h3>Ingredients</h3>
@@ -101,6 +101,7 @@ fetch("data/recipes.json")
                 </button>
                 </div>
                 </section>
+                <p class="alsoLike">You might also like <a href="recipe.html?id=${recipe.innerLink[0].link}">${recipe.innerLink[0].name}</a></p>
                 </article>
           `;
 
