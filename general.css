@@ -439,3 +439,7 @@ backdrop-filter: blur(10px);
   color: var(--color);
     text-decoration: none;
 }
+
+ .show {
+  display: block;
+}

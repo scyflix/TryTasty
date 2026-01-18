@@ -18,7 +18,7 @@ const videosPage = document.getElementById("videosPage");
 const userName = document.getElementById("userName");
 const Useremail = document.getElementById("Useremail");
 const loginLink = document.getElementById("loginLink");
-const googleBtn = document.querySelectorAll(".google-btn");
+const googleBtn = document.querySelector(".google-btn");
 const infoNoteLogin = document.querySelector(".infoNoteLogin");
 
 //Authstatechanged(loggedin)
@@ -63,10 +63,8 @@ onUserAuthChange((user) => {
   }
 });
 
-googleBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
+googleBtn.addEventListener("click", () => {
     googleLogin();
-  });
 });
 
 if (signupBtn) {

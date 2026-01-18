@@ -1,25 +1,33 @@
 /* Popup Overlay */
 #popup {
-  position: fixed;
-  inset: 0;
   background: rgba(0, 0, 0, 0.65);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
+ display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100dvh;
+position: fixed;
+z-index: 2222;
+top: 0;
+left: 0;
+backdrop-filter: blur(10px);
 }
 
 /* Popup Box */
 #popup-content {
-  background: #3b3b3b;
-  padding: 28px;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 14px;
+  color: var(--color);
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--main-bg);
+  border: 2px solid var(--btn-bg);
+  backdrop-filter: blur(100px) brightness(60%);
+    max-width: 400px;
   text-align: center;
   animation: fadeIn 0.25s ease;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
-  color: #fff;
 }
 .infoText {
   opacity: 0.5;
