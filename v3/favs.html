@@ -35,37 +35,12 @@
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="../general.css" />
     <link rel="stylesheet" href="form.css" />
-
+<link rel="stylesheet" href="favs.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
-    <style>
-      main {
-        margin-top: 20px;
-        min-width: 80%;
-      }
-      .fav-link {
-        display: flex;
-        justify-content: center;
-      }
-      .fav-link a {
-        margin-right: 20px;
-        color: white;
-      }
-      #body a {
-        transition: all 0.6s ease;
-        margin: 5px;
-        text-decoration: underline;
-      }
-      #body a:hover {
-        opacity: 0.8;
-      }
-      #body a:hover::before {
-        content: "🧑🏽‍🍳Cook";
-        margin-right: 9px;
-      }
-    </style>
+    
   </head>
 
   <body>
@@ -121,6 +96,8 @@
     <script type="module" src="main.js" defer></script>
     <script src="../recipe.js" defer></script>
     <script type="module" src="../fav.js" defer></script>
-    <script src="nav.js"></script>
+    <script src="nav.js" defer></script>
+        <script type="module" src="../pageProtect.js"></script>
+
   </body>
 </html>

@@ -40,6 +40,7 @@ welcomeText &&
 
 //authstatechanged(loggedout)
 function loggedout() {
+  
   logoutBtn && (logoutBtn.style.display = "none");
   Useremail && (Useremail.innerText = "Login first");
   userName && (userName.innerText = "username");
