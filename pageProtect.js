@@ -12,7 +12,9 @@ function notLoggedInModal() {
 `
 const main = document.querySelector("main")
 
-main.appendChild(div)
+setTimeout(() => {
+  main.appendChild(div)
+}, 1000);
 }
 
 // Listen for auth state changes

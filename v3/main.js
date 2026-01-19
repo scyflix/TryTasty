@@ -10,11 +10,8 @@ const logoutBtn = document.getElementById("logoutBtn");
 export const welcomeText = document.getElementById("welcomeText");
 const popup = document.getElementById("popup");
 const loginInputForm = document.getElementById("loginInputForm");
-const nonUserMessage = document.getElementById("non-userMessage");
-const recipeForm = document.getElementById("recipeSubmissionForm");
 const loginBtn = document.getElementById("loginBtn");
 const signupBtn = document.getElementById("signupBtn");
-const videosPage = document.getElementById("videosPage");
 const userName = document.getElementById("userName");
 const Useremail = document.getElementById("Useremail");
 const loginLink = document.getElementById("loginLink");
@@ -30,12 +27,9 @@ welcomeText &&
   userName &&
     (userName.textContent = user.displayName.slice(0, 5) + "..." || "Profile");
   logoutBtn && (logoutBtn.style.display = "block");
-  loginLink && (loginLink.style.display = "none");
+  loginLink && (loginLink.style.display = "block");
   popup && (popup.style.display = "none");
   loginInputForm && (loginInputForm.style.display = "none");
-  nonUserMessage && (nonUserMessage.style.display = "none");
-  recipeForm && (recipeForm.style.display = "block");
-  videosPage && (videosPage.style.display = "block");
 }
 
 //authstatechanged(loggedout)
@@ -46,12 +40,9 @@ function loggedout() {
   userName && (userName.innerText = "username");
   loginLink && (loginLink.innerText = "Login");
   loginLink && (loginLink.style.display = "block");
-  popup && (popup.style.display = "block");
-  nonUserMessage && (nonUserMessage.style.display = "block");
-  recipeForm && (recipeForm.style.display = "none");
+  popup && (popup.style.display = "flex");
   welcomeText && (welcomeText.innerText = "");
   loginInputForm && (loginInputForm.style.display = "block");
-  videosPage && (videosPage.style.display = "none");
 }
 
 // Listen for auth state changes

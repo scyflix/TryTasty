@@ -93,7 +93,6 @@ button:focus {
 #loginLink {
   color: #1d1d1d;
   flex: 1;
-  display: none;
   border: none;
   margin-left: 30px;
   background: #ff6b6b;

@@ -270,7 +270,7 @@ footer {
     display: flex;
     margin: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 8888;
     bottom: -1px;
     align-items: center;
     justify-content: space-between;
@@ -440,6 +440,3 @@ backdrop-filter: blur(10px);
     text-decoration: none;
 }
 
- .show {
-  display: block;
-}

@@ -46,3 +46,8 @@ main {
   flex-wrap: wrap;
   border-radius: 8px;
 }
+
+
+.show {
+  display: block;
+}

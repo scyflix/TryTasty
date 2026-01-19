@@ -1,4 +1,5 @@
 
+
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
 const overlay = document.querySelector(".overlay");
@@ -21,27 +22,16 @@ function setupMenuIcons() {
   });
 }
 
-const botLink = document.querySelector(".botLink");
-const popularSection = document.querySelector(".popular-section");
-const faq = document.querySelector(".faq");
-
-if (botLink) {
-  botLink.addEventListener("click", () => {
-    sidebarfunc();
-    faq.classList.toggle("hide");
-    popularSection.classList.toggle("hide");
-  });
-}
 //Create Sidebar links in an array
 const navLinks = [
-  { text: "Home", href: "index.html", class: "toastNavLink" },
-  { text: "Recipes", href: "#recipeList", class: "recipeSection" },
-  { text: "Favorites", href: "v3/favs.html", class: "toastNavLink" },
-  { text: "Videos", href: "v3/videos.html", class: "toastNavLink" },
-  { text: "Submit", href: "v3/submit.html" },
+  { text: "Home", href: "../../index.html", class: "toastNavLink" },
+  { text: "Recipes", href: "../../index.html#recipeList" },
+  { text: "Favorites", href: "../favs.html", class: "toastNavLink" },
+  { text: "Videos", href: "../videos.html", class: "toastNavLink" },
   { text: "Community", href: "../TryTasty-community/community.html" },
-  { text: "Privacy Policy", href: "v3/doc/privacyGerman.html" },
-  { text: "About TryTasty", href: "v3/doc/about.html" },
+  { text: "Submit", href: "../submit.html" },
+  { text: "Privacy Policy", href: "privacyGerman.html" },
+  { text: "About TryTasty", href: "about.html" },
 ];
 
 //Loop through each link and create a new one for each link
@@ -52,15 +42,11 @@ navLinks.forEach((link) => {
   //add content to the created element
   a.textContent = link.text;
   a.href = link.href;
-  a.classList = link.class;
+  a.className = link.class;
 
   //append all created elements into sidebar
   sidebar.appendChild(a);
 });
-
-document.querySelector(".recipeSection").addEventListener("click", () => {
-  sidebarfunc()
-})
 
 //Version number
 const paragraph = document.createElement("p");
@@ -69,7 +55,7 @@ sidebar.appendChild(paragraph);
 
 const upperNavContainer = document.querySelector(".upperNavContainer");
 if (upperNavContainer) {
-  upperNavContainer.innerHTML = `<a href="v3/userProfile.html" class="userProfileLink">
+  upperNavContainer.innerHTML = ` <a href="../userProfile.html" class="userProfileLink">
            <svg
            class="profileImg"
           xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +67,7 @@ if (upperNavContainer) {
             d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
           />
         </svg>
-            <span id="userName"></span>
+            <span id="userName">username</span>
           </a>
           <div class="menu-icon">
             <svg
@@ -97,15 +83,13 @@ if (upperNavContainer) {
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-          </div>
-              `;
+          </div>`;
   setupMenuIcons();
 }
 
 const bottomNavContainer = document.getElementById("bottomNavContainer");
-
 bottomNavContainer.innerHTML = `
- <a href="index.html" aria-label="Home">
+ <a href="../../index.html" aria-label="Home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
@@ -120,7 +104,7 @@ bottomNavContainer.innerHTML = `
 
       </a>
 
-      <a href="v3/favs.html" aria-label="Favorites">
+      <a href="../favs.html" aria-label="Favorites">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
@@ -135,7 +119,7 @@ bottomNavContainer.innerHTML = `
 
       </a>
 
-      <a href="v3/videos.html" aria-label="Videos">
+      <a href="../videos.html" aria-label="Videos">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
@@ -150,7 +134,7 @@ bottomNavContainer.innerHTML = `
 
       </a>
       
-      <a href="v3/userProfile.html" aria-label="Profile">
+      <a href="../userProfile.html" aria-label="Profile">
     <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 -960 960 960"
@@ -165,7 +149,7 @@ bottomNavContainer.innerHTML = `
 </a>
 
 
-<a href="TryTasty-community/community.html" aria-label="Community">
+<a href="../../TryTasty-community/community.html" aria-label="Community">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
     <path d="M320-540q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32Zm320 0q-46 0-78-32t-32-78q0-46 32-78t78-32q46 0 78 32t32 78q0 46-32 78t-78 32ZM200-200v-104q0-34 17.5-61.5T264-408q45-23 90.5-33.5T440-452q-19 14-32 36.5T395-360v160H200Zm365 0v-160q0-29-13-51.5T520-452q55 1 100.5 11.5T711-408q29 15 46 42.5t17 61.5v104H565Z"/>
   </svg>
