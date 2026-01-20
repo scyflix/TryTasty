@@ -27,7 +27,7 @@ welcomeText &&
   userName &&
     (userName.textContent = user.displayName.slice(0, 5) + "..." || "Profile");
   logoutBtn && (logoutBtn.style.display = "block");
-  loginLink && (loginLink.style.display = "block");
+  loginLink && (loginLink.style.display = "none");
   popup && (popup.style.display = "none");
   loginInputForm && (loginInputForm.style.display = "none");
 }

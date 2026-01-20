@@ -193,7 +193,9 @@ h2.available {
   height: 170px;
   overflow: hidden;
   background-color: var(--snackImg-bg);
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 0 8px rgba(119, 116, 116, 0.362);
 }
 .snackImage img {

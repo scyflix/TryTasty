@@ -62,7 +62,7 @@
         padding-bottom: 5px;
       }
       .sectionHeader {
-            color: var(--color);
+        color: var(--color);
         font-size: 2rem;
         text-align: center;
         padding-top: 32px;
@@ -85,13 +85,38 @@
           display: flex;
           justify-content: space-around;
           align-items: center;
-      }
-}
-      article ul {
-            display: block;
-            line-height: 2;
         }
-       
+      }
+      article ul {
+        display: block;
+        line-height: 2;
+      }
+      .timeStamp {
+        margin: 0;
+        padding: 0;
+        opacity: 0.5;
+      }
+      .timeStamp:before {
+        content: "→";
+        font-size: 1.5rem;
+        margin-right: 12px;
+      }
+      h3 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      main h1 {
+        text-align: center;
+      }
+      main h1 a {
+        background: linear-gradient(90deg, orange, orangered);
+        background-clip: text;
+        color: transparent;
+      }
+      .supportLink {
+        background: black;
+        padding: 6px 4px;
+      }
     </style>
 
     <script type="application/ld+json">
@@ -166,57 +191,181 @@
     <main>
       <!-- TABLE OF CONTENTS -->
       <section id="table-of-contents">
-        <h1>About Trytasty</h1>
+        <h1>
+          About <a target="_blank" href="https://trytasty.de">TryTasty.de</a>
+        </h1>
         <ul>
           <li><a href="#introduction">Introduction</a></li>
           <li><a href="#story">Story</a></li>
           <li><a href="#versionUpdates">Version Updates</a></li>
-          <li><a href="#terms-of-use">Nutzungsbedingungen</a></li>
+          <li><a href="#donation">Support Us</a></li>
         </ul>
       </section>
       <article>
-            <!--Introduction-->
+        <!--Introduction-->
         <section id="introduction">
           <h2>Introduction</h2>
           <p>
-            TryTasty is a food service brand that offers unique and simplified
-            recipes, providing a tasty and happy feeling.With recipes from
-            different parts of the world, we are giving our users the
-            opportunity to experience a cheap but luxurious experience.
+            <a target="_blank" href="https://trytasty.de"> TryTasty</a> is a
+            food service brand that offers unique and simplified recipes,
+            providing a tasty and happy feeling.With recipes from different
+            parts of the world, we are giving our users the opportunity to
+            experience a cheap but luxurious experience.
           </p>
         </section>
         <!--Story-->
         <section id="story">
           <h2>Story</h2>
           <p>
-            TryTasty was first creaated as a learning project to practice basic
-            HTML and learnt at the time. With time, TryTasty has been evolving
-            from what it used to be. It all started with the first deployment on
-            <b>June 17, 2025</b>, which featured a simple homepage with just a few
-            recipes. The layout and design were basic. No responsiveness, only
-            the foundational HTML and CSS I had learned at that time. Since
+            <a target="_blank" href="https://trytasty.de">TryTasty.de</a> was
+            first creaated as a learning project to practice basic HTML and
+            learnt at the time. With time, TryTasty has been evolving from what
+            it used to be. It all started with the first deployment on
+            <b>June 17, 2025</b>, which featured a simple homepage with just a
+            few recipes. The layout and design were basic. No responsiveness,
+            only the foundational HTML and CSS I had learned at that time. Since
             then, I’ve continuously updated and improved it with everything new
             I’ve learned. This project has taught me a lot and remains one I
             actively develop and maintain.
           </p>
         </section>
-<!--Version updates-->
-<section id="versionUpdates">
-      <h2>Version Updates</h2>
-      <p>Below is are lists and descriptions of updates made to TryTasty.</p>
+        <!--Version updates-->
+        <section id="versionUpdates">
+          <h2>Version Updates</h2>
+          <p>
+            Below is are lists and descriptions of updates made to TryTasty.
+          </p>
 
-      <h3>Version: 1.0.0(Initial Release)</h3>
-      <p class="timeStamp">11.08.2025</p>
-<ul>
-      <li><b>Colour Change:</b> Updated from white and orange to beige, orange and orangered.</li>
-      <li><b>Login/Signup System:</b> Added login functionality to prepare for future expansion and user personalization.</li>
-      <li><b>Videos Page:</b> Introduced a new page for users to watch our food videos directly on the site.</li>
-      <li><b>Header Layout Update:</b> Changed the navigation layout from a column with a logo to a row-based design, removing the logo to make room for additional links like Login.</li>
-      <li><b>Page Access Restrictions:</b> Limited access to certain pages (e.g., Recipe Submission and Videos) to logged-in users only.</li>
-      <li><b>User Experience (UX) Improvements:</b> Enhanced SEO and accessibility for better usability and user comfort.</li>
-</ul>
-<p>These changes helped improve the overall user experience and gave TryTasty a more structured direction.</p>
-</section>
+          <h3>Version: 1.0.0(Initial Release)</h3>
+          <p class="timeStamp">11.08.2025</p>
+          <p>
+            URL:
+            <a href="https://trytasty.de/v1/" target="_blank">TryTasty V1</a>
+          </p>
+          <ul>
+            <li>
+              <b>Colour Change:</b> Updated from white and orange to beige,
+              orange and orangered.
+            </li>
+            <li>
+              <b>Login/Signup System:</b> Added login functionality to prepare
+              for future expansion and user personalization.
+            </li>
+            <li>
+              <b>Videos Page:</b> Introduced a new page for users to watch our
+              food videos directly on the site.
+            </li>
+            <li>
+              <b>Header Layout Update:</b> Changed the navigation layout from a
+              column with a logo to a row-based design, removing the logo to
+              make room for additional links like Login.
+            </li>
+            <li>
+              <b>Page Access Restrictions:</b> Limited access to certain pages
+              (e.g., Recipe Submission and Videos) to logged-in users only.
+            </li>
+            <li>
+              <b>User Experience (UX) Improvements:</b> Enhanced SEO and
+              accessibility for better usability and user comfort.
+            </li>
+          </ul>
+          <p>
+            These changes helped improve the overall user experience and gave
+            TryTasty a more structured direction.
+          </p>
+
+          <h3>Version 2.0.0</h3>
+          <p class="timeStamp">05.09.2025</p>
+          <p>
+            URL:
+            <a href="https://trytasty.de/v2/" target="_blank">TryTasty V2</a>
+          </p>
+
+          <ul>
+            <li>
+              <b>Default Theme Update:</b> Updated from beige, orange and
+              redorange to a radial gradient of yellow and orange.
+            </li>
+            <li>
+              <b>Basic Bot:</b> Introduced a recipe search bot to help users
+              find recipes easily.
+            </li>
+            <li>
+              <b>Improved Performance:</b> Optimised image by coverting them to
+              AVIF, icreasing site loading speed.
+            </li>
+            <li>
+              <b>Sidebar:</b> Moved navigation links from header to the sidebar
+              due to increase in links, for easier navigation between pages.
+            </li>
+            <li>
+              <b>Favorites Feature:</b> Itroduced an "Add to favorites" option
+              for users to save recipes for later. Saved recipes can be found in
+              <a href="http://trytasty.de/v3/favs.html" target="_blank"
+                >the favorites Page</a
+              >.
+            </li>
+            <li>
+              <b>Legal Page:</b> Added essential legal documents, including
+              <a
+                href="http://127.0.0.1:5500/v3/doc/privacyGerman.html#impressum"
+                >Imprint</a
+              >
+              and
+              <a
+                href="http://127.0.0.1:5500/v3/doc/privacyGerman.html#datenschutz"
+                >Privacy Policy</a
+              >.
+            </li>
+          </ul>
+          <p>
+            These changes shows that TryTasty is moving towards a professional
+            web app that cares for its users and hope to give users a good
+            experience.
+          </p>
+
+          <h3>Version 3.0.0(Current version)</h3>
+          <p class="timeStamp">28.12.2025</p>
+          <p>
+            URL: <a href="https://trytasty.de/" target="_blank">TryTasty V3</a>
+          </p>
+          <ul>
+            <li>
+              <b>Profiles page:</b>Introduced the profiles page where users can
+              see the name, email they logged in with, number of recipes they
+              saved(favorites) and number of recipesthey have submited through
+              <a href="https://trytasty.de/v3/submit.html">the submite page</a>.
+            </li>
+            <li>
+              <b>Unique recipe URl:</b> Gave each recipe a unique URL for easy
+              recipe sharing.
+            </li>
+            <li>
+              <b>Toast Navigation:</b> Added a toast navigation for mobile to
+              give the platform an App-like feel for good user experience.
+            </li>
+            <li>
+              <b>Light and Dark mode:</b> Added light and dark mode
+              functionality, giving users the ability to switch interface with
+              the click of a button.
+            </li>
+            <li>
+              <b>About page:</b> Added an about page to make user learn more
+              about TryTasty and build trust.
+            </li>
+          </ul>
+          <p>
+            All these updates show that TryTasty is no longer just a learning
+            project, it’s becoming a food service industry startup that
+            continues to grow into something revolutionary.
+          </p>
+          <p>For more information or a possiblity of collaboration, contact us at <a href="mailto:scybudtech@gmail.com">scybudtech@gmail.com</a></p>
+        </section>
+
+        <section id="donation">
+          <h2>Support Us</h2>
+          <p>A little support goes a long way! If you’d like to help us keep creating, you can do so at <a class="supportLink" href="https://ko-fi.com/scybud" target="_blank">https://ko-fi.com/scybud</a> </p>
+        </section>
       </article>
 
       <p class="infoNote">Created on: June 17, 2025</p>
