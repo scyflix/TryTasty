@@ -1,27 +1,13 @@
-body.lightMode main nav {
-  --snackImg-color: #333;
+body main nav {
+    --snackImg-color: #333;
   --snackImg-bg: #feebbb;
+
 }
-body.lightMode main {
-  --popular-bg: #ffffff;
-  --popular-border: rgba(0, 0, 0, 0.08);
-  --popular-shadow: rgba(0, 0, 0, 0.08);
-
-  --popular-heading: #e65100;
-  --popular-text: #000000;
-
-  --popular-divider: rgba(0, 0, 0, 0.1);
-
-  --popular-link-hover: #171717b9;
-  --popular-link: #e65100;
-
-  --faq-bg: #ffffff;
-  --faq-border: #e6e6e6;
-  --faq-hover: #e8e8e8;
-  --faq-summary-text: #222222;
-  --faq-answer-text: #555555;
+body.darkMode main nav {
+  --snackImg-color: #f1f1f1;
+  --snackImg-bg: #141414;
 }
-body main {
+body.darkMode main {
   --popular-bg: #121212;
   --popular-border: rgba(255, 255, 255, 0.05);
   --popular-shadow: rgba(0, 0, 0, 0.35);
@@ -39,10 +25,26 @@ body main {
   --faq-hover: #000000;
   --faq-summary-text: #ffffff;
   --faq-answer-text: #cfcfcf;
+
 }
-body main nav {
-  --snackImg-color: #f1f1f1;
-  --snackImg-bg: #141414;
+body main {
+  --popular-bg: #ffffff;
+  --popular-border: rgba(0, 0, 0, 0.08);
+  --popular-shadow: rgba(0, 0, 0, 0.08);
+
+  --popular-heading: #e65100;
+  --popular-text: #000000;
+
+  --popular-divider: rgba(0, 0, 0, 0.1);
+
+  --popular-link-hover: #171717b9;
+  --popular-link: #e65100;
+
+  --faq-bg: #ffffff;
+  --faq-border: #e6e6e6;
+  --faq-hover: #e8e8e8;
+  --faq-summary-text: #222222;
+  --faq-answer-text: #555555;
 }
 
 .popular-section {

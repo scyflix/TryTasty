@@ -56,9 +56,9 @@ function darkMode() {
   isDark = !isDark;
 
   // Apply UI
-  body.classList.toggle("lightMode", !isDark);
+  body.classList.toggle("darkMode", !isDark);
   if (darkModeBtn) {
-    darkModeBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
+    darkModeBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
   }
 
   // Save
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isDark = localStorage.getItem("darkMode") === "true";
 
-  body.classList.toggle("lightMode", !isDark);
+  body.classList.toggle("darkMode", !isDark);
   if (darkModeBtn) {
-    darkModeBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
+    darkModeBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
   }
 });
 

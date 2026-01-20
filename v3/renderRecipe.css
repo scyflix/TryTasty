@@ -1,9 +1,10 @@
 body .meta span {
-  --border-color: #ffa500;
+    --border-color: #ff4500;
+
 }
 
-body.lightMode .meta span {
-  --border-color: #ff4500;
+body.darkMode .meta span {
+  --border-color: #ffa500;
 }
 .meta {
   display: flex;

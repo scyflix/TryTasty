@@ -4,29 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --link-color: #f59f1d;
-  --link-color-hover: #ff7300;
-  --btn-bg: #ff6a00;
-  --bg: #464545;
-  --main-bg: #1e1e1e;
-  --color: #ffffff;
-  --padding: 10px;
-  --font-size: 1rem;
-  --radius: 8px;
-  --header-bg: #ffa500;
-  --header-color: #0d0d0d;
-  --shadow: 0 2px 30px 2px rgb(0, 0, 0);
-  --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
-  --infoNote-bg: #fff3cd;
-  --infoNote-color: #ff4500;
-  --filter: blur(60px) brightness(60%);
-  --bottomNav-color: #1e1e1e;
-  --active-color: #ffff00;
-  --icon-color: #ffffff;
-  --toast-color-success: green;
-  --toast-color-error: #ff4500;
-}
-body.lightMode {
   --bg: #ebe9e5e8;
   --main-bg: #fffdfa;
   --color: #333;
@@ -39,6 +16,31 @@ body.lightMode {
   --filter: blur(20px) brightness(90%);
     --bottomNav-color: #e3e3e3;
   --active-color: #ff4500;
+  --padding: 10px;
+  --font-size: 1rem;
+  --radius: 8px;
+  --btn-bg: #ff6a00;
+    --link-color: #ff7300;
+  --link-color-hover: #f59f1d;
+}
+body.darkMode {
+  --link-color: #f59f1d;
+  --link-color-hover: #ff7300;
+  --bg: #464545;
+  --main-bg: #1e1e1e;
+  --color: #ffffff;
+  --header-bg: #ffa500;
+  --header-color: #0d0d0d;
+  --shadow: 0 2px 30px 2px rgb(0, 0, 0);
+  --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+  --infoNote-bg: #fff3cd;
+  --infoNote-color: #ff4500;
+  --filter: blur(60px) brightness(60%);
+  --bottomNav-color: #1e1e1e;
+  --active-color: #ffff00;
+  --icon-color: #ffffff;
+  --toast-color-success: green;
+  --toast-color-error: #ff4500;
 }
 
 html,

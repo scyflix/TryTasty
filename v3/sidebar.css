@@ -1,15 +1,17 @@
 #sidebar {
-  --sidebar-bg: #1e1e1e;
-  --color: #f5f5dc;
-  --icon-color: #161616;
-  --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  --link-border: yellow;
-}
-body.lightMode #sidebar {
   --color: #161616;
   --sidebar-bg: beige;
   --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   --link-border: orange;
+
+
+}
+body.darkMode #sidebar {
+    --sidebar-bg: #1e1e1e;
+  --color: #f5f5dc;
+  --icon-color: #161616;
+  --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  --link-border: yellow;
 }
 .lockScroll {
   overflow: hidden;
@@ -119,7 +121,7 @@ span {
   border-radius: 10px;
   transition: all 0.4s ease;
   color: var(--span);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   background: linear-gradient(#5656564b 0 0) left/0 100% no-repeat;
 }
