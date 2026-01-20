@@ -1,15 +1,16 @@
 
-body.lightMode form{
+body.darkMode form{
     --form-bg: #f5f5f5;
   --input-textarea-bg: #ffffff;
   --input-textarea-color: #1a1a1a;
   --input-textarea-border: #cfcfcf;
   --btn-bg: #ff6a00;
-  --link: #1a1a1a;
+    --link: #ff4500;
 
 }
 /* Form */
 .auth-form {
+  --link: #1a1a1a;
   --form-bg: #272727;
   --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;

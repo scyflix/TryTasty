@@ -17,6 +17,8 @@ const Useremail = document.getElementById("Useremail");
 const loginLink = document.getElementById("loginLink");
 const googleBtn = document.querySelectorAll(".google-btn");
 const infoNoteLogin = document.querySelector(".infoNoteLogin");
+const buttons = document.querySelectorAll("button")
+
 
 //Authstatechanged(loggedin)
  function loggedIn(user) {
@@ -63,7 +65,11 @@ googleBtn.forEach((btn) => {
 if (signupBtn) {
   // Signup
   signupBtn.addEventListener("click", async () => {
-    signupBtn.classList.add("disable");
+    if (buttons) {
+      buttons.forEach((btn) => {
+        btn.classList.add("disable");
+      });
+    }
     const userNameInputValue = document.getElementById("userNameInput").value;
     const email = document.getElementById("emailForSignup").value;
     const password = document.getElementById("passwordForSignup").value;
@@ -73,19 +79,31 @@ if (signupBtn) {
     const infoNoteSignup = document.querySelector(".infoNoteSignup");
 
     if (!userNameInputValue || !password || !confirmPassword) {
-      signupBtn.classList.remove("disable");
+      if (buttons) {
+        buttons.forEach((btn) => {
+          btn.classList.remove("disable");
+        });
+      }
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Please fill all forms.";
       return;
     }
     if (!email.includes("@")) {
-      signupBtn.classList.remove("disable");
+      if (buttons) {
+        buttons.forEach((btn) => {
+          btn.classList.remove("disable");
+        });
+      }
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Please input a valid email address";
       return;
     }
     if (password !== confirmPassword) {
-      signupBtn.classList.remove("disable");
+  if (buttons) {
+    buttons.forEach((btn) => {
+      btn.classList.remove("disable");
+    });
+  }
       infoNoteSignup.classList.add("errorShow");
       infoNoteSignup.textContent = "Passwords do not match.";
       return;
@@ -98,12 +116,19 @@ if (signupBtn) {
       if (userName) userName.innerText = user.displayName;
 
       alert("Signup successful!");
-      loginBtn.classList.remove("disable");
-
+if (buttons) {
+  buttons.forEach((btn) => {
+    btn.classList.remove("disable");
+  });
+}
       window.location.href = "../index.html";
     } catch (error) {
       infoNoteSignup.classList.add("errorShow");
-
+if (buttons) {
+          buttons.forEach((btn) => {
+            btn.classList.remove("disable");
+          });
+        }
       infoNoteSignup.textContent = error.message;
     }
   });
@@ -112,21 +137,32 @@ if (signupBtn) {
 if (loginBtn) {
   // Login
   loginBtn.addEventListener("click", async () => {
-    loginBtn.classList.add("disable");
+    if(buttons) {
+      buttons.forEach((btn) => {
+  btn.classList.add("disable");
+      })
+    }
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     if (!email || !password) {
-      loginBtn.classList.remove("disable");
+        if (buttons) {
+          buttons.forEach((btn) => {
+            btn.classList.remove("disable");
+          });
+        }
       infoNoteLogin.textContent = "Email and password are required";
       return;
     }
     try {
       await login(email, password);
       alert("Login successful!");
-      loginBtn.classList.remove("disable");
       window.location.href = "../index.html";
     } catch (error) {
-      loginBtn.classList.remove("disable");
+        if (buttons) {
+          buttons.forEach((btn) => {
+            btn.classList.remove("disable");
+          });
+        }
       infoNoteLogin.classList.add("errorShow");
 
       if (error.message === "Firebase: Error (auth/invalid-credential)") {

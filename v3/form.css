@@ -4,7 +4,8 @@ body.darkMode .auth-form {
   --input-textarea-bg: #1d1d1d;
   --input-textarea-color: #fff;
   --input-textarea-border: #444;
-  
+    --link: #ff4500;
+
 }
 /* Form */
 .auth-form,
