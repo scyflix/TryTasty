@@ -19,15 +19,16 @@ backdrop-filter: blur(10px);
 #popup-content {
   color: var(--color);
   display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 30px;
   border-radius: 10px;
   background: var(--main-bg);
   border: 2px solid var(--btn-bg);
   backdrop-filter: blur(100px) brightness(60%);
-    max-width: 400px;
+  max-width: 600px;
+  margin: 0 20px;
   text-align: center;
   animation: fadeIn 0.25s ease;
 }
