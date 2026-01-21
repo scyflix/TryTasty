@@ -42,6 +42,7 @@ const navLinks = [
   { text: "Community", href: "../TryTasty-community/community.html" },
   { text: "Privacy Policy", href: "v3/doc/privacyGerman.html" },
   { text: "About TryTasty", href: "v3/doc/about.html" },
+  
 ];
 
 //Loop through each link and create a new one for each link

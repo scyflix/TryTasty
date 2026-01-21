@@ -116,9 +116,9 @@ span {
 }
 
 .page-nav a {
-  text-align: center;
   border: 1px solid var(--link-border);
   border-radius: 10px;
+  padding-left: 4px;
   transition: all 0.4s ease;
   color: var(--span);
   font-size: 1.5rem;
