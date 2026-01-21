@@ -116,6 +116,7 @@ span {
 }
 
 .page-nav a {
+  text-align: center;
   border: 1px solid var(--link-border);
   border-radius: 10px;
   padding-left: 4px;
