@@ -38,40 +38,39 @@ const postStore = JSON.parse(localStorage.getItem("posts")) || [];
 if (postStore) {
   postStore.forEach(renderPost);
 }
+  function post(user) {
+    const postTitle = document.getElementById("postTitle").value;
+    const postContent = document.getElementById("postContent").value;
+    const imgUrl = document.getElementById("imgUrl").value;
 
-function post(user) {
-  const postTitle = document.getElementById("postTitle").value;
-  const postContent = document.getElementById("postContent").value;
-const imgUrl = document.getElementById("imgUrl").value;
+    if (!postContent) {
+      alert("Your post must have a title and content");
+      return;
+    }
 
-  if ( !postContent) {
-    alert("Your post must have a title and content");
-    return;
+    const time = new Date().toLocaleString();
+
+    const postData = {
+      title: postTitle,
+      content: postContent,
+      image: imgUrl,
+      time: time,
+      id: crypto.randomUUID(),
+      owner: user ? user.displayName : "Guest",
+    };
+    postStore.push(postData);
+    localStorage.setItem("posts", JSON.stringify(postStore));
+
+    renderPost(postData);
+
+    postedContentSection.style.display = "block";
+
+    // Reset UI
+    document.getElementById("postForm").reset();
+    document.getElementById("allForms").classList.remove("show");
+    document.getElementById("forminputbtn").classList.remove("hide");
+    document.querySelector(".writeIcon").classList.remove("hide");
   }
-
-  const time = new Date().toLocaleString();
-
-  const postData = {
-    title: postTitle,
-    content: postContent,
-    image: imgUrl,
-    time: time,
-    id: crypto.randomUUID(),
-    owner: user ? user.displayName : "Guest",
-  };
-  postStore.push(postData);
-  localStorage.setItem("posts", JSON.stringify(postStore));
-  
-  renderPost(postData);
-  
-  postedContentSection.style.display = "block";
-
-  // Reset UI
-  document.getElementById("postForm").reset();
-  document.getElementById("allForms").classList.remove("show");
-  document.getElementById("forminputbtn").classList.remove("hide");
-  document.querySelector(".writeIcon").classList.remove("hide");
-}
 
 function renderPost(post) {
   const postDiv = document.createElement("div");

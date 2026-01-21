@@ -28,7 +28,7 @@ const navLinks = [
   { text: "Recipes", href: "../../index.html#recipeList" },
   { text: "Favorites", href: "../favs.html", class: "toastNavLink" },
   { text: "Videos", href: "../videos.html", class: "toastNavLink" },
-  { text: "Community", href: "../TryTasty-community/community.html" },
+  { text: "Community", href: "../../TryTasty-community/community.html" },
   { text: "Submit", href: "../submit.html" },
   { text: "Privacy Policy", href: "privacyGerman.html" },
   { text: "About TryTasty", href: "about.html" },

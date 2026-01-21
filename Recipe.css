@@ -264,9 +264,6 @@ img {
 img:hover {
   transform: scale(1.02);
 }
-a {
-  text-decoration: none;
-}
 
 a:hover {
   text-decoration: underline;
@@ -274,3 +271,24 @@ a:hover {
 .hide {
   display: none;
 }
+
+
+ .botLink svg{
+        width: 70px;
+        height: 70px;
+        transition: 0.5s ease;
+      }
+      a.botLink:has(svg) {
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        padding: 0;
+        height: fit-content;
+        border: none;
+      }
+
+      .botLink svg:hover {
+        padding: 0;
+        transform: scale(1.1);
+      }
+      

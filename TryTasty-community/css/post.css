@@ -100,10 +100,14 @@
   width: 100%;
 }
 
-.timeStamp {
+.timeStamp  {
   opacity: 0.3;
 }
+.placeholder {
+  text-align: center;
+    opacity: 0.3;
 
+}
 .profileImg {
   width: 40px;
   margin: 0 10px 0 0;
