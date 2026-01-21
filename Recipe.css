@@ -272,7 +272,6 @@ a:hover {
   display: none;
 }
 
-
  .botLink svg{
         width: 70px;
         height: 70px;
@@ -282,6 +281,7 @@ a:hover {
         position: absolute;
         left: 0;
         bottom: 1px;
+        z-index: 2;
         padding: 0;
         height: fit-content;
         border: none;
