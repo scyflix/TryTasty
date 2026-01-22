@@ -43,7 +43,7 @@ label {
 
 /* Inputs */
 input,
-textarea {
+textarea, select {
   width: 100%;
   padding: 14px;
   margin: 0;
@@ -57,7 +57,7 @@ textarea {
   min-height: 120px;
 }
 input:focus,
-textarea:focus {
+textarea:focus, select:focus {
   border-color: #ff8800;
   box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.3);
   outline: none;

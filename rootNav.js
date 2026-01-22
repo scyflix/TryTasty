@@ -39,10 +39,12 @@ const navLinks = [
   { text: "Favorites", href: "v3/favs.html", class: "toastNavLink" },
   { text: "Videos", href: "v3/videos.html", class: "toastNavLink" },
   { text: "Submit", href: "v3/submit.html" },
-  { text: "Community", href: "../TryTasty-community/community.html" },
+  {
+    text: "Community",
+    href: "../TryTasty-community/community.html",
+    class: "toastNavLink", },
   { text: "Privacy Policy", href: "v3/doc/privacyGerman.html" },
   { text: "About TryTasty", href: "v3/doc/about.html" },
-  
 ];
 
 //Loop through each link and create a new one for each link

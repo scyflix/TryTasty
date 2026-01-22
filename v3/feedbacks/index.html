@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+         <!-- Cookiebot -->
+<script
+  id="Cookiebot"
+  src="https://consent.cookiebot.com/uc.js"
+  data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
+  type="text/javascript"
+  defer
+></script>
+
+<!-- Cookie declaration -->
+<script
+  id="CookieDeclaration"
+  src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
+  type="text/javascript"
+  defer
+></script>
+
+<!-- logic -->
+<script src="./../cookie-consent.js" defer></script>
+<meta name="robots" content="noindex, follow">
+
+    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
+<title>Feedback | TryTasty</title>
+    <meta charset="utf-8" />
+  <meta
+  name="description"
+  content="Share your feedback about TryTasty. Tell us what works, what doesn’t, and how we can improve."
+/>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Feedback | TryTasty" />
+<meta property="og:description" content="Your opinion matters. Share feedback about TryTasty." />
+<meta property="og:url" content="https://trytasty.de/feedback/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Recipe.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../../general.css" />
+    <link rel="stylesheet" href="../form.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <style> 
+      small {
+            margin: 0;
+            padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--PRELOADER-->
+    <div id="preloader">
+      <h1>TryTasty</h1>
+      <div class="loadBar">
+        <div class="loadLine"></div>
+      </div>
+    </div>
+    <header>
+        <a href="https://trytasty.de/">
+          <h1>TryTasty</h1>
+        </a>
+      </div>
+      
+    </header>
+    <main>
+          <a class="backBtn" href="../../index.html">← Back</a>
+      <section id="feedbackForm">
+        <form
+          action="https://formspree.io/f/mwvlpkzw"
+          method="POST"
+          id="submitRecipeForm"
+          class="form"
+        >
+          <h1>Your Feedback</h1>
+<p class="infoNote">Help us improve TryTasty by sharing your honest feedback and experience.</p>
+          <label for="email"> Your email: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <label for="type">Feedback type</label>
+<select id="type" name="type" required>
+  <option value="">Select one</option>
+  <option value="bug">Bug / Something is broken</option>
+  <option value="idea">Feature request / Idea</option>
+  <option value="recipe">Recipe feedback</option>
+  <option value="ui">Design / UX</option>
+  <option value="other">Other</option>
+</select>
+
+          <label for="rating">Overall experience</label>
+<select id="rating" name="rating">
+  <option value="">No rating</option>
+  <option value="1">⭐ Very bad</option>
+  <option value="2">⭐⭐ Bad</option>
+  <option value="3">⭐⭐⭐ Okay</option>
+  <option value="4">⭐⭐⭐⭐ Good</option>
+  <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+</select>
+
+          <label for="feedback"> Feedback </label>
+          <textarea
+          minlength="30"
+          maxlength="3000"
+            id="feedback"
+            name="feedback"
+  placeholder="Tell us what you like, what’s confusing, or what we can improve (min. 30 characters)"
+            required
+          ></textarea>
+          <small id="counter">0 / 3000</small>
+
+          <button id="feedbackSubmit" type="submit">Submit</button>
+        </form>
+      </section>
+      <p style="text-align: center;"><a href="../doc/about.html">Learn more about TryTasty</a></p>
+    </main>
+
+    <!-- Small screen bottom navigation -->
+    <nav id="bottomNavContainer">
+      
+    </nav>
+    <script>
+      // Auto-resize textareas
+      document.querySelectorAll("textarea").forEach((textarea) => {
+        textarea.addEventListener("input", () => {
+          textarea.style.height = "auto";
+          textarea.style.height = textarea.scrollHeight + "px";
+        });
+      });
+
+      const textarea = document.getElementById("feedback");
+const counter = document.getElementById("counter");
+
+textarea.addEventListener("input", () => {
+  counter.textContent = `${textarea.value.length} / 3000`;
+});
+    </script>
+    <script src="../../recipe.js" defer></script>
+    <script type="module" src="../main.js" defer></script>
+  </body>
+</html>
