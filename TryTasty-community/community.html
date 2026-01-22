@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/post.css" />
     <link rel="stylesheet" href="css/nav.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../v3/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../v3/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../v3/favicon/favicon-16x16.png"
+    />
   </head>
   <body>
     <!--PRELOADER-->
@@ -32,10 +50,9 @@
       <input id="forminputbtn" type="text" placeholder="Post something..." />
       <a href="../index.html" class="recipePageLink">Recipes</a>
     </header>
-    <main>
-      <aside class="sidebar">
-        <div class="menuIcon cancelIcon">
-              <svg
+    <aside class="sidebar">
+      <div class="menuIcon cancelIcon">
+        <svg
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
@@ -44,7 +61,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              >
+                >
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
@@ -57,8 +74,9 @@
         </nav>
         <div aria-label="post button" class="writeIcon"><span>✍️</span></div>
       </aside>
-      <div class="mainContents">
-        <section id="allForms">
+        <main class="mainContents">
+
+          <section id="allForms">
           <a class="backBtn" href="community.html">←Back</a>
           <form id="postForm">
             <h2>Create a post</h2>
@@ -82,11 +100,12 @@
             <button id="postbtn" type="button">Post</button>
           </form>
         </section>
+
         <section id="postedContent">
-          <p class="placeholder">Posts show here</p>
-        </section>
-      </div>
+
+      <p class="placeholder">Posts show here</p>
     </main>
+
     <script type="module" src="js/nav.js" defer></script>
     <script type="module" src="js/post.js" defer></script>
   </body>

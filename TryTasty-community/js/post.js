@@ -73,11 +73,12 @@ if (postStore) {
   }
 
 function renderPost(post) {
-  const postDiv = document.createElement("div");
-  postDiv.classList.add("post");
+  const postArticle = document.createElement("article");
+  postArticle.classList.add("post");
 
-  postDiv.innerHTML = `
-            <a href="../v3/userProfile.html">
+  postArticle.innerHTML = `
+        <!--POST PROFILE BEGINS-->
+           <a href="../v3/userProfile.html">
             <svg
             class="profileImg"
             xmlns="http://www.w3.org/2000/svg"
@@ -89,32 +90,106 @@ function renderPost(post) {
             d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
             />
             </svg>
-            
             </a>
+                    <!--POST PROFILE ENDS-->
+
+                        <!-- POST HEADER -->
             <div class="postContainer">
-            <div class="postHeader">
+            
+            <header class="postHeader">
             <div class="ownerData">
             <a href="../v3/userProfile.html">
             <h2 class="postOwner">${post.owner}</h2>
             </a>
             <p class="timeStamp">${post.time}</p>
             </div>
+
             <div class="ownerActions">
             <button type="button" class="deleteBtn">Delete</button>
             </div>
-            </div>
+            </header>
+                        <!-- POST HEADER ENDS -->
 
-      <h3>${post.title}</h3>
-      <p>${post.content}</p>
-      <img src="${post.image}">
-      <button type="button" class="seeMore">Read more</button>
-      </div>
+                                                <!-- POST CONTENT -->
+<div class="postContent">
+<h3>${post.title}</h3>
+<p>${post.content}</p>
+<img src="${post.image}">
+<button type="button" class="seeMore">⇃</button>
+</div>
+                        <!-- POST CONTENT ENDES-->
+
+             <!-- POST REACTIONS -->               
+    <footer class="postReactions">
+      <button aria-label="Like post">
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 20s-6.5-4.3-8.5-7.2C1.6 10.2 2.4 7 5.5 6
+           7.3 5.4 9 6.4 12 9
+           15 6.4 16.7 5.4 18.5 6
+           21.6 7 22.4 10.2 20.5 12.8
+           18.5 15.7 12 20 12 20z"/>
+</svg>
+
+      </button>
+
+      <button aria-label="Comment">
+ <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path
+    d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+  />
+</svg>
+
+</button>
+
+<button aria-label="Share">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="18" cy="5" r="3" />
+  <circle cx="6" cy="12" r="3" />
+  <circle cx="18" cy="19" r="3" />
+  <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
+  <line x1="15.4" y1="6.5" x2="8.6" y2="10.5" />
+</svg>
+
+</button>
+
+    </footer>
+                 <!-- POST REACTIONS ENDS-->               
       `;
-      postedContentSection.prepend(postDiv);
+      postedContentSection.prepend(postArticle);
 
   
-  const postContainer = postDiv.querySelector(".postContainer");
-  const seeMoreBtn = postDiv.querySelector(".seeMore");
+  const postContainer = postArticle.querySelector(".postContainer");
+  const seeMoreBtn = postArticle.querySelector(".seeMore");
   
   //See more button logic
   if (postContainer.scrollHeight > postContainer.clientHeight) {
@@ -126,13 +201,13 @@ function renderPost(post) {
   
   seeMoreBtn.addEventListener("click", () => {
     const isClicked = postContainer.classList.toggle("clicked");
-    seeMoreBtn.textContent = isClicked ? "Read less" : "Read more";
+    seeMoreBtn.textContent = isClicked ? "—" : "⇃";
   });
   
-  const deleteBtn = postDiv.querySelector(".deleteBtn");
+  const deleteBtn = postArticle.querySelector(".deleteBtn");
   deleteBtn.addEventListener("click", () => {
     if (!confirm("Delete this post?")) return;
-    postDiv.remove();
+    postArticle.remove();
     
     const index = postStore.findIndex((p) => p.id === post.id);
     if (index !== -1) {

@@ -35,6 +35,9 @@
 }
 .postHeader {
   display: flex;
+  background: none;
+  z-index: 0;
+  padding: 0;
   justify-content: space-between;
 }
 .postHeader .deleteBtn {
@@ -42,7 +45,9 @@
   padding: 6px 12px;
   background: #ff6b6b;
   box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .deleteBtn:hover {
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
@@ -86,11 +91,12 @@
   width: fit-content;
   position: absolute;
   bottom: 0;
-  margin: 20px 0;
+  z-index: 1;
+  margin: 20px 0 12px;
   right: 4px;
   background-color: var(--bg);
   color: var(--color);
-  padding: 8px;
+  padding: 8px 13px;
 }
 .seeMore:hover {
   background-color: var(--form-bg);
@@ -98,15 +104,15 @@
 
 #postedContent {
   width: 100%;
+  position: relative;
 }
 
-.timeStamp  {
+.timeStamp {
   opacity: 0.3;
 }
 .placeholder {
   text-align: center;
-    opacity: 0.3;
-
+  opacity: 0.3;
 }
 .profileImg {
   width: 40px;
@@ -115,10 +121,38 @@
   height: 40px;
   padding: 5px;
   border: 2px solid #e69500;
-  transition: border-radius 0.5s ease, background-color 0.5s ease;
+  transition:
+    border-radius 0.5s ease,
+    background-color 0.5s ease;
   border-radius: var(--radius);
 }
 .profileImg:hover {
   border-radius: 50%;
   background-color: var(--bg);
+}
+
+.postReactions {
+  position: absolute;
+  bottom: 12px;
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 4px 0;
+  max-width: 100%;
+}
+.postReactions button {
+  color: #ccc;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+.postReactions button svg {
+  width: 80px;
+}
+
+@media (max-width: 400px) {
+  .postReactions button svg {
+    width: 60px;
+  }
 }
