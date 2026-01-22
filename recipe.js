@@ -126,15 +126,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //For the recipe bot form
 function findRecipe() {
-  const userName = document.getElementById("searcher").value.trim();
   const userInput = document.getElementById("userInput").value.trim();
   const infoNote = document.querySelector(".infoNote");
   const suggestions = document.getElementById("suggestions");
   const recipe = document.getElementsByClassName("recipe");
   let matches = [];
 
-  if (!userName || !userInput) {
-    infoNote.innerHTML = `<p>Please enter your name and ingredients.</p>`;
+  if (!userInput) {
+    infoNote.innerHTML = `<p>Please enter an ingredient.</p>`;
     return;
   }
   for (let i = 0; i < recipe.length; i++) {
@@ -146,11 +145,10 @@ function findRecipe() {
   }
 
   if (matches.length > 0) {
-    suggestions.innerHTML = `${userName}, based on your ingredients, i suggest you try: <br> ${matches.join(
-      "<br>"
-    )}`;
+  
+    suggestions.innerHTML = `<p>Based on your ingredients, i suggest you try:</p> <br> ${matches.join("<br>")}`;
   } else {
-    suggestions.textContent = `${userName}, sorry I do not have a recipe for that yet 😓.`;
+    suggestions.textContent = `Sorry I do not have a recipe for that yet 😓.`;
   }
 }
 

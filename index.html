@@ -229,24 +229,44 @@
         ></iframe>
       -->
         <form id="recipeBot" class="form">
-          <h2 style="color: orange">
-            Hi, I`m Resp, your recipe suggestion Bot🤖.
-          </h2>
-          <p id="bot-question">
-            Ask me any recipe by inputing your name and ingredients below.
-          </p>
+          <a title="Recipe Search Bot" href="#resp" class="botLinkInner">
+                  <svg
+      width="128"
+      height="128"
+      viewBox="0 0 128 128"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="TryTasty AI Bot"
+    >
+      <!-- Head -->
+      <rect x="20" y="28" width="88" height="72" rx="20" fill="#FF8C42"/>
+    
+      <!-- Visor -->
+      <rect x="32" y="44" width="64" height="28" rx="14" fill="#111827"/>
+    
+      <!-- Visor lights -->
+      <circle cx="52" cy="58" r="4" fill="#4ADE80"/>
+      <circle cx="64" cy="58" r="4" fill="#4ADE80"/>
+      <circle cx="76" cy="58" r="4" fill="#4ADE80"/>
+    
+      <!-- Side bolts -->
+      <circle cx="20" cy="64" r="4" fill="#D97706"/>
+      <circle cx="108" cy="64" r="4" fill="#D97706"/>
+    
+      <!-- Neck -->
+      <rect x="52" y="100" width="24" height="8" rx="4" fill="#111827"/>
+    
+      <!-- Antenna -->
+      <line x1="64" y1="16" x2="64" y2="28" stroke="#111827" stroke-width="3"/>
+      <circle cx="64" cy="12" r="4" fill="#4ADE80"/>
+    </svg>
+    
+                </a>
           <div class="infoNote">
             <b>Note:</b> I only support <b>1 ingredient input</b> at the moment.
             Please enter your most <b>dominant</b> ingredient for better
             suggestions
           </div>
-          <label for="searcher">Your name</label>
-          <input
-            type="text"
-            id="searcher"
-            placeholder="e.g John Mally"
-            autocomplete="name"
-          />
+        
           <label for="userInput">Input a single recipe</label>
           <input
             type="text"
