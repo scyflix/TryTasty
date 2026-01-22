@@ -69,3 +69,21 @@ ol li {
 .alsoLike {
   text-align: center;
 }
+
+.recipeActionBtns {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.recipeActionBtns button {
+  margin: 0;
+  padding: 0;
+    background: var(--btn-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 30%;
+  max-width: 30px;
+}

@@ -63,7 +63,30 @@ fetch("data/recipes.json")
     document.title = `${recipe.title} | TryTasty`;
     const totalTimeMin = recipe.prepTimeMin + recipe.cookTimeMin;
     document.getElementById("recipe").innerHTML = `
-                  <a class="backBtn" href="../index.html">← Back</a>
+    <div class="recipeActionBtns">
+    <a class="backBtn" href="../index.html">← Back</a>
+
+    <button class="shareBtn">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="18" cy="5" r="3" />
+  <circle cx="6" cy="12" r="3" />
+  <circle cx="18" cy="19" r="3" />
+  <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
+  <line x1="15.4" y1="6.5" x2="8.6" y2="10.5" />
+</svg>
+
+    </button>
+    </div>
                   
                   <article>
                   <h2>${recipe.title}</h2>
@@ -108,6 +131,31 @@ fetch("data/recipes.json")
         })
         .then(() => {
           addToFav();
+
+          const btn = document.querySelector(".shareBtn")
+            btn.addEventListener("click", async () => {
+              const url = btn.dataset.url || window.location.href;
+
+              if (navigator.share) {
+                try {
+                  await navigator.share({
+                    title: "TryTasty Community",
+                    text: "Check out this recipe on TryTasty 👀🍽️",
+                    url,
+                  });
+                } catch (err) {
+                  // user cancelled – ignore
+                }
+              } else {
+                fallbackShare(url);
+              }
+            });
+
+          function fallbackShare(url) {
+            navigator.clipboard.writeText(url).then(() => {
+              alert("Link copied to clipboard!");
+            });
+          }
         })
   .catch(() => {
     document.getElementById(
@@ -152,3 +200,5 @@ fetch("data/recipes.json")
   </p>
   </div>`;
   });
+
+  
