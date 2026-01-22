@@ -319,7 +319,7 @@ a.page-nav:hover {
     display: block;
     min-height: 100vh;
   }
-  main div.mainContents {
+  main.mainContents {
     padding: 10px 14px 10px;
     max-width: 100%;
 
