@@ -288,7 +288,7 @@ a:hover {
         transition: 0.5s ease;
       }
       a.botLink:has(svg) {
-        position: absolute;
+        position: sticky;
         left: 0;
         bottom: 1px;
         z-index: 2;
