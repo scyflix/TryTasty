@@ -76,7 +76,6 @@ button,
   cursor: pointer;
   transition: 0.2s;
   margin: 10px auto;
-  min-width: 40%;
 }
 form button {
   min-width: 100%;

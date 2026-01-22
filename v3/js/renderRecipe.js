@@ -84,7 +84,7 @@ fetch("data/recipes.json")
   <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
   <line x1="15.4" y1="6.5" x2="8.6" y2="10.5" />
 </svg>
-
+Share
     </button>
     </div>
                   
@@ -139,7 +139,7 @@ fetch("data/recipes.json")
               if (navigator.share) {
                 try {
                   await navigator.share({
-                    title: "TryTasty Community",
+                    title: "TryTasty Recipe",
                     text: "Check out this recipe on TryTasty 👀🍽️",
                     url,
                   });

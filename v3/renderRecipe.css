@@ -79,11 +79,13 @@ ol li {
 }
 .recipeActionBtns button {
   margin: 0;
-  padding: 0;
+  padding: 0 ;
     background: var(--btn-bg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  min-width: 30%;
-  max-width: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
