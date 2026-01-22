@@ -91,12 +91,11 @@
   width: fit-content;
   position: absolute;
   bottom: 0;
-  z-index: 1;
   margin: 20px 0 12px;
   right: 4px;
   background-color: var(--bg);
   color: var(--color);
-  padding: 8px 13px;
+  padding: 8px 24px;
 }
 .seeMore:hover {
   background-color: var(--form-bg);
