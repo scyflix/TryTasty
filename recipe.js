@@ -126,7 +126,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //For the recipe bot form
 function findRecipe() {
-  const userInput = document.getElementById("userInput").value.trim();
+  const userInput = document.getElementById("userInput").value.toLowerCase().trim();
   const infoNote = document.querySelector(".infoNote");
   const suggestions = document.getElementById("suggestions");
   const recipe = document.getElementsByClassName("recipe");
