@@ -1,4 +1,4 @@
-import { onUserAuthChange } from "./v3/js/auth.js";
+import { onUserAuthChange } from "./auth.js";
 
 function notLoggedInModal() {
       const div = document.createElement("div")
@@ -12,9 +12,7 @@ function notLoggedInModal() {
 `
 const main = document.querySelector("main")
 
-setTimeout(() => {
   main.appendChild(div)
-}, 1000);
 }
 
 // Listen for auth state changes

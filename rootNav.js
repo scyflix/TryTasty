@@ -43,7 +43,6 @@ const navLinks = [
     text: "Community",
     href: "../TryTasty-community/community.html",
     class: "toastNavLink", },
-  { text: "Privacy Policy", href: "v3/doc/privacyGerman.html" },
   { text: "About TryTasty", href: "v3/doc/about.html" },
 ];
 
