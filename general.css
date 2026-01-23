@@ -8,6 +8,7 @@
   --main-bg: #fffdfa;
   --color: #333;
   --header-bg: #ffd9a0;
+    --header-color: linear-gradient(90deg, orange, orangered);
   --icon-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
   --preloader-bg: linear-gradient(135deg, #807d7d, #f5f5dc);
@@ -100,7 +101,9 @@ header {
   max-height: 95px;
 }
 header h1 {
-  color: var(--header-color);
+   background: var(--header-color);
+        background-clip: text;
+        color: transparent;
 }
 h1 {
   margin: 3px 10px 2px 5px;

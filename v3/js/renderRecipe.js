@@ -61,7 +61,7 @@ fetch("data/recipes.json")
     }
 
     document.title = `${recipe.title} | TryTasty`;
-    const totalTimeMin = recipe.prepTimeMin + recipe.cookTimeMin;
+    const totalTimeMin = recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
     document.getElementById("recipe").innerHTML = `
     <div class="recipeActionBtns">
     <a class="backBtn" href="../index.html">← Back</a>
@@ -93,6 +93,7 @@ Share
                   <section class="meta">
                   <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
                   <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
+                  <span>❄️ Cooling: ${recipe.coolTime}</span>
                   <span>⌛ Total: ${totalTimeMin} min</span>
                   <span>🍽 Serves: ${recipe.servings}</span>
                   </section>
