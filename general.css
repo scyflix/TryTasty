@@ -303,6 +303,8 @@ a.userProfileLink span {
     color: var(--active-color);
     padding: 4px;
     transform: scale(1.09);
+        border-top: 1px solid;
+
   }
   #bottomNavContainer a[href*="favs"] svg {
     transform: scale(0.9);
