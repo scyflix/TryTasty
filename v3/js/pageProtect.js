@@ -1,8 +1,8 @@
 import { onUserAuthChange } from "./auth.js";
 
-function notLoggedInModal() {
+function popupModal() {
       const div = document.createElement("div")
-      div.className = "notLoggedInModal"
+      div.className = "popupModal"
       div.innerHTML = `
       <div class="modalContentContainer">
 <h2>User Not logged in</h2>
@@ -18,6 +18,6 @@ const main = document.querySelector("main")
 // Listen for auth state changes
 onUserAuthChange((user) => {
   if (!user) {
-      notLoggedInModal()
+      popupModal()
   } 
 });
