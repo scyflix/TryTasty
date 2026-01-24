@@ -182,7 +182,7 @@ function callToFeedback() {
 <h2>Write us a Feedback</h2>
 <p>We want to make TryTasty better for you.</p>
 <p>Tell us your experience using TryTasty</p>
-<a class="loginBtn" href="feedback/index.html">Write to us</a>
+<a class="loginBtn" href="feedbacks/index.html">Write to us</a>
 </div>
 `;
   const main = document.querySelector("main");
