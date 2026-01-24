@@ -24,10 +24,7 @@ body.darkMode .meta span {
 .meta span:hover {
   transform: scale(1.05);
 }
-#recipe {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+
 p {
   margin: 0 22px 12px;
 }
