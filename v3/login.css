@@ -32,6 +32,10 @@ backdrop-filter: blur(10px);
   text-align: center;
   animation: fadeIn 0.25s ease;
 }
+.modalHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 .infoText {
   opacity: 0.5;
   font-size: 12px;

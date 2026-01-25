@@ -56,9 +56,8 @@ body main {
   border: 1px solid var(--popular-border);
 }
 
-.popular-section h2 {
+.popular-section h1 {
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--popular-heading);
   letter-spacing: 0.5px;

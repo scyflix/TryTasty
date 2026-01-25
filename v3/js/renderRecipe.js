@@ -89,7 +89,7 @@ Share
     </div>
                   
                   <article>
-                  <h2>${recipe.title}</h2>
+                  <h1>${recipe.title}</h1>
                   <section class="meta">
                   <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
                   <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
@@ -104,14 +104,14 @@ Share
                   }" loading="lazy" />
                   <div class="recipeTexts">
                   <section>
-                  <h3>Ingredients</h3>
+                  <h2>Ingredients</h2>
                   <ul>
                   ${recipe.ingredients.map((i) => `<li>${i}</li>`).join("")}
                   </ul>
 </section>
 
                 <section>
-                <h3>Instructions</h3>
+                <h2>Instructions</h2>
                 <ol>
                 ${recipe.steps.map((s) => `<li>${s}</li>`).join("")}
                 </ol>

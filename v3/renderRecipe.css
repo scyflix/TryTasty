@@ -24,7 +24,17 @@ body.darkMode .meta span {
 .meta span:hover {
   transform: scale(1.05);
 }
-
+#recipe h1 {
+  color: #e65c00;
+  text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffa94d;
+    padding-bottom: 5px;
+}
+#recipe h2 {
+  border: none;
+  text-align: left;
+}
 p {
   margin: 0 22px 12px;
 }
