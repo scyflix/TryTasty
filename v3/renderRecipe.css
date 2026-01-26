@@ -100,3 +100,21 @@ ol li {
   justify-content: center;
   align-items: center;
 }
+
+.activateCookMode {
+  min-width: 60%;
+  margin: 0 auto;
+  display: block;
+  background-color: #f98508;
+}
+.divider {
+  border-bottom: 2px solid #ffa94d;
+}
+
+.fadeOut {
+opacity: 0;
+transition: opacity 1s ease;
+}
+.disappear {
+  display: none;
+}

@@ -4,6 +4,7 @@ const recipeId = params.get("id");
 import { addToFav } from "../js/fav.js";
 
 const recipeContainer = document.getElementById("recipe");
+const recipe = document.getElementById("recipe")
 
 if (!recipeId) {
   recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
@@ -98,6 +99,8 @@ Share
                   <span>🍽 Serves: ${recipe.servings}</span>
                   </section>
                   <p>${recipe.description}</p>
+                  <button class="activateCookMode">🥘Start Cook Mode</button>
+                  <hr class="divider">
                   <section class="flexRecipeContent">
                   <img loading="lazy" src="${recipe.image}" alt="${
                     recipe.title
@@ -132,7 +135,7 @@ Share
         })
         .then(() => {
           addToFav();
-
+cookMode();
           const btn = document.querySelector(".shareBtn")
             btn.addEventListener("click", async () => {
               const url = btn.dataset.url || window.location.href;
@@ -202,4 +205,29 @@ Share
   </div>`;
   });
 
+  
+  function cookMode() {
+
+    //Cooking mode script
+    const activateCookMode = document.querySelector(".activateCookMode");
+
+    activateCookMode.addEventListener("click", () =>{
+    const recipe = document.getElementById("recipe");
+    //Fade out for smooth ux
+    recipe.classList.add("fadeOut");
+    //remove section after fadeout
+    setTimeout(() => {
+      recipe.classList.add("disappear");
+    }, 1000)
+
+
+    const recipeUtilitySection = document.getElementById("recipeUtility");
+
+    recipeUtilitySection.innerHTML = `
+    <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
+    `;
+  })
+
+
+}
   
