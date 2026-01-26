@@ -1,6 +1,38 @@
 {
   "recipes": [
     {
+      "id": "savory-french-toast-sticks",
+      "title": "Savory French Toast Sticks",
+      "description": "Savory French Toast Sticks made with bread, eggs, milk and grated cheese. Perfect for breakfast.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif",
+      "dataKeywords": "eggs,egg,milk,bread",
+
+      "prepTimeMin": 22,
+      "cookTimeMin": 16,
+      "coolTime": 0,
+
+      "servings": 1,
+      "ingredients": [
+        "4 slices of bread",
+        "2 eggs",
+        "1/4 cup milk",
+        "1 tbsp grated cheese(optional)",
+        "Salt,black pepper, and chili flakes"
+      ],
+      "steps": [
+        "Cut bread into sticks.",
+        "Whisk eggs with milk, cheese, salt, pepper, and chili.",
+        "Dip sticks and fry until golden on each side.",
+        "Serve warm with grated cheese sprickled on it."
+      ],
+      "innerLink": [
+        {
+          "link": "avocado-egg-toast-cups",
+          "name": "Avocado Egg Toast Cups"
+        }
+      ]
+    },
+    {
       "id": "plantain-nachos",
       "title": "Plantain Nachos",
       "description": "Crispy plantain nachos made with ripe plantains, melted cheese, and fresh toppings. A perfect snack or party appetizer with a savory crunch.",
@@ -34,6 +66,39 @@
         }
       ]
     },
+    
+    {
+      "id": "peanut-butter-apple-nachos",
+      "title": "Peanut Butter Apple Nachos",
+      "description": "…",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif",
+      "dataKeywords": "pear,peanut butter,peanutbutter,apple",
+
+      "prepTimeMin": 8,
+      "cookTimeMin": 0,
+      "coolTime": 0,
+
+      "servings": 1,
+
+      "ingredients": [
+        "1 Apple",
+        "1 tbsp peanut butter",
+        "Granola or crushed nuts",
+        "Chocolate drizzle(optional)"
+      ],
+      "steps": [
+        "Cut apples into thin slices.",
+        "Layer apple slices on a plate.",
+        "Melt peanut butter and drizzle it on the layered apples.",
+        "Add the chocolate drizzle as well and sprickle the granola or crushed nuts."
+      ],
+      "innerLink": [
+        {
+          "link": "spicy-peanut-butter-popcorn",
+          "name": "Spicy Peanut Butter Popcorn"
+        }
+      ]
+    },
 
     {
       "id": "spicy-peanut-butter-popcorn",
@@ -63,39 +128,6 @@
         {
           "link": "peanut-butter-apple-nachos",
           "name": "Peanut Butter Apple Nachos"
-        }
-      ]
-    },
-
-    {
-      "id": "savory-french-toast-sticks",
-      "title": "Savory French Toast Sticks",
-      "description": "Savory French Toast Sticks made with bread, eggs, milk and grated cheese. Perfect for breakfast.",
-      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif",
-      "dataKeywords": "eggs,egg,milk,bread",
-
-      "prepTimeMin": 22,
-      "cookTimeMin": 16,
-      "coolTime": 0,
-
-      "servings": 1,
-      "ingredients": [
-        "4 slices of bread",
-        "2 eggs",
-        "1/4 cup milk",
-        "1 tbsp grated cheese(optional)",
-        "Salt,black pepper, and chili flakes"
-      ],
-      "steps": [
-        "Cut bread into sticks.",
-        "Whisk eggs with milk, cheese, salt, pepper, and chili.",
-        "Dip sticks and fry until golden on each side.",
-        "Serve warm with grated cheese sprickled on it."
-      ],
-      "innerLink": [
-        {
-          "link": "avocado-egg-toast-cups",
-          "name": "Avocado Egg Toast Cups"
         }
       ]
     },
@@ -514,39 +546,6 @@
         {
           "link": "sweet-potato-bites-with-yougurt-dip",
           "name": "sweet Potato Bites With Yogurt Dip"
-        }
-      ]
-    },
-
-    {
-      "id": "peanut-butter-apple-nachos",
-      "title": "Peanut Butter Apple Nachos",
-      "description": "…",
-      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif",
-      "dataKeywords": "pear,peanut butter,peanutbutter,apple",
-
-      "prepTimeMin": 8,
-      "cookTimeMin": 0,
-      "coolTime": 0,
-
-      "servings": 1,
-
-      "ingredients": [
-        "1 Apple",
-        "1 tbsp peanut butter",
-        "Granola or crushed nuts",
-        "Chocolate drizzle(optional)"
-      ],
-      "steps": [
-        "Cut apples into thin slices.",
-        "Layer apple slices on a plate.",
-        "Melt peanut butter and drizzle it on the layered apples.",
-        "Add the chocolate drizzle as well and sprickle the granola or crushed nuts."
-      ],
-      "innerLink": [
-        {
-          "link": "spicy-peanut-butter-popcorn",
-          "name": "Spicy Peanut Butter Popcorn"
         }
       ]
     },
