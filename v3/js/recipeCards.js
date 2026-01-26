@@ -15,12 +15,12 @@ fetch("v3/data/recipes.json")
        <a href="v3/recipe.html?id=${rec.id}"
               data-keywords="${rec.dataKeywords}"
               class="snackImage recipe"
-              ><img
+              ><img loading="lazy"
                 src="${rec.image}"
                 title="Click to see details"
                 alt="${rec.title}"
               />${rec.title}</a>
-      `
+      `,
       )
       .join("");
   })

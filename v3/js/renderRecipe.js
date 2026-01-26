@@ -101,7 +101,7 @@ Share
                   <section class="flexRecipeContent">
                   <img loading="lazy" src="${recipe.image}" alt="${
                     recipe.title
-                  }" loading="lazy" />
+                  }"/>
                   <div class="recipeTexts">
                   <section>
                   <h2>Ingredients</h2>
