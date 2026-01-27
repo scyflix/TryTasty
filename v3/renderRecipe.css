@@ -104,8 +104,9 @@ ol li {
 }
 
 .activateCookMode {
-  min-width: 60%;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  margin: 22px auto 0;
   display: block;
   background-color: #f98508;
 }
