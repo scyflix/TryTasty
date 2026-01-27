@@ -196,4 +196,4 @@ function callToFeedback() {
 
 setTimeout(() => {
   callToFeedback();
-}, 100000);
+}, 1000000);
