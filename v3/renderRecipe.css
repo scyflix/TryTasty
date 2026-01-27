@@ -1,6 +1,5 @@
 body .meta span {
-    --border-color: #ff4500;
-
+  --border-color: #ff4500;
 }
 
 body.darkMode .meta span {
@@ -13,7 +12,8 @@ body.darkMode .meta span {
   gap: 12px;
   flex-wrap: wrap;
 }
-.meta span, .listContainer .estTimespan {
+.meta span,
+.valueData {
   font-size: 16px;
   border: 2px solid var(--border-color);
   border-radius: 12px;
@@ -21,15 +21,17 @@ body.darkMode .meta span {
   cursor: default;
   transition: transform 0.5s ease;
 }
-.meta span:hover {
+.meta span:hover,
+.valueData:hover {
   transform: scale(1.05);
 }
+
 #recipe h1 {
   color: #e65c00;
   text-align: center;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ffa94d;
-    padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffa94d;
+  padding-bottom: 5px;
 }
 #recipe h2 {
   border: none;
@@ -90,8 +92,8 @@ ol li {
 }
 .recipeActionBtns button {
   margin: 0;
-  padding: 0 ;
-    background: var(--btn-bg);
+  padding: 0;
+  background: var(--btn-bg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -112,26 +114,82 @@ ol li {
 }
 
 .fadeOut {
-opacity: 0;
-transition: opacity 1s ease;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 .disappear {
   display: none;
 }
+#recipeUtility h3 {
+  background: #444;
+  padding-left: 4px;
+  border-radius: 6px;
+  color: #ffd500;
+}
 #recipeUtility label {
-display: flex;
+  display: flex;
   justify-content: start;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
   cursor: pointer;
-    width: fit-content;
-    margin-bottom: 8px;
+  width: fit-content;
+  margin-bottom: 8px;
 }
 #recipeUtility label span {
-    font-size: 1.1rem;
+  font-size: 1rem;
 }
-#recipeUtility label input {
-width: 22px;
-height: 22px;
-cursor: pointer;
+ 
+#recipeUtility label input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#recipeUtility label input[type="checkbox"]:checked {
+  background: #4caf50;
+  border-color: #4caf50;
+}
+#recipeUtility label input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 2rem;
+}
+#recipeUtility {
+  overflow-y: auto;
+  max-height: 90vh;
+}
+.activeUtilityMain {
+  padding-right: 0;
+}
+.valueData {
+  background: var(--bg);
+}
+/* RECIPE UTILITY SCROLLBAR */
+/* width */
+#recipeUtility::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#recipeUtility::-webkit-scrollbar-track {
+  background: #444; /* softer dark */
+  border-radius: 10px;
+}
+
+/* Handle */
+#recipeUtility::-webkit-scrollbar-thumb {
+  background: #ffd900;
+  border-radius: 10px;
+}
+
+/* Handle hover */
+#recipeUtility::-webkit-scrollbar-thumb:hover {
+  background: #e0bf00; /* darker yellow, still consistent */
 }

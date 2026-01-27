@@ -52,12 +52,6 @@ fetch("data/recipes.json")
     script.textContent = JSON.stringify(recipeSchema);
     document.head.appendChild(script);
 
-    if (!recipe) {
-      recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
-  <p>Recipe not found.</p>`;
-      return;
-    }
-
     document.title = `${recipe.title} | TryTasty`;
     const totalTimeMin =
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
@@ -207,14 +201,18 @@ function cookMode() {
   const activateCookMode = document.querySelector(".activateCookMode");
 
   activateCookMode.addEventListener("click", () => {
-    const cookModeActive = true;
-
+    
+window.location.href = "#"
     const recipe = document.getElementById("recipe");
     //Fade out for smooth ux
     recipe.classList.add("fadeOut");
+    document.querySelector("header").classList.add("fadeOut");
     //remove section after fadeout
     setTimeout(() => {
       recipe.classList.add("disappear");
+      document.querySelector("header").classList.add("disappear");
+      document.querySelector("main").classList.add("activeUtilityMain")
+      document.body.classList.add("lockScroll");
     }, 1000);
 
     const recipeUtilitySection = document.getElementById("recipeUtility");
@@ -225,14 +223,16 @@ function cookMode() {
         if (!data || !data.recipes) { console.error("Failed to load recipes in cook mode"); return; }
 
         const recipe = data.recipes.find((r) => r.id === recipeId);
+        
     const totalTimeMin =
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
 
         recipeUtilitySection.innerHTML = `
+            <a class="backBtn" onclick="window.location.reload()" href="#">← Exit cook mode</a>
           <h2>Cooking: ${recipe.title}</h2>
           <h3>Grocery List:</h3>
           <div class="listContainer groceryListContainer">
-                  ${recipe.utility.groceryList.map((g) => `<label> <input type="checkbox"><span>${g.item}:</span> <span>${g.quantity}</span></label>`).join("")}
+                  ${recipe.utility.groceryList.map((g) => `<label> <input type="checkbox"><span>${g.item}:</span> <span class="valueData">${g.quantity}</span></label>`).join("")}
                   </div>
                    <section class="meta">
                   <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
@@ -241,11 +241,13 @@ function cookMode() {
                   <span>⌛ Total: ${totalTimeMin} min</span>
                   <span>🍽 Serves: ${recipe.servings}</span>
                   </section>
+                            <h3>Equipments:</h3>
                   <section class="listContainer equipmentListContainer">
                   ${recipe.utility.equipment.map((e) => `<label> <input type="checkbox"><span>${e}</span></label>`).join("")}
                   </section>
+                            <h3>Steps:</h3>
                   <section class="listContainer stepListContainer">
-                  ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="estTime">${s.estTimeMin}</span></label>`).join("")}
+                  ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="valueData">${s.estTimeMin} min</span></label>`).join("")}
                   </section>
           <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
           `;
