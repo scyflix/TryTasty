@@ -165,10 +165,10 @@ ol li {
 #recipeUtility {
   overflow-y: auto;
   max-height: 90vh;
+  z-index: 9999;
 }
 .activeUtilityMain {
   padding-right: 0;
-  z-index: 9999;
 }
 .valueData {
   background: var(--bg);

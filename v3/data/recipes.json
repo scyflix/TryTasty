@@ -32,7 +32,7 @@
         }
       ],
       "utility": {
-        "active": true,
+        "mode": "cook",
         "groceryList": [
           { "item": "Bread", "quantity": "4 slices" },
           { "item": "Eggs", "quantity": "2" },
