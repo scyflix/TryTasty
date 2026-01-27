@@ -11,7 +11,7 @@
       "cookTimeMin": 16,
       "coolTime": 0,
       "servings": 1,
-      
+
       "ingredients": [
         "4 slices of bread",
         "2 eggs",
@@ -30,7 +30,56 @@
           "link": "avocado-egg-toast-cups",
           "name": "Avocado Egg Toast Cups"
         }
-      ]
+      ],
+      "utility": {
+        "groceryList": [
+          { "item": "Bread", "quantity": "4 slices" },
+          { "item": "Eggs", "quantity": "2" },
+          { "item": "Milk", "quantity": "1/4 cup" },
+          { "item": "Grated cheese", "quantity": "1 tbsp", "optional": true },
+          { "item": "Salt", "quantity": "A pinch" },
+          { "item": "Black pepper", "quantity": "A pinch" },
+          { "item": "Chili flakes", "quantity": "Light sprickle" }
+        ],
+
+        "equipment": [
+          "Knife",
+          "Mixing bowl",
+          "Whisk or fork",
+          "Frying pan",
+          "Spatula"
+        ],
+
+        "stepFlow": [
+          { "step": 1, "text": "Cut bread into sticks.", "estTimeMin": 5 },
+          {
+            "step": 2,
+            "text": "Whisk eggs, milk, cheese and spices.",
+            "estTimeMin": 4
+          },
+          {
+            "step": 3,
+            "text": "Dip bread sticks into mixture.",
+            "estTimeMin": 3
+          },
+          {
+            "step": 4,
+            "text": "Fry until golden on each side.",
+            "estTimeMin": 8
+          }
+        ],
+
+        "notes": {
+          "userNotesEnabled": true,
+          "defaultTip": "Use slightly stale bread for better texture."
+        },
+
+        "leftovers": {
+          "storage": "Store in fridge in airtight container",
+          "shelfLife": "1 day",
+          "reheat": "Pan-fry for 2–3 minutes"
+        }
+      }
     },
     {
       "id": "plantain-nachos",

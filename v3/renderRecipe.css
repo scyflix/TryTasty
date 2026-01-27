@@ -13,7 +13,7 @@ body.darkMode .meta span {
   gap: 12px;
   flex-wrap: wrap;
 }
-.meta span {
+.meta span, .listContainer .estTimespan {
   font-size: 16px;
   border: 2px solid var(--border-color);
   border-radius: 12px;
@@ -117,4 +117,21 @@ transition: opacity 1s ease;
 }
 .disappear {
   display: none;
+}
+#recipeUtility label {
+display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+#recipeUtility label span {
+    font-size: 1.1rem;
+}
+#recipeUtility label input {
+width: 22px;
+height: 22px;
+cursor: pointer;
 }

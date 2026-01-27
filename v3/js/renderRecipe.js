@@ -4,7 +4,6 @@ const recipeId = params.get("id");
 import { addToFav } from "../js/fav.js";
 
 const recipeContainer = document.getElementById("recipe");
-const recipe = document.getElementById("recipe")
 
 if (!recipeId) {
   recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
@@ -53,8 +52,6 @@ fetch("data/recipes.json")
     script.textContent = JSON.stringify(recipeSchema);
     document.head.appendChild(script);
 
-
-
     if (!recipe) {
       recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
   <p>Recipe not found.</p>`;
@@ -62,7 +59,8 @@ fetch("data/recipes.json")
     }
 
     document.title = `${recipe.title} | TryTasty`;
-    const totalTimeMin = recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
+    const totalTimeMin =
+      recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
     document.getElementById("recipe").innerHTML = `
     <div class="recipeActionBtns">
     <a class="backBtn" href="../index.html">← Back</a>
@@ -131,40 +129,39 @@ Share
                 <p class="alsoLike">You might also like <a href="recipe.html?id=${recipe.innerLink[0].link}">${recipe.innerLink[0].name}</a></p>
                 </article>
           `;
+  })
+  
+  .then(() => {
+    addToFav();
+    cookMode();
+    const btn = document.querySelector(".shareBtn");
+    btn.addEventListener("click", async () => {
+      const url = btn.dataset.url || window.location.href;
 
-        })
-        .then(() => {
-          addToFav();
-cookMode();
-          const btn = document.querySelector(".shareBtn")
-            btn.addEventListener("click", async () => {
-              const url = btn.dataset.url || window.location.href;
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: "TryTasty Recipe",
+            text: "Check out this recipe on TryTasty 👀🍽️",
+            url,
+          });
+        } catch (err) {
+          // user cancelled – ignore
+        }
+      } else {
+        fallbackShare(url);
+      }
+    });
 
-              if (navigator.share) {
-                try {
-                  await navigator.share({
-                    title: "TryTasty Recipe",
-                    text: "Check out this recipe on TryTasty 👀🍽️",
-                    url,
-                  });
-                } catch (err) {
-                  // user cancelled – ignore
-                }
-              } else {
-                fallbackShare(url);
-              }
-            });
-
-          function fallbackShare(url) {
-            navigator.clipboard.writeText(url).then(() => {
-              alert("Link copied to clipboard!");
-            });
-          }
-        })
+    function fallbackShare(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert("Link copied to clipboard!");
+      });
+    }
+  })
   .catch(() => {
-    document.getElementById(
-      "recipe"
-    ).innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
+    document.getElementById("recipe").innerHTML =
+      `<a class="backBtn" href="../index.html">← Back</a>
     <div style="text-align: center;" class="failedToLoad">
     <svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
     <!-- background blob -->
@@ -205,29 +202,53 @@ cookMode();
   </div>`;
   });
 
-  
-  function cookMode() {
+function cookMode() {
+  //Cooking mode script
+  const activateCookMode = document.querySelector(".activateCookMode");
 
-    //Cooking mode script
-    const activateCookMode = document.querySelector(".activateCookMode");
+  activateCookMode.addEventListener("click", () => {
+    const cookModeActive = true;
 
-    activateCookMode.addEventListener("click", () =>{
     const recipe = document.getElementById("recipe");
     //Fade out for smooth ux
     recipe.classList.add("fadeOut");
     //remove section after fadeout
     setTimeout(() => {
       recipe.classList.add("disappear");
-    }, 1000)
-
+    }, 1000);
 
     const recipeUtilitySection = document.getElementById("recipeUtility");
 
-    recipeUtilitySection.innerHTML = `
-    <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
-    `;
-  })
+    fetch("data/recipes.json")
+      .then((response) => response.json()
+      .then((data) => {
+        if (!data || !data.recipes) { console.error("Failed to load recipes in cook mode"); return; }
 
+        const recipe = data.recipes.find((r) => r.id === recipeId);
+    const totalTimeMin =
+      recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
 
+        recipeUtilitySection.innerHTML = `
+          <h2>Cooking: ${recipe.title}</h2>
+          <h3>Grocery List:</h3>
+          <div class="listContainer groceryListContainer">
+                  ${recipe.utility.groceryList.map((g) => `<label> <input type="checkbox"><span>${g.item}:</span> <span>${g.quantity}</span></label>`).join("")}
+                  </div>
+                   <section class="meta">
+                  <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
+                  <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
+                  <span>❄️ Cooling: ${recipe.coolTime}</span>
+                  <span>⌛ Total: ${totalTimeMin} min</span>
+                  <span>🍽 Serves: ${recipe.servings}</span>
+                  </section>
+                  <section class="listContainer equipmentListContainer">
+                  ${recipe.utility.equipment.map((e) => `<label> <input type="checkbox"><span>${e}</span></label>`).join("")}
+                  </section>
+                  <section class="listContainer stepListContainer">
+                  ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="estTime">${s.estTimeMin}</span></label>`).join("")}
+                  </section>
+          <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
+          `;
+      }));
+  });
 }
-  
