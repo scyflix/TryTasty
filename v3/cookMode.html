@@ -3,14 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe | TryTasty</title>
-
-    <meta name="google-adsense-account" content="ca-pub-5719179006644682" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5719179006644682"
-      crossorigin="anonymous"
-    ></script>
+    <title>Cooking Mode | TryTasty</title>
 
     <!-- Cookiebot -->
     <script
@@ -164,6 +157,13 @@
       <div id="recipe">
         <!--Selected recipe-->
       </div>
+
+      <div id="recipeUtility">
+        <!--Selected recipe utility-->
+      </div>
+<div id="completedTask">
+  <!--Cook mode completed task-->
+</div>
     </main>
     <!-- Small screen bottom navigation -->
     <nav id="bottomNavContainer">
@@ -219,10 +219,10 @@
         </svg>
       </a>
     </nav>
-    <script type="module" src="js/renderRecipe.js" defer></script>
     <script src="nav.js" defer></script>
     <script type="module" src="main.js" defer></script>
     <script src="../recipe.js" defer></script>
+    <script src="js/cookMode.js" defer></script>
     <script>
       const otherAppsIcon = document.getElementById("otherAppsIcon");
       const FromScybud = document.getElementById("FromScybud");

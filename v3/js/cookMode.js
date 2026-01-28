@@ -54,7 +54,24 @@ function enterCookMode(recipeId) {
                   <section class="listContainer stepListContainer">
                   ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="valueData">${s.estTimeMin} min</span></label>`).join("")}
                   </section>
+                  <div id="completedTask">
+  <!--Cook mode completed task-->
+</div>
           <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
           `;
-    });
-}
+          
+         recipeUtilitySection.addEventListener("change", (e) => {
+           if (e.target.type !== "checkbox") return;
+
+           const checkbox = e.target;
+           const label = checkbox.closest("label");
+           const checkedContainer = document.getElementById("completedTask");
+
+           if (checkbox.checked) {
+             checkedContainer.appendChild(label);
+           }
+         });
+
+          
+        });
+      }

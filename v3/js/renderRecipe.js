@@ -91,7 +91,7 @@ Share
                   <span>🍽 Serves: ${recipe.servings}</span>
                   </section>
                   <p>${recipe.description}</p>
-                  <button class="activateCookMode">🥘Start Cook Mode</button>
+                  <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🥘Start Cook Mode</a>
                   <hr class="divider">
                   <section class="flexRecipeContent">
                   <img loading="lazy" src="${recipe.image}" alt="${
@@ -127,7 +127,6 @@ Share
   
   .then(() => {
     addToFav();
-    cookMode();
     const btn = document.querySelector(".shareBtn");
     btn.addEventListener("click", async () => {
       const url = btn.dataset.url || window.location.href;
@@ -197,15 +196,3 @@ Share
   });
 
   
-  function cookMode() {
-    const activateCookMode = document.querySelector(".activateCookMode");
-    activateCookMode.addEventListener("click", () => {
-      history.pushState(
-        { mode: "cook", recipeId },
-        "",
-        `?id=${recipeId}&mode=cook`,
-      );
-  
-      enterCookMode(recipeId);
-    });
-}

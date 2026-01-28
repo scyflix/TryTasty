@@ -104,11 +104,29 @@ ol li {
 }
 
 .activateCookMode {
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.2s;
   width: 100%;
   max-width: 400px;
   margin: 22px auto 0;
   display: block;
+  text-align: center;
+  color: #000000;
   background-color: #f98508;
+}
+.activateCookMode:hover {
+    color: #000000;
+    text-decoration: none;
+  background: #ff8b1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.activateCookMode:focus {
+  opacity: 0.9;
 }
 .divider {
   border-bottom: 2px solid #ffa94d;
@@ -138,14 +156,14 @@ ol li {
   margin-bottom: 8px;
 }
 #recipeUtility label span {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
  
 #recipeUtility label input[type="checkbox"] {
   appearance: none;
   width: 18px;
   height: 18px;
-  border: 2px solid #ddd;
+  border: 2px solid #f98508;
   border-radius: 6px;
   cursor: pointer;
   position: relative;
@@ -194,4 +212,10 @@ ol li {
 /* Handle hover */
 #recipeUtility::-webkit-scrollbar-thumb:hover {
   background: #e0bf00; /* darker yellow, still consistent */
+}
+
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
 }
