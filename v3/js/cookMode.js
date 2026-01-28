@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function enterCookMode(recipeId) {
-  document.querySelector("header").classList.add("fadeOut");
 
   setTimeout(() => {
-    document.querySelector("header").classList.add("disappear");
     document.querySelector("main").classList.add("activeUtilityMain");
     document.body.classList.add("lockScroll");
   }, 1000);
