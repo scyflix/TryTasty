@@ -156,13 +156,13 @@ ol li {
   margin-bottom: 8px;
 }
 #recipeUtility label span {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
  
 #recipeUtility label input[type="checkbox"] {
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   border: 2px solid #f98508;
   border-radius: 6px;
   cursor: pointer;
@@ -178,7 +178,7 @@ ol li {
 #recipeUtility label input[type="checkbox"]:checked::after {
   content: "✓";
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #recipeUtility {
   overflow-y: auto;

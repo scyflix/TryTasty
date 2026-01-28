@@ -9,13 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function enterCookMode(recipeId) {
-  const recipe = document.getElementById("recipe");
-
-  recipe.classList.add("fadeOut");
   document.querySelector("header").classList.add("fadeOut");
 
   setTimeout(() => {
-    recipe.classList.add("disappear");
     document.querySelector("header").classList.add("disappear");
     document.querySelector("main").classList.add("activeUtilityMain");
     document.body.classList.add("lockScroll");
@@ -54,7 +50,8 @@ function enterCookMode(recipeId) {
                   <section class="listContainer stepListContainer">
                   ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="valueData">${s.estTimeMin} min</span></label>`).join("")}
                   </section>
-                  <div id="completedTask">
+          <div id="completedTask">
+          <h3>Completed:</h3>
   <!--Cook mode completed task-->
 </div>
           <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
