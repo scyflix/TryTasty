@@ -9,7 +9,6 @@
       src="https://consent.cookiebot.com/uc.js"
       data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
       type="text/javascript"
-      defer
     ></script>
 
     <!-- Cookie declaration -->
@@ -17,11 +16,27 @@
       id="CookieDeclaration"
       src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
       type="text/javascript"
-      defer
     ></script>
 
     <!-- logic -->
-    <script src="./cookie-consent.js" defer></script>
+<!-- Google tag (GA4) -->
+<script
+  type="text/plain"
+  data-cookieconsent="statistics"
+>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DDLCL6XBQR', {
+    anonymize_ip: true
+  });
+</script>
+
+<script
+  type="text/plain"
+  data-cookieconsent="statistics"
+  src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
+></script>
 
     <script type="application/ld+json">
       {
@@ -36,7 +51,6 @@
     "query-input": "required name=search_term_string"
   }
 }
-
     </script>
 
     <script type="application/ld+json">
