@@ -27,7 +27,7 @@ function enterCookMode(recipeId) {
         recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
 
       recipeUtilitySection.innerHTML = `
-            <a class="backBtn" href="recipe.html?id=${recipe.id}">← Exit cook mode</a>
+            <button class="backBtn cookModeExit">← Exit cook mode</button>
           <h2>Cooking: ${recipe.title}</h2>
           <section class="meta">
          <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
@@ -66,7 +66,7 @@ function enterCookMode(recipeId) {
              checkedContainer.appendChild(label);
            }
          });
-
+exitCookMode();
 
         })
         .catch(() => {
@@ -111,4 +111,18 @@ function enterCookMode(recipeId) {
           </p>
           </div>`;
         });
+      }
+
+      
+      function exitCookMode() {
+        const cookModeExit = document.querySelector(".cookModeExit");
+        if (!cookModeExit) return;
+
+        cookModeExit.addEventListener("click", () => {
+          const confirmExit = confirm("Exit cooking mode? Progress will reset.")
+          if(!confirmExit) return
+          window.history.back();
+        })
+
+        
       }

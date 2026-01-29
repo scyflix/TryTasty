@@ -223,3 +223,49 @@ ol li {
   display: flex;
   flex-direction: column;
 }
+
+.confirmOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.confirmModal {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: min(90%, 320px);
+  text-align: center;
+}
+
+.confirmModal p {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.confirmModal .actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.confirmModal button {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.confirmModal .cancel {
+  background: #333;
+  color: #fff;
+}
+
+.confirmModal .confirm {
+  background: #ff8c00;
+  color: #000;
+}
