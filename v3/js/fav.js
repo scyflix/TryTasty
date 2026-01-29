@@ -15,7 +15,7 @@ const recipeImg = favBtns.getAttribute("data-img");
       const toast = document.getElementById("toast");
 
       if (!exists) {
-        favrecipes.push({ name: recipeName, key: recipeKey, img: recipeImg });
+        favrecipes.unshift({ name: recipeName, key: recipeKey, img: recipeImg });
         localStorage.setItem("favs", JSON.stringify(favrecipes));
 
         toast.textContent = "Saved to favorites";
@@ -72,7 +72,7 @@ a.innerHTML = `<img loading="lazy" src=${recipe.img} alt=${recipe.name}>
     };
 
     if (favsection) {
-      favsection.appendChild(a);
+      favsection.prepend(a);
     }
   });
 }
