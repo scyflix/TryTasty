@@ -3,19 +3,19 @@ const favrecipes = JSON.parse(localStorage.getItem("favs")) || [];
 export function addToFav() {
 
   //add to favorite and favorite count
-  const favBtns = document.querySelectorAll(".add-fav");
+  const favBtns = document.querySelector(".add-fav");
 
-  favBtns.forEach((fav) => {
-    fav.addEventListener("click", () => {
-      const recipeName = fav.getAttribute("data-name");
-      const recipeKey = fav.getAttribute("data-key");
+  favBtns.addEventListener("click", () => {
+      const recipeName = favBtns.getAttribute("data-name");
+      const recipeKey = favBtns.getAttribute("data-key");
+const recipeImg = favBtns.getAttribute("data-img");
 
       const exists = favrecipes.some((f) => f.key === recipeKey);
 
       const toast = document.getElementById("toast");
 
       if (!exists) {
-        favrecipes.push({ name: recipeName, key: recipeKey });
+        favrecipes.push({ name: recipeName, key: recipeKey, img: recipeImg });
         localStorage.setItem("favs", JSON.stringify(favrecipes));
 
         toast.textContent = "Saved to favorites";
@@ -32,7 +32,6 @@ export function addToFav() {
         toast.classList.remove("error");
       }, 3000);
     });
-  });
 
   //End of function
 }
@@ -60,11 +59,13 @@ if (favrecipes.length === 0) {
   favrecipes.forEach((recipe) => {
     const a = document.createElement("a");
 
-    const recipeKey = recipe.key || recipe.id; // whatever your real key is
+    const recipeKey = recipe.key || recipe.id; 
 
     a.href = `recipe.html?id=${recipeKey}`;
-    a.textContent = recipe.name + ",";
-    a.className = "fav-link";
+    a.className = "snackImage";
+a.innerHTML = `<img loading="lazy" src=${recipe.img} alt=${recipe.name}>
+<span>${recipe.name}</span>
+`;
 
     a.onclick = () => {
       window.location.href = `recipe.html?id=${recipeKey}`;

@@ -115,6 +115,7 @@ Share
                 class="add-fav"
                 data-key="${recipe.id}"
                 data-name="${recipe.title}"
+                data-img="${recipe.image}"
                 >
                 Add to favorites
                 </button>

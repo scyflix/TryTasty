@@ -8,7 +8,7 @@ body.darkMode .meta span {
 .meta {
   display: flex;
   margin: 20px 0;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -184,6 +184,10 @@ ol li {
   overflow-y: auto;
   max-height: 90vh;
   z-index: 9999;
+}
+#recipeUtility .meta span {
+  font-size: 0.8rem;
+  margin: 0;
 }
 .activeUtilityMain {
   padding-right: 0;

@@ -29,17 +29,17 @@ function enterCookMode(recipeId) {
       recipeUtilitySection.innerHTML = `
             <a class="backBtn" href="recipe.html?id=${recipe.id}">← Exit cook mode</a>
           <h2>Cooking: ${recipe.title}</h2>
+          <section class="meta">
+         <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
+         <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
+         <span>❄️ Cooling: ${recipe.coolTime}</span>
+         <span>⌛ Total: ${totalTimeMin} min</span>
+         <span>🍽 Serves: ${recipe.servings}</span>
+         </section>
           <h3>Grocery List:</h3>
           <div class="listContainer groceryListContainer">
                   ${recipe.utility.groceryList.map((g) => `<label> <input type="checkbox"><span>${g.item}:</span> <span class="valueData">${g.quantity}</span></label>`).join("")}
                   </div>
-                   <section class="meta">
-                  <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
-                  <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
-                  <span>❄️ Cooling: ${recipe.coolTime}</span>
-                  <span>⌛ Total: ${totalTimeMin} min</span>
-                  <span>🍽 Serves: ${recipe.servings}</span>
-                  </section>
                             <h3>Equipments:</h3>
                   <section class="listContainer equipmentListContainer">
                   ${recipe.utility.equipment.map((e) => `<label> <input type="checkbox"><span>${e}</span></label>`).join("")}
