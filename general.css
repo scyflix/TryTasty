@@ -96,7 +96,6 @@ header {
   top: 0;
   z-index: 1000;
   margin: 0;
-  border-radius: var(--radius);
   height: 50px;
   max-height: 95px;
 }
