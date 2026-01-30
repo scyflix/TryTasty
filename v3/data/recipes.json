@@ -54,14 +54,16 @@
         "stepFlow": [
           {
             "step": 0,
-            "text": "Wipe to start cooking.",
-            "estTimeMin": "Total Cook Time: 20"
+            "text": "Swipe to start cooking.",
+            "estTimeMin": "16"
           },
-          { "step": 1, "text": "Cut bread into sticks.", "estTimeMin": 5 },
+          { "step": 1, 
+          "text": "Cut bread into sticks.", 
+          "estTimeMin": 4 },
           {
             "step": 2,
             "text": "Whisk eggs, milk, cheese and spices.",
-            "estTimeMin": 4
+            "estTimeMin": 2
           },
           {
             "step": 3,
@@ -72,6 +74,16 @@
             "step": 4,
             "text": "Fry until golden on each side.",
             "estTimeMin": 8
+          },
+          {
+            "step": 5,
+            "text": "Arrange on a plate and sprickle with grated cheese.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 6,
+            "text": "Congratulations🎊, you have just completed this recipe.",
+            "estTimeMin": 0
           }
         ],
 

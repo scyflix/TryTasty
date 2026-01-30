@@ -51,7 +51,7 @@ function enterCookMode(recipeId) {
                       (s) => `<div class="steps">
                     <span>Step ${s.step}: </span>
                     <p>${s.text}</p> 
-                    <span class="valueData">${s.estTimeMin} min</span>
+                    <span class="valueData">Estimated Time: ${s.estTimeMin} min</span>
                     </div>`,
                     )
                     .join("")}
@@ -60,7 +60,7 @@ function enterCookMode(recipeId) {
           <h3>Completed:</h3>
   <!--Cook mode completed task-->
 </div>
-          <p style="text-align: center; opacity: 0.3;">Cooking mode details  will show here</p>
+          <p style="text-align: center; opacity: 0.3;">Cooking...</p>
           `;
           
          recipeUtilitySection.addEventListener("change", (e) => {

@@ -177,7 +177,7 @@ ol li {
 }
 #recipeUtility label input[type="checkbox"]:checked::after {
   content: "✓";
-  color: #fff;
+  color: var(--color);
   font-size: 1.5rem;
 }
 #recipeUtility {
@@ -194,7 +194,6 @@ ol li {
 }
 .valueData {
   background: var(--bg);
-  color: #f5f5f5;
   font-size: 1.2rem;
 }
 /* RECIPE UTILITY SCROLLBAR */
@@ -227,8 +226,7 @@ ol li {
 }
 
 .stepListContainer {
-  background: linear-gradient(180deg, #ff4500, #f98508);
-  color: #ffffff;
+  background: linear-gradient(to top, var(--main-bg), #f98508);
   border-radius: 8px;
   margin: 0 12px;
   display: flex;
@@ -250,6 +248,7 @@ ol li {
 #recipeUtility .stepListContainer div.steps {
   position: relative;
   padding: 0 29px;
+  font-weight: 600;
   font-size: clamp(1rem, 7vw, 2rem);
     overflow: hidden;
   min-width: 100%;
@@ -257,24 +256,7 @@ ol li {
   scroll-snap-align: start;
 }
 
-/* Buttons */
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  padding: 12px 16px;
-  font-size: 20px;
-  cursor: pointer;
-}
 
-.scroll-btn.left {
-  left: 0;
-}
-
-.scroll-btn.right {
-  right: 0;
-}
 /*
 .confirmOverlay {
   position: fixed;
