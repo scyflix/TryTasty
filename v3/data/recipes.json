@@ -52,7 +52,12 @@
         ],
 
         "stepFlow": [
-          { "step": 1, "text": "Cut bread into sticks. Cut bread into sticks", "estTimeMin": 5 },
+          {
+            "step": 0,
+            "text": "Wipe to start cooking.",
+            "estTimeMin": "Total Cook Time: 20"
+          },
+          { "step": 1, "text": "Cut bread into sticks.", "estTimeMin": 5 },
           {
             "step": 2,
             "text": "Whisk eggs, milk, cheese and spices.",
@@ -116,7 +121,7 @@
         }
       ]
     },
-    
+
     {
       "id": "peanut-butter-apple-nachos",
       "title": "Peanut Butter Apple Nachos",
