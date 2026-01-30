@@ -46,7 +46,15 @@ function enterCookMode(recipeId) {
                   </section>
                             <h3>Steps:</h3>
                   <section class="listContainer stepListContainer">
-                  ${recipe.utility.stepFlow.map((s) => `<label> <input type="checkbox"><span>Step ${s.step}:</span><span>${s.text}</span> <span class="valueData">${s.estTimeMin} min</span></label>`).join("")}
+                  ${recipe.utility.stepFlow
+                    .map(
+                      (s) => `<div class="steps">
+                    <span>Step ${s.step}: </span>
+                    <p>${s.text}</p> 
+                    <span class="valueData">${s.estTimeMin} min</span>
+                    </div>`,
+                    )
+                    .join("")}
                   </section>
           <div id="completedTask">
           <h3>Completed:</h3>

@@ -194,6 +194,8 @@ ol li {
 }
 .valueData {
   background: var(--bg);
+  color: #f5f5f5;
+  font-size: 1.2rem;
 }
 /* RECIPE UTILITY SCROLLBAR */
 /* width */
@@ -224,6 +226,56 @@ ol li {
   flex-direction: column;
 }
 
+.stepListContainer {
+  background: linear-gradient(180deg, #ff4500, #f98508);
+  color: #ffffff;
+  border-radius: 8px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+    scrollbar-width: none;
+
+  overscroll-behavior: auto;
+  height: 70vh;
+  scroll-snap-type: x mandatory;
+}
+.stepListContainer::-webkit-scrollbar {
+  display: none;
+}
+#recipeUtility .stepListContainer div.steps {
+  position: relative;
+  padding: 0 29px;
+  font-size: clamp(1rem, 7vw, 2rem);
+    overflow: hidden;
+  min-width: 100%;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+/*
 .confirmOverlay {
   position: fixed;
   inset: 0;
@@ -269,3 +321,4 @@ ol li {
   background: #ff8c00;
   color: #000;
 }
+*/

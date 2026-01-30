@@ -52,7 +52,7 @@
         ],
 
         "stepFlow": [
-          { "step": 1, "text": "Cut bread into sticks.", "estTimeMin": 5 },
+          { "step": 1, "text": "Cut bread into sticks. Cut bread into sticks", "estTimeMin": 5 },
           {
             "step": 2,
             "text": "Whisk eggs, milk, cheese and spices.",
