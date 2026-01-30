@@ -58,4 +58,4 @@ For licensing or partnership inquiries, contact:
 
 ## 🙌 Credits
 
-Created with passion under the **Scybud** brand by Abdulroqib Oladipo — driven by creativity, curiosity, and a love for good food.
+Created with passion under the **Scybud** brand by Abdulroqib Oladipo. Driven by creativity, curiosity, and a love for good food.
