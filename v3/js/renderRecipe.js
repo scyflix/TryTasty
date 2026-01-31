@@ -64,8 +64,13 @@ if (!recipe) {
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(recipeSchema);
     document.head.appendChild(script);
-
     document.title = `${recipe.title} | TryTasty`;
+
+    const metaOgImg = document.createElement("meta")
+    metaOgImg.property = "og:image"
+    metaOgImg.content = `<${recipe.image}`
+    document.head.appendChild(metaOgImg)
+    
     const totalTimeMin =
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
     document.getElementById("recipe").innerHTML = `
