@@ -137,11 +137,9 @@ Share
                 <p class="alsoLike">You might also like <a href="recipe.html?id=${recipe.innerLink[0].link}">${recipe.innerLink[0].name}</a></p>
                 </article>
           `;
-  })
-  
-  .then(() => {
-    addToFav();
-    const btn = document.querySelector(".shareBtn");
+
+          function shareRecipe() {
+ const btn = document.querySelector(".shareBtn");
     btn.addEventListener("click", async () => {
       const url = btn.dataset.url || window.location.href;
 
@@ -149,7 +147,7 @@ Share
         try {
           await navigator.share({
             title: "TryTasty Recipe",
-            text: "Check out this recipe on TryTasty 👀🍽️",
+            text: `Check out this ${recipe.title} recipe on TryTasty 👀🍽️`,
             url,
           });
         } catch (err) {
@@ -159,12 +157,18 @@ Share
         fallbackShare(url);
       }
     });
-
+    
     function fallbackShare(url) {
       navigator.clipboard.writeText(url).then(() => {
         alert("Link copied to clipboard!");
       });
     }
+  }
+  shareRecipe()
+  })
+  
+  .then(() => {
+    addToFav();
   })
   .catch(() => {
     document.getElementById("recipe").innerHTML =

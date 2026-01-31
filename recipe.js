@@ -145,7 +145,6 @@ function findRecipe() {
   }
 
   if (matches.length > 0) {
-  
     suggestions.innerHTML = `<p>Based on your ingredients, i suggest you try:</p> <br> ${matches.join("<br>")}`;
   } else {
     suggestions.textContent = `Sorry I do not have a recipe for that yet 😓.`;
