@@ -34,6 +34,7 @@ if (!recipe) {
       name: recipe.title,
       description: recipe.description,
       image: recipe.image ? [recipe.image] : undefined,
+      keywords: recipe.dataKeywords || undefined,
       url: window.location.href,
 
       author: {
