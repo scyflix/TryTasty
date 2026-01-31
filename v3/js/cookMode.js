@@ -43,6 +43,7 @@ function enterCookMode(recipeId) {
                             <h3>Equipments:</h3>
                   <section class="listContainer equipmentListContainer">
                   ${recipe.utility.equipment.map((e) => `<label> <input type="checkbox"><span>${e}</span></label>`).join("")}
+                  <a class="buyBtn" href="buy/shop.html">Get In Shop</a>
                   </section>
                             <h3>Steps:</h3>
                   <section class="listContainer stepListContainer">
