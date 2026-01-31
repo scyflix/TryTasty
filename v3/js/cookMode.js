@@ -80,7 +80,7 @@ exitCookMode();
         })
         .catch(() => {
             document.getElementById("recipeUtility").innerHTML =
-              `<a class="backBtn" href="../index.html">← Home</a>
+              `<a class="backBtn cookModeExit" href="../index.html">← Home</a>
             <div style="text-align: center;" class="failedToLoad">
             <svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
             <!-- background blob -->
