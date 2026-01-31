@@ -1,5 +1,3 @@
-
-
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
 const overlay = document.querySelector(".overlay");
@@ -27,6 +25,8 @@ const navLinks = [
   { text: "Home", href: "../../index.html", class: "toastNavLink" },
   { text: "Recipes", href: "../../index.html#recipeList" },
   { text: "Favorites", href: "../favs.html", class: "toastNavLink" },
+    { text: "Shop", href: "../buy/shop.html", class: "toastNavLink" },
+
   { text: "Videos", href: "../videos.html", class: "toastNavLink" },
   { text: "Community", href: "../../TryTasty-community/community.html" },
   { text: "Submit", href: "../submit.html" },
@@ -118,6 +118,20 @@ bottomNavContainer.innerHTML = `
           <span>Favorites</span>
 
       </a>
+
+          <a href="../buy/shop.html" arial-label="Shop">
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 -960 960 960"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    d="M160-200v-360l80-200h480l80 200v360H520v-160H440v160H160Zm80-80h120v-160h240v160h120v-280H240v280Zm40-360h400l-32-80H312l-32 80Zm-40 360v-280 280Z"
+  />
+</svg>
+          <span>Shop</span>
+</a>
 
       <a href="../videos.html" aria-label="Videos">
         <svg
