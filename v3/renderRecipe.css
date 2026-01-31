@@ -219,6 +219,12 @@ ol li {
   background: #e0bf00; /* darker yellow, still consistent */
 }
 
+.tip {
+font: clamp(1rem, 4vw, 1.2rem) cursive;
+max-width: 500px;
+width: 90%;
+margin: auto;
+}
 
 .listContainer {
   display: flex;
@@ -254,6 +260,13 @@ ol li {
   min-width: 100%;
   text-align: center;
   scroll-snap-align: start;
+}
+
+#recipeUtility a.buyBtn {
+      min-width: 20%;
+      max-width: 100%;
+      width: 20%;
+      margin: auto;
 }
 
 

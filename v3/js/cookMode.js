@@ -40,6 +40,12 @@ function enterCookMode(recipeId) {
           <div class="listContainer groceryListContainer">
                   ${recipe.utility.groceryList.map((g) => `<label> <input type="checkbox"><span>${g.item}:</span> <span class="valueData">${g.quantity}</span></label>`).join("")}
                   </div>
+
+                  <div class="infoNote tip">
+                  <b>Tip:</b>
+                  ${recipe.utility.notes.defaultTip}
+                  </div>
+
                             <h3>Equipments:</h3>
                   <section class="listContainer equipmentListContainer">
                   ${recipe.utility.equipment.map((e) => `<label> <input type="checkbox"><span>${e}</span></label>`).join("")}
