@@ -419,8 +419,20 @@ backdrop-filter: blur(10px);
 }
 .closeModal {
   position: absolute;
+  cursor: pointer;
   right: 12px;
   top: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg);
+}
+.closeModal:hover {
+  opacity: 0.8;
+}
+.closeModal svg {
+   width: 40px;
+  height: 40px;
 }
 .loginBtn {
   border: none;
