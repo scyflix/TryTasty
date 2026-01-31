@@ -75,6 +75,7 @@ a.buyBtn:hover {
       border-radius: var(--radius);
 }
 .imgContainer {
+            border-radius: var(--radius);
       position: relative;
             width: 100%;
             overflow: hidden;
@@ -103,7 +104,7 @@ padding-left: 12px;
 
 .productDetails {
       cursor: pointer;
-      margin: 4px 20px;
+      margin: 4px 20px 12px;
       background: #0000004e;
       border-radius: var(--radius);
       border-bottom: 2px solid ;
