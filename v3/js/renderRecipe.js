@@ -8,12 +8,17 @@ const recipeContainer = document.getElementById("recipe");
 if (!recipeId) {
   recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
   <p style="text-align: center; opacity: 0.3;">Recipe not found.</p>`;
+    throw new Error("Missing recipeId");
+
 }
 
 fetch("data/recipes.json")
   .then((response) => response.json())
   .then((data) => {
     const recipe = data.recipes.find((r) => r.id === recipeId);
+if (!recipe) {
+  throw new Error("Recipe not found");
+}
 
     const toISO = (min) => `PT${min}M`;
 
@@ -21,9 +26,14 @@ fetch("data/recipes.json")
       "@context": "https://schema.org",
       "@type": "Recipe",
 
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": window.location.href,
+      },
+
       name: recipe.title,
       description: recipe.description,
-      image: [recipe.image],
+      image: recipe.image ? [recipe.image] : undefined,
       url: window.location.href,
 
       author: {
@@ -38,11 +48,13 @@ fetch("data/recipes.json")
       recipeYield: `${recipe.servings} serving${
         recipe.servings === 1 ? "" : "s"
       }`,
+      recipeCuisine: recipe.cuisine || "International",
 
       recipeIngredient: recipe.ingredients,
 
-      recipeInstructions: recipe.steps.map((step) => ({
+      recipeInstructions: recipe.steps.map((step, index) => ({
         "@type": "HowToStep",
+        name: "Step " + (index + 1),
         text: step,
       })),
     };
