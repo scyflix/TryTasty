@@ -232,7 +232,7 @@ margin: auto;
 }
 
 .stepListContainer {
-  background: linear-gradient(to top, var(--main-bg), #f98508);
+  background: linear-gradient(to top, var(--bg), #f98508);
   border-radius: 8px;
   margin: 0 12px;
   display: flex;
@@ -257,6 +257,7 @@ margin: auto;
   font-weight: 600;
   font-size: clamp(1rem, 7vw, 2rem);
     overflow: hidden;
+    border-right: 2px solid var(--color);
   min-width: 100%;
   text-align: center;
   scroll-snap-align: start;

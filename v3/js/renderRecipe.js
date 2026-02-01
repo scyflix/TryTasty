@@ -75,7 +75,7 @@ if (!recipe) {
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
     document.getElementById("recipe").innerHTML = `
     <div class="recipeActionBtns">
-    <a class="backBtn" href="../index.html">← Back</a>
+    <a class="backBtn" href="../index.html">← Home</a>
 
     <button class="shareBtn">
     <svg

@@ -53,8 +53,8 @@
 
         "stepFlow": [
           {
-            "step": 0,
-            "text": "Swipe left to start cooking.",
+            "step": "0",
+            "text": "Ready? Swipe left to begin.",
             "estTimeMin": "16"
           },
           { "step": 1, 
