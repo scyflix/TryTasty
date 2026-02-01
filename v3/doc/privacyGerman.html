@@ -49,7 +49,7 @@
         padding-bottom: 5px;
       }
       .sectionHeader {
-        color: white;
+        color: var(--color);
         font-size: 2rem;
         text-align: center;
         padding-top: 32px;
@@ -74,6 +74,9 @@ h1 {
           justify-content: space-around;
           align-items: center;
         }
+      }
+      header {
+        position: static;
       }
     </style>
 
@@ -131,7 +134,8 @@ h1 {
         <p><strong>Angaben gemäß § 5 TMG:</strong></p>
         <p>
           Oladipo Abdulroqib<br />
-          Bremen<br />
+          Heinrich Plett Allee 64<br />
+          28259 Bremen<br />
           Deutschland
         </p>
         <p>
@@ -175,7 +179,7 @@ h1 {
       <!-- DATENSCHUTZ -->
       <section id="datenschutz">
         <h2 class="sectionHeader">Datenschutzerklärung</h2>
-        <p><strong>Letzte Aktualisierung:</strong> 11. Juli 2025</p>
+        <p><strong>Letzte Aktualisierung:</strong> 02. Februar 2025</p>
 
         <h2>1. Einleitung</h2>
         <p>
@@ -185,19 +189,25 @@ h1 {
         </p>
 
         <h2>2. Google Analytics</h2>
-        <p>
-          Wir verwenden Google Analytics, um zu verstehen, wie Besucher unsere
-          Website nutzen. Google Analytics sammelt anonymisierte Daten wie
-          Browsertyp, besuchte Seiten und Verweildauer. Es werden keine
-          personenbezogenen Daten erfasst.
-        </p>
-        <p>
-          Google kann Cookies verwenden, um Daten zu sammeln. Sie können die
-          Erfassung über folgendes Plugin deaktivieren:
-          <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">
-            Google Analytics Opt-Out </a
-          >.
-        </p>
+<p>
+Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited.
+Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen.
+</p>
+<p>
+Die IP-Adresse wird anonymisiert verarbeitet. Dennoch handelt es sich um personenbezogene Daten
+im Sinne der DSGVO.
+</p>
+<p>
+Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung
+gemäß Art. 6 Abs. 1 lit. a DSGVO.
+</p>
+<p>
+Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen oder
+die Erfassung durch folgendes Browser-Plugin verhindern:
+<a href="https://tools.google.com/dlpage/gaoptout" target="_blank">
+Google Analytics Opt-Out
+</a>.
+</p>
 
         <h2>3. Cookies</h2>
         <p>
@@ -219,14 +229,8 @@ h1 {
           Analytics verarbeitet.
         </p>
 
-        <h2>5. Einwilligung</h2>
-        <p>
-          Durch die Nutzung unserer Website stimmen Sie dieser
-          Datenschutzerklärung zu.
-        </p>
-
         <section id="recipeSubmission">
-          <h2>6. Rezept Einreichen</h2>
+          <h2>5. Rezept Einreichen</h2>
           <p>
             Das Einreichen von Rezepten ist nur nach Anmeldung möglich. Mit dem
             Absenden bestätigen Sie, dass das Rezept Ihnen gehört und Sie die
@@ -234,12 +238,17 @@ h1 {
             Rezept öffentlich anzuzeigen.
           </p>
           <p>
+Die eingereichten Inhalte werden gespeichert, solange das Nutzerkonto besteht
+oder bis eine Löschung beantragt wird.
+</p>
+
+          <p>
             Wir übernehmen keine Verantwortung für Urheberrechtsverletzungen bei
             eingereichten Rezepten.
           </p>
         </section>
 
-        <h2>7. Ihre Rechte gemäß DSGVO</h2>
+        <h2>6. Ihre Rechte gemäß DSGVO</h2>
         <p>
           Sie haben das Recht auf Auskunft, Berichtigung, Löschung und
           Einschränkung der Verarbeitung Ihrer Daten. Sie können Ihre
@@ -247,11 +256,29 @@ h1 {
           <a href="mailto:scybudtech@gmail.com">scybudtech@gmail.com</a>.
         </p>
 
-        <h2>8. Änderungen dieser Erklärung</h2>
+        <h2>7. Änderungen dieser Erklärung</h2>
         <p>
           Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf
           zu ändern. Änderungen werden auf dieser Seite veröffentlicht.
         </p>
+        <section id="amazonProgram">
+          <h2>8. Amazon-Partnerprogramm</h2>
+          <p>
+            TryTasty nimmt am Amazon EU-Partnerprogramm teil.
+            Durch Affiliate-Links können Cookies von Amazon gesetzt werden,
+            um die Herkunft von Bestellungen nachvollziehen zu können.
+          </p>
+          <p>
+            Die Nutzung erfolgt nur nach Ihrer Einwilligung über das Cookie-Consent-Tool.
+            Weitere Informationen finden Sie in der Datenschutzerklärung von Amazon.
+          </p>
+        </section>
+
+<h2>9. Kontakt & Feedback</h2>
+<p>
+Wenn Sie uns über Formulare kontaktieren, werden die übermittelten Daten
+ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.
+</p>
 
       </section>
       
@@ -272,7 +299,7 @@ h1 {
         </p>
         <p>Es gilt das Recht der Bundesrepublik Deutschland.</p>
       </section>
-      <p class="infoNote">Last updated: December 19, 2025</p>
+      <p class="infoNote"><b>Letzte Aktualisierung:</b> 02. Februar 2025</p>
     </main>
     <footer>
       <section class="footerContainer">
@@ -322,9 +349,10 @@ h1 {
       
       <div class="footerLinks">
         <a href="about.html">About</a>
-        <a href="privacyGerman.html">Imprint & privacy policy</a>
-        <a href="../feedbacks/index.html">Write a feedback</a>
         <a href="../submit.html">Submit a recipe</a>
+        <a href="../feedbacks/index.html">Write a feedback</a>
+        <a href="privacyGerman.html">Imprint & privacy policy</a>
+        <a href="../buy/shop.html">Get kitchen utensils</a>
       </div>
     </section>
 
