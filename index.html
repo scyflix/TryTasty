@@ -119,15 +119,43 @@
     />
     <link rel="manifest" href="v3/favicon/site.webmanifest" />
   
+    <style>
+      .skeletonContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .skeletonImg {
+        background: var(--bg);
+        width: 100%;
+        height: 70%;
+        animation: shima 2s ease infinite;
+      }
+      @keyframes shima {
+        0% {
+          background-color: var(--bg);
+        }
+        50% {
+          background-color: var(--main-bg);
+        }
+        100% {
+                    background-color: var(--bg);
+        }
+      }
+      .skeletonText {
+                background: var(--bg);
+width: 90%;
+height: 10%;
+margin:  auto ;
+        animation: shima 2s ease infinite;
+
+      }
+      .skeletonText2 {
+        width: 80%;
+      }
+    </style>
   </head>
   <body>
- <!--PRELOADER-->
-    <div id="preloader">
-      <div class="logo">TryTasty</div>
-      <div class="loadBar">
-        <div class="loadLine"></div>
-      </div>
-    </div>
+ 
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div
@@ -246,6 +274,57 @@
       <section id="recipeList">
         <h2 class="available">Available Recipes</h2>
         <nav class="page" >
+          <!--SKELETON LOAD-->
+          <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+             <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+             <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+             <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+             <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+             <div
+              class="snackImage recipe skeletonContainer"
+              ><div class="skeletonImg">
+              </div>
+              <span class="skeletonText"></span>
+                            <span class="skeletonText skeletonText2"></span>
+
+            </div>
+
+
           <!--Link all the recipe pages here-->
         </nav>
       </section>
@@ -417,7 +496,7 @@
     </nav>
     <script src="rootNav.js" derfer></script>
     <script src="recipe.js" defer></script>
-    <script src="v3/js/recipeCards.js"></script>
+      <script src="v3/js/recipeCards.js"></script>
     <script type="module" src="v3/main.js" defer></script>
   </body>
 </html>
