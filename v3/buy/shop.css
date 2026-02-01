@@ -4,12 +4,12 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 20px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
       section.productContainer {
             grid-template-columns: 1fr 1fr 1fr; 
       }
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
       section.productContainer {
             grid-template-columns: 1fr 1fr; 
       }
@@ -26,12 +26,12 @@ section.productContainer a {
       text-decoration: none;
 }
 .productItemContainer {
-      margin: 10px 0;
+      margin: 10px 0 0;
       padding-bottom: 20px;
-border: 1px solid #ffffff; 
+border: 1px solid var(--color); 
       border-radius: var(--radius);
 }
-.productItemContainer h3, .productItemContainer p {
+.productItemContainer h2, .productItemContainer p {
       margin: 0 6px;
 }
 .productItemContainer a{
@@ -39,19 +39,19 @@ border: 1px solid #ffffff;
 }
 a.buyBtn {
       color: #000000;
-        background: var(--btn-bg);
-      margin: auto 10px;
+      background: #f98508;
+      margin: 20px;
       min-width: 90%;
       display: block;
       transition: all 0.2s ease;
       text-align: center;
       text-decoration: none;
-        border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
+       border: none;
+       padding: 14px;
+       border-radius: 10px;
+       font-size: 17px;
+       font-weight: 600;
+       cursor: pointer;
 }
 a.buyBtn::after {
       content: "↗";
@@ -66,7 +66,7 @@ a.buyBtn:hover:after {
       margin-left: 10px;
 }
 a.buyBtn:hover {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: translateY(-2px);
 }
 .productItemContainer img {
@@ -88,7 +88,7 @@ a.buyBtn:hover {
       font-weight: 700;
       bottom: 0;
       text-align: end;
-padding-left: 12px;
+      padding-left: 12px;
       color: #ffffff;
       margin: 0;
       opacity: 0;
@@ -105,7 +105,7 @@ padding-left: 12px;
 .productDetails {
       cursor: pointer;
       margin: 4px 20px 12px;
-      background: #0000004e;
+      background: var(--main-bg);
       border-radius: var(--radius);
       border-bottom: 2px solid ;
       border-top: 1px solid ;
@@ -115,5 +115,5 @@ padding-left: 12px;
 transition: background-color 0.5s ease;
 }
 .productDetails summary:hover {
-      background-color: #282828;
+      background-color: var(--bg);
 }
