@@ -117,13 +117,14 @@ exitCookMode();
           <circle cx="200" cy="165" r="4" fill="#ffe07a"/>
           
           <!-- title -->
-          <text x="120" y="185" text-anchor="middle" font-size="12" font-family="Arial" fill="#666">
+          <text x="120" y="200" text-anchor="middle" font-size="12" font-family="Arial" fill="#666">
           Oops… snacks didn’t load
           </text>
           </svg>
           
-          <p style="text-align: center; opacity: 0.3;">Failed to load data. Please reload the app.
+          <p style="text-align: center; opacity: 0.3;">Cook Mode isnt available on this recipe yet. 
           </p>
+          <a href="feedbacks/index.html">Report this issue</a>
           </div>`;
         });
       }
