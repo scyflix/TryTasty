@@ -27,7 +27,7 @@ const navLinks = [
   { text: "Home", href: "../index.html", class: "toastNavLink" },
   { text: "Recipes", href: "../index.html#recipeList" },
   { text: "Favorites", href: "favs.html", class: "toastNavLink" },
-  { text: "Shop", href: "buy/shop.html" },
+  { text: "Utensils", href: "buy/shop.html" },
 
   { text: "Videos", href: "videos.html", class: "toastNavLink" },
   {
