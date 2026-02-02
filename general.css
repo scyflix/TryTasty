@@ -6,8 +6,9 @@
 :root {
   --bg: #ebe9e5e8;
   --main-bg: #fffdfa;
+  --desc-bg: #fcdab9;
   --color: #333;
-  --header-bg: #ffd9a0;
+  --header-bg: #ffe3b9;
     --header-color: linear-gradient(90deg, orange, orangered);
   --icon-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
@@ -27,6 +28,7 @@
 body.darkMode {
   --link-color: #f59f1d;
   --link-color-hover: #ff7300;
+  --desc-bg: #44321f;
   --bg: #464545;
   --main-bg: #1e1e1e;
   --color: #ffffff;

@@ -108,7 +108,7 @@ Share
                   <span>⌛ Total: ${totalTimeMin} min</span>
                   <span>🍽 Serves: ${recipe.servings}</span>
                   </section>
-                  <p>${recipe.description}</p>
+                  <p class="recipeDesc">${recipe.description}</p>
                   <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🥘Start Cook Mode</a>
                   <hr class="divider">
                   <section class="flexRecipeContent">

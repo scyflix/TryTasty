@@ -63,6 +63,11 @@ ol li {
 .flexRecipeContent .recipeTexts {
   order: 1;
 }
+.recipeDesc {
+  background: var(--desc-bg);
+  border-radius: var(--radius);
+  padding: 6px;
+}
 @media (max-width: 700px) {
   .flexRecipeContent {
     display: flex;
@@ -76,6 +81,10 @@ ol li {
   }
   .flexRecipeContent .recipeTexts {
     order: 2;
+  }
+  .recipeDesc {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
