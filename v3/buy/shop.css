@@ -1,4 +1,4 @@
-section.productContainer {
+article.productContainer {
   width: 100%;
   margin: 20px auto;
   column-count: 4;
@@ -8,7 +8,6 @@ section.productContainer {
 
 /* Ensure cards don't split across columns */
 .productItemContainer {
-      position: relative;
   break-inside: avoid; /*TO AVOID CARDS FROM BREAKING INTO HALF*/
   margin-bottom: 20px;
   display: flex;
@@ -21,24 +20,24 @@ section.productContainer {
 
 /* Update your Media Queries */
 @media (max-width: 1400px) {
-  section.productContainer {
+  article.productContainer {
     column-count: 3;
   }
 }
 @media (max-width: 1000px) {
-  section.productContainer {
+  article.productContainer {
     column-count: 2;
   }
 }
 @media (max-width: 600px) {
-  section.productContainer {
+  article.productContainer {
     column-count: 1;
   }
 }
 .productItemContaine:hover {
   opacity: 0.8;
 }
-section.productContainer a {
+article.productContainer a {
   text-decoration: none;
 }
 .productItemContainer h2,
