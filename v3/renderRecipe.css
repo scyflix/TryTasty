@@ -98,6 +98,7 @@ ol li {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  opacity: 0.8;
 }
 .recipeActionBtns button {
   margin: 0;
@@ -117,6 +118,7 @@ ol li {
   padding: 14px;
   border-radius: 10px;
   font-size: 17px;
+  opacity: 0.9;
   font-weight: 600;
   transition: 0.2s;
   width: 100%;
