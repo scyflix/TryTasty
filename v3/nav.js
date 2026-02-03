@@ -200,13 +200,13 @@ function callToFeedback() {
           </div>
 
 <h2>Write us a Feedback</h2>
-<p>We want to make TryTasty better for you.</p>
-<p>Tell us your experience using TryTasty</p>
+<p>We want to make TryTasty better for you!</p>
+<p>Tell us your experience using TryTasty.</p>
 <a class="loginBtn" href="feedbacks/index.html">Write to us</a>
 </div>
 `;
   const main = document.querySelector("main");
-  main.appendChild(div);
+  main.prepend(div);
 
   const closeModal = document.querySelector(".closeModal");
   closeModal.addEventListener("click", () =>  {
@@ -215,5 +215,6 @@ function callToFeedback() {
 }
 
 setTimeout(() => {
+  //call the funtion after approximately 5mins
   callToFeedback();
-}, 1000000);
+}, 299999);

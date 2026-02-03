@@ -26,7 +26,12 @@ temuProductsContainer.innerHTML = data.products
          </div>
 
          <div class="text">
-         <h2>${product.title}</h2>
+         <h2><a
+         href="${product.link}"
+         target="_blank"
+         rel="sponsored nofollow"
+         >${product.title}</a
+         ></h2>
          <p>
          ${product.description.desc1}</p>
          <p>${product.description.desc2}</p>

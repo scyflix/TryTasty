@@ -171,3 +171,45 @@ bottomNavContainer.innerHTML = `
   <span>Community</span>
 </a>
 `;
+
+function callToFeedback() {
+  const div = document.createElement("div");
+  div.className = "popupModal";
+  div.innerHTML = `
+  
+  <div class="modalContentContainer">
+  <div class="closeModal">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+
+<h2>Write us a Feedback</h2>
+<p>We want to make TryTasty better for you!</p>
+<p>Tell us your experience using TryTasty.</p>
+<a class="loginBtn" href="feedbacks/index.html">Write to us</a>
+</div>
+`;
+  const main = document.querySelector("main");
+  main.prepend(div);
+
+  const closeModal = document.querySelector(".closeModal");
+  closeModal.addEventListener("click", () => {
+    div.style.display = "none";
+  });
+}
+
+setTimeout(() => {
+  //call the funtion after approximately 5mins
+  callToFeedback();
+}, 299999);
