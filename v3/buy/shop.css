@@ -44,7 +44,7 @@ article.productContainer a {
 .productItemContainer p {
   margin: 0 6px;
 }
-.productItemContainer h2 a {
+.productItemContainer h2 a:hover {
   text-decoration: underline;
 }
 a.buyBtn {
