@@ -420,8 +420,30 @@ a.userProfileLink span {
 .mayHide.hideSection {
   display: none;
 }
+.popupModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5px;
+backdrop-filter: blur(10px);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 9999;
+width: 100vw;
+height: 100dvh;
+}
+.feedbackPopupModal {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 5px;
+backdrop-filter: blur(10px);
+width: 100%;
+max-width: 600px;
+
+}
 .modalContentContainer {
-  width: 100%;
   color: var(--color);
   display: flex;
 justify-content: center;
@@ -433,18 +455,25 @@ flex-direction: column;
   border: 2px solid var(--btn-bg);
   backdrop-filter: blur(100px) brightness(60%);
 }
+.feedbackModalContentContainer {
+color: var(--color);
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+  padding: 4px 30px;
+  border-radius: 8px;
+  background: var(--main-bg);
+  border: 2px solid var(--btn-bg);
+  backdrop-filter: blur(100px) brightness(60%);
+}
 .modalContentContainer h2, p {
   color: var(--color);
-  margin: 0;
-  padding: 0;
 }
-.popupModal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 0 5px;
-backdrop-filter: blur(10px);
+.feedbackModalContentContainer h2, .feedbackModalContentContainer p {
+    color: var(--color);
+margin: 2px;
 }
 .closeModal {
   position: absolute;

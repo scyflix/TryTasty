@@ -1,5 +1,3 @@
-
-
 //SIDEBAR TOGGLE
 const sidebar = document.getElementById("sidebar");
 const overlay = document.querySelector(".overlay");
@@ -176,13 +174,12 @@ bottomNavContainer.innerHTML = `
 </a>
 `;
 
-
 function callToFeedback() {
   const div = document.createElement("div");
-  div.className = "popupModal";
+  div.className = "feedbackPopupModal";
   div.innerHTML = `
   
-  <div class="modalContentContainer">
+  <div class="feedbackModalContentContainer">
   <div class="closeModal">
             <svg
               width="32"
@@ -209,12 +206,10 @@ function callToFeedback() {
   main.prepend(div);
 
   const closeModal = document.querySelector(".closeModal");
-  closeModal.addEventListener("click", () =>  {
-    div.style.display = "none"
-  })
+  closeModal.addEventListener("click", () => {
+    div.style.display = "none";
+  });
 }
 
-setTimeout(() => {
-  //call the funtion after approximately 5mins
+//call the funtion after approximately 5mins
   callToFeedback();
-}, 299999);
