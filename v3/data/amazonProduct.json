@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1769854116/Gemini_Generated_Image_q8ei93q8ei93q8ei_trje63.webp",
+      "imageLabel": "AI generated image",
+      "title": "Amazon Basics 14 Piece Knife Set - Black",
+      "description": "High-quality stainless steel blades with a stylish pine wood storage block. Perfect for home chefs.",
+      "link": "https://amzn.to/4kcHFxl"
+    },
+    {
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1769876464/cooking_pot_zu8gm0.webp",
+      "imageLabel": "AI generated image",
+      "title": "Large Stainless Steel Stockpot",
+      "description": "A durable, mirror-polished stockpot ideal for family-sized meals and professional kitchen tasks. Non-toxic stainless steel construction, Induction-compatible base and Multi-functional useage pot.",
+      "link": "https://amzn.to/4apV9m3"
+    },
+    {
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1769943698/spatula_set_b44esz.svg",
+      "imageLabel": "AI generated image",
+      "title": "BlauKe 7-Piece Bamboo Cooking Utensils Set",
+      "description": "Elevate your culinary experience with the BlauKe 7-Piece Bamboo Utensil Set. Designed to be gentle on your expensive non-stick pots and pans while providing the durability needed for daily heavy-duty cooking.",
+      "link": "https://amzn.to/4qOIG15"
+    },
+    {
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1769862053/frying_pan_ulukse.webp",
+      "imageLabel": "AI generated image",
+      "title": "Non-Stick 28cm Aluminium Frying Pan",
+      "description": "This 28cm non-stick frying pan is designed for effortless everyday cooking. Its durable aluminum body ensures quick, even heating, making it a reliable choice for everything from morning eggs to evening stir-fry.",
+      "link": "https://amzn.to/4a2r5vp"
+    }
+  ]
+}

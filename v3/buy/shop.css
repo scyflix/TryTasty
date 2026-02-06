@@ -143,3 +143,22 @@ a.buyBtn:hover {
   top: 0;
   left: 0;
 }
+
+#filter {
+  width: auto;
+  height: auto;
+  background: var(--input-textarea-bg);
+  color: var(--color);
+  border: 2px solid #f98508;
+  padding: 8px;
+  margin-top: 4px;
+}
+#filter option {
+    background: var(--bg);
+    border-radius: 8px;
+
+}
+
+.hide {
+  display: none;
+}

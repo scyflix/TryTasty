@@ -162,10 +162,15 @@
         <b>Note:</b> Images may be <b>AI</b> generated and not accurate. Image
         label shows on hover
       </div>
-
+      <select name="filterProducts" id="filter">
+        <option value="noFilter">Filter by marketplace</option>
+        <option id="temuFilter" value="temu">Temu</option>
+        <option id="amazonFilter" value="amazon">Amazon</option>
+      </select>
       <article class="productContainer">
-
-<div class="productCardContainer">
+        
+        <!--
+        <div class="productCardContainer">
   <div class="productItemContainer">
     <div class="imgContainer">
             <img
@@ -280,6 +285,7 @@
           >
         </div>
       </div>
+      -->
       </article>
     </main>
 
@@ -356,5 +362,6 @@
     <script type="module" src="../main.js" defer></script>
     <script src="js/productRender.js"></script>
     <script src="../../recipe.js" defer></script>
+    <script src="js/productActions.js" defer></script>
   </body>
 </html>
