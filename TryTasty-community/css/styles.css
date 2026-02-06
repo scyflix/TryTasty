@@ -148,16 +148,25 @@ header a h1 {
 }
 .pageContainer {
   display: grid;
-  gap: 22px;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px minmax(400px, 700px) 1fr;
 }
 .mainContents {
   width: 100%;
-  border-radius: 10px;
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 30px;
   background-color: var(--main-bg);
   box-shadow: var(--shadow);
+}
+.suggestFeed {
+  background-color: var(--main-bg);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.suggestFeed h2 {
+  text-align: center;
+  border-bottom: 2px solid ;
 }
 a {
   color: var(--link-color);
@@ -269,7 +278,6 @@ aside.sidebar {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 10px;
 }
 aside.sidebar nav {
   display: flex;
@@ -322,7 +330,9 @@ a.page-nav:hover {
   main.mainContents {
     padding: 10px 14px 10px;
     max-width: 100%;
-
+  }
+  .suggestFeed {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -397,4 +407,38 @@ backdrop-filter: blur(10px);
   background: var(--btn-bg);
   color: var(--color);
     text-decoration: none;
+}
+
+
+
+.snackImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  color: var(--snackImg-color);
+  border: 1px solid var(--infoNote-color);
+  border-radius: 6px;
+  height: 170px;
+  overflow: hidden;
+  background-color: var(--snackImg-bg);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.362);
+    transition: all 0.5s ease;
+
+}
+.snackImage img {
+  max-width: 98%;
+  width: 90%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 0.5s ease;
+}
+.snackImage img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.462);
 }

@@ -203,7 +203,7 @@ function callToFeedback() {
 </div>
 `;
   const main = document.querySelector("main");
-  main.prepend(div);
+  main.append(div);
 
   const closeModal = document.querySelector(".closeModal");
   closeModal.addEventListener("click", () => {
