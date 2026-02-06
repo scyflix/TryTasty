@@ -130,11 +130,23 @@ a.buyBtn:hover {
 .productDetails summary:hover {
   background-color: var(--bg);
 }
-     .shopNotice {
+
+.shopNotice {
   background: rgba(255, 157, 0, 0.08);
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 8px;
-  font-size:0.9rem; text-align:center; margin-bottom:16px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 157, 0, 0.18);
+}
+.shopNotice p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+.shopNotice a {
+  font-weight: 600;
+  text-decoration: underline;
 }
 .affiliateLabel {
   font-size: 0.8rem;
@@ -144,19 +156,52 @@ a.buyBtn:hover {
   left: 0;
 }
 
-#filter {
-  width: auto;
-  height: auto;
+#filter option {
+  background: var(--main-bg);
+}
+.tt-filter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f98508;
+  width: fit-content;
+  padding: 5px 14px;
+  margin-top: 4px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.tt-filter-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--link-color); /* TryTasty accent */
+}
+
+.tt-filter select {
   background: var(--input-textarea-bg);
   color: var(--color);
-  border: 2px solid #f98508;
-  padding: 8px;
-  margin-top: 4px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
 }
-#filter option {
-    background: var(--bg);
-    border-radius: 8px;
 
+/* Hover + focus */
+.tt-filter:hover {
+  border-color: #ff6a00;
+}
+
+.tt-filter select:focus {
+  background: var(--bg);
 }
 
 .hide {
