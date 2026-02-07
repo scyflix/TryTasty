@@ -1,4 +1,5 @@
 const productContainer = document.querySelector(".productContainer");
+import { filterAction } from "./productActions.js";
 
 //Temu products
 fetch("../data/temuProduct.json")
@@ -105,4 +106,7 @@ fetch("../data/amazonProduct.json")
       .join("");
 
     productContainer.append(amazonProductsContainer);
+  })
+  .then(() => {
+    filterAction();
   });
