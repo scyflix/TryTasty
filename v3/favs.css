@@ -2,10 +2,13 @@
         margin-top: 20px;
       }
       #favs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
       .fav-link a {
         margin-right: 20px;
         color: white;
@@ -22,29 +25,32 @@
         content: "🧑🏽‍🍳Cook";
         margin-right: 9px;
       }
-      .snackImage span {
-        font-size: 1.1rem;
-        font-weight: 600;
-      }
       .snackImage {
-        text-align: center;
-        overflow: hidden;
-        border-radius: 12px;
-        max-height: 300px;
-        max-width: 250px;
-        border: 1px solid orange;
-      }
-      .snackImage img {
-        width: 100%;
-        height: 90%;
-        transition: transform 0.5s ease;
-      }
-      .snackImage img:hover {
-        transform: scale(1.02);
-      }
-      .snackImage:hover {
-        border-color: #ff4500;
-      }
+  text-align: center;
+  text-decoration: none;
+  color: var(--snackImg-color);
+  border-radius: 6px;
+  width: 30%;
+  height: 170px;
+  overflow: hidden;
+  background-color: var(--snackImg-bg);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(119, 116, 116, 0.362);
+}
+.snackImage img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0;
+  margin-bottom: 5px;
+}
+.snackImage:hover {
+      color: var(--snackImg-color);
+  transform: scale(1.02);
+  box-shadow: 0 0 18px rgb(255, 111, 0);
+}
 
       .backBtn {
         color: #000000;

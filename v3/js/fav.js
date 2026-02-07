@@ -67,7 +67,7 @@ if (favrecipes.length === 0) {
     a.href = `recipe.html?id=${recipeKey}`;
     a.className = "snackImage";
 a.innerHTML = `<img loading="lazy" src=${recipe.img} alt=${recipe.name}>
-<span>${recipe.name}</span>
+${recipe.name}
 `;
 
     a.onclick = () => {

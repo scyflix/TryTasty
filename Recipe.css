@@ -1,6 +1,6 @@
 body main nav {
   --snackImg-color: #333;
-  --snackImg-bg: #feebbb;
+  --snackImg-bg: #f7d47e;
 }
 body.darkMode main nav {
   --snackImg-color: #f1f1f1;
@@ -227,8 +227,9 @@ h2.available {
   margin-bottom: 5px;
 }
 .snackImage:hover {
+    color: var(--snackImg-color);
   transform: scale(1.02);
-  box-shadow: 0 0 8px rgba(119, 116, 116, 0.462);
+  box-shadow: 0 0 18px rgb(255, 111, 0);
 }
 #suggestions {
   display: flex;
