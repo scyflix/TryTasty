@@ -1,0 +1,366 @@
+{
+  "recipes": [
+    {
+      "id": "savory-french-toast-sticks",
+      "title": "Savory French Toast Sticks",
+      "description": "⭐Savory French Toast Sticks made with bread, eggs, milk and grated cheese. Perfect for breakfast.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/IMG_20250710_092333_1_glg6ik.avif",
+      "dataKeywords": "eggs,egg,milk,bread",
+
+      "prepTimeMin": 22,
+      "cookTimeMin": 16,
+      "coolTime": 0,
+      "servings": 1,
+
+      "ingredients": [
+        "4 slices of bread",
+        "2 eggs",
+        "1/4 cup milk",
+        "1 tbsp grated cheese(optional)",
+        "Salt,black pepper, and chili flakes"
+      ],
+      "steps": [
+        "Cut bread into sticks.",
+        "Whisk eggs with milk, cheese, salt, pepper, and chili.",
+        "Dip sticks and fry until golden on each side.",
+        "Serve warm with grated cheese sprickled on it."
+      ],
+      "innerLink": [
+        {
+          "link": "avocado-egg-toast-cups",
+          "name": "Avocado Egg Toast Cups"
+        }
+      ],
+      "utility": {
+        "mode": "cook",
+        "groceryList": [
+          { "item": "Bread", "quantity": "4 slices" },
+          { "item": "Eggs", "quantity": "2" },
+          { "item": "Milk", "quantity": "1/4 cup" },
+          { "item": "Grated cheese", "quantity": "1 tbsp", "optional": true },
+          { "item": "Salt", "quantity": "A pinch" },
+          { "item": "Black pepper", "quantity": "A pinch" },
+          { "item": "Chili flakes", "quantity": "Light sprickle" }
+        ],
+
+        "equipment": [
+          "Knife",
+          "Mixing bowl",
+          "Whisk or fork",
+          "Frying pan",
+          "Spatula"
+        ],
+
+        "stepFlow": [
+          {
+            "step": "0",
+            "text": "Ready? Swipe left to begin.",
+            "estTimeMin": "16"
+          },
+          { "step": 1, "text": "Cut bread into sticks.", "estTimeMin": 4 },
+          {
+            "step": 2,
+            "text": "Whisk eggs, milk, cheese and spices.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 3,
+            "text": "Dip bread sticks into mixture.",
+            "estTimeMin": 3
+          },
+          {
+            "step": 4,
+            "text": "Fry until golden on each side.",
+            "estTimeMin": 8
+          },
+          {
+            "step": 5,
+            "text": "Arrange on a plate and sprickle with grated cheese.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 6,
+            "text": "Congratulations🎊, you have just completed this recipe.",
+            "estTimeMin": 0
+          }
+        ],
+
+        "notes": {
+          "userNotesEnabled": true,
+          "defaultTip": "Use slightly stale bread for better texture."
+        },
+
+        "leftovers": {
+          "storage": "Store in fridge in airtight container",
+          "shelfLife": "1 day",
+          "reheat": "Pan-fry for 2–3 minutes"
+        }
+      }
+    },
+    {
+      "id": "plantain-nachos",
+      "title": "Plantain Nachos",
+      "description": "⭐Crispy plantain nachos made with ripe plantains, melted cheese, and fresh toppings. A perfect snack or party appetizer with a savory crunch.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1755801683/ChatGPT-Image-May-3_-2025_-10_59_04-AM-_1__1_wqzd2y_11zon_xxu4kl.avif",
+      "dataKeywords": "plantains,plantain,tomatoe",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 25,
+      "coolTime": 0,
+      "servings": 2,
+
+      "ingredients": [
+        "2 ripe plantains",
+        "1 tbsp olive oil",
+        "Salt",
+        "Shredded cheese",
+        "Diced tomatoes, onions, and jalapeños",
+        "Sour cream or yogurt for topping"
+      ],
+      "steps": [
+        "Slice the plantains thinly and toss with olive oil and salt.",
+        "Bake at 180°C (350°F) for 20 minutes until crispy.",
+        "Remove from oven and top with shredded cheese and diced toppings.",
+        "Bake for 5 more minutes until the cheese melts.",
+        "Serve warm with a dollop of sour cream or yogurt."
+      ],
+      "innerLink": [
+        {
+          "link": "plantain-cinnamon-rolls",
+          "name": "Plantain Cinnamon Rolls"
+        }
+      ]
+    },
+
+    {
+      "id": "peanut-butter-apple-nachos",
+      "title": "Peanut Butter Apple Nachos",
+      "description": "⭐Crisp, sweet, and drizzled with creamy peanut butter. These Peanut Butter Apple Nachos are the perfect quick snack when you want something fresh but still a little indulgent. Thin apple slices are topped with peanut butter, chocolate drizzle, and a sprinkle of granola for a fun, no‑bake treat that’s ready in minutes. Great for after‑school snacking, light desserts, or a healthier twist on classic nachos.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755417445/IMG_20250806_150806_svoeqb_th0ev7.avif",
+      "dataKeywords": "pear,peanut butter,peanutbutter,apple",
+
+      "prepTimeMin": 8,
+      "cookTimeMin": 0,
+      "coolTime": 0,
+
+      "servings": 1,
+
+      "ingredients": [
+        "1 Apple",
+        "1 tbsp peanut butter",
+        "Granola or crushed nuts",
+        "Chocolate drizzle(optional)"
+      ],
+      "steps": [
+        "Cut apples into thin slices.",
+        "Layer apple slices on a plate.",
+        "Melt peanut butter and drizzle it on the layered apples.",
+        "Add the chocolate drizzle as well and sprickle the granola or crushed nuts."
+      ],
+      "innerLink": [
+        {
+          "link": "spicy-peanut-butter-popcorn",
+          "name": "Spicy Peanut Butter Popcorn"
+        }
+      ]
+    },
+
+    {
+      "id": "spicy-peanut-butter-popcorn",
+      "title": "Spicy Peanut Butter Popcorn",
+      "description": "⭐Spicy Peanut Butter Popcorn made with popcorn, peanut butter and honey. Perfect for movie nights and small snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416751/Spicy-Peanut-Butter-Popcorn-Delights-_1__1_svy6og.avif",
+      "dataKeywords": "chili,peanut butter,popcorn",
+
+      "prepTimeMin": 4,
+      "cookTimeMin": 10,
+      "coolTime": 0,
+      "servings": 3,
+
+      "ingredients": [
+        "6 cups popcorn",
+        "3 tbsp peanut butter",
+        "1 tbsp honey",
+        "1/2 tsp chili powder",
+        "Pinch of salt"
+      ],
+      "steps": [
+        "Melt peanut butter, honey, and chili powder in a pot under low heat.",
+        "Pour over already cooked popcorn and mix evenly.",
+        "Let cool slightly before serving."
+      ],
+      "innerLink": [
+        {
+          "link": "peanut-butter-apple-nachos",
+          "name": "Peanut Butter Apple Nachos"
+        }
+      ]
+    },
+
+    {
+      "id": "instant-ramen-tacos",
+      "title": "Instant Ramen Taco",
+      "description": "⭐Instant Ramen Taco made with instant noodles, egg, lettuce and shredded cheese. Perfect for breakfast and tasty snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1767979068/instant-ramen-tacos_m6u3qq.webp",
+      "dataKeywords": "egg,eggs,noodles,Lettuce,chicken",
+
+      "prepTimeMin": 6,
+      "cookTimeMin": 15,
+      "coolTime": 0,
+
+      "servings": 1,
+      "ingredients": [
+        "1 pack of instant noodles",
+        "1 egg",
+        "Oil for frying",
+        "Lettuce, shredded chicken, spicy mayo(for filling)"
+      ],
+      "steps": [
+        "Cook noodles slightly, then mix with beaten egg.",
+        "Shape into small taco shells using foil molds.",
+        "Fry until crispy and golden.",
+        "Fill with your choice of toppings."
+      ],
+      "innerLink": [
+        {
+          "link": "cheesy-ramen-nest",
+          "name": "Cheesy Ramen Nest"
+        }
+      ]
+    },
+
+    {
+      "id": "spicy-corn-and-coconut-bites",
+      "title": "Spicy Corn & Coconut Bites",
+      "description": "⭐Spicy Corn & Coconut Bites made with Sweet corn, Grated coconut, Lime juice and Chili flakes. Perfect for instant and tasty snacks.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416737/Spicy_Corn_and_Coconut_Bites_1_ql2cvh.avif",
+      "dataKeywords": "corn,coconut,chili",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 10,
+      "coolTime": 0,
+
+      "servings": 2,
+      "ingredients": [
+        "Sweet corn",
+        "Grated coconut",
+        "Chili flakes",
+        "Lime juice",
+        "Salt"
+      ],
+      "steps": [
+        "Mix corn, coconut, chili flakes, and salt in a bowl.",
+        "Squeeze lime juice into the mixture and mix.",
+        "Form the mixture into small balls and chill for 10min before serving."
+      ],
+      "innerLink": [
+        {
+          "link": "banana-oat-energy-bites",
+          "name": "Banana Oat Energy Bites"
+        }
+      ]
+    },
+
+    {
+      "id": "plantain-cinnamon-rolls",
+      "title": "Plantain Cinnamon Rolls",
+      "description": "⭐Plantain Cinnamon Rolls made with ripe plantain, ground cinnamon and butter. Perfect for appetizers.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Plantain_Cinnamon_Rolls_on_Ceramic_Plate_1_lb4rgi.avif",
+      "dataKeywords": "plantains,plantain,cinnamon",
+
+      "prepTimeMin": 13,
+      "cookTimeMin": 3,
+      "coolTime": 0,
+
+      "servings": 2,
+      "ingredients": [
+        "2 ripe plantains",
+        "1 tsp ground cinnamon",
+        "2 tsp butter or margarine",
+        "Toothpicks or skewers (optional)"
+      ],
+      "steps": [
+        "Peel the plantain and slice it lengthwise into very thin, flat strips.",
+        "Lightly bake the strips in a little butter for 3 minutes until soft and flexible (not crispy).",
+        "Mix sugar (or honey) with cinnamon in a small bowl.",
+        "Spread a thin layer of the cinnamon mix over each warm plantain strip.",
+        "Gently roll each strip like a cinnamon roll and secure with a toothpick(s) or skewer(s) if needed.",
+        "Let cool slightly and enjoy warm!"
+      ],
+      "innerLink": [
+        {
+          "link": "plantain-egg-cups",
+          "name": "Plantain Egg Cups"
+        }
+      ]
+    },
+
+    {
+      "id": "plantain-egg-cups",
+      "title": "Plantain Egg Cups",
+      "description": "⭐Plantain Egg Cups made with ripe plantain, egg and salt. Perfect for breakfast.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416739/Plantain_Egg_Cups_1_jo9uqx.avif",
+      "dataKeywords": "plantains,plantain,egg",
+
+      "prepTimeMin": 18,
+      "cookTimeMin": 15,
+      "coolTime": 0,
+
+      "servings": 3,
+      "ingredients": [
+        "2 ripe plantains",
+        "2 eggs",
+        "A pinch of salt",
+        "A pinch of pepper",
+        "Oil for greasing"
+      ],
+      "steps": [
+        "Preheat your oven for 10 minutes to 180°C (350°F).",
+        "Slice the plantain into thin rounds.",
+        "Lightly grease muffin cups with oil and press the plantain slices into the bottom to form a base.",
+        "Crack an egg into each muffin cup over the plantain base.",
+        "Sprinkle a pinch of salt and pepper on each.",
+        "Bake for 12–15 minutes, or until the eggs are set to your liking.",
+        "Let them cool slightly before carefully removing from the muffin tin."
+      ],
+      "innerLink": [
+        {
+          "link": "plantain-nachos",
+          "name": "Plantain Nachos"
+        }
+      ]
+    },
+
+    {
+      "id": "choco-chili-banana-chips",
+      "title": "Choco Chili Banana Chips",
+      "description": "⭐Choco Chili Banana Chips made with ripe plantain, dark chocolate and chili powder. A perfect snack or party appetizer with a savory crunch.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif",
+      "dataKeywords": "plantains,banana,chili",
+
+      "prepTimeMin": 7,
+      "cookTimeMin": 10,
+      "coolTime": 0,
+
+      "servings": 3,
+      "ingredients": [
+        "2 ripe plantains",
+        "Melted dark chocolate",
+        "Pinch of chili powder",
+        "Salt"
+      ],
+      "steps": [
+        "Thinly slice plantains and bake or fry until crisp.",
+        "Dip half side of the baked(or fried) plantain in melted chocolate.",
+        "Sprinkle with chili powder and salt.",
+        "Let it set and enjoy."
+      ],
+      "innerLink": [
+        {
+          "link": "zesty-cucumber-chips",
+          "name": "Zesty Cucumber Chips"
+        }
+      ]
+    }
+  ]
+}

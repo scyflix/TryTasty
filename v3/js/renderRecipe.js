@@ -12,13 +12,22 @@ if (!recipeId) {
 
 }
 
-fetch("data/recipes.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const recipe = data.recipes.find((r) => r.id === recipeId);
-if (!recipe) {
-  throw new Error("Recipe not found");
-}
+// 1) Load multiple recipe files
+const recipeFiles = [
+  "data/recipes/recipes1.json",
+  "data/recipes/recipes2.json"
+];
+
+Promise.all(recipeFiles.map(file => fetch(file).then(r => r.json())))
+  .then(results => {
+    // Merge all recipe arrays
+    const allRecipes = results.flatMap(r => r.recipes);
+
+    // Find the recipe by ID
+    const recipe = allRecipes.find((r) => r.id === recipeId);
+    if (!recipe) {
+      throw new Error("Recipe not found");
+    }
 
     const toISO = (min) => `PT${min}M`;
 
@@ -46,9 +55,7 @@ if (!recipe) {
       cookTime: toISO(recipe.cookTimeMin),
       totalTime: toISO(recipe.prepTimeMin + recipe.cookTimeMin),
 
-      recipeYield: `${recipe.servings} serving${
-        recipe.servings === 1 ? "" : "s"
-      }`,
+      recipeYield: `${recipe.servings} serving${recipe.servings === 1 ? "" : "s"}`,
       recipeCuisine: recipe.cuisine || "International",
 
       recipeIngredient: recipe.ingredients,
@@ -66,120 +73,120 @@ if (!recipe) {
     document.head.appendChild(script);
     document.title = `${recipe.title} | TryTasty`;
 
-    const metaOgImg = document.createElement("meta")
-    metaOgImg.property = "og:image"
-    metaOgImg.content = `<${recipe.image}`
-    document.head.appendChild(metaOgImg)
-    
+    const metaOgImg = document.createElement("meta");
+    metaOgImg.property = "og:image";
+    metaOgImg.content = `<${recipe.image}`;
+    document.head.appendChild(metaOgImg);
+
     const totalTimeMin =
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
+
     document.getElementById("recipe").innerHTML = `
     <div class="recipeActionBtns">
-    <a class="backBtn" href="../index.html">← Home</a>
+      <a class="backBtn" href="../index.html">← Home</a>
 
-    <button class="shareBtn">
-    <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <circle cx="18" cy="5" r="3" />
-  <circle cx="6" cy="12" r="3" />
-  <circle cx="18" cy="19" r="3" />
-  <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
-  <line x1="15.4" y1="6.5" x2="8.6" y2="10.5" />
-</svg>
-Share
-    </button>
+      <button class="shareBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
+          <line x1="15.4" y1="6.5" x2="8.6" y2="10.5" />
+        </svg>
+        Share
+      </button>
     </div>
-                  
-                  <article>
-                  <h1>${recipe.title}</h1>
-                  <section class="meta">
-                  <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
-                  <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
-                  <span>❄️ Cooling: ${recipe.coolTime}</span>
-                  <span>⌛ Total: ${totalTimeMin} min</span>
-                  <span>🍽 Serves: ${recipe.servings}</span>
-                  </section>
-                  <p class="recipeDesc">${recipe.description}</p>
-                  <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🥘Start Cook Mode</a>
-                  <hr class="divider">
-                  <section class="flexRecipeContent">
-                  <img loading="lazy" src="${recipe.image}" alt="${
-                    recipe.title
-                  }"/>
-                  <div class="recipeTexts">
-                  <section>
-                  <h2>Ingredients</h2>
-                  <ul>
-                  ${recipe.ingredients.map((i) => `<li>${i}</li>`).join("")}
-                  </ul>
-</section>
 
-                <section>
-                <h2>Instructions</h2>
-                <ol>
-                ${recipe.steps.map((s) => `<li>${s}</li>`).join("")}
-                </ol>
-                </section>
-                <button
-                class="add-fav"
-                data-key="${recipe.id}"
-                data-name="${recipe.title}"
-                data-img="${recipe.image}"
-                >
-                Add to favorites
-                </button>
-                </div>
-                </section>
-                <p class="alsoLike">You might also like <a href="recipe.html?id=${recipe.innerLink[0].link}">${recipe.innerLink[0].name}</a></p>
-                </article>
-          `;
+    <article>
+      <h1>${recipe.title}</h1>
+      <section class="meta">
+        <span>⏱ Prep: ${recipe.prepTimeMin} min</span>
+        <span>🔥 Cook: ${recipe.cookTimeMin} min</span>
+        <span>❄️ Cooling: ${recipe.coolTime}</span>
+        <span>⌛ Total: ${totalTimeMin} min</span>
+        <span>🍽 Serves: ${recipe.servings}</span>
+      </section>
 
-          function shareRecipe() {
- const btn = document.querySelector(".shareBtn");
-    btn.addEventListener("click", async () => {
-      const url = btn.dataset.url || window.location.href;
+      <p class="recipeDesc">${recipe.description}</p>
+      <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🥘Start Cook Mode</a>
+      <hr class="divider">
 
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: "TryTasty Recipe",
-            text: `Check out this ${recipe.title} recipe on TryTasty 👀🍽️`,
-            url,
-          });
-        } catch (err) {
-          // user cancelled – ignore
+      <section class="flexRecipeContent">
+        <img loading="lazy" src="${recipe.image}" alt="${recipe.title}"/>
+        <div class="recipeTexts">
+
+          <section>
+            <h2>Ingredients</h2>
+            <ul>
+              ${recipe.ingredients.map((i) => `<li>${i}</li>`).join("")}
+            </ul>
+          </section>
+
+          <section>
+            <h2>Instructions</h2>
+            <ol>
+              ${recipe.steps.map((s) => `<li>${s}</li>`).join("")}
+            </ol>
+          </section>
+
+          <button
+            class="add-fav"
+            data-key="${recipe.id}"
+            data-name="${recipe.title}"
+            data-img="${recipe.image}"
+          >
+            Add to favorites
+          </button>
+
+        </div>
+      </section>
+
+      <p class="alsoLike">
+        You might also like
+        <a href="recipe.html?id=${recipe.innerLink[0].link}">
+          ${recipe.innerLink[0].name}
+        </a>
+      </p>
+    </article>
+    `;
+
+    function shareRecipe() {
+      const btn = document.querySelector(".shareBtn");
+      btn.addEventListener("click", async () => {
+        const url = btn.dataset.url || window.location.href;
+
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: "TryTasty Recipe",
+              text: `Check out this ${recipe.title} recipe on TryTasty 👀🍽️`,
+              url,
+            });
+          } catch (err) {}
+        } else {
+          fallbackShare(url);
         }
-      } else {
-        fallbackShare(url);
-      }
-    });
-    
-    function fallbackShare(url) {
-      navigator.clipboard.writeText(url).then(() => {
-        alert("Link copied to clipboard!");
       });
+
+      function fallbackShare(url) {
+        navigator.clipboard.writeText(url).then(() => {
+          alert("Link copied to clipboard!");
+        });
+      }
     }
-  }
-  shareRecipe()
+
+    shareRecipe();
   })
-  
   .then(() => {
     addToFav();
   })
   .catch(() => {
-    document.getElementById("recipe").innerHTML =
-      `<a class="backBtn" href="../index.html">← Back</a>
-    <div style="text-align: center;" class="failedToLoad">
-    <svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+    document.getElementById("recipe").innerHTML = `
+      <a class="backBtn" href="../index.html">← Back</a>
+      <div style="text-align: center;" class="failedToLoad">
+ <svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
     <!-- background blob -->
     <ellipse cx="120" cy="120" rx="95" ry="70" fill="#fff6e6"/>
     
@@ -212,10 +219,8 @@ Share
   Oops… snacks didn’t load
   </text>
   </svg>
-  
-  <p style="text-align: center; opacity: 0.3;">Failed to load data. Please reload the app.
-  </p>
-  </div>`;
+       <p style="text-align: center; color: gray;">Failed to load data. Please
+        <a href="feedbacks/index.html">Report this issue</a>
+        .</p>
+      </div>`;
   });
-
-  
