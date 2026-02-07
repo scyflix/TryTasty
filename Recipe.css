@@ -1,7 +1,6 @@
 body main nav {
-    --snackImg-color: #333;
+  --snackImg-color: #333;
   --snackImg-bg: #feebbb;
-
 }
 body.darkMode main nav {
   --snackImg-color: #f1f1f1;
@@ -25,7 +24,6 @@ body.darkMode main {
   --faq-hover: #000000;
   --faq-summary-text: #ffffff;
   --faq-answer-text: #cfcfcf;
-
 }
 body main {
   --popular-bg: #ffffff;
@@ -166,16 +164,15 @@ body main {
   transition: opacity 0.5s ease;
   font-size: clamp(1.3rem, 1.5rem, 1.5rem);
 }
- .backBtn:hover {
+.backBtn:hover {
   opacity: 0.7;
   text-decoration: none;
-    color: beige;
-
+  color: beige;
 }
 #recipeBotForm {
   display: none;
 }
-.botLinkInner svg{
+.botLinkInner svg {
   width: 50px;
   height: 50px;
 }
@@ -192,6 +189,7 @@ nav.page .allRecipeDiv {
   font-weight: bold;
 }
 .loadMoreBtns {
+  background-color: var(--header-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,24 +291,22 @@ a:hover {
   display: none;
 }
 
- .botLink svg{
-        width: 70px;
-        height: 70px;
-        transition: 0.5s ease;
-      }
-      a.botLink:has(svg) {
-        position: sticky;
-        left: 0;
-        bottom: 1px;
-        z-index: 2;
-        padding: 0;
-        height: fit-content;
-        border: none;
-      }
+.botLink svg {
+  width: 70px;
+  height: 70px;
+  transition: 0.5s ease;
+}
+a.botLink:has(svg) {
+  position: sticky;
+  left: 0;
+  bottom: 1px;
+  z-index: 2;
+  padding: 0;
+  height: fit-content;
+  border: none;
+}
 
-      .botLink svg:hover {
-        padding: 0;
-        transform: scale(1.1);
-      }
-      
-    
+.botLink svg:hover {
+  padding: 0;
+  transform: scale(1.1);
+}

@@ -1,6 +1,6 @@
 //Import authstate
 import { onUserAuthChange } from "./../../v3/js/auth.js";
-import {sidebarFunc} from "./nav.js"
+import { sidebarFunc } from "./nav.js";
 
 //Hide preloader when page content loads
 window.addEventListener("load", () => {
@@ -27,7 +27,7 @@ function openform() {
 //Implement open form funtion
 writeIcon.addEventListener("click", () => {
   openform();
-  sidebarFunc()
+  sidebarFunc();
 });
 forminputbtn.addEventListener("click", () => {
   openform();
@@ -38,39 +38,39 @@ const postStore = JSON.parse(localStorage.getItem("posts")) || [];
 if (postStore) {
   postStore.forEach(renderPost);
 }
-  function post(user) {
-    const postTitle = document.getElementById("postTitle").value;
-    const postContent = document.getElementById("postContent").value;
-    const imgUrl = document.getElementById("imgUrl").value;
+function post(user) {
+  const postTitle = document.getElementById("postTitle").value;
+  const postContent = document.getElementById("postContent").value;
+  const imgUrl = document.getElementById("imgUrl").value;
 
-    if (!postContent) {
-      alert("Your post must have a title and content");
-      return;
-    }
-
-    const time = new Date().toLocaleString();
-
-    const postData = {
-      title: postTitle,
-      content: postContent,
-      image: imgUrl,
-      time: time,
-      id: crypto.randomUUID(),
-      owner: user ? user.displayName : "Guest",
-    };
-    postStore.push(postData);
-    localStorage.setItem("posts", JSON.stringify(postStore));
-
-    renderPost(postData);
-
-    postedContentSection.style.display = "block";
-
-    // Reset UI
-    document.getElementById("postForm").reset();
-    document.getElementById("allForms").classList.remove("show");
-    document.getElementById("forminputbtn").classList.remove("hide");
-    document.querySelector(".writeIcon").classList.remove("hide");
+  if (!postContent) {
+    alert("Your post must have a title and content");
+    return;
   }
+
+  const time = new Date().toLocaleString();
+
+  const postData = {
+    title: postTitle,
+    content: postContent,
+    image: imgUrl,
+    time: time,
+    id: crypto.randomUUID(),
+    owner: user ? user.displayName : "Guest",
+  };
+  postStore.push(postData);
+  localStorage.setItem("posts", JSON.stringify(postStore));
+
+  renderPost(postData);
+
+  postedContentSection.style.display = "block";
+
+  // Reset UI
+  document.getElementById("postForm").reset();
+  document.getElementById("allForms").classList.remove("show");
+  document.getElementById("forminputbtn").classList.remove("hide");
+  document.querySelector(".writeIcon").classList.remove("hide");
+}
 
 function renderPost(post) {
   const postArticle = document.createElement("article");
@@ -185,12 +185,11 @@ function renderPost(post) {
     </footer>
                  <!-- POST REACTIONS ENDS-->               
       `;
-      postedContentSection.prepend(postArticle);
+  postedContentSection.prepend(postArticle);
 
-  
   const postContainer = postArticle.querySelector(".postContainer");
   const seeMoreBtn = postArticle.querySelector(".seeMore");
-  
+
   //See more button logic
   if (postContainer.scrollHeight > postContainer.clientHeight) {
     seeMoreBtn.classList.add("show");
@@ -198,17 +197,17 @@ function renderPost(post) {
   } else {
     seeMoreBtn.classList.add("hide");
   }
-  
+
   seeMoreBtn.addEventListener("click", () => {
     const isClicked = postContainer.classList.toggle("clicked");
     seeMoreBtn.textContent = isClicked ? "—" : "⇃";
   });
-  
+
   const deleteBtn = postArticle.querySelector(".deleteBtn");
   deleteBtn.addEventListener("click", () => {
     if (!confirm("Delete this post?")) return;
     postArticle.remove();
-    
+
     const index = postStore.findIndex((p) => p.id === post.id);
     if (index !== -1) {
       postStore.splice(index, 1);
@@ -221,9 +220,9 @@ function renderPost(post) {
 
 onUserAuthChange((user) => {
   postbtn.addEventListener("click", () => {
-   post(user);
-   window.location.reload();
-  })
+    post(user);
+    window.location.reload();
+  });
 });
 window.addEventListener("resize", () => {
   document.querySelectorAll(".postContainer").forEach((post) => {
