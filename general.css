@@ -294,7 +294,8 @@ a.userProfileLink span {
   }
   #bottomNavContainer {
     display: flex;
-    margin: 0;
+    align-self: center;
+    margin: 0 auto;
     position: fixed;
     z-index: 9;
     bottom: -1px;
@@ -305,6 +306,7 @@ a.userProfileLink span {
     flex-wrap: wrap;
     background-color: var(--bottomNav-color);
     border-radius: var(--radius) var(--radius) 0 0;
+    animation: slideIn 1s ease;
   }
   #bottomNavContainer a {
     width: calc(var(--font-size) * 2);
