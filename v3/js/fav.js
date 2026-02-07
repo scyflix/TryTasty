@@ -48,8 +48,11 @@ const favsection = document.getElementById("favs");
 const clearFavs = document.getElementById("clearFavs");
 if (favrecipes.length === 0) {
   if (favsection) {
-    favsection.innerHTML =
-      "<h2 class=infoNote>You don`t have a favorite yet😓</h2>";
+    document.querySelector("main").innerHTML =
+      `<h2 class=infoNote>You don't have a favorite yet😓</h2>
+     <a href="../index.html" class="backBtn">Browse Recipes</a> 
+      `;
+      
     clearFavs.style.display = "none";
   }
 } else {

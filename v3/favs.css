@@ -4,7 +4,7 @@
       #favs {
         display: flex;
         flex-wrap: wrap;
-gap: 10px;
+        gap: 10px;
       }
       .fav-link a {
         margin-right: 20px;
@@ -45,3 +45,20 @@ gap: 10px;
       .snackImage:hover {
         border-color: #ff4500;
       }
+
+      .backBtn {
+        color: #000000;
+  background-color: var(--header-bg);
+  display: block;
+  margin: 0 auto;
+  padding: 10px 5px;
+  max-width: 150px;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.backBtn:hover {
+  color: #000000;
+  text-decoration: none;
+}

@@ -66,6 +66,10 @@ body {
   font-size: var(--font-size);
 }
 
+::selection {
+  background-color: #ff6a00;
+  color: #ffffff;
+}
 /* Custom scrollbar for dark theme */
 
 ::-webkit-scrollbar {
