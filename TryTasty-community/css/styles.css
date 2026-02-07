@@ -112,7 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: arial, sans-serif;
-  background-color: var(--bg);
+  background-color: var(--main-bg);
   line-height: 1.6;
 }
 
@@ -122,6 +122,7 @@ header {
   padding: 0 10px;
   display: grid;
   gap: 10px;
+  width: 100%;
   place-items: center;
   grid-template-columns: minmax(20px, 90px) 1fr minmax(20px, 90px);
 }
@@ -138,28 +139,28 @@ header a h1 {
   border: none;
   background-color: var(--bg);
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 12px 10px;
   max-width: 400px;
-  height: 40px;
 }
 #forminputbtn:hover {
   opacity: 0.9;
 }
 .pageContainer {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 300px minmax(400px, 700px) 1fr;
+  max-width: 80%;
+  grid-template-columns: 250px minmax(500px, 1fr) minmax(200px, 300px);
 }
 .mainContents {
-  width: 100%;
-  margin: 0 auto;
-  border-left: 2px solid #f59f1d;
-  border-right: 2px solid #f59f1d;
-  padding: 30px;
+  border-left: 2px solid #f59f1d86;
+  border-right: 2px solid #f59f1d86;
+  padding: 0;
   background-color: var(--main-bg);
   box-shadow: var(--shadow);
 }
 .suggestFeed {
   background-color: var(--main-bg);
+  border-right: 10px solid #312c25;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -241,7 +242,7 @@ a.backBtn {
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
-  margin: 10px auto;
+  margin: auto;
   color: var(--color);
 }
 /* Button */
@@ -271,13 +272,14 @@ button:focus,
 }
 
 aside.sidebar {
-  background-color: var(--form-bg);
+  border-left: 10px solid #312c25;
+  background-color: var(--main-bg);
   max-height: 100dvh;
   height: 100vh;
+  align-self: start;
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
 }
 aside.sidebar nav {
   display: flex;
@@ -314,12 +316,12 @@ a.page-nav:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   header {
-    display: flex;
     position: sticky;
     top: 0;
     z-index: 1;
+    display: flex;
     height: 50px;
     width: 100%;
   }
@@ -328,7 +330,7 @@ a.page-nav:hover {
     min-height: 100vh;
   }
   main.mainContents {
-    padding: 10px 14px 10px;
+    padding: 0 0 14px 0;
     max-width: 100%;
   }
   .suggestFeed {

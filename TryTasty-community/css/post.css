@@ -1,6 +1,7 @@
 .post {
   position: relative;
   display: flex;
+  overflow: hidden;
 }
 .post p {
   white-space: normal;
@@ -102,7 +103,8 @@
 }
 
 #postedContent {
-  width: 100%;
+  max-width: 100%;
+  margin: 30px;
   position: relative;
 }
 
@@ -138,13 +140,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   padding: 4px 0;
-  max-width: 100%;
 }
 .postReactions button {
-  color: #ccc;
+  color: var(--color);
   background: none;
-  padding: 0;
+  padding: 4px 0;
   margin: 0;
+}
+button:first-child:focus svg {
+  fill: #ff1414;
 }
 .postReactions button svg {
   width: 80px;

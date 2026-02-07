@@ -2,7 +2,7 @@
 .cancelIcon {
   display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   /* Menu Icon */
   .menuIcon {
     display: block;
@@ -49,8 +49,9 @@
     position: fixed;
     transition: transform 0.4s ease;
     transform: translateX(-100%);
-    width: 50%;
     z-index: 9999;
+        width: 40%;
+
   }
   #forminputbtn,
   .recipePageLink {

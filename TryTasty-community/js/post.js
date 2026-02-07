@@ -115,7 +115,7 @@ function renderPost(post) {
 <h3>${post.title}</h3>
 <p>${post.content}</p>
 <img src="${post.image}">
-<button type="button" class="seeMore">⇃</button>
+<button type="button" class="seeMore">↓</button>
 </div>
                         <!-- POST CONTENT ENDES-->
 
