@@ -540,10 +540,19 @@ footer {
 
 .footerContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 100%;
   text-align: left;
+  place-items: center;
 }
+
 .footerLinks {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .trustpilot-widget {
+    display: none;
+  }
 }
