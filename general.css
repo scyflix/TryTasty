@@ -324,7 +324,7 @@ a.userProfileLink span {
     margin: 0;
     padding: 0;
   }
-
+  
   #bottomNavContainer a:hover {
     opacity: 0.8;
     border-top: 1px solid;
@@ -348,6 +348,9 @@ a.userProfileLink span {
     font-size: 0.6rem;
     font-weight: 600;
   }
+    footer {
+      margin-bottom: 80px;
+    }
 }
 
 #otherAppsIcon {
@@ -518,8 +521,8 @@ p {
 
 .upperFooter {
   display: flex;
-  align-items: center;
-  justify-content: center;
+justify-content: center;
+align-items: center;
 }
 
 .feedbackBtn svg {
@@ -527,6 +530,7 @@ p {
   padding: 4px;
   width: 40px;
   height: 40px;
+  transition: all 0.6s ease;
 }
 .feedbackBtn svg:hover {
   color: var(--link-color-hover);
@@ -543,16 +547,27 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   max-height: 100%;
   text-align: left;
-  place-items: center;
+  justify-content: center;
 }
 
 .footerLinks {
   display: flex;
   flex-direction: column;
+  font-size: 0.8rem;
 }
-
-@media (max-width: 600px) {
-  .trustpilot-widget {
-    display: none;
+.footerSectionHeader {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.trustpilot-widget {
+max-height: 52px;
+max-width: fit-content;
+overflow: hidden;
+margin: 0;
+}
+@media (max-width: 500px) {
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
