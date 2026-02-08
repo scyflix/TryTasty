@@ -54,8 +54,8 @@ function enterCookMode(recipeId) {
             .join("")}
         </div>
 
-        <div class="infoNote tip">
-          <b>Tip:</b> ${recipe.utility.notes.defaultTip}
+        <div class="infoNote tip"  contenteditable="true">
+          <b  contenteditable="false">Tip:</b> ${recipe.utility.notes.defaultTip}
         </div>
 
         <h3>Equipments:</h3>

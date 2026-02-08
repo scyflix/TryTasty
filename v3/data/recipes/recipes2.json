@@ -389,6 +389,38 @@
           "name": "Frozen Banana S`more Bites"
         }
       ]
+    },
+
+    {
+      "id": "choco-chili-banana-chips",
+      "title": "Choco Chili Banana Chips",
+      "description": "⭐Choco Chili Banana Chips made with ripe plantain, dark chocolate and chili powder. A perfect snack or party appetizer with a savory crunch.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif",
+      "dataKeywords": "plantains,banana,chili",
+
+      "prepTimeMin": 7,
+      "cookTimeMin": 10,
+      "coolTime": 0,
+
+      "servings": 3,
+      "ingredients": [
+        "2 ripe plantains",
+        "Melted dark chocolate",
+        "Pinch of chili powder",
+        "Salt"
+      ],
+      "steps": [
+        "Thinly slice plantains and bake or fry until crisp.",
+        "Dip half side of the baked(or fried) plantain in melted chocolate.",
+        "Sprinkle with chili powder and salt.",
+        "Let it set and enjoy."
+      ],
+      "innerLink": [
+        {
+          "link": "zesty-cucumber-chips",
+          "name": "Zesty Cucumber Chips"
+        }
+      ]
     }
   ]
 }

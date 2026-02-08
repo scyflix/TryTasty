@@ -98,6 +98,111 @@
       }
     },
     {
+      "id": "sweet-pan-bread",
+      "title": "Sweet Pan Bread",
+      "description": "⭐Sweet pan flatbreads made from flour, sugar, and water. Lightly browned, firm on the outside, and chewy inside. Simple, filling, and made with what you already have.",
+      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/v1770579235/sweet-pan-bread_dxbqts.webp",
+      "dataKeywords": "sugar,flour,water",
+
+      "prepTimeMin": 10,
+      "cookTimeMin": 10,
+      "coolTime": 0,
+      "servings": 1,
+
+      "ingredients": [
+        "1 cup flour",
+        "2–3 tbsp sugar (adjust to taste)",
+        "~½ cup water (add slowly)",
+        "(Optional if you have it: a pinch of salt or oil)"
+      ],
+      "steps": [
+        "Mix flour and sugar.",
+        "Add water little by little and mix until you get a soft dough.",
+        "Knead for 3 minutes.",
+        "Divide into small balls and flatten them.",
+        "Fry each panbread for about 1–2 minutes per side until lightly golden."
+      ],
+      "innerLink": [
+        {
+          "link": "savory-french-toast-sticks",
+          "name": "Savory French Toast Sticks"
+        }
+      ],
+      "utility": {
+        "mode": "cook",
+        "groceryList": [
+          { "item": "Flour", "quantity": "1 Cup" },
+          { "item": "Sugar", "quantity": "2½ Cups" },
+          { "item": "Water", "quantity": "½ Cup" }
+        ],
+
+        "equipment": [
+          "Mixing bowl",
+          "Measuring Cup",
+          "Frying pan"
+        ],
+
+        "stepFlow": [
+          {
+            "step": "0",
+            "text": "Ready? Swipe left to begin.",
+            "estTimeMin": 18
+          },
+          {
+            "step": 1,
+            "text": "In a bowl, Mix Flour and sugar together.",
+            "estTimeMin": 1
+          },
+          {
+            "step": 2,
+            "text": "Add water little by little and mix until you get a soft dough (not sticky).",
+            "estTimeMin": 2
+          },
+          {
+            "step": 3,
+            "text": "Knead for 3 minutes and add little flour to make sure it is not sticky.",
+            "estTimeMin": 3
+          },
+          {
+            "step": 4,
+            "text": "Heat a dry pan on medium heat.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 4,
+            "text": "Add cooking oil and heat.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 5,
+            "text": "Fry each panbread for about 2 minutes per side until lightly golden.",
+            "estTimeMin": 10
+          },
+          {
+            "step": 5,
+            "text": "Arrange on a plate.",
+            "estTimeMin": 2
+          },
+          {
+            "step": 6,
+            "text": "Congratulations🎊, you have just completed this recipe.",
+            "estTimeMin": 0
+          }
+        ],
+
+        "notes": {
+          "userNotesEnabled": true,
+          "defaultTip": "Once kneaded, fry the dough within 4 minutes. Waiting longer can make it wet and harder to cook."
+        },
+
+        "leftovers": {
+          "storage": "Store in fridge in airtight container",
+          "shelfLife": "2 days",
+          "reheat": "Pan-fry for 2–3 minutes"
+        }
+      }
+    },
+    {
       "id": "plantain-nachos",
       "title": "Plantain Nachos",
       "description": "⭐Crispy plantain nachos made with ripe plantains, melted cheese, and fresh toppings. A perfect snack or party appetizer with a savory crunch.",
@@ -327,38 +432,6 @@
         {
           "link": "plantain-nachos",
           "name": "Plantain Nachos"
-        }
-      ]
-    },
-
-    {
-      "id": "choco-chili-banana-chips",
-      "title": "Choco Chili Banana Chips",
-      "description": "⭐Choco Chili Banana Chips made with ripe plantain, dark chocolate and chili powder. A perfect snack or party appetizer with a savory crunch.",
-      "image": "https://res.cloudinary.com/dc1bmavl5/image/upload/f_auto,q_auto/v1755416738/Choco_Chili_Banana_Chips_Delight_1_z8nxnl.avif",
-      "dataKeywords": "plantains,banana,chili",
-
-      "prepTimeMin": 7,
-      "cookTimeMin": 10,
-      "coolTime": 0,
-
-      "servings": 3,
-      "ingredients": [
-        "2 ripe plantains",
-        "Melted dark chocolate",
-        "Pinch of chili powder",
-        "Salt"
-      ],
-      "steps": [
-        "Thinly slice plantains and bake or fry until crisp.",
-        "Dip half side of the baked(or fried) plantain in melted chocolate.",
-        "Sprinkle with chili powder and salt.",
-        "Let it set and enjoy."
-      ],
-      "innerLink": [
-        {
-          "link": "zesty-cucumber-chips",
-          "name": "Zesty Cucumber Chips"
         }
       ]
     }
