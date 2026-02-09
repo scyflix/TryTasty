@@ -611,6 +611,7 @@ footer p {
   color: white;
   border: none;
   border-radius: 6px;
+  min-width: auto;
   cursor: pointer;
   font-weight: 600;
   transition:  background 0.2s ease transition 0.2s ease;
