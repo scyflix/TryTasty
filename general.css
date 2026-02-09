@@ -296,7 +296,7 @@ a.userProfileLink span {
     display: flex;
     align-self: center;
     margin: 0 auto;
-    position: fixed;
+    position: sticky;
     z-index: 9;
     bottom: -1px;
     align-items: center;
@@ -324,7 +324,7 @@ a.userProfileLink span {
     margin: 0;
     padding: 0;
   }
-  
+
   #bottomNavContainer a:hover {
     opacity: 0.8;
     border-top: 1px solid;
@@ -348,9 +348,7 @@ a.userProfileLink span {
     font-size: 0.6rem;
     font-weight: 600;
   }
-    footer {
-      margin-bottom: 80px;
-    }
+
 }
 
 #otherAppsIcon {
@@ -365,33 +363,21 @@ a.userProfileLink span {
   bottom: 15px;
   z-index: 99999;
 }
-#otherAppsIcon span {
-  background: var(--color);
-  width: 5px;
-  height: 5px;
-  margin: 0;
-}
-#sidebar #FromScybud {
-  position: absolute;
+
+ #FromScybud {
   left: 40px;
   bottom: 30px;
   padding: 0;
-  background: var(--bg);
-  width: 0;
-  height: 0;
-  overflow: hidden;
   transition: all 0.7s ease;
-}
-#sidebar #FromScybud.showApps {
-  padding: 10px;
-  width: auto;
-  height: auto;
+text-align: center;
 }
 #scybudApps {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  text-align: center;
 }
 #scybudApps a {
   text-decoration: none;
@@ -406,7 +392,8 @@ a.userProfileLink span {
 }
 #scybudApps a span {
   margin-top: 5px;
-  color: var(--color);
+  color: #ffffff;
+  font-weight: 600;
   font-size: calc(var(--font-size) / 1.5);
 }
 #scybudApps .container img {
@@ -414,7 +401,6 @@ a.userProfileLink span {
   width: 50px;
   height: 50px;
   object-fit: contain;
-  background-color: var(--infoNote-bg);
 }
 #scybudApps img:hover {
   transform: scale(1.06);
@@ -521,35 +507,48 @@ p {
 
 .upperFooter {
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.feedbackBtn svg {
+footer svg {
   color: beige;
   padding: 4px;
   width: 40px;
   height: 40px;
   transition: all 0.6s ease;
 }
-.feedbackBtn svg:hover {
-  color: var(--link-color-hover);
+footer svg:hover {
+  fill: var(--link-color-hover);
 }
 footer {
   text-align: center;
-  color: var(--color);
+  color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
   box-shadow: var(--shadow);
-  background-color: var(--main-bg);
+  background-color: black;
+}
+footer p {
+  color: #ffffff;
 }
 
 .footerContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
   max-height: 100%;
   text-align: left;
   justify-content: center;
 }
-
+.footerMiddleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 10px 0;
+}
 .footerLinks {
   display: flex;
   flex-direction: column;
@@ -560,14 +559,69 @@ footer {
   font-weight: 700;
 }
 .trustpilot-widget {
-max-height: 52px;
-max-width: fit-content;
-overflow: hidden;
-margin: 0;
+  max-height: 52px;
+  max-width: fit-content;
+  overflow: hidden;
+  margin: 0;
 }
 @media (max-width: 500px) {
   .footerContainer {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+/*NEWS LETTER INPUT FIELD STYLE*/
+.newsletter-box {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: rgb(24, 24, 24);
+  border: 1px solid #e5e5e5;
+}
+
+.newsletter-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#newsletterEmail {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#newsletterEmail:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+}
+
+.newsletter-btn {
+  padding: 0.7rem 1.2rem;
+  background: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:  background 0.2s ease transition 0.2s ease;
+}
+
+.newsletter-btn:hover {
+  background: #e86d00;
+}
+
+.newsletter-note {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
 }

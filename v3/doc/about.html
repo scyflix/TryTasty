@@ -409,75 +409,141 @@
 
     <footer>
       <section class="footerContainer">
+
         <div class="upperFooter">
+          <a title="Write a Feedback" href="feedbacks/index.html" class="feedbackBtn" aria-label="Feedback">
+ <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="white"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  >
+  <path
+  d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+  />
+</svg>
+
+</a>
+
+        <div class="social-icons">
           <a
-            title="Write a Feedback"
-            href="../feedbacks/index.html"
-            class="feedbackBtn"
-            aria-label="Feedback"
+            href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
+            target="_blank"
+            title="YouTube"
+            class="social-icon"
           >
             <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              fill="none"
+              fill="white"
+              stroke="white"
               xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
             >
               <path
-                d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linejoin="round"
+              d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
               />
             </svg>
-          </a>
-
-          <div class="social-icons">
-            <a
-              href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
-              target="_blank"
-              title="YouTube"
-              class="social-icon"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
-                />
-              </svg>
-            </a>
-          </div>
+          </a> 
         </div>
-
-            <div class="trustpilot-widget" 
+      </div>
+      
+      <div class="trustpilot-widget" 
       data-locale="en-US" 
       data-template-id="56278e9abfbbba0bdcd568bc" 
       data-businessunit-id="69885f152706dd2e7b4402d3" 
       data-token="20df0dc3-c215-42df-b6e0-214624119af1">
       <a href="https://www.trustpilot.com/review/trytasty.de" target="_blank" rel="noopener">Trustpilot</a>
       </div>
-
-        <div class="footerLinks">
+      
+      <div class="footerLinks">
         <span class="footerSectionHeader">Links</span>
-          <a href="about.html">About</a>
-          <a href="../submit.html">Submit a recipe</a>
-          <a href="../feedbacks/index.html">Write a feedback</a>
-          <a href="privacyGerman.html">Imprint & privacy policy</a>
-          <a href="../buy/shop.html">Get kitchen utensils</a>
-        </div>
-      </section>
+        <a href="about.html">About</a>
+        <a href="../submit.html">Submit a recipe</a>
+        <a href="../feedbacks/index.html">Send feedback</a>
+        <a href="privacyGerman.html">Imprint & privacy policy</a>
+        <a href="../buy/shop.html">Kitchen Tools Shop</a>
+      </div>
+      <!-- TrustBox widget - Review Collector -->
+  <!-- End TrustBox widget -->
+    </section>
 
-      <p>&copy;2025 - 2026 TryTasty. All Rights reserved.</p>
+    <section class="footerContainer footerMiddleContainer">
+
+      <div class="newsletter-box">
+        <label for="newsletterEmail" class="newsletter-label">
+          Subscribe to our newsletter (optional)
+        </label>
+        
+  <div class="newsletter-input-wrapper">
+    <input
+      type="email"
+      id="newsletterEmail"
+      placeholder="Enter your email"
+      autocomplete="off"
+    />
+    <button id="newsletterSubmit" type="button" class="newsletter-btn">
+      Subscribe
+    </button>
+  </div>
+  
+  <p class="newsletter-note">
+    Get recipe inspiration, updates, and occasional TryTasty news.
+  </p>
+</div>
+
+ <div id="FromScybud">
+        <span class="footerSectionHeader">Scybud Creations</span>
+          <div id="scybudApps">
+            <a href="https://scyflix.github.io/RushSite/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                  alt="RushSite Logo"
+                />
+                <span>RushSite</span>
+              </div>
+            </a>
+            <a href="https://trytasty.de/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
+                  alt="TryTasty Logo"
+                />
+                <span>TryTasty</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Playbud/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                  alt="Playbud Logo"
+                />
+                <span>Playbud</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                  alt="Scybud Logo"
+                  />
+                  <span>Scybud</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+          
+      <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
 
-    <!-- Small screen bottom navigation -->
-    <nav id="bottomNavContainer"></nav>
+
     <script src="../../recipe.js"></script>
     <script src="nav.js"></script>
     <script type="module" src="../main.js"></script>
