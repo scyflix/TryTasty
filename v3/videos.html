@@ -58,14 +58,42 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <style>
+      .tt-noodle-loader {
+  width: 140px;
+  height: 70px;
+}
+
+#noodle {
+  fill: none;
+  stroke: #ff6b35;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: noodle 1.6s ease-in-out infinite;
+}
+
+@keyframes noodle {
+  0% { stroke-dashoffset: 180; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -180; opacity: 0.4; }
+}
+
+
+    </style>
   </head>
   <body>
     <!--PRELOADER-->
     <div id="preloader">
       <div class="logo">TryTasty</div>
-      <div class="loadBar">
-        <div class="loadLine"></div>
-      </div>
+      <div class="tt-noodle-loader">
+  <svg viewBox="0 0 120 60">
+    <path id="noodle" d="M10 30 C 40 10, 80 50, 110 30" />
+  </svg>
+
+</div>
     </div>
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
