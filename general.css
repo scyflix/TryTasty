@@ -8,7 +8,7 @@
   --main-bg: #f7f7f7;
   --desc-bg: #fcdab9;
   --color: #333;
-  --header-bg: #ffd392;
+  --header-bg: rgba(255, 255, 255, 0.7);
   --header-color: linear-gradient(90deg, orange, orangered);
   --icon-color: #0d0d0d;
   --shadow: 0 2px 30px 2px rgba(0, 0, 0, 0.1);
@@ -32,8 +32,7 @@ body.darkMode {
   --bg: #464545;
   --main-bg: #1e1e1e;
   --color: #ffffff;
-  --header-bg: #ffa500;
-  --header-color: #0d0d0d;
+  --header-bg: rgba(0, 0, 0, 0.7);
   --shadow: 0 2px 30px 2px rgb(0, 0, 0);
   --preloader-bg: linear-gradient(135deg, #0d0d0d, #1e1e1e);
   --infoNote-bg: #fff3cd;
@@ -163,6 +162,7 @@ header {
   background: var(--header-bg);
   padding: 0 var(--padding);
   position: sticky;
+  backdrop-filter: blur(5px);
   top: 0;
   z-index: 1000;
   margin: 0;
@@ -576,7 +576,7 @@ footer p {
 
 .footerContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
   gap: 10px;
   margin: 0 5px 15px;

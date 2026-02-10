@@ -98,7 +98,7 @@ ol li {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .recipeActionBtns button {
   margin: 0;

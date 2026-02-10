@@ -11,6 +11,7 @@
 
 /* DARK MODE (DEFAULT) */
 .theme-dark {
+  --bg: radial-gradient(circle at top, #2a1a00, #050505 55%);
   --bg-main: #050505;
   --bg-surface: #151515;
   --bg-soft: #1f1f1f;
@@ -33,8 +34,8 @@
   --review-star-filled: #ffb347;
   --review-star-empty: #444444;
 
-  --header-bg: rgba(0, 0, 0, 0.7);
-  --header-blur: blur(12px);
+  --header-bg: rgba(0, 0, 0, 0.447);
+  --header-blur: blur(5px);
 
   --footer-bg: #000000;
   --footer-text: #ffffff;
@@ -47,6 +48,7 @@
 
 /* LIGHT MODE */
 .theme-light {
+  --bg: radial-gradient(circle at top, #2a1a00, #b0afaf 55%);
   --bg-main: #ffffff;
   --bg-surface: #f7f3ee;
   --bg-soft: #ffffff;
@@ -60,8 +62,8 @@
 
   --border-subtle: rgba(0, 0, 0, 0.08);
 
-  --hero-bg: rgba(255, 255, 255, 0.9);
-  --hero-blur: blur(18px);
+  --hero-bg: rgba(255, 255, 255, 0.447);
+  --hero-blur: blur(5px);
 
   --card-bg: #ffffff;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -92,7 +94,7 @@ body {
 }
 
 body {
-  background: radial-gradient(circle at top, #2a1a00, #050505 55%);
+  background: var(--bg);
   color: var(--text-main);
   text-align: center;
 }
@@ -124,10 +126,14 @@ body {
    ========================= */
 
 .header {
+  max-width: 1200px;
   width: 100%;
+  margin: auto;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 20px;
+  right: 50%;
+  transform: translate(50%);
+  border-radius: 30px;
   padding: 10px 0;
   background: var(--header-bg);
   backdrop-filter: var(--header-blur);
@@ -181,12 +187,15 @@ body {
 
 .header-btn {
   padding: 6px 14px;
-  background: var(--color-accent);
+  background-color: var(--color-accent);
   border-radius: 999px;
   color: #ffffff !important;
   font-weight: 600;
+  transition: all 0.6s ease;
 }
-
+.header-btn:hover {
+  background-color: var(--btn-bg-hover);
+}
 /* =========================
    HERO
    ========================= */
@@ -237,7 +246,7 @@ body {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-buttons button:hover {
@@ -371,13 +380,13 @@ body {
 .review-stars::before {
   content: "★★★★★";
   letter-spacing: 3px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   background: linear-gradient(
     90deg,
     var(--review-star-filled) calc(var(--percent)),
     var(--review-star-empty) calc(var(--percent))
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   display: inline-block;
   margin: 6px 0;
@@ -394,6 +403,9 @@ body {
   color: var(--text-muted);
 }
 
+a {
+  color: var(--btn-bg);
+}
 /* =========================
    CTA
    ========================= */
@@ -652,6 +664,10 @@ footer p {
    ========================= */
 
 @media (max-width: 700px) {
+  .header {
+    border-radius: 10px;
+    top: 0;
+  }
   .header-inner {
     flex-direction: column;
     gap: 8px;

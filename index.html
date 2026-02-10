@@ -1,5 +1,5 @@
 <!--Bismillai Rahmani Rahim-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="canonical" href="https://trytasty.de/" />
@@ -19,38 +19,35 @@
     ></script>
 
     <!-- logic -->
-<!-- Google tag (GA4) -->
-<script
-  type="text/plain"
-  data-cookieconsent="statistics"
->
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DDLCL6XBQR', {
-    anonymize_ip: true
-  });
-</script>
+    <!-- Google tag (GA4) -->
+    <script type="text/plain" data-cookieconsent="statistics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DDLCL6XBQR', {
+        anonymize_ip: true
+      });
+    </script>
 
-<script
-  type="text/plain"
-  data-cookieconsent="statistics"
-  src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
-></script>
+    <script
+      type="text/plain"
+      data-cookieconsent="statistics"
+      src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
+    ></script>
 
     <script type="application/ld+json">
       {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "TryTasty",
-  "url": "https://trytasty.de",
-  "description": "Quick & tasty snack recipes to make at home",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://trytasty.de/search.html?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TryTasty",
+        "url": "https://trytasty.de",
+        "description": "Quick & tasty snack recipes to make at home",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://trytasty.de/search.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
     </script>
 
     <script type="application/ld+json">
@@ -93,7 +90,10 @@
       content="Discover exciting new recipes with TryTasty. Your go to destination for tasty
          and easy-to-make snacks."
     />
-    <meta name="twitter:image" content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp" />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Recipe.css" />
@@ -120,18 +120,21 @@
     <link rel="manifest" href="v3/favicon/site.webmanifest" />
 
     <!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-<!-- End TrustBox script -->
-
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <!-- End TrustBox script -->
   </head>
   <body>
-<!--PRELOADER-->
+    <!--PRELOADER-->
     <div id="preloader">
       <div class="logo">TryTasty</div>
       <div class="beggingText">Just a moment.We are sorry for the delay.</div>
-    <div class="tt-sizzle-loader">
-  <span></span><span></span><span></span><span></span>
-</div>
+      <div class="tt-sizzle-loader">
+        <span></span><span></span><span></span><span></span>
+      </div>
     </div>
 
     <!--HEADER-->
@@ -151,59 +154,69 @@
         </a>
       </div>
 
-      <div class="overlay">
-            </div>
-              
-              <nav class="page-nav" id="sidebar">
-                <div class="upperNavContainer">
-                  <!--USER PROFILE LINK-->
-                </div>
-                <div class="actionBtns">
-                  <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
-                    Light Mode
-                  </button>
-                  <a id="loginLink" href="v3/login.html">Login</a>
-                </div>
+      <div class="overlay"></div>
 
-                <a title="Recipe Search Bot" href="#resp" class="botLink" onclick="showPage('recipeBotForm')">
-                  <svg
-      width="128"
-      height="128"
-      viewBox="0 0 128 128"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="TryTasty AI Bot"
-    >
-      <!-- Head -->
-      <rect x="20" y="28" width="88" height="72" rx="20" fill="#FF8C42"/>
-    
-      <!-- Visor -->
-      <rect x="32" y="44" width="64" height="28" rx="14" fill="#111827"/>
-    
-      <!-- Visor lights -->
-      <circle cx="52" cy="58" r="4" fill="#4ADE80"/>
-      <circle cx="64" cy="58" r="4" fill="#4ADE80"/>
-      <circle cx="76" cy="58" r="4" fill="#4ADE80"/>
-    
-      <!-- Side bolts -->
-      <circle cx="20" cy="64" r="4" fill="#D97706"/>
-      <circle cx="108" cy="64" r="4" fill="#D97706"/>
-    
-      <!-- Neck -->
-      <rect x="52" y="100" width="24" height="8" rx="4" fill="#111827"/>
-    
-      <!-- Antenna -->
-      <line x1="64" y1="16" x2="64" y2="28" stroke="#111827" stroke-width="3"/>
-      <circle cx="64" cy="12" r="4" fill="#4ADE80"/>
-    </svg>
-    
-                </a>
-              </nav>
-            </header>
+      <nav class="page-nav" id="sidebar">
+        <div class="upperNavContainer">
+          <!--USER PROFILE LINK-->
+        </div>
+        <div class="actionBtns">
+          <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+            Light Mode
+          </button>
+          <a id="loginLink" href="v3/login.html">Login</a>
+        </div>
+
+        <a
+          title="Recipe Search Bot"
+          href="#resp"
+          class="botLink"
+          onclick="showPage('recipeBotForm')"
+        >
+          <svg
+            width="128"
+            height="128"
+            viewBox="0 0 128 128"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="TryTasty AI Bot"
+          >
+            <!-- Head -->
+            <rect x="20" y="28" width="88" height="72" rx="20" fill="#FF8C42" />
+
+            <!-- Visor -->
+            <rect x="32" y="44" width="64" height="28" rx="14" fill="#111827" />
+
+            <!-- Visor lights -->
+            <circle cx="52" cy="58" r="4" fill="#4ADE80" />
+            <circle cx="64" cy="58" r="4" fill="#4ADE80" />
+            <circle cx="76" cy="58" r="4" fill="#4ADE80" />
+
+            <!-- Side bolts -->
+            <circle cx="20" cy="64" r="4" fill="#D97706" />
+            <circle cx="108" cy="64" r="4" fill="#D97706" />
+
+            <!-- Neck -->
+            <rect x="52" y="100" width="24" height="8" rx="4" fill="#111827" />
+
+            <!-- Antenna -->
+            <line
+              x1="64"
+              y1="16"
+              x2="64"
+              y2="28"
+              stroke="#111827"
+              stroke-width="3"
+            />
+            <circle cx="64" cy="12" r="4" fill="#4ADE80" />
+          </svg>
+        </a>
+      </nav>
+    </header>
     <div id="toast">Recipe saved successfully!</div>
 
-      <main id="main">
-        <div class="popular-section">
-          <h1>Popular Snack Recipes</h1>
+    <main id="main">
+      <div class="popular-section">
+        <h1>Popular Snack Recipes</h1>
 
         <p class="popular-intro">
           Looking for something quick, tasty, and easy to make with the
@@ -236,9 +249,7 @@
             – no-bake bites perfect for school, gym, or travel
           </li>
           <li>
-            <a href="v3/recipe.html?id=cheesy-ramen-nest"
-              >Cheesy Ramen Nests</a
-            >
+            <a href="v3/recipe.html?id=cheesy-ramen-nest">Cheesy Ramen Nests</a>
             – baked ramen cups with melty cheese
           </li>
           <li>
@@ -252,8 +263,7 @@
 
       <section id="recipeList">
         <h2 class="available">Available Recipes</h2>
-        <nav class="page" >
-
+        <nav class="page">
           <!--Link all the recipe pages here-->
         </nav>
       </section>
@@ -269,46 +279,73 @@
           style="border: none; border-radius: 14px"
           ></iframe>
           -->
-          <section id="suggestions"></section>
+        <section id="suggestions"></section>
         <form id="recipeBot" class="form">
           <a title="Recipe Search Bot" href="#resp" class="botLinkInner">
-                  <svg
-      width="128"
-      height="128"
-      viewBox="0 0 128 128"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="TryTasty AI Bot"
-    >
-      <!-- Head -->
-      <rect x="20" y="28" width="88" height="72" rx="20" fill="#FF8C42"/>
-    
-      <!-- Visor -->
-      <rect x="32" y="44" width="64" height="28" rx="14" fill="#111827"/>
-    
-      <!-- Visor lights -->
-      <circle cx="52" cy="58" r="4" fill="#4ADE80"/>
-      <circle cx="64" cy="58" r="4" fill="#4ADE80"/>
-      <circle cx="76" cy="58" r="4" fill="#4ADE80"/>
-    
-      <!-- Side bolts -->
-      <circle cx="20" cy="64" r="4" fill="#D97706"/>
-      <circle cx="108" cy="64" r="4" fill="#D97706"/>
-    
-      <!-- Neck -->
-      <rect x="52" y="100" width="24" height="8" rx="4" fill="#111827"/>
-    
-      <!-- Antenna -->
-      <line x1="64" y1="16" x2="64" y2="28" stroke="#111827" stroke-width="3"/>
-      <circle cx="64" cy="12" r="4" fill="#4ADE80"/>
-    </svg>
-    
-  </a>
-  <div class="infoNote">
+            <svg
+              width="128"
+              height="128"
+              viewBox="0 0 128 128"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="TryTasty AI Bot"
+            >
+              <!-- Head -->
+              <rect
+                x="20"
+                y="28"
+                width="88"
+                height="72"
+                rx="20"
+                fill="#FF8C42"
+              />
+
+              <!-- Visor -->
+              <rect
+                x="32"
+                y="44"
+                width="64"
+                height="28"
+                rx="14"
+                fill="#111827"
+              />
+
+              <!-- Visor lights -->
+              <circle cx="52" cy="58" r="4" fill="#4ADE80" />
+              <circle cx="64" cy="58" r="4" fill="#4ADE80" />
+              <circle cx="76" cy="58" r="4" fill="#4ADE80" />
+
+              <!-- Side bolts -->
+              <circle cx="20" cy="64" r="4" fill="#D97706" />
+              <circle cx="108" cy="64" r="4" fill="#D97706" />
+
+              <!-- Neck -->
+              <rect
+                x="52"
+                y="100"
+                width="24"
+                height="8"
+                rx="4"
+                fill="#111827"
+              />
+
+              <!-- Antenna -->
+              <line
+                x1="64"
+                y1="16"
+                x2="64"
+                y2="28"
+                stroke="#111827"
+                stroke-width="3"
+              />
+              <circle cx="64" cy="12" r="4" fill="#4ADE80" />
+            </svg>
+          </a>
+          <div class="infoNote">
             <b>Note:</b> I only support <b>1 ingredient input</b> at the moment.
             Please enter your most <b>dominant</b> ingredient for better
             suggestions
           </div>
-        
+
           <label for="userInput">Input a single recipe</label>
           <input
             type="text"
@@ -320,151 +357,134 @@
           />
           <button type="button" onclick="findRecipe()">Suggest</button>
         </form>
-        
       </div>
-
-      <section class="faq">
-        <details>
-          <summary>How do I submit a recipe?</summary>
-          <p>
-            Got a snack idea? Awesome. Send it through the
-            <a href="v3/submit.html">submit page</a> and we’ll check it
-            out. We love creative twists.
-          </p>
-        </details>
-
-        <details>
-          <summary>Are the recipes beginner-friendly?</summary>
-          <p>
-            Yes. If you can use a pan and a spoon, you’re good. Steps are short
-            and ingredients are simple.
-          </p>
-        </details>
-
-        <details>
-          <summary>Can I save favorite recipes?</summary>
-          <p>
-            Yes, tap the favorite button on any recipe. It’ll be saved so you
-            can find it again in the
-            <a href="v3/favs.html">favorites page</a> easily.
-          </p>
-        </details>
-
-        <details>
-          <summary>Do I need special ingredients?</summary>
-          <p>
-            Nope. Most recipes use everyday kitchen ingredients you probably
-            already have.
-          </p>
-        </details>
-      </section>
 
     </main>
 
     <!-- Small screen bottom navigation -->
     <nav id="bottomNavContainer">
       <!--Inject elements with js-->
-    
     </nav>
 
     <footer>
       <section class="footerContainer">
-
         <div class="upperFooter">
-          <a title="Write a Feedback" href="v3/feedbacks/index.html" class="feedbackBtn" aria-label="Feedback">
- <svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="white"
-  xmlns="http://www.w3.org/2000/svg"
-  aria-hidden="true"
->
-  <path
-  d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linejoin="round"
-  />
-</svg>
-
-</a>
-
-        <div class="social-icons">
           <a
-            href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
-            target="_blank"
-            title="YouTube"
-            class="social-icon"
+            title="Write a Feedback"
+            href="v3/feedbacks/index.html"
+            class="feedbackBtn"
+            aria-label="Feedback"
           >
             <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="white"
-              stroke="white"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
-              d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
+                d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
               />
             </svg>
-          </a> 
+          </a>
+
+          <div class="social-icons">
+            <a
+              href="https://youtube.com/@trytasty?si=DjZBx-oai7TXVWyt"
+              target="_blank"
+              title="YouTube"
+              class="social-icon"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="white"
+                stroke="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
-      
-      <div class="footerLinks">
-        <span class="footerSectionHeader">Links</span>
-        <a href="v3/doc/about.html">About</a>
-        <a href="v3/submit.html">Submit a recipe</a>
-        <a href="v3/feedbacks/index.html">Send feedback</a>
-        <a href="v3/doc/privacyGerman.html">Imprint & privacy policy</a>
-        <a href="v3/buy/shop.html">Kitchen Tools Shop</a>
-      </div>
-    </section>
-    
-    <section class="footerContainer">
-<a href="https://www.producthunt.com/products/trytasty?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-trytasty" target="_blank" rel="noopener noreferrer"><img alt="TryTasty - Discover tasty, easy‑to‑make snacks. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1077150&amp;theme=dark&amp;t=1770745057105"></a>      <!-- TrustBox widget - Review Collector -->
-      <div
-      class="trustpilot-widget"
-      data-locale="en-US"
-      data-template-id="56278e9abfbbba0bdcd568bc"
-      data-businessunit-id="69885f152706dd2e7b4402d3"
-      data-token="20df0dc3-c215-42df-b6e0-214624119af1"
-      >
-      <a href="https://www.trustpilot.com/review/trytasty.de" target="_blank" rel="noopener">Trustpilot</a>
-    </div>
-    <!-- End TrustBox widget -->
-    </section>
 
-    <section class="footerContainer footerMiddleContainer">
+        <div class="footerLinks">
+          <span class="footerSectionHeader">Links</span>
+          <a href="v3/doc/about.html">About</a>
+          <a href="v3/submit.html">Submit a recipe</a>
+          <a href="v3/feedbacks/index.html">Send feedback</a>
+          <a href="v3/doc/privacyGerman.html">Imprint & privacy policy</a>
+          <a href="v3/buy/shop.html">Kitchen Tools Shop</a>
+        </div>
+      </section>
 
-      <div class="newsletter-box">
-        <label for="newsletterEmail" class="newsletter-label">
-          Subscribe to our newsletter (optional)
-        </label>
-        
-  <form action="https://formspree.io/f/xykdzlvv" method="POST" class="newsletter-input-wrapper">
-    <input
-      type="email"
-      name="newsletterEmail"
-      id="newsletterEmail"
-      placeholder="Enter your email"
-      autocomplete="off"
-      required
-    />
-    <button id="newsletterSubmit" type="submit" class="newsletter-btn">
-      Subscribe
-    </button>
-  </form>
-  
-  <p class="newsletter-note">
-    Get recipe inspiration, updates, and occasional TryTasty news.
-  </p>
-</div>
+      <section class="footerContainer">
+        <a
+          href="https://www.producthunt.com/products/trytasty?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-trytasty"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            alt="TryTasty - Discover tasty, easy‑to‑make snacks. | Product Hunt"
+            width="250"
+            height="54"
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1077150&amp;theme=dark&amp;t=1770745057105"
+        /></a>
+        <!-- TrustBox widget - Review Collector -->
+        <div
+          class="trustpilot-widget"
+          data-locale="en-US"
+          data-template-id="56278e9abfbbba0bdcd568bc"
+          data-businessunit-id="69885f152706dd2e7b4402d3"
+          data-token="20df0dc3-c215-42df-b6e0-214624119af1"
+        >
+          <a
+            href="https://www.trustpilot.com/review/trytasty.de"
+            target="_blank"
+            rel="noopener"
+            >Trustpilot</a
+          >
+        </div>
+        <!-- End TrustBox widget -->
+      </section>
 
- <div id="FromScybud">
-        <span class="footerSectionHeader">Scybud Creations</span>
+      <section class="footerContainer footerMiddleContainer">
+        <div class="newsletter-box">
+          <label for="newsletterEmail" class="newsletter-label">
+            Subscribe to our newsletter (optional)
+          </label>
+
+          <form
+            action="https://formspree.io/f/xykdzlvv"
+            method="POST"
+            class="newsletter-input-wrapper"
+          >
+            <input
+              type="email"
+              name="newsletterEmail"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+              autocomplete="off"
+              required
+            />
+            <button id="newsletterSubmit" type="submit" class="newsletter-btn">
+              Subscribe
+            </button>
+          </form>
+
+          <p class="newsletter-note">
+            Get recipe inspiration, updates, and occasional TryTasty news.
+          </p>
+        </div>
+
+        <div id="FromScybud">
+          <span class="footerSectionHeader">Scybud Creations</span>
           <div id="scybudApps">
             <a href="https://scyflix.github.io/RushSite/" target="_blank">
               <div class="container">
@@ -498,21 +518,20 @@
                 <img
                   src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
                   alt="Scybud Logo"
-                  />
-                  <span>Scybud</span>
-                </div>
-              </a>
-            </div>
+                />
+                <span>Scybud</span>
+              </div>
+            </a>
           </div>
-        </section>
-          
+        </div>
+      </section>
+
       <p>&copy;2025 TryTasty. All Rights reserved.</p>
     </footer>
 
-
     <script src="rootNav.js" derfer></script>
     <script src="recipe.js" defer></script>
-      <script src="v3/js/recipeCards.js"></script>
+    <script src="v3/js/recipeCards.js"></script>
     <script type="module" src="v3/main.js" defer></script>
   </body>
 </html>

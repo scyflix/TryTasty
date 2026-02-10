@@ -189,8 +189,11 @@ nav.page .allRecipeDiv {
   font-weight: bold;
 }
 .loadMoreBtns {
+  backdrop-filter: blur(2px);
   background-color: var(--header-bg);
   display: flex;
+    border: 2px solid #ff9d00;
+  color: white;
   justify-content: center;
   align-items: center;
   margin: auto;

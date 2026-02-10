@@ -70,13 +70,13 @@ Promise.all(recipeFiles.map(file => fetch(file).then(r => r.json())))
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(recipeSchema);
-    document.head.appendChild(script);
+
     document.title = `${recipe.title} | TryTasty`;
 
     const metaOgImg = document.createElement("meta");
     metaOgImg.property = "og:image";
-    metaOgImg.content = `<${recipe.image}`;
-    document.head.appendChild(metaOgImg);
+    metaOgImg.content = `${recipe.image}`;
+    document.head.append(metaOgImg, script);
 
     const totalTimeMin =
       recipe.prepTimeMin + recipe.cookTimeMin + recipe.coolTime;
