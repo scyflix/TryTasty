@@ -578,17 +578,20 @@ footer p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  gap: 10px;
+  margin: 0 5px 15px;
   max-height: 100%;
   text-align: left;
   justify-content: center;
 }
 .footerMiddleContainer {
   display: flex;
-  justify-content: center;
+    justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
   width: 100%;
   margin: 10px 0;
+  padding: 0 20px;
 }
 .footerLinks {
   display: flex;
@@ -608,6 +611,7 @@ footer p {
 @media (max-width: 500px) {
   .footerContainer {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 }
