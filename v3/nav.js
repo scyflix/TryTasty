@@ -212,4 +212,7 @@ function callToFeedback() {
 }
 
 //call the funtion after approximately 5mins
+setTimeout(() => {
   callToFeedback();
+
+}, 29999)
