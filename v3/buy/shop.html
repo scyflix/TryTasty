@@ -117,13 +117,32 @@
   </head>
 
   <body>
-    <!--PRELOADER-->
-    <div id="preloader">
-      <div class="logo">TryTasty</div>
-      <div class="loadBar">
-        <div class="loadLine"></div>
+    <header>
+    <div style="display: flex; margin-left: 0" id="menuIconContainer">
+      <div class="menu-icon"><span></span>
+        <span></span>
+        <span></span>
       </div>
+      <a href="https://trytasty.de/">
+        <div class="logo">TryTasty</div>
+      </a>
     </div>
+
+         <div class="overlay">
+            </div>
+      
+    <nav class="page-nav" id="sidebar">
+      <div class="upperNavContainer"></div>
+      <div class="actionBtns">
+        <button id="dark-mode" aria-label="Dark Mode" onclick="darkMode()">
+          Light Mode
+        </button>
+        <a id="loginLink" href="../login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!--HEADER-->
     <header>
       <div style="display: flex; margin-left: 0" id="menuIconContainer">
         <div class="menu-icon">
