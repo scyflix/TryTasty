@@ -60,27 +60,49 @@
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <style>
-      .tt-noodle-loader {
-  width: 140px;
-  height: 70px;
+  .tt-sizzle-loader {
+  position: relative;
+  width: 60px;
+  height: 40px;
 }
 
-#noodle {
-  fill: none;
-  stroke: #ff6b35;
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-dasharray: 180;
-  stroke-dashoffset: 180;
-  animation: noodle 1.6s ease-in-out infinite;
+.tt-sizzle-loader span {
+  position: absolute;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  background: #ff6b35;
+  border-radius: 50%;
+  animation: sizzle 0.9s infinite ease-out;
+  opacity: 0;
 }
 
-@keyframes noodle {
-  0% { stroke-dashoffset: 180; opacity: 0.4; }
-  50% { stroke-dashoffset: 0; opacity: 1; }
-  100% { stroke-dashoffset: -180; opacity: 0.4; }
+.tt-sizzle-loader span:nth-child(1) { left: 5px; animation-delay: 0s; }
+.tt-sizzle-loader span:nth-child(2) { left: 20px; animation-delay: 0.15s; }
+.tt-sizzle-loader span:nth-child(3) { left: 35px; animation-delay: 0.3s; }
+.tt-sizzle-loader span:nth-child(4) { left: 50px; animation-delay: 0.45s; }
+
+@keyframes sizzle {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  40% { opacity: 1; }
+  100% { transform: translateY(-25px) scale(1); opacity: 0; }
 }
 
+
+.beggingText {
+  font-size: 0.7rem;
+  animation: show 5s ease;
+  opacity: 0;
+  animation-delay: 2s;
+}
+@keyframes show {
+  from {
+opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
     </style>
   </head>
@@ -88,11 +110,9 @@
     <!--PRELOADER-->
     <div id="preloader">
       <div class="logo">TryTasty</div>
-      <div class="tt-noodle-loader">
-  <svg viewBox="0 0 120 60">
-    <path id="noodle" d="M10 30 C 40 10, 80 50, 110 30" />
-  </svg>
-
+      <div class="beggingText">Just a moment.We are sorry for the delay.</div>
+    <div class="tt-sizzle-loader">
+  <span></span><span></span><span></span><span></span>
 </div>
     </div>
     <header>
