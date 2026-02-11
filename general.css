@@ -650,12 +650,13 @@ footer p {
 
 .newsletter-input-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
 }
 
 #newsletterEmail {
-  flex: 1;
+  min-width: auto;
   padding: 0.7rem 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -669,6 +670,7 @@ footer p {
 }
 
 .newsletter-btn {
+  margin: 0;
   padding: 0.7rem 1.2rem;
   background: #ff7a00;
   color: white;
