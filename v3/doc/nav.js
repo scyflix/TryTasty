@@ -22,12 +22,12 @@ function setupMenuIcons() {
 
 //Create Sidebar links in an array
 const navLinks = [
-  { text: "Home", href: "../../index.html"},
+  { text: "Home", href: "../../index.html" },
   { text: "Recipes", href: "../../index.html#recipeList" },
-  { text: "Favorites", href: "../favs.html"},
-    { text: "Shop", href: "../buy/shop.html"},
+  { text: "Favorites", href: "../favs.html" },
+  { text: "Shop", href: "../buy/shop.html" },
 
-  { text: "Videos", href: "../videos.html"},
+  { text: "Videos", href: "../videos.html" },
   { text: "Community", href: "../../TryTasty-community/community.html" },
   { text: "Submit", href: "../submit.html" },
   { text: "Privacy Policy", href: "privacyGerman.html" },

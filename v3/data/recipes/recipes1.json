@@ -136,11 +136,7 @@
           { "item": "Water", "quantity": "½ Cup" }
         ],
 
-        "equipment": [
-          "Mixing bowl",
-          "Measuring Cup",
-          "Frying pan"
-        ],
+        "equipment": ["Mixing bowl", "Measuring Cup", "Frying pan"],
 
         "stepFlow": [
           {

@@ -9,17 +9,17 @@ export function filterAction() {
   );
 
   filter.addEventListener("change", (e) => {
-    const value = e.target.value
+    const value = e.target.value;
 
-  if (value === "temu") {
-       temuProductCardContainer.classList.remove("hide");
-    amazonProductCardContainer.classList.add("hide");
-  } else if(value === "amazon") {
-       amazonProductCardContainer.classList.remove("hide");
-    temuProductCardContainer.classList.add("hide");
-  } else {
-          temuProductCardContainer.classList.remove("hide");
-          amazonProductCardContainer.classList.remove("hide");
-  }
-});
+    if (value === "temu") {
+      temuProductCardContainer.classList.remove("hide");
+      amazonProductCardContainer.classList.add("hide");
+    } else if (value === "amazon") {
+      amazonProductCardContainer.classList.remove("hide");
+      temuProductCardContainer.classList.add("hide");
+    } else {
+      temuProductCardContainer.classList.remove("hide");
+      amazonProductCardContainer.classList.remove("hide");
+    }
+  });
 }

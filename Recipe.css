@@ -192,7 +192,7 @@ nav.page .allRecipeDiv {
   backdrop-filter: blur(2px);
   background-color: var(--header-bg);
   display: flex;
-    border: 2px solid #ff9d00;
+  border: 2px solid #ff9d00;
   color: white;
   justify-content: center;
   align-items: center;
@@ -230,7 +230,7 @@ h2.available {
   margin-bottom: 5px;
 }
 .snackImage:hover {
-    color: var(--snackImg-color);
+  color: var(--snackImg-color);
   transform: scale(1.02);
   box-shadow: 0 0 18px rgb(255, 111, 0);
 }
@@ -314,4 +314,3 @@ a.botLink:has(svg) {
   padding: 0;
   transform: scale(1.1);
 }
-

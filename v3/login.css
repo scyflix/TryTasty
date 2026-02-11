@@ -1,16 +1,16 @@
 /* Popup Overlay */
 #popup {
   background: rgba(0, 0, 0, 0.65);
- display: none;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 100dvh;
-position: fixed;
-z-index: 2222;
-top: 0;
-left: 0;
-backdrop-filter: blur(10px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  z-index: 2222;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
 }
 .showFlex {
   display: flex;

@@ -1,14 +1,13 @@
 //TOAST NAVIGATION ACTIVE STATE
 document.addEventListener("DOMContentLoaded", () => {
   const toastLink = document.querySelectorAll("#bottomNavContainer a");
-  
+
   toastLink.forEach((link) => {
     if (link.href === window.location.href) {
       link.classList.add("active");
     }
   });
-
-})
+});
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
@@ -126,7 +125,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //For the recipe bot form
 function findRecipe() {
-  const userInput = document.getElementById("userInput").value.toLowerCase().trim();
+  const userInput = document
+    .getElementById("userInput")
+    .value.toLowerCase()
+    .trim();
   const infoNote = document.querySelector(".infoNote");
   const suggestions = document.getElementById("suggestions");
   const recipe = document.getElementsByClassName("recipe");

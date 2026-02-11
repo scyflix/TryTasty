@@ -15,11 +15,11 @@ import { auth } from "./firebase.js";
 
 // Google Sign-In
 export async function googleLogin() {
-    const provider = new GoogleAuthProvider();
-    try {
+  const provider = new GoogleAuthProvider();
+  try {
     await signInWithPopup(auth, provider);
   } catch (err) {
-    console.log( err.message);
+    console.log(err.message);
   }
 }
 

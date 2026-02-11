@@ -3,19 +3,19 @@ import { filterAction } from "./productActions.js";
 
 //Temu products
 fetch("../data/temuProduct.json")
-.then((response) => {
-if(!response.ok) {
+  .then((response) => {
+    if (!response.ok) {
       throw new Error("Network response was not ok");
-}
+    }
     return response.json();
-})
-.then((data) => {
-const temuProductsContainer = document.createElement("div")
-temuProductsContainer.classList.add("temuProductCardContainer");
+  })
+  .then((data) => {
+    const temuProductsContainer = document.createElement("div");
+    temuProductsContainer.classList.add("temuProductCardContainer");
 
-temuProductsContainer.innerHTML = data.products
-  .map(
-    (product) => `
+    temuProductsContainer.innerHTML = data.products
+      .map(
+        (product) => `
       <div class="productItemContainer">
           <div class="imgContainer">
             <img
@@ -48,13 +48,11 @@ temuProductsContainer.innerHTML = data.products
          </div>
         </div>
       `,
-  )
-  .join("");
+      )
+      .join("");
 
-productContainer.prepend(temuProductsContainer);
-})
-
-
+    productContainer.prepend(temuProductsContainer);
+  });
 
 //Amazon products
 fetch("../data/amazonProduct.json")

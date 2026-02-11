@@ -132,17 +132,36 @@ body {
   opacity: 0;
 }
 
-.tt-sizzle-loader span:nth-child(1) { left: 5px; animation-delay: 0s; }
-.tt-sizzle-loader span:nth-child(2) { left: 20px; animation-delay: 0.15s; }
-.tt-sizzle-loader span:nth-child(3) { left: 35px; animation-delay: 0.3s; }
-.tt-sizzle-loader span:nth-child(4) { left: 50px; animation-delay: 0.45s; }
-
-@keyframes sizzle {
-  0% { transform: translateY(0) scale(0.6); opacity: 0; }
-  40% { opacity: 1; }
-  100% { transform: translateY(-25px) scale(1); opacity: 0; }
+.tt-sizzle-loader span:nth-child(1) {
+  left: 5px;
+  animation-delay: 0s;
+}
+.tt-sizzle-loader span:nth-child(2) {
+  left: 20px;
+  animation-delay: 0.15s;
+}
+.tt-sizzle-loader span:nth-child(3) {
+  left: 35px;
+  animation-delay: 0.3s;
+}
+.tt-sizzle-loader span:nth-child(4) {
+  left: 50px;
+  animation-delay: 0.45s;
 }
 
+@keyframes sizzle {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-25px) scale(1);
+    opacity: 0;
+  }
+}
 
 .beggingText {
   font-size: 0.7rem;
@@ -389,7 +408,6 @@ a.userProfileLink span {
     font-size: 0.6rem;
     font-weight: 600;
   }
-
 }
 
 #otherAppsIcon {
@@ -405,12 +423,12 @@ a.userProfileLink span {
   z-index: 99999;
 }
 
- #FromScybud {
+#FromScybud {
   left: 40px;
   bottom: 30px;
   padding: 0;
   transition: all 0.7s ease;
-text-align: center;
+  text-align: center;
 }
 #scybudApps {
   display: flex;
@@ -586,7 +604,7 @@ footer p {
 }
 .footerMiddleContainer {
   display: flex;
-    justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -659,7 +677,7 @@ footer p {
   min-width: auto;
   cursor: pointer;
   font-weight: 600;
-  transition:  background 0.2s ease transition 0.2s ease;
+  transition: background 0.2s ease transition 0.2s ease;
 }
 
 .newsletter-btn:hover {

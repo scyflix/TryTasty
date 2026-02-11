@@ -113,7 +113,9 @@ body {
   cursor: pointer;
   z-index: 9999;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 #themeToggle:hover {
@@ -246,7 +248,10 @@ body {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    all 0.4s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .hero-buttons button:hover {
@@ -392,11 +397,21 @@ body {
   margin: 6px 0;
 }
 
-.review-card[data-stars="5"] { --percent: 100%; }
-.review-card[data-stars="4"] { --percent: 80%; }
-.review-card[data-stars="3"] { --percent: 60%; }
-.review-card[data-stars="2"] { --percent: 40%; }
-.review-card[data-stars="1"] { --percent: 20%; }
+.review-card[data-stars="5"] {
+  --percent: 100%;
+}
+.review-card[data-stars="4"] {
+  --percent: 80%;
+}
+.review-card[data-stars="3"] {
+  --percent: 60%;
+}
+.review-card[data-stars="2"] {
+  --percent: 40%;
+}
+.review-card[data-stars="1"] {
+  --percent: 20%;
+}
 
 .review-text {
   font-size: 0.95rem;
@@ -431,7 +446,10 @@ a {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .cta button:hover {
@@ -563,7 +581,7 @@ footer svg {
   border-radius: 6px;
   font-size: 1rem;
   background: var(--input-textarea-bg);
-    width: 100%;
+  width: 100%;
   border: 2px solid var(--btn-bg);
   color: var(--input-textarea-color);
   transition: 0.25s;
@@ -584,7 +602,7 @@ footer svg {
   min-width: auto;
   cursor: pointer;
   font-weight: 600;
-  transition:  background 0.2s ease transition 0.2s ease;
+  transition: background 0.2s ease transition 0.2s ease;
 }
 
 .newsletter-btn:hover {

@@ -176,7 +176,6 @@ function callToFeedback() {
   const div = document.createElement("div");
   div.className = "popupModal";
   div.innerHTML = `
-  
   <div class="modalContentContainer">
   <div class="closeModal">
             <svg

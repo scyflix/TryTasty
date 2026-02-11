@@ -9,23 +9,23 @@ fetch("v3/data/recipes/recipes1.json")
   })
 
   .then((data) => {
-    const allRecipeDiv1 = document.createElement("div")
-    allRecipeDiv1.classList.add("allRecipeDiv")
+    const allRecipeDiv1 = document.createElement("div");
+    allRecipeDiv1.classList.add("allRecipeDiv");
 
-    const loadMoreBtn1 = document.createElement("button")
-    loadMoreBtn1.type = "button"
-    loadMoreBtn1.id = "loadMoreBtn1"
-    loadMoreBtn1.classList.add("loadMoreBtns")
+    const loadMoreBtn1 = document.createElement("button");
+    loadMoreBtn1.type = "button";
+    loadMoreBtn1.id = "loadMoreBtn1";
+    loadMoreBtn1.classList.add("loadMoreBtns");
 
-loadMoreBtn1.innerHTML = `
+    loadMoreBtn1.innerHTML = `
 <span>Load More</span>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <polyline points="6 9 12 15 18 9"></polyline>
 </svg>
 `;
-allRecipeDiv1.innerHTML = data.recipes
-.map(
-  (rec) => `
+    allRecipeDiv1.innerHTML = data.recipes
+      .map(
+        (rec) => `
   <a href="v3/recipe.html?id=${rec.id}"
   data-keywords="${rec.dataKeywords}"
   class="snackImage recipe"
@@ -35,11 +35,11 @@ allRecipeDiv1.innerHTML = data.recipes
   alt="${rec.title}"
   />${rec.title}</a>
   `,
-)
-.join("");
+      )
+      .join("");
 
-      page.prepend(allRecipeDiv1)
-      page.appendChild(loadMoreBtn1)
+    page.prepend(allRecipeDiv1);
+    page.appendChild(loadMoreBtn1);
   })
   .then(() => {
     loadMoreRecipes();
@@ -88,40 +88,39 @@ allRecipeDiv1.innerHTML = data.recipes
   `;
   });
 
+//function to load more recipes
+function loadMoreRecipes() {
+  const loadMoreBtn1 = document.getElementById("loadMoreBtn1");
 
-  //function to load more recipes
-  function loadMoreRecipes() {
-    const loadMoreBtn1 = document.getElementById("loadMoreBtn1")
+  loadMoreBtn1.addEventListener("click", () => {
+    loadMoreBtn1.classList.add("hide");
 
-    loadMoreBtn1.addEventListener("click", () => {
-loadMoreBtn1.classList.add("hide")
+    fetch("v3/data/recipes/recipes2.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
 
-      fetch("v3/data/recipes/recipes2.json")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
+      .then((data) => {
+        const allRecipeDiv2 = document.createElement("div");
+        allRecipeDiv2.classList.add("allRecipeDiv");
 
-        .then((data) => {
-          const allRecipeDiv2 = document.createElement("div");
-          allRecipeDiv2.classList.add("allRecipeDiv");
+        const loadMoreBtn2 = document.createElement("button");
+        loadMoreBtn2.type = "button";
+        loadMoreBtn2.id = "loadMoreBtn2";
+        loadMoreBtn2.classList.add("loadMoreBtns");
 
-          const loadMoreBtn2 = document.createElement("button");
-          loadMoreBtn2.type = "button";
-          loadMoreBtn2.id = "loadMoreBtn2";
-          loadMoreBtn2.classList.add("loadMoreBtns")
-
-          loadMoreBtn2.innerHTML = `
+        loadMoreBtn2.innerHTML = `
 <span>Load More</span>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <polyline points="6 9 12 15 18 9"></polyline>
 </svg>
 `;
-allRecipeDiv2.innerHTML = data.recipes
-.map(
-  (rec) => `
+        allRecipeDiv2.innerHTML = data.recipes
+          .map(
+            (rec) => `
   <a href="v3/recipe.html?id=${rec.id}"
   data-keywords="${rec.dataKeywords}"
   class="snackImage recipe"
@@ -131,14 +130,14 @@ allRecipeDiv2.innerHTML = data.recipes
   alt="${rec.title}"
   />${rec.title}</a>
   `,
-)
-.join("");
+          )
+          .join("");
 
-page.append(allRecipeDiv2);
-page.appendChild(loadMoreBtn2);
-        })
-        .catch(() => {
-          page.innerHTML = `
+        page.append(allRecipeDiv2);
+        page.appendChild(loadMoreBtn2);
+      })
+      .catch(() => {
+        page.innerHTML = `
     <div style="text-align: center;" class="failedToLoad">
     <svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
     <!-- background blob -->
@@ -179,7 +178,6 @@ page.appendChild(loadMoreBtn2);
             <a href="feedbacks/index.html">Report this issue</a>
   </div>
   `;
-        });
-
-    })
-  }
+      });
+  });
+}

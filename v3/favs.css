@@ -1,7 +1,7 @@
- main {
-        margin-top: 20px;
-      }
-      #favs {
+main {
+  margin-top: 20px;
+}
+#favs {
   display: flex;
   gap: 18px;
   justify-content: center;
@@ -9,23 +9,23 @@
   margin-bottom: 30px;
   font-weight: bold;
 }
-      .fav-link a {
-        margin-right: 20px;
-        color: white;
-      }
-      #body #favs a {
-        transition: all 0.6s ease;
-        margin: 5px;
-        text-decoration: none;
-      }
-      #body a:hover {
-        opacity: 0.8;
-      }
-      #body #favs a span:hover::before {
-        content: "🧑🏽‍🍳Cook";
-        margin-right: 9px;
-      }
-      .snackImage {
+.fav-link a {
+  margin-right: 20px;
+  color: white;
+}
+#body #favs a {
+  transition: all 0.6s ease;
+  margin: 5px;
+  text-decoration: none;
+}
+#body a:hover {
+  opacity: 0.8;
+}
+#body #favs a span:hover::before {
+  content: "🧑🏽‍🍳Cook";
+  margin-right: 9px;
+}
+.snackImage {
   text-align: center;
   text-decoration: none;
   color: var(--snackImg-color);
@@ -48,13 +48,13 @@
   margin-bottom: 5px;
 }
 .snackImage:hover {
-      color: var(--snackImg-color);
+  color: var(--snackImg-color);
   transform: scale(1.02);
   box-shadow: 0 0 18px rgb(255, 111, 0);
 }
 
-      .backBtn {
-        color: white;
+.backBtn {
+  color: white;
   background-color: var(--header-bg);
   display: block;
   margin: 0 auto;

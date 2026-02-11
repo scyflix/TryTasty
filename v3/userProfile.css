@@ -6,7 +6,7 @@ main {
   height: auto;
 }
 #Useremail {
-    color: #ffa726;   /* or whatever text color you use */
+  color: #ffa726; /* or whatever text color you use */
   text-decoration: none;
   cursor: default;
 }
@@ -27,7 +27,9 @@ main {
   margin: 20px auto;
   border: 2px solid #e69500;
   border-radius: 50%;
-  transition: border-radius 0.5s ease, transform 0.5s ease;
+  transition:
+    border-radius 0.5s ease,
+    transform 0.5s ease;
 }
 .userProfileContainer span {
   font-size: 16px;
@@ -46,7 +48,6 @@ main {
   flex-wrap: wrap;
   border-radius: 8px;
 }
-
 
 .show {
   display: block;

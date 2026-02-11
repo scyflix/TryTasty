@@ -130,8 +130,8 @@ ol li {
   background-color: #f98508;
 }
 .activateCookMode:hover {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none;
   background: #ff8b1a;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -169,7 +169,7 @@ ol li {
 #recipeUtility label span {
   font-size: 1.2rem;
 }
- 
+
 #recipeUtility label input[type="checkbox"] {
   appearance: none;
   width: 26px;
@@ -231,10 +231,10 @@ ol li {
 }
 
 .tip {
-font: clamp(1rem, 4vw, 1.2rem) cursive;
-max-width: 500px;
-width: 90%;
-margin: auto;
+  font: clamp(1rem, 4vw, 1.2rem) cursive;
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
 }
 
 .listContainer {
@@ -253,7 +253,7 @@ margin: auto;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-    scrollbar-width: none;
+  scrollbar-width: none;
 
   overscroll-behavior: auto;
   height: 70vh;
@@ -267,20 +267,19 @@ margin: auto;
   padding: 0 29px;
   font-weight: 600;
   font-size: clamp(1rem, 7vw, 2rem);
-    overflow: hidden;
-    border-right: 2px solid var(--color);
+  overflow: hidden;
+  border-right: 2px solid var(--color);
   min-width: 100%;
   text-align: center;
   scroll-snap-align: start;
 }
 
 #recipeUtility a.buyBtn {
-      min-width: 20%;
-     width: 100%;
-       max-width: 300px;
-      margin: auto;
+  min-width: 20%;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
-
 
 /*
 .confirmOverlay {

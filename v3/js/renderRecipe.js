@@ -8,20 +8,19 @@ const recipeContainer = document.getElementById("recipe");
 if (!recipeId) {
   recipeContainer.innerHTML = `<a class="backBtn" href="../index.html">← Back</a>
   <p style="text-align: center; opacity: 0.3;">Recipe not found.</p>`;
-    throw new Error("Missing recipeId");
-
+  throw new Error("Missing recipeId");
 }
 
 // 1) Load multiple recipe files
 const recipeFiles = [
   "data/recipes/recipes1.json",
-  "data/recipes/recipes2.json"
+  "data/recipes/recipes2.json",
 ];
 
-Promise.all(recipeFiles.map(file => fetch(file).then(r => r.json())))
-  .then(results => {
+Promise.all(recipeFiles.map((file) => fetch(file).then((r) => r.json())))
+  .then((results) => {
     // Merge all recipe arrays
-    const allRecipes = results.flatMap(r => r.recipes);
+    const allRecipes = results.flatMap((r) => r.recipes);
 
     // Find the recipe by ID
     const recipe = allRecipes.find((r) => r.id === recipeId);

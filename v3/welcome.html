@@ -1,347 +1,392 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TryTasty | Quick & Tasty Snack Recipes</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TryTasty | Quick & Tasty Snack Recipes</title>
 
-  <!-- Cookiebot -->
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
-    data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245" type="text/javascript"></script>
+    <!-- Cookiebot -->
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="3eaa47f0-2a50-46a7-a7da-73a27cec1245"
+      type="text/javascript"
+    ></script>
 
-  <!-- Cookie declaration -->
-  <script id="CookieDeclaration"
-    src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
-    type="text/javascript"></script>
+    <!-- Cookie declaration -->
+    <script
+      id="CookieDeclaration"
+      src="https://consent.cookiebot.com/3eaa47f0-2a50-46a7-a7da-73a27cec1245/cd.js"
+      type="text/javascript"
+    ></script>
 
-  <!-- GA4 -->
-  <script type="text/plain" data-cookieconsent="statistics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DDLCL6XBQR', { anonymize_ip: true });
-  </script>
-  <script type="text/plain" data-cookieconsent="statistics"
-    src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"></script>
+    <!-- GA4 -->
+    <script type="text/plain" data-cookieconsent="statistics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DDLCL6XBQR', { anonymize_ip: true });
+    </script>
+    <script
+      type="text/plain"
+      data-cookieconsent="statistics"
+      src="https://www.googletagmanager.com/gtag/js?id=G-DDLCL6XBQR"
+    ></script>
 
-  <!-- Trustpilot -->
-  <script type="text/javascript"
-    src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- Trustpilot -->
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="theme-dark">
-  <!-- THEME TOGGLE -->
-  <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+  <body class="theme-dark">
+    <!-- THEME TOGGLE -->
+    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-left">
-        <img
-          src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
-          alt="TryTasty Logo"
-          class="header-logo"
-        />
-        <span class="header-title">TryTasty</span>
-      </div>
-
-      <nav class="header-nav">
-        <a href="../index.html">Recipes</a>
-        <a href="submit.html">Submit</a>
-        <a href="feedbacks/index.html">Feedback</a>
-        <a href="login.html" class="header-btn">Login</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <main class="hero">
-    <img
-      id="logo"
-      src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
-      alt="TryTasty Logo"
-    />
-
-    <h1>Quick & Tasty Snack Recipes</h1>
-    <p class="hero-sub">
-      Discover snack ideas in seconds. Simple, fast, and tasty—perfect for late nights, breaks, and cravings.
-    </p>
-
-    <div class="hero-buttons">
-      <button onclick="window.location.href='../index.html'">Explore Recipes</button>
-      <button onclick="window.location.href='login.html'">Login / Signup</button>
-    </div>
-  </main>
-
-  <!-- FEATURES -->
-  <section class="features">
-    <h2>Why TryTasty?</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <span class="feature-icon">⚡</span>
-        <h3>Fast</h3>
-        <p>Find snack ideas in seconds: no endless scrolling.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">🍪</span>
-        <h3>Simple</h3>
-        <p>Easy steps, minimal ingredients, maximum taste.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">✨</span>
-        <h3>Inspiring</h3>
-        <p>Perfect when you’re hungry but out of ideas.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <span class="step-number">1</span>
-        <p>Open TryTasty</p>
-      </div>
-      <div class="step">
-        <span class="step-number">2</span>
-        <p>Get snack ideas</p>
-      </div>
-      <div class="step">
-        <span class="step-number">3</span>
-        <p>Make & enjoy</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="reviews">
-    <h2>What People Say</h2>
-    <div class="review-grid">
-      <div class="review-card" data-stars="5">
-        <div class="review-profile">
-          <svg viewBox="0 0 24 24" class="profile-svg">
-            <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
-            <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
-          </svg>
-          <span class="review-name">Fawas</span>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left">
+          <img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
+            alt="TryTasty Logo"
+            class="header-logo"
+          />
+          <span class="header-title">TryTasty</span>
         </div>
-        <div class="review-stars"></div>
-        <p class="review-text">“Post more of all these
-I've tried making two of the recipes, and I gotta say, it's good🫠🫠.”</p>
-      </div>
 
-      <div class="review-card" data-stars="4">
-        <div class="review-profile">
-          <svg viewBox="0 0 24 24" class="profile-svg">
-            <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
-            <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
-          </svg>
-          <span class="review-name">Firdaus</span>
+        <nav class="header-nav">
+          <a href="../index.html">Recipes</a>
+          <a href="submit.html">Submit</a>
+          <a href="feedbacks/index.html">Feedback</a>
+          <a href="login.html" class="header-btn">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero">
+      <img
+        id="logo"
+        src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
+        alt="TryTasty Logo"
+      />
+
+      <h1>Quick & Tasty Snack Recipes</h1>
+      <p class="hero-sub">
+        Discover snack ideas in seconds. Simple, fast, and tasty—perfect for
+        late nights, breaks, and cravings.
+      </p>
+
+      <div class="hero-buttons">
+        <button onclick="window.location.href = '../index.html'">
+          Explore Recipes
+        </button>
+        <button onclick="window.location.href = 'login.html'">
+          Login / Signup
+        </button>
+      </div>
+    </main>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <h2>Why TryTasty?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h3>Fast</h3>
+          <p>Find snack ideas in seconds: no endless scrolling.</p>
         </div>
-        <div class="review-stars"></div>
-        <p class="review-text">“Interesting recipe.
-Keep it up, need more recipes
-👍👍👍.”</p>
-      </div>
-
-      <div class="review-card" data-stars="5">
-        <div class="review-profile">
-          <svg viewBox="0 0 24 24" class="profile-svg">
-            <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
-            <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
-          </svg>
-          <span class="review-name">Bashir</span>
+        <div class="feature-card">
+          <span class="feature-icon">🍪</span>
+          <h3>Simple</h3>
+          <p>Easy steps, minimal ingredients, maximum taste.</p>
         </div>
-        <div class="review-stars"></div>
-        <p class="review-text">“The page is greatly growing every now and then. Well done.”</p>
+        <div class="feature-card">
+          <span class="feature-icon">✨</span>
+          <h3>Inspiring</h3>
+          <p>Perfect when you’re hungry but out of ideas.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Ready to Try Something Tasty?</h2>
-    <button onclick="window.location.href='../index.html'">Start Exploring</button>
-  </section>
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <p>Open TryTasty</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <p>Get snack ideas</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <p>Make & enjoy</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- FAQ -->
- <section class="faq">
-        <details>
-          <summary>How do I submit a recipe?</summary>
-          <p>
-            Got a snack idea? Awesome. Send it through the
-            <a href="v3/submit.html">submit page</a> and we’ll check it out. We
-            love creative twists.
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <h2>What People Say</h2>
+      <div class="review-grid">
+        <div class="review-card" data-stars="5">
+          <div class="review-profile">
+            <svg viewBox="0 0 24 24" class="profile-svg">
+              <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
+              <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
+            </svg>
+            <span class="review-name">Fawas</span>
+          </div>
+          <div class="review-stars"></div>
+          <p class="review-text">
+            “Post more of all these I've tried making two of the recipes, and I
+            gotta say, it's good🫠🫠.”
           </p>
-        </details>
+        </div>
 
-        <details>
-          <summary>Are the recipes beginner-friendly?</summary>
-          <p>
-            Yes. If you can use a pan and a spoon, you’re good. Steps are short
-            and ingredients are simple.
+        <div class="review-card" data-stars="4">
+          <div class="review-profile">
+            <svg viewBox="0 0 24 24" class="profile-svg">
+              <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
+              <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
+            </svg>
+            <span class="review-name">Firdaus</span>
+          </div>
+          <div class="review-stars"></div>
+          <p class="review-text">
+            “Interesting recipe. Keep it up, need more recipes 👍👍👍.”
           </p>
-        </details>
+        </div>
 
-        <details>
-          <summary>Can I save favorite recipes?</summary>
-          <p>
-            Yes, tap the favorite button on any recipe. It’ll be saved so you
-            can find it again in the
-            <a href="v3/favs.html">favorites page</a> easily.
+        <div class="review-card" data-stars="5">
+          <div class="review-profile">
+            <svg viewBox="0 0 24 24" class="profile-svg">
+              <circle cx="12" cy="8" r="4" fill="var(--color-accent)" />
+              <circle cx="12" cy="20" r="7" fill="var(--color-accent)" />
+            </svg>
+            <span class="review-name">Bashir</span>
+          </div>
+          <div class="review-stars"></div>
+          <p class="review-text">
+            “The page is greatly growing every now and then. Well done.”
           </p>
-        </details>
+        </div>
+      </div>
+    </section>
 
-        <details>
-          <summary>Do I need special ingredients?</summary>
-          <p>
-            Nope. Most recipes use everyday kitchen ingredients you probably
-            already have.
-          </p>
-        </details>
-      </section>
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Ready to Try Something Tasty?</h2>
+      <button onclick="window.location.href = '../index.html'">
+        Start Exploring
+      </button>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <section class="footerContainer">
-      <div class="upperFooter">
-        <a title="Write a Feedback" href="feedbacks/index.html" class="feedbackBtn" aria-label="Feedback">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-            <path
-              d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
-              stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-          </svg>
-        </a>
+    <!-- FAQ -->
+    <section class="faq">
+      <details>
+        <summary>How do I submit a recipe?</summary>
+        <p>
+          Got a snack idea? Awesome. Send it through the
+          <a href="v3/submit.html">submit page</a> and we’ll check it out. We
+          love creative twists.
+        </p>
+      </details>
 
-        <div class="social-icons">
+      <details>
+        <summary>Are the recipes beginner-friendly?</summary>
+        <p>
+          Yes. If you can use a pan and a spoon, you’re good. Steps are short
+          and ingredients are simple.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I save favorite recipes?</summary>
+        <p>
+          Yes, tap the favorite button on any recipe. It’ll be saved so you can
+          find it again in the
+          <a href="v3/favs.html">favorites page</a> easily.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do I need special ingredients?</summary>
+        <p>
+          Nope. Most recipes use everyday kitchen ingredients you probably
+          already have.
+        </p>
+      </details>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="footerContainer">
+        <div class="upperFooter">
           <a
-            href="https://youtube.com/@trytasty"
-            target="_blank"
-            title="YouTube"
-            class="social-icon"
+            title="Write a Feedback"
+            href="feedbacks/index.html"
+            class="feedbackBtn"
+            aria-label="Feedback"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
               <path
-                d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
+                d="M4 4H20C21.1 4 22 4.9 22 6V15C22 16.1 21.1 17 20 17H8L4 21V6C4 4.9 4.9 4 6 4Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
               />
             </svg>
           </a>
-        </div>
-      </div>
 
-      
-      <div class="footerLinks">
-        <span class="footerSectionHeader">Links</span>
-        <a href="doc/about.html">About</a>
-        <a href="submit.html">Submit a recipe</a>
-        <a href="feedbacks/index.html">Send feedback</a>
-        <a href="doc/privacyGerman.html">Imprint & privacy policy</a>
-        <a href="buy/shop.html">Kitchen Tools Shop</a>
-      </div>
-    </section>
-    <section class="footerContainer">
-<a href="https://www.producthunt.com/products/trytasty?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-trytasty" target="_blank" rel="noopener noreferrer"><img alt="TryTasty - Discover tasty, easy‑to‑make snacks. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1077150&amp;theme=dark&amp;t=1770745057105"></a>      <div
-        class="trustpilot-widget"
-        data-locale="en-US"
-        data-template-id="56278e9abfbbba0bdcd568bc"
-        data-businessunit-id="69885f152706dd2e7b4402d3"
-        data-token="20df0dc3-c215-42df-b6e0-214624119af1"
-      >
-        <a href="https://www.trustpilot.com/review/trytasty.de" target="_blank" rel="noopener">Trustpilot</a>
-      </div>
-    </section>
-    
-    <section class="footerContainer footerMiddleContainer">
-      <div class="newsletter-box">
-        <label for="newsletterEmail" class="newsletter-label">
-          Subscribe to our newsletter (optional)
-        </label>
-        <form
-          action="https://formspree.io/f/xykdzlvv"
-          method="POST"
-          class="newsletter-input-wrapper"
+          <div class="social-icons">
+            <a
+              href="https://youtube.com/@trytasty"
+              target="_blank"
+              title="YouTube"
+              class="social-icon"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path
+                  d="M19.615 3.184A3.011 3.011 0 0 1 21.73 5.3c.518 1.93.518 5.95.518 5.95s0 4.02-.518 5.95a3.011 3.011 0 0 1-2.115 2.115c-1.93.518-9.615.518-9.615.518s-7.685 0-9.615-.518A3.011 3.011 0 0 1 .385 17.2C-.133 15.27-.133 11.25-.133 11.25s0-4.02.518-5.95A3.011 3.011 0 0 1 2.5 3.184C4.43 2.666 12.115 2.666 12.115 2.666s7.685 0 9.615.518zM9.75 15.545l6-3.295-6-3.295v6.59z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footerLinks">
+          <span class="footerSectionHeader">Links</span>
+          <a href="doc/about.html">About</a>
+          <a href="submit.html">Submit a recipe</a>
+          <a href="feedbacks/index.html">Send feedback</a>
+          <a href="doc/privacyGerman.html">Imprint & privacy policy</a>
+          <a href="buy/shop.html">Kitchen Tools Shop</a>
+        </div>
+      </section>
+      <section class="footerContainer">
+        <a
+          href="https://www.producthunt.com/products/trytasty?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-trytasty"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            alt="TryTasty - Discover tasty, easy‑to‑make snacks. | Product Hunt"
+            width="250"
+            height="54"
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1077150&amp;theme=dark&amp;t=1770745057105"
+        /></a>
+        <div
+          class="trustpilot-widget"
+          data-locale="en-US"
+          data-template-id="56278e9abfbbba0bdcd568bc"
+          data-businessunit-id="69885f152706dd2e7b4402d3"
+          data-token="20df0dc3-c215-42df-b6e0-214624119af1"
         >
-          <input
-            type="email"
-            name="newsletterEmail"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            autocomplete="off"
-            required
-          />
-          <button id="newsletterSubmit" type="submit" class="newsletter-btn">
-            Subscribe
-          </button>
-        </form>
-        <p class="newsletter-note">
-          Get recipe inspiration, updates, and occasional TryTasty news.
-        </p>
-      </div>
-
-      <div id="FromScybud">
-        <span class="footerSectionHeader">Scybud Creations</span>
-        <div id="scybudApps">
-          <a href="https://scyflix.github.io/RushSite/" target="_blank">
-            <div class="container">
-              <img
-                src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
-                alt="RushSite Logo"
-              />
-              <span>RushSite</span>
-            </div>
-          </a>
-          <a href="https://trytasty.de/" target="_blank">
-            <div class="container">
-              <img
-                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
-                alt="TryTasty Logo"
-              />
-              <span>TryTasty</span>
-            </div>
-          </a>
-          <a href="https://scyflix.github.io/Playbud/" target="_blank">
-            <div class="container">
-              <img
-                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
-                alt="Playbud Logo"
-              />
-              <span>Playbud</span>
-            </div>
-          </a>
-          <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
-            <div class="container">
-              <img
-                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
-                alt="Scybud Logo"
-              />
-              <span>Scybud</span>
-            </div>
-          </a>
+          <a
+            href="https://www.trustpilot.com/review/trytasty.de"
+            target="_blank"
+            rel="noopener"
+            >Trustpilot</a
+          >
         </div>
-      </div>
-    </section>
+      </section>
 
-    <p>&copy;2025 TryTasty. All Rights reserved.</p>
-  </footer>
+      <section class="footerContainer footerMiddleContainer">
+        <div class="newsletter-box">
+          <label for="newsletterEmail" class="newsletter-label">
+            Subscribe to our newsletter (optional)
+          </label>
+          <form
+            action="https://formspree.io/f/xykdzlvv"
+            method="POST"
+            class="newsletter-input-wrapper"
+          >
+            <input
+              type="email"
+              name="newsletterEmail"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+              autocomplete="off"
+              required
+            />
+            <button id="newsletterSubmit" type="submit" class="newsletter-btn">
+              Subscribe
+            </button>
+          </form>
+          <p class="newsletter-note">
+            Get recipe inspiration, updates, and occasional TryTasty news.
+          </p>
+        </div>
 
-  <!-- THEME TOGGLE SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const body = document.body;
+        <div id="FromScybud">
+          <span class="footerSectionHeader">Scybud Creations</span>
+          <div id="scybudApps">
+            <a href="https://scyflix.github.io/RushSite/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                  alt="RushSite Logo"
+                />
+                <span>RushSite</span>
+              </div>
+            </a>
+            <a href="https://trytasty.de/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1768408808/Trytasty_logo_nx6kbn.webp"
+                  alt="TryTasty Logo"
+                />
+                <span>TryTasty</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Playbud/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                  alt="Playbud Logo"
+                />
+                <span>Playbud</span>
+              </div>
+            </a>
+            <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+              <div class="container">
+                <img
+                  src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                  alt="Scybud Logo"
+                />
+                <span>Scybud</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
-    function setTheme(mode) {
-      body.classList.remove("theme-dark", "theme-light");
-      body.classList.add(mode);
-      toggle.textContent = mode === "theme-light" ? "☀️" : "🌙";
-    }
+      <p>&copy;2025 TryTasty. All Rights reserved.</p>
+    </footer>
 
-    toggle.addEventListener("click", () => {
-      const isDark = body.classList.contains("theme-dark");
-      setTheme(isDark ? "theme-light" : "theme-dark");
-    });
-  </script>
-</body>
+    <!-- THEME TOGGLE SCRIPT -->
+    <script>
+      const toggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      function setTheme(mode) {
+        body.classList.remove("theme-dark", "theme-light");
+        body.classList.add(mode);
+        toggle.textContent = mode === "theme-light" ? "☀️" : "🌙";
+      }
+
+      toggle.addEventListener("click", () => {
+        const isDark = body.classList.contains("theme-dark");
+        setTheme(isDark ? "theme-light" : "theme-dark");
+      });
+    </script>
+  </body>
 </html>

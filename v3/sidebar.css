@@ -3,11 +3,9 @@
   --sidebar-bg: #f7f7f7;
   --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   --link-border: orange;
-
-
 }
 body.darkMode #sidebar {
-    --sidebar-bg: #1e1e1e;
+  --sidebar-bg: #1e1e1e;
   --color: #f5f5dc;
   --icon-color: #161616;
   --shadow: 0 0 15px rgba(255, 255, 255, 0.3);
@@ -80,8 +78,8 @@ body.darkMode #sidebar {
   background: #1e1e1e;
 }
 .menu-icon:hover {
-opacity: 0.8;
-transform: translateY(-1px);
+  opacity: 0.8;
+  transform: translateY(-1px);
 }
 .menu-icon span {
   background: var(--icon-color);
