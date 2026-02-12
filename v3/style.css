@@ -301,7 +301,7 @@ body {
 }
 
 .feature-grid {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   display: grid;
   gap: 18px;
@@ -316,9 +316,8 @@ body {
   box-shadow: var(--card-shadow);
 }
 
-.feature-icon {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
+.feature-icon svg {
+  width: 100px;
 }
 
 /* =========================
