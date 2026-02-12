@@ -43,6 +43,18 @@
   --btn-bg: #ff6a00;
   --btn-bg-hover: #ff8b1a;
 
+   --popular-bg: #121212;
+  --popular-border: rgba(255, 255, 255, 0.05);
+  --popular-shadow: rgba(0, 0, 0, 0.35);
+
+  --popular-heading: #ffa726;
+  --popular-text: #e3e3e3;
+
+  --popular-divider: rgba(255, 255, 255, 0.08);
+
+  --popular-link-hover: #ffffff;
+  --popular-link: #ffb74d;
+
   --radius: 12px;
 }
 
@@ -79,6 +91,19 @@
 
   --btn-bg: #ff6a00;
   --btn-bg-hover: #ff8b1a;
+
+  --popular-bg: #ffffff;
+  --popular-border: rgba(0, 0, 0, 0.08);
+  --popular-shadow: rgba(0, 0, 0, 0.08);
+
+  --popular-heading: #e65100;
+  --popular-text: #000000;
+
+  --popular-divider: rgba(0, 0, 0, 0.1);
+
+  --popular-link-hover: #171717b9;
+  --popular-link: #e65100;
+
 
   --radius: 12px;
 }
@@ -332,6 +357,64 @@ body {
   font-size: 1.6rem;
   color: var(--color-accent);
   font-weight: 700;
+}
+
+/* =========================
+   POPULAR RECIPES
+   ========================= */
+
+.popular-section {
+  background-color: var(--bg-surface);
+  margin: 1rem auto;
+  padding: 1.8rem 1rem;
+  box-shadow: 0 20px 40px var(--popular-shadow);
+  border: 1px solid var(--popular-border);
+}
+
+.popular-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--popular-heading);
+  letter-spacing: 0.5px;
+}
+
+.popular-intro {
+  color: var(--popular-text);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.popular-list {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 1.5rem auto 0 auto;
+  max-width: 650px;
+}
+
+.popular-list li {
+  padding: 0.6rem 0.4rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--popular-divider);
+}
+
+.popular-list li:last-child {
+  border-bottom: none;
+}
+
+.popular-list a {
+  color: var(--popular-link);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.popular-list a:hover {
+  color: var(--popular-link-hover);
+  letter-spacing: 0.3px;
 }
 
 /* =========================

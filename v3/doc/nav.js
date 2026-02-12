@@ -23,7 +23,6 @@ function setupMenuIcons() {
 //Create Sidebar links in an array
 const navLinks = [
   { text: "Home", href: "../../index.html" },
-  { text: "Recipes", href: "../../index.html#recipeList" },
   { text: "Favorites", href: "../favs.html" },
   { text: "Shop", href: "../buy/shop.html" },
 

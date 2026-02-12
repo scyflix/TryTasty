@@ -34,7 +34,6 @@ if (botLink) {
 //Create Sidebar links in an array
 const navLinks = [
   { text: "Home", href: "index.html", class: "toastNavLink" },
-  { text: "Recipes", href: "#recipeList", class: "recipeSection" },
   { text: "Favorites", href: "v3/favs.html", class: "toastNavLink" },
   { text: "Utensils", href: "v3/buy/shop.html", class: "toastNavLink" },
 
@@ -60,10 +59,6 @@ navLinks.forEach((link) => {
 
   //append all created elements into sidebar
   sidebar.appendChild(a);
-});
-
-document.querySelector(".recipeSection").addEventListener("click", () => {
-  sidebarfunc();
 });
 
 //Version number
