@@ -70,6 +70,9 @@ function post(user) {
   document.getElementById("allForms").classList.remove("show");
   document.getElementById("forminputbtn").classList.remove("hide");
   document.querySelector(".writeIcon").classList.remove("hide");
+
+      window.location.reload();
+
 }
 
 function renderPost(post) {
@@ -221,7 +224,6 @@ function renderPost(post) {
 onUserAuthChange((user) => {
   postbtn.addEventListener("click", () => {
     post(user);
-    window.location.reload();
   });
 });
 window.addEventListener("resize", () => {
