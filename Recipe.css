@@ -70,9 +70,9 @@ nav.page .allRecipeDiv {
   background-color: var(--header-bg);
   display: flex;
   border: 2px solid #ff9d00;
-  color: white;
   justify-content: center;
   align-items: center;
+  color: var(--color);
   margin: auto;
   border-radius: 40px;
 }

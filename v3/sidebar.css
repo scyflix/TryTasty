@@ -1,9 +1,4 @@
-#sidebar {
-  --color: #161616;
-  --sidebar-bg: #f7f7f7;
-  --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-  --link-border: orange;
-}
+
 body.darkMode #sidebar {
   --sidebar-bg: #1e1e1e;
   --color: #f5f5dc;
@@ -16,6 +11,11 @@ body.darkMode #sidebar {
 }
 /* Sidebar */
 #sidebar {
+   --color: #161616;
+  --sidebar-bg: #f7f7f7;
+  --shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  --link-border: orange;
+
   position: fixed;
   top: 0;
   z-index: 9999;
@@ -143,8 +143,10 @@ span {
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   display: none;

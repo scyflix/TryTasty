@@ -104,7 +104,6 @@
   --popular-link-hover: #171717b9;
   --popular-link: #e65100;
 
-
   --radius: 12px;
 }
 
@@ -129,12 +128,12 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--color-accent);
+  background: var(--text-main);
   color: #ffffff;
   border: none;
   padding: 10px 12px;
   border-radius: 999px;
-  font-size: 18px;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 9999;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
@@ -145,7 +144,7 @@ body {
 
 #themeToggle:hover {
   transform: scale(1.08);
-  background: var(--color-accent-soft);
+  background: var(--card-bg);
 }
 
 /* =========================
@@ -664,7 +663,7 @@ footer svg {
   font-size: 1rem;
   background: var(--input-textarea-bg);
   width: 100%;
-  border: 2px solid var(--btn-bg);
+  border: 1px solid rgba(128, 128, 128, 0.253);
   color: var(--input-textarea-color);
   transition: 0.25s;
 }
