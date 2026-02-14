@@ -109,7 +109,7 @@ Promise.all(recipeFiles.map((file) => fetch(file).then((r) => r.json())))
       </section>
 
       <p class="recipeDesc">${recipe.description}</p>
-      <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🥘Start Cook Mode</a>
+      <a href="cookMode.html?id=${recipeId}&mode=cook" class="activateCookMode">🍲Start Cook Mode</a>
       <hr class="divider">
 
       <section class="flexRecipeContent">

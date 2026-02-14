@@ -49,7 +49,48 @@ ol {
 ul li,
 ol li {
   margin-bottom: 6px;
+  font-size: 1.2rem;
 }
+li::marker {
+    font-size: 1.5rem;
+  color: var(--link-color);
+}
+
+ol {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  
+}
+
+ol li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 50px;
+  margin: 14px 0;
+}
+ol li:hover::before {
+  color: white;
+  background-color: var(--link-color);
+  border: 0.5px solid var(--color);
+}
+ol li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  backdrop-filter: var(--filter);
+  color: var(--link-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
 
 .flexRecipeContent {
   margin-top: 60px;
@@ -115,6 +156,9 @@ ol li {
 
 .activateCookMode {
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 14px;
   border-radius: 10px;
   font-size: 17px;
